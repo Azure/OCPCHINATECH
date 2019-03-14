@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateDeviceIdentity", "CreateDeviceIdentity\CreateDeviceIdentity.csproj", "{727CD0D5-60FC-4AAE-9270-7C96FB5BFC1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{727CD0D5-60FC-4AAE-9270-7C96FB5BFC1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{727CD0D5-60FC-4AAE-9270-7C96FB5BFC1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{727CD0D5-60FC-4AAE-9270-7C96FB5BFC1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{727CD0D5-60FC-4AAE-9270-7C96FB5BFC1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1108D20-78C5-4FBF-A2F0-4CE13F23060F}
+	EndGlobalSection
+EndGlobal
