@@ -24,7 +24,7 @@
 
 在 **OCPOpenHack/Azure_Deep_Learning/notebooks** 文件夹中，仔细阅读 **04-Transfer Learning (*framework*).ipynb** notebook 文件中的代码和说明。这是一个使用迁移学习来训练一个 CNN 的例子。
 
-### 2. Use transfer learning to train a model
+### 2. 使用迁移学习技术训练一个模型
 
 使用用迁移学习技术，从一个已有模型的特征提取层之上创建一个新的 CNN 的分类器。
 
