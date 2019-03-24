@@ -15,6 +15,7 @@ OCP-Hack项目是为参加OCP HackFest的伙伴准备的动手实验指导，主
 - [基于LUIS的Voice Command创建](./Azure_LUIS/README.md)
 - [基于QnA Maker的问答机器人创建](./Azure_QnAMaker/README.md)
 - [基于Azure Machine Learning Studio的机器学习](./Azure_Machine_Learning_Studio/README.md)
+- [基于Azure的深度学习](./Azure_Deep_Learning/README.md)
 
 ## Azure订阅获取
 本项目的所有实验都会需要Azure订阅，由于使用到很多最新的Cognitive Services，建议伙伴申请或使用您的Azure海外（Azure.com)订阅。
