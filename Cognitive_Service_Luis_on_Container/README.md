@@ -16,9 +16,11 @@ Azure Cognitive Service中的LUIS（语义理解服务）是提供给对话AI服
 
 ## 准备Docker环境 ##
 1 . 在https://docs.docker.com/docker-for-windows/install/ 安装Docker for Windows，安装完成后，点击Settings菜单
+
 <img width="300" height="300" src="./images/image01.JPG"/>
 
 2 . 确保本地磁盘可以被docker访问
+
 <img width="600" height="400" src="./images/image02.JPG"/>
 
 ## 下载并安装LUIS镜像
@@ -77,6 +79,7 @@ ApiKey={ENDPOINT_KEY}
 将Billing和ApiKey后面设置为之前我们保存的endpoint和key信息。
 
 6 . 运行成功后，提示如下：
+
 <img width="600" height="240" src="./images/image07.JPG"/>
 
 ## 测试LUIS容器
