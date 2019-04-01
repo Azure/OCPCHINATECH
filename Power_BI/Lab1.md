@@ -1,6 +1,5 @@
 # 创建和共享第一份PowerBI报表
 
-<img width="2000" height="200" src="./Images/banner.jpg"/>
 
 使用 Power BI 可以创建引人注目的视觉对象和报表。 本模块介绍如何使用 Power BI Desktop 连接到数据、生成视觉对象，并创建可与组织中的其他人共享的报表。 然后，将介绍如何将报表发布到 Power BI 服务，让其他人能够查看你的见解并从你的工作中受益。
 
