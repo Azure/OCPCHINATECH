@@ -1,0 +1,7 @@
+Sales YTD= TOTALYTD(SUM('Sales'[Revenue]),'Date'[Date])
+
+Sales LY YTD = CALCULATE ([Sales YTD], SAMEPERIODLASTYEAR ('Date'[Date]))
+
+Sales Var = [Sales YTD] - [Sales LY YTD]
+
+IsVanArsdel = IF([Manufacturer]="VanArsdel", "Y", "N")
