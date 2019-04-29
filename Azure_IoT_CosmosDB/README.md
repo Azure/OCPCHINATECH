@@ -15,30 +15,38 @@
 ### 2.新建Cosmos DB
 
 点击左上角“+新建”按钮，然后依次选择“数据库”，“Azure Cosmos DB”，如下图所示：
-![images]https://github.com/Azure/OCPOpenHack/blob/master/Azure_IoT_CosmosDB/Images/1.PNG
+
+![images](https://github.com/Azure/OCPOpenHack/blob/master/Azure_IoT_CosmosDB/Images/1.PNG)
 
 选择在“基于Azure IoT Hub的远程监控”中的资源组，为cosmosDB新建名称，API选择‘核心（SQL）’，以及数据中心位置，如下图所示：
-![images]https://github.com/Azure/OCPOpenHack/blob/master/Azure_IoT_CosmosDB/Images/2.PNG
+
+![images](https://github.com/Azure/OCPOpenHack/blob/master/Azure_IoT_CosmosDB/Images/2.png)
 
 点击“查看 + 创建”，并点击“创建", 如下图所示：
-![images]https://github.com/Azure/OCPOpenHack/blob/master/Azure_IoT_CosmosDB/Images/3.PNG
+
+![images](https://github.com/Azure/OCPOpenHack/blob/master/Azure_IoT_CosmosDB/Images/3.png)
 
 ### 3.配置Stream Analytics Job输出到Cosmos DB
 
 如果Stream Analytic Job 还在运行，请点击‘停止’，如下图所示：
-![images]https://github.com/Azure/OCPOpenHack/blob/master/Azure_IoT_CosmosDB/Images/4.PNG
+
+![images](https://github.com/Azure/OCPOpenHack/blob/master/Azure_IoT_CosmosDB/Images/4.png)
 
 点击‘输出’ -> ‘添加’ -> 'Cosmos DB',如下
-![images]https://github.com/Azure/OCPOpenHack/blob/master/Azure_IoT_CosmosDB/Images/5.PNG
+
+![images](https://github.com/Azure/OCPOpenHack/blob/master/Azure_IoT_CosmosDB/Images/5.png)
 
 填写输出别名，选择订阅，并选择在上述步骤中创建的cosmos DB账户ID，点击‘新建’并填写名称和集合名称模式，最后点击‘保存’，如下
-![images]https://github.com/Azure/OCPOpenHack/blob/master/Azure_IoT_CosmosDB/Images/6.PNG
+
+![images](https://github.com/Azure/OCPOpenHack/blob/master/Azure_IoT_CosmosDB/Images/6.png)
 
 在Stream Analytics Job中点击“查询”，然后输入如下查询语句，并点击“保存“：
-![images]https://github.com/Azure/OCPOpenHack/blob/master/Azure_IoT_CosmosDB/Images/7.PNG
+
+![images](https://github.com/Azure/OCPOpenHack/blob/master/Azure_IoT_CosmosDB/Images/7.PNG)
 
 在Stream Analytics Job界面中，点击“启动‘，如下图所示：
-![images]https://github.com/Azure/OCPOpenHack/blob/master/Azure_IoT_CosmosDB/Images/8.PNG
+
+![images](https://github.com/Azure/OCPOpenHack/blob/master/Azure_IoT_CosmosDB/Images/8.png)
 
 
 ### 4.在Cosmos DB中查看监控数据
@@ -48,7 +56,8 @@
 
 
 点击cosmos DB服务->'数据资源管理器'， 选择之前步骤中创建的账户->集合名称模式, 在id下可以看到模拟数据从iot hub传入到cosmos DB，如下图所示：
-![images]https://github.com/Azure/OCPOpenHack/blob/master/Azure_IoT_CosmosDB/Images/1.PNG
+
+![images](https://github.com/Azure/OCPOpenHack/blob/master/Azure_IoT_CosmosDB/Images/9.png)
 
 
 
