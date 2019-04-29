@@ -42,6 +42,22 @@
 
 在Stream Analytics Job中点击“查询”，然后输入如下查询语句，并点击“保存“：
 
+SELECT
+
+    deviceId, Avg(Temperature) as Temperature
+    
+INTO
+
+    outputcosmos
+    
+FROM
+
+    input
+    
+GROUP BY deviceId, TumblingWindow(second,30)
+
+
+
 ![images](https://github.com/Azure/OCPOpenHack/blob/master/Azure_IoT_CosmosDB/Images/7.PNG)
 
 在Stream Analytics Job界面中，点击“启动‘，如下图所示：
