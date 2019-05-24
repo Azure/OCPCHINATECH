@@ -17,7 +17,7 @@ OCP-Hack项目是为参加OCP HackFest的伙伴准备的动手实验指导，主
 - [基于QnA Maker的问答机器人创建](./Azure_QnAMaker/README.md)
 - [人脸认知服务在容器中实现](./Cognitive_Service_Face_on_Container/README.md)
 - [语义理解LUIS服务在容器中实现](./Cognitive_Service_Luis_on_Container/README.md)
-- [自定义视觉识别图像分类器的操作实验](./Cognitive_Custom_Vision/README.md)
+- [自定义视觉创建图像分类器](./Cognitive_Custom_Vision/README.md)
 
 ## 机器学习&深度学习动手实验
 - [基于Azure Machine Learning Studio的机器学习](./Azure_Machine_Learning_Studio/README.md)
