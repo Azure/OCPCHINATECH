@@ -145,6 +145,7 @@ else:
 4. 监控训练状态
   - 使用jupyter widget可以监控训练状态（Queued， Preparing， Running， Completed等）
  <img width="400" height="200" src="./images/image04.JPG"/>
+  
   - 训练完成后，可以获取训练日志，显示训练结果
   
 5. 注册模型
@@ -165,7 +166,7 @@ else:
   - 使用测试数据生成预测结果
   - 使用混淆矩阵评估预测结果
 
-**Note：**混淆矩阵是对Scikit-Learning算法的评估方法， 横轴是预测值，纵轴是真实值， 每个交叉点就是有多少预测值的个数。 因此对角线的数值越大，非对角线数值越小，说明模型精度越高。
+**Note：** 混淆矩阵是对Scikit-Learning算法的评估方法， 横轴是预测值，纵轴是真实值， 每个交叉点就是有多少预测值的个数。 因此对角线的数值越大，非对角线数值越小，说明模型精度越高。
 
 <img width="400" height="180" src="./images/image05.JPG"/>
 
