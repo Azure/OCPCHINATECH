@@ -89,7 +89,7 @@ Azure Machine Learning Service支持用户使用云端的notebook server运行�
   - 在Workspace中创建一个实验
   - 在Workspace中创建训练需要的计算资源（或者关联你已有的计算资源）
 
-Note： 在实验一中我们创建的是一个空白的workspace，所以我们第一次训练时需要为自己创建训练所需要的计算资源。这里我们需要替换部分代码，
+**Note：** 在实验一中我们创建的是一个空白的workspace，所以我们第一次训练时需要为自己创建训练所需要的计算资源。这里我们需要替换部分代码，
 
 第一次需要创建计算资源请使用下面的代码 （我们创建了一个最多4节点的CPU集群）
 ```Python
@@ -146,8 +146,10 @@ else:
   - 使用jupyter widget可以监控训练状态（Queued， Preparing， Running， Completed等）
  <img width="400" height="200" src="./images/image04.JPG"/>
   - 训练完成后，可以获取训练日志，显示训练结果
+  
 5. 注册模型
   - 训练结束，将模型注册到workspace中， 为后续其他用户使用。
+   
 6. 准备部署模型
   - 在jupyter notebook中回到你从github上Clone下面的目录中，打开img-classification-part2-deploy.ipynb 脚本，我们可以开始进行实验三的内容。
 
@@ -163,7 +165,7 @@ else:
   - 使用测试数据生成预测结果
   - 使用混淆矩阵评估预测结果
 
-Note：混淆矩阵是对Scikit-Learning算法的评估方法， 横轴是预测值，纵轴是真实值， 每个交叉点就是有多少预测值的个数。 因此对角线的数值越大，非对角线数值越小，说明模型精度越高。
+**Note：**混淆矩阵是对Scikit-Learning算法的评估方法， 横轴是预测值，纵轴是真实值， 每个交叉点就是有多少预测值的个数。 因此对角线的数值越大，非对角线数值越小，说明模型精度越高。
 
 <img width="400" height="180" src="./images/image05.JPG"/>
 
@@ -179,7 +181,7 @@ Note：混淆矩阵是对Scikit-Learning算法的评估方法， 横轴是预测
   - 创建容器实例的配置文件
   - 创建部署容器实例（Azure Container Instance，需要提供score.py，环境文件，配置文件等）
 
-Note： 容器实例生成后，会提供一个webservice url, 是一个RESF API，可以调用它来给需要设别的图片返回预测数字。
+**Note：** 容器实例生成后，会提供一个webservice url, 是一个RESF API，可以调用它来给需要设别的图片返回预测数字。
 
 4. 测试部署的服务
   - 加载测试数据图片，随机取30个数据调用容器中部署的服务, 显示预测结果
