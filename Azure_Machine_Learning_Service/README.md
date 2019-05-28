@@ -64,7 +64,7 @@ Azure Machine Learning Service支持用户使用云端的notebook server运行�
    ```
    完成后，结果如下：
 
-   <img width="500" height="200" src="./images/image01.jpg"/>
+   <img width="500" height="200" src="./images/image01.JPG"/>
 
 8. 运行下面命令在本地目录下生成aml_config/config.json文件，里面包括workspace的配置信息，后面实验需要使用。
      ```python
@@ -127,11 +127,11 @@ else:
     print(compute_target.get_status().serialize())
 ```
 运行结果如下：
-<img width="800" height="650" src="./images/image02.jpg"/>
+<img width="800" height="650" src="./images/image02.JPG"/>
 
 如果计算资源已经创建好了，可以保持原始脚本中的代码不变如下：
 
-<img width="700" height="150" src="./images/image03.jpg"/>
+<img width="700" height="150" src="./images/image03.JPG"/>
 
 2. 准备数据
   - 下载实验所需的MNIST数据集
@@ -144,7 +144,7 @@ else:
   - 提交Estimator Job到WS计算资源进行训练
 4. 监控训练状态
   - 使用jupyter widget可以监控训练状态（Queued， Preparing， Running， Completed等）
- <img width="400" height="200" src="./images/image04.jpg"/>
+ <img width="400" height="200" src="./images/image04.JPG"/>
   - 训练完成后，可以获取训练日志，显示训练结果
 5. 注册模型
   - 训练结束，将模型注册到workspace中， 为后续其他用户使用。
@@ -165,13 +165,13 @@ else:
 
 Note：混淆矩阵是对Scikit-Learning算法的评估方法， 横轴是预测值，纵轴是真实值， 每个交叉点就是有多少预测值的个数。 因此对角线的数值越大，非对角线数值越小，说明模型精度越高。
 
-<img width="400" height="180" src="./images/image05.jpg"/>
+<img width="400" height="180" src="./images/image05.JPG"/>
 
 图中可看出数值5的手写体预测出来的准确率不高。识别成3的概率比较高。
 
 另外实验还给出了混淆矩阵的可视化图，颜色越浅，错误率越高。
 
-<img width="400" height="300" src="./images/image06.jpg"/>
+<img width="400" height="300" src="./images/image06.JPG"/>
 
 3. 部署Web Service的docker image
   - 创建Scoring脚本（score.py)
@@ -184,7 +184,7 @@ Note： 容器实例生成后，会提供一个webservice url, 是一个RESF API
 4. 测试部署的服务
   - 加载测试数据图片，随机取30个数据调用容器中部署的服务, 显示预测结果
   
-    <img width="400" height="30" src="./images/image07.jpg"/>
+    <img width="400" height="30" src="./images/image07.JPG"/>
 
 ## 资源清理 ##
 
