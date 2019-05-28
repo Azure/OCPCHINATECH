@@ -22,6 +22,7 @@ OCP-Hack项目是为参加OCP HackFest的伙伴准备的动手实验指导，主
 ## 机器学习&深度学习动手实验
 - [基于Azure Machine Learning Studio的机器学习](./Azure_Machine_Learning_Studio/README.md)
 - [基于Azure的深度学习](./Azure_Deep_Learning/README.md)
+- [基于Azure Machine Learning Service实现图像分类服务](./Azure_Machine_Learning_Service/README.md)
   
 ## 大数据与数据可视化动手实验
 - [PowerBI入门到精通](./Power_BI/README.md)
