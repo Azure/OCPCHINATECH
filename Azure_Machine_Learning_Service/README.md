@@ -20,8 +20,8 @@ Azure Machine Learning Service是Azure上的一个基于云的环境, 可用于�
 Azure Machine Learning Service支持用户使用云端的notebook server运行脚本，也支持用户使用自己本地的notebook server运行脚本来训练模型。 本实验我们将介绍如果创建使用自己本地notebook server的环境。
 
 1. 下载安装[Anaconda](https://www.anaconda.com/download/ )， 选择你的系统平台安装包，下载安装。
-2. 安装完成后， 进入程序->Anaconda3->Anaconda Prompt，启动Anaconda Promopt。
-3. 为Azure Machine Learning Service Python SDK安装创建一个独立的部署环境， 在Anaconda Promopt命令窗口依次运行如下命令：
+2. 安装完成后， 进入程序->Anaconda3->Anaconda Prompt，启动Anaconda Prompt。
+3. 为Azure Machine Learning Service Python SDK安装创建一个独立的部署环境， 在Anaconda Prompt命令窗口依次运行如下命令：
     ```
     conda create -n myenv python=3.6.5
 

@@ -42,7 +42,7 @@ Azure认知服务的视觉服务分类中，提供自定义视觉服务， 主�
 
 
 ## 测试分类器 ##
-1 . 图片训练完成后，可以测试分类器的效果，点击Quick Test，在Image URL中输入要测试的图片路径或者选择本地图片。这里我们用这个[https://img1.21food.cn/img/product/2013/4/16/www109yes1512028.jpg](https://img1.21food.cn/img/product/2013/4/16/www109yes1512028.jpg)，建议大家自己选择图片测试。结果非常正确地显示是瓶装水的概率是99.%
+1 . 图片训练完成后，可以测试分类器的效果，点击Quick Test，在Image URL中输入要测试的图片路径或者选择本地图片。这里我们用这个[https://img1.21food.cn/img/product/2013/4/16/www109yes1512028.jpg](https://img1.21food.cn/img/product/2013/4/16/www109yes1512028.jpg)，建议大家自己选择图片测试。结果非常正确地显示是瓶装水的概率是99.9%
 
 <img width="300" height="200" src="./images/image07.JPG"/>
 
