@@ -6,6 +6,8 @@
 
 ## 动手实践
 1. 找到创建的Notebook VM，打开Jupyter，如下图所示:
-   <img width="500" height="300" src="./images/lab1-1.png"/>
+   
+   <img width="500" height="430" src="./images/lab1-1.png"/>
 2. 找到register-model-deploy-local，并执行：
-   <img width="500" height="300" src="./images/lab4-2.png"/>
+   
+   <img width="500" height="350" src="./images/lab4-2.png"/>
