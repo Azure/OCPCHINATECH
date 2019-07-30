@@ -1,4 +1,4 @@
-# 基于Azure IoT Central的远程监控
+# 利用Azure IoT Central快速搭建远程监控平台
 
 本教程介绍了如何利用模板在 Microsoft Azure IoT Central 应用程序中定义一个远程监控系统。设备模板定义设备类型的遥测、状态、属性和设置。
 

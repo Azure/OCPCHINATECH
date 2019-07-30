@@ -1,4 +1,4 @@
-# 基于Azure Machine Learning Service创建图片分类服务
+# 自建环境的图像识别项目
 
 Azure Machine Learning Service是Azure上的一个基于云的环境, 可用于准备数据、培训、测试、部署、管理和跟踪机器学习模型。开始在本地计算机上进行培训, 然后扩展到云。该服务完全支持开源技术, 如 PyTorch、TensorFlow, 可用于任何类型的机器学习, 从经典的机器学习到深度学习、监督和无监督的学习。
 
