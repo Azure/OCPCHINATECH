@@ -39,7 +39,7 @@ docker images --format "table {{.ID}}\t{{.Repository}}\t{{.Tag}}"
 3 . LUIS本地容器就绪后，使用流程大体如下：
 
 - 导出在LUIS.AI中创建的应用
-- 创建一个input目录，将到处的LUIS应用包复制到input目录下
+- 创建一个input目录，将导出的LUIS应用包复制到input目录下
 - 准备好在Azure Portal下面相关的LUIS的计费配置信息（endpoint和APIKey）
 - 运行Docker Run的命令（带input、output目录和计费配置信息）
 - 测试本地运行的LUIS应用
