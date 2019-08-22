@@ -11,6 +11,7 @@ OCP-Hack项目是为参加OCP HackFest的伙伴准备的动手实验指导，主
 
 ## 物联网动手实验
 - [基于Azure IoT Hub的远程监控](./Azure_IoT_Hub/README.md)
+- [利用Azure IoT Central快速搭建远程监控平台](./Azure_IoT_Central/README.md)
 
 ## 认知服务动手实验
 - [基于LUIS的Voice Command创建](./Azure_LUIS/README.md)
