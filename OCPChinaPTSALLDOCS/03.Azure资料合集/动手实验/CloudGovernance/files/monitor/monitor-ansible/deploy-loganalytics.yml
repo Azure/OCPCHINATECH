@@ -1,0 +1,20 @@
+---
+- name: Deploy required Azure Log Analytics workspaces
+  hosts: localhost
+  vars_files:
+    - ./vars/loganalytics.yml
+
+  tasks:
+  - name: Deploy required Log Analytics workspace for Monitor Solution
+    azure_rm_deployment:
+      name: "{{ item.name }}"
+      state: present
+      resource_group: "{{ item.resource_group }}"
+      location: "{{ item.rg_location }}"
+      parameters:
+        workspaceName:
+          value: "{{ item.name }}"
+        location:
+          value: "{{ item.location }}"
+      template_link: "https://raw.githubusercontent.com/ericzhao0821/azure-ansible/master/roles/azure_loganalytics/demo.json"
+    with_items: "{{ logAnalyticsWS }}"

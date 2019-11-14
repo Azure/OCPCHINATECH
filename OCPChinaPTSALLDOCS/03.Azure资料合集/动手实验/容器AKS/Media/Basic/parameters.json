@@ -1,0 +1,63 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "resourceName": {
+            "value": "azcnaks01" 	
+        },
+        "location": {
+            "value": "chinanorth2" 	
+        },
+        "dnsPrefix": {
+            "value": "azcnaks01"
+        },
+        "osDiskSizeGB": {
+            "value": 0
+        },
+        "agentCount": {
+            "value": 3	
+        },
+        "agentVMSize": {
+            "value": "Standard_DS2_v2"
+        },
+        "servicePrincipalClientId": {
+            "value": "1f045ca3-e822-4010-9a95-5a59be646a1a"
+        },
+        "servicePrincipalClientSecret": {
+            "value": "MicroSoft1234!"		
+        },
+        "osType": {
+            "value": "Linux"	
+        },
+        "kubernetesVersion": {
+            "value": "1.12.6"	
+        },
+        "networkPlugin": {
+            "value": "azure"
+        },
+        "maxPods": {
+            "value": 30		
+        },
+        "enableRBAC": {
+            "value": false
+        },
+        "enableHttpApplicationRouting": {
+            "value": false
+        },
+        "vnetSubnetID": {
+            "value": "/subscriptions/0f53c77e-a06b-4d80-8974-9d5fe127c280/resourceGroups/xinsheng/providers/Microsoft.Network/virtualNetworks/VPC0001/subnets/K8s"
+        },
+        "serviceCidr": {
+            "value": "172.20.0.0/16"
+        },
+        "dnsServiceIP": {
+            "value": "172.20.0.10"
+        },
+        "dockerBridgeCidr": {
+            "value": "172.17.0.1/16"
+        },
+        "principalId": {
+            "value": "ef29fe9d-f85c-41f2-91bf-b8ef2932747a"   
+        }
+    }
+}

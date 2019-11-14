@@ -1,0 +1,15 @@
+---
+# Create required Log Analytics Workspace
+logAnalyticsWS:
+- name: "activityLogWS"
+  location: "westus2"
+  resource_group: "zjmon01"
+  rg_location: "westus2" 
+- name: "projectOne"
+  location: "westus2"
+  resource_group: "Project01"
+  rg_location: "westus2"
+- name: "projectTwo"
+  location: "eastus"
+  resource_group: "Project02"
+  rg_location: "east"
