@@ -1,0 +1,81 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "activityLogAlertName": {
+            "type": "string",
+            "metadata": {
+                "description": "Unique name (within the Resource Group) for the Activity log alert."
+            }
+        },
+        "actionGroupResourceId": {
+            "type": "string",
+            "metadata": {
+                "description": "Resource Id for the Action group."
+            }
+        },
+        "scopes":{
+            "type": "array",
+            "minLength": 1,
+            "metadata": {
+                "description": "Resource Health Monitor is for subscription or resource group or specific resource."
+            }
+        }
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Insights/activityLogAlerts",
+            "apiVersion": "2017-04-01",
+            "name": "[parameters('activityLogAlertName')]",
+            "location": "Global",
+            "properties": {
+                "enabled": true,
+                "scopes": "[parameters('scopes')]",
+                "condition": {
+                    "allOf": [
+                        {
+                            "field": "category",
+                            "equals": "ResourceHealth",
+                            "containsAny": null
+                        },
+                        {
+                            "anyOf": [
+                                {
+                                    "field": "properties.currentHealthStatus",
+                                    "equals": "Unavailable",
+                                    "containsAny": null
+                                },
+                                {
+                                    "field": "properties.currentHealthStatus",
+                                    "equals": "Degraded",
+                                    "containsAny": null
+                                },
+                                {
+                                    "field": "properties.currentHealthStatus",
+                                    "equals": "Unknown",
+                                    "containsAny": null
+                                }
+                            ]
+                        },
+                        {
+                            "anyOf": [
+                                {
+                                    "field": "properties.previousHealthStatus",
+                                    "equals": "Available",
+                                    "containsAny": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "actions": {
+                    "actionGroups": [
+                        {
+                            "actionGroupId": "[parameters('actionGroupResourceId')]"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

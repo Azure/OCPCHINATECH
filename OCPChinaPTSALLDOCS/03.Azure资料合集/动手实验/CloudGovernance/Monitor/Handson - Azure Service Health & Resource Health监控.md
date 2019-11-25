@@ -15,14 +15,64 @@
 
 ### 针对 Service Health Service Issue & Planned Maintenance 设置告警
 
+Azure中的Alerts设置分为两个部分：
+
+- Action Group : 设置警报需要采取的措施, 如发邮件/发短信等
+
+- Alert Rule : 警报触发的条件
+
 #### 设置 Action Group
 
+设置一个名为 `serviceHealthAction` 的 Action Group, 当出现问题时, 立刻发送信息到指定邮箱
 
+![image](./images/service_resource_health_images/x01.png)
 
+![image](./images/service_resource_health_images/x02.png)
 
+#### 创建 Service Health Alert
 
+创建一个名为 `serviceHealthAlert` 的报警规则, 当平台出现 `Service Issue` 或 `Planned Maintenance`, 会立刻发邮件到指定的Action Group; 报警规则可以针对于`特定服务/特性区域`进行针对性设置.
 
+![image](./images/service_resource_health_images/x03.png)
 
+![image](./images/service_resource_health_images/x04.png)
+
+这样当下一次平台中选中的服务出现问题或出现维护公告时，你会第一时间收到消息，确保可以及早处理突发事件.
+
+### 针对 Resource Health 设置告警
+
+同 Service Health 类似, 当我们正在使用的平台资源, 出现不可用或服务降级的情况, 例如 VM 突然停机, 状态会从 `Available` 转换到 `Unavailable` 状态, 我们希望第一时间收到消息, 及时处理.
+
+创建 `Resource Health` 的警报涉及到 ARM 部署操作, 涉及的ARM文件请参照 [arm-templates](./files/service_resource_health_files/arm-templates/) 下的相应文件. 另外, 请事先准备好一台虚机, 且状态显示 Running.
+
+![image](./images/service_resource_health_images/x06.png)
+
+#### 设置 Action Group
+
+设置一个名为 `resourceHealthAction` 的 Action Group, 当出现问题时, 立刻发送信息到指定手机
+
+![image](./images/service_resource_health_images/x05.png)
+
+#### 设置 Resource Health 告警
+
+```
+# 本次实验将使用 Azure CLI 结合 ARM 模板完成
+# 针对 Resource Health 进行告警设置，当资源组下的某一资源状态从Available改变成Unavailable,Unknown,Degraded时，发送警报通知运维人员
+# 获取ResourceID
+az group show -n $your_rg_name --query id -o tsv
+
+# 获取 Action Group ResourceID
+az monitor action-group show -n resourceHealthAction -g $your_rg_name --query 'id' -o tsv
+
+# 设置Resource Health的警报
+az group deployment create --name ResourceHealth01 -g $your_rg_name --template-file './files/service_resource_health_files/arm-templates/monitor-resources-health.json' --parameters activityLogAlertName="ResourceHealthAlert01" --parameters '{ "scopes": {"value": ["$rgID"]}}' --parameters actionGroupResourceId='$actionGroupID'
+```
+
+设置完成后，当出现平台性问题导致资源状态变化，或如实验中，手动触发停止VM，就会发送告警信息.
+
+![image](./images/service_resource_health_images/x08.png)
+
+![image](./images/service_resource_health_images/x09.png)
 
 ### 参考资料
 
@@ -33,59 +83,3 @@
 - [Azure 资源运行状况中的资源类型和运行状况检查](https://docs.microsoft.com/zh-cn/azure/service-health/resource-health-checks-resource-types)
 
 - [使用资源管理器模板创建资源运行状况警报](https://docs.microsoft.com/zh-cn/azure/service-health/resource-health-alert-arm-template-guide)
-
-
-
-
-### 结合 Service Health & Resource Health，及时了解环境动态并设置告警
-
-本次实验，将结合两个服务`Service Health` & `Resource Health`，设置相应的警报，确保当云平台或资源出现问题时，第一时间知晓。
-
-
-
-
-
-
-
-本次实验将针对`Service issue`进行设置，另外两个的设置请自行练习。
-
-![image](./images/monitor/mon48.png)
-
-Step 1 选择需要涉及的订阅，区域，服务以及事件类别
-
-![image](./images/monitor/mon49.png)
-
-Step 2 选择Alert关联的`Action Group` 并进行创建
-
-![image](./images/monitor/mon50.png)
-
-这样当下一次平台中选中的服务出现问题或出现维护公告时，你会第一时间收到消息，确保可以及早处理突发事件。
-
-
-
-
-
-本次实验将针对资源组下的所有资源类型`Resource Health`设置警报，有关涉及到的 ARM Template 请参阅 [arm-templates](./files/monitor/arm-templates/) 下的相应文件。
-
-```
-# 本次实验将使用 Azure CLI 结合 ARM 模板完成
-# 针对 Resource Health 进行告警设置，当资源组下的某一资源状态从Available改变成Unavailable,Unknown,Degraded时，发送警报通知运维人员
-# 获取ResourceID
-az group show -n Prj01 --query id -o tsv
-
-# 获取 Action Group ResourceID
-az monitor action-group show -n Prj01 -g Prj01 --query 'id' -o tsv
-
-# 设置Resource Health的警报
-az group deployment create --name ResourceHealth01 -g Prj01 --template-file monitor-resources-health.json --parameters activityLogAlertName="ResourceHealthAlert_Prj01" --parameters '{ "scopes": {"value": ["$rgID"]}}' --parameters actionGroupResourceId='$actionGroupID'
-```
-
-设置完成后，当出现平台性问题导致资源状态变化，或如实验中，手动触发停止VM，就会发送告警信息。
-
-![image](./images/monitor/mon52.png)
-
-![image](./images/monitor/mon53.png)
-
-
-
----
