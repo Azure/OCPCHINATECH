@@ -78,7 +78,7 @@ https://github.com/rkuehfus/AzureMonitoringHackathon
 
 3.	在Visual Studio里打开相对应的project
 
-    首先下载project [eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb)，解压。
+    
 
     点击 `eShopOnWeb`, 用Visual Studio打开，
 
@@ -93,7 +93,7 @@ https://github.com/rkuehfus/AzureMonitoringHackathon
 
     接下来就能看到打开的eshop网站了。
     
-    ![image](./images/app_insight_sdk_images/wms01.png)
+    ![image](./images/app_insight_sdk_images/AppInsightsSDK14.png)
 
 
 4.	接下来让我们来安装一下application insights的SDK。在右侧“Web”那里点击右键 -> `add` -> `Application Insights Telemetry`, 然后点击安装sdk。

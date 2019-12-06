@@ -54,6 +54,20 @@
 
 需要注意的是AWS Cloudtrail的log只能audit enable之后的log。
 
+12. 查看下AWS的事件：
+
+```shell
+let Now = now();
+(range TimeGenerated from ago(30d) to Now-1d step 1d
+| extend Count = 0
+| union isfuzzy=true (AWSCloudTrail
+| summarize Count = count() by bin_at(TimeGenerated, 1d, Now))
+| summarize Count=max(Count) by bin_at(TimeGenerated, 1d, Now)
+| sort by TimeGenerated
+| project Value = iff(isnull(Count), 0, Count), Time = TimeGenerated, Legend = "awsCloudTrail")
+| render timechart
+```
+![image](./images/AWSCloudtrail/12.png)
 
 
 
