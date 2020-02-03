@@ -1,11 +1,11 @@
 # Partner Readiness
 
-## Azure Fundamental PART Ⅰ - Virtual Machine
+## Azure Fundamental PART Ⅰ - 虚拟机、存储、备份
 
 以Azure level100-200为主要内容，涵盖了目前最常见的云概念、虚拟机、存储、备份等相关知识点。旨在帮助Partner做Azure基础培训。
 
 
-## Azure Fundamental PART Ⅱ - Network
+## Azure Fundamental PART Ⅱ - 网络
 
 以Azure level100-200为主要内容，涵盖了Network相关知识点，包括VNet, VPN, ER, LB, APPGW等。旨在帮助Partner做Azure基础培训。
 
