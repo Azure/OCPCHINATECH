@@ -116,7 +116,24 @@
 | 111 | [新一代大数据计算框架 Flink 与 Microsoft Azure Kubernetes 集成来做流批计算](https://theodorew.github.io/wxsblog.github.io/2019/11/17/2019-11-18-FlinkonAKS/) | Xinsheng Wang | 2019年11月份 | 2019/12/18  00:00:00 | 项 |  |
 | 112 | [学习笔记-Azure机器学习服务](https://www.cnblogs.com/royang/articles/11832847.html) | Robert Yang | 2019年11月份 | 2019/12/18  00:00:00 | 项 |  |
 | 113 | [Azure + MongoDB - NoSQL数据库集群初探(实践篇)](http://mp.weixin.qq.com/s?__biz=MzI1ODI0Nzk0MQ==&mid=2247483711&idx=1&sn=13a22f7caa50d5fc2c9cbdc238cc7e46&chksm=ea0a5d55dd7dd4438d406a7a3b432feae71f51c05f21222d5866932fefb9745e44325fc4de05&token=843883345&lang=zh_CN#rd) | Minsheng Wang | 2019年11月份 | 2020/01/06  00:00:00 | 项 |  |
+| 114 | [你有张良计，我有过墙梯——小测Azure堡垒机](http://aubreyhan.net/undefined/3091/) | Yuan Han | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 115 | [运筹帷幄间，决胜千里外——VS Code远程开发环境搭建](http://aubreyhan.net/undefined/16642/) | Yuan Han | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 116 | [Azure、AWS、Google，三大云厂商k8s服务大PK](https://mp.weixin.qq.com/s/9LM50KwsczMYtGWnzgeC5w) | Minsheng Wang | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 117 | [Azure上实现Redis高可用集群部署方案](https://mp.weixin.qq.com/s/L4iPHasEg6zlwFHIPglLWg) | Yi Liang | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 118 | [浅析在线英语教育网络优化](https://www.cnblogs.com/royang/p/12038845.html) | Robert Yang | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 119 | [基于AKS部署Redis集群](https://www.cnblogs.com/royang/p/11999821.html) | Robert Yang | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 120 | [使用Azure Blob优化Hadoop集群存储成本](https://www.cnblogs.com/royang/p/11978733.html) | Robert Yang | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 121 | [Azure Expert MSP New Onboard White Paper Reference](https://microsoftapc.sharepoint.com/:w:/t/OCPPRCPTSTeam/EX00AgEUg7RAh-B9V-9ACE4BuRKQrCfGWuPP1K891EgFVA?e=dWussA) | Song Wang | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 122 | [Azure Expert MSP Renew White Paper Reference](https://microsoftapc.sharepoint.com/:w:/t/OCPPRCPTSTeam/EU1-_0wNoqFJuOuXvtgitpMBN94eswZw8WCay_IWn1bIjA?e=rF0HOu) | Song Wang | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 123 | [Azure Database Migration Service — 数据库迁移到 Microsoft Azure 平台的好帮手](https://theodorew.github.io/wxsblog.github.io/2019/12/09/2019-12-09-AzureDMS/) | Xinsheng Wang | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 124 | [借助 Private Link 实现 AKS 集群的私有化访问](https://mp.weixin.qq.com/s?__biz=MzU0OTY0NDE1NA==&mid=2247484298&idx=1&sn=834c0d5749c45556011a5af0e2b2cbff&chksm=fbadf19fccda788943363610747f8267eeb480837a51444d4fa94c56cb1da9c8a08f178d6a05&token=72640782&lang=en_US#rd) | Jian Zhao | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 125 | [KEDA - 基于 Event 完成 AKS 中服务能力从0到N的自动伸缩](https://mp.weixin.qq.com/s?__biz=MzU0OTY0NDE1NA==&mid=2247484281&idx=1&sn=a6d7206e9120a686cc872010251ba030&chksm=fbadf16cccda787a97c5a74fe0ebcc2bcab3ecde6263cb559d9c017eb9742554adb83e5c953f&token=72640782&lang=en_US#rd) | Jian Zhao | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 126 | [将 Prometheus 监控指标整合到 Azure Monitor, 丰富AKS监控](https://mp.weixin.qq.com/s?__biz=MzU0OTY0NDE1NA==&mid=2247484259&idx=1&sn=180005b59eecb7bd10e1e575920f82cf&chksm=fbadf176ccda786087763bfb9a8d5c3a903dccaa51ec5b48b4a3d3d0ebb8fe77d1ae992191d2&token=72640782&lang=en_US#rd) | Jian Zhao | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 127 | [EMS 动手实验1:将Azure AD 登陆和审核日志发送到Azure Monitor](https://www.cnblogs.com/changruijun/p/12122032.html) | Ruijun Chang | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 128 | [EMS 动手实验2:用户自助密码重设&条件访问策略强制用户使用MFA二次验证&启用标识保护配置风险检测](https://www.cnblogs.com/changruijun/p/12122162.html) | Ruijun Chang | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 129 | [EMS 动手实验3:使用 Privileged Identity Management建立管理角色的审批和授权](https://www.cnblogs.com/changruijun/p/12122262.html) | Ruijun Chang | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 130 | [EMS 动手实验4:使用Intune 管理设备和移动设备](https://www.cnblogs.com/changruijun/p/12123770.html) | Ruijun Chang | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
 
-Mason Wang
+Jalen Hu
 
-2020-01-06
+2020-01-17
