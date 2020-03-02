@@ -127,13 +127,27 @@
 | 122 | [Azure Expert MSP Renew White Paper Reference](https://microsoftapc.sharepoint.com/:w:/t/OCPPRCPTSTeam/EU1-_0wNoqFJuOuXvtgitpMBN94eswZw8WCay_IWn1bIjA?e=rF0HOu) | Song Wang | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
 | 123 | [Azure Database Migration Service — 数据库迁移到 Microsoft Azure 平台的好帮手](https://theodorew.github.io/wxsblog.github.io/2019/12/09/2019-12-09-AzureDMS/) | Xinsheng Wang | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
 | 124 | [借助 Private Link 实现 AKS 集群的私有化访问](https://mp.weixin.qq.com/s?__biz=MzU0OTY0NDE1NA==&mid=2247484298&idx=1&sn=834c0d5749c45556011a5af0e2b2cbff&chksm=fbadf19fccda788943363610747f8267eeb480837a51444d4fa94c56cb1da9c8a08f178d6a05&token=72640782&lang=en_US#rd) | Jian Zhao | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
-| 125 | [KEDA - 基于 Event 完成 AKS 中服务能力从0到N的自动伸缩](https://mp.weixin.qq.com/s?__biz=MzU0OTY0NDE1NA==&mid=2247484281&idx=1&sn=a6d7206e9120a686cc872010251ba030&chksm=fbadf16cccda787a97c5a74fe0ebcc2bcab3ecde6263cb559d9c017eb9742554adb83e5c953f&token=72640782&lang=en_US#rd) | Jian Zhao | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
-| 126 | [将 Prometheus 监控指标整合到 Azure Monitor, 丰富AKS监控](https://mp.weixin.qq.com/s?__biz=MzU0OTY0NDE1NA==&mid=2247484259&idx=1&sn=180005b59eecb7bd10e1e575920f82cf&chksm=fbadf176ccda786087763bfb9a8d5c3a903dccaa51ec5b48b4a3d3d0ebb8fe77d1ae992191d2&token=72640782&lang=en_US#rd) | Jian Zhao | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
-| 127 | [EMS 动手实验1:将Azure AD 登陆和审核日志发送到Azure Monitor](https://www.cnblogs.com/changruijun/p/12122032.html) | Ruijun Chang | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
-| 128 | [EMS 动手实验2:用户自助密码重设&条件访问策略强制用户使用MFA二次验证&启用标识保护配置风险检测](https://www.cnblogs.com/changruijun/p/12122162.html) | Ruijun Chang | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
-| 129 | [EMS 动手实验3:使用 Privileged Identity Management建立管理角色的审批和授权](https://www.cnblogs.com/changruijun/p/12122262.html) | Ruijun Chang | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
-| 130 | [EMS 动手实验4:使用Intune 管理设备和移动设备](https://www.cnblogs.com/changruijun/p/12123770.html) | Ruijun Chang | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 125 | [PCSM Newsletter-201911](https://microsoftapc.sharepoint.com/:b:/t/P-CSMTeams/ERbl1mDR-rhBsHLUjsXNvZ0BqgZrtwaqdKRjr_F6FFRKsw?e=jKoOLz) | Xinsheng Wang | 2019年12月份 | 2020/03/02  00:00:00 | 项 |  |
+| 126 | [KEDA - 基于 Event 完成 AKS 中服务能力从0到N的自动伸缩](https://mp.weixin.qq.com/s?__biz=MzU0OTY0NDE1NA==&mid=2247484281&idx=1&sn=a6d7206e9120a686cc872010251ba030&chksm=fbadf16cccda787a97c5a74fe0ebcc2bcab3ecde6263cb559d9c017eb9742554adb83e5c953f&token=72640782&lang=en_US#rd) | Jian Zhao | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 127 | [将 Prometheus 监控指标整合到 Azure Monitor, 丰富AKS监控](https://mp.weixin.qq.com/s?__biz=MzU0OTY0NDE1NA==&mid=2247484259&idx=1&sn=180005b59eecb7bd10e1e575920f82cf&chksm=fbadf176ccda786087763bfb9a8d5c3a903dccaa51ec5b48b4a3d3d0ebb8fe77d1ae992191d2&token=72640782&lang=en_US#rd) | Jian Zhao | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 128 | [EMS 动手实验1:将Azure AD 登陆和审核日志发送到Azure Monitor](https://www.cnblogs.com/changruijun/p/12122032.html) | Ruijun Chang | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 129 | [EMS 动手实验2:用户自助密码重设&条件访问策略强制用户使用MFA二次验证&启用标识保护配置风险检测](https://www.cnblogs.com/changruijun/p/12122162.html) | Ruijun Chang | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 130 | [EMS 动手实验3:使用 Privileged Identity Management建立管理角色的审批和授权](https://www.cnblogs.com/changruijun/p/12122262.html) | Ruijun Chang | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 131 | [EMS 动手实验4:使用Intune 管理设备和移动设备](https://www.cnblogs.com/changruijun/p/12123770.html) | Ruijun Chang | 2019年12月份 | 2020/01/17  00:00:00 | 项 |  |
+| 132 | [如何从AWS Redshift迁移到Azure Synapse Analytics](https://www.cnblogs.com/royang/p/12331866.html) | Robert Yang | 2020年1&2月份 | 2020/03/02  00:00:00 | 项 |  |
+| 133 | [Power BI快速上手干货指南](https://mp.weixin.qq.com/s/HfpR7fZoQy39ST2JM0O7sg) | Yi Liang | 2020年1&2月份 | 2020/03/02  00:00:00 | 项 |  |
+| 134 | [Azure MySQL自主医疗保健手册之连接池](https://mp.weixin.qq.com/s/l6zRU-I_n6lZcj_RKd0hJw) | Renjie Zhu | 2020年1&2月份 | 2020/03/02  00:00:00 | 项 |  |
+| 135 | [在AKS上部署 Istio 1.4.3](https://github.com/radezheng/blog/blob/master/Istio/%E5%9C%A8AKS%E4%B8%8A%E9%83%A8%E7%BD%B2%20Istio%201.4.3.md#%E5%9C%A8aks%E4%B8%8A%E9%83%A8%E7%BD%B2-istio-143) | Rade Zheng | 2020年1&2月份 | 2020/03/02  00:00:00 | 项 |  |
+| 136 | [Speech SDK for Java 中使用 Push Stream](https://github.com/radezheng/blog/blob/master/Speech/Speech%20SDK%20for%20Java%20%E4%B8%AD%E4%BD%BF%E7%94%A8Push%20Stream.md#speech-sdk-for-java-%E4%B8%AD%E4%BD%BF%E7%94%A8-push-stream) | Rade Zheng | 2020年1&2月份 | 2020/03/02  00:00:00 | 项 |  |
+| 137 | [利用Microsoft Forms轻松创建员工返工情况调查表](https://mp.weixin.qq.com/s/x_awPeKLkSud6Pbv_zgVww) | Minsheng Wang | 2020年1&2月份 | 2020/03/02  00:00:00 | 项 |  |
+| 138 | [Azure 运维篇 - 通过 Ansible 批量更改 Azure 资源](https://mp.weixin.qq.com/s?__biz=MzU0OTY0NDE1NA==&mid=2247484310&idx=1&sn=e8f23712562680647f2f566d28ff20ff&chksm=fbadf183ccda78954edea01fb3c510d275c1e090463f27dc53fb18949f3cf21b423612dffb05&token=1138576309&lang=en_US#rd) |Jian Zhao| 2020年1&2月份 | 2020/03/02  00:00:00 | 项 |  |
+| 139 | [如何推送Azure Monitor报警到Teams](https://www.jianshu.com/p/1742452540ef) |Kele Wang| 2020年1&2月份 | 2020/03/02  00:00:00 | 项 |  |
 
-Jalen Hu
 
-2020-01-17
+
+
+
+Mason Wang
+
+
+2020-03-02
