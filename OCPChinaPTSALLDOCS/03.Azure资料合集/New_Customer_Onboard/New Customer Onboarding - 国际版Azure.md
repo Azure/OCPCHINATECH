@@ -1,121 +1,33 @@
 ## 新客户 Onboard 需要了解的 Azure 基础概念及最佳实践
 
 ---
-本白皮书面向的群体，是刚刚接触云服务知识或者刚刚购买Azure准备使用的客户。第一章主要介绍Azure的各种体系，各种门户使用方法，以及资源确认和支持情况。第二章包含各种动手实践，旨在熟悉Portal和资源的情况。第三章是各种常用链接。请各位按需读取。
+本文内容, 针对即将采用 `Azure Cloud` 的用户, 为用户带来直观的云上体验. 第一章主要介绍 `Azure` 相关的资源购买, 组织, 管理以及问题支持等方面；第二章包含各种动手实践，旨在熟悉Portal和资源的情况；第三章是各种常用链接。请各位按需读取。
 
 ## 1. Azure资源管理
 
-### 1.1. 购买的账号对应的账号体系
+### 1.1 Azure 云端的资源管理
 
-#### 1.1.1. Azure Mooncake(Azure中国区)购买账号及对应的账号体系
+当账号拿到之后, 以下两个链接将会经常被用到
 
-在中国，可通过两种方式采购由世纪互联运营的 Microsoft Azure 服务：在线服务标准协议（Online Service Standard Agreement，OSSA），以及在线服务高级协议（Online Service Premium Agreement，OSPA）。
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/01.png)
 
-- OSSA 是一种可供客户直接在线购买的在线签约过程。
-- OSPA 主要适用于可做出最低货币承诺的大型企业客户。OSPA主要适用于企业型客户通过线下合同方式完成。
+#### EA Portal : https://ea.azure.com
 
-**在线服务标准协议（OSSA）**
+EA Portal 主要包括 合约信息的查询, 组织结构的分配, 订阅的创建管理, 账户余额查询, 资源花费查询, 详细花费下载, 查看价目表等内容, 更多内容请参见 [EA门户入门](https://docs.microsoft.com/zh-cn/azure/cost-management-billing/manage/ea-portal-get-started) 及 [EA 操作指南](./files/EA 入门指南.pdf)
 
-任何希望通过 Azure.cn 在线购买 Azure 的客户均可选择 OSSA 方式。这是一种预付费模式，对购买金额有最低要求。目前 OSSA 提供两种类型的服务：
-
-- 1 元人民币试用：新用户可支付 1 元人民币，获得有效期 1 个月，价值人民币 1,500 元的 Azure 额度。在到期删除前，这种订阅可随时升级为预付费（PIA）订阅。
-- 预付费：用户也可直接购买预付费订阅。所购买 Azure 额度等同于预先支付的金额，每次购买所获得额度有效期 12 个月。
-
-按照法律规定，OSSA 客户需通过实名身份认证。因此用户必须预先准备好自己的身份证号码和复印件，企业客户需提供注册营业执照编号和营业执照复印件。在注册 Azure 帐户过程中还需具备中国的移动电话号码。
-
-OSSA实际对应于Web Direct。
-
-**在线服务高级协议（OSPA）**
-
-OSPA 适用于需要签署三年期合约，具备最低年度额度承诺，通过合约流程购买 Azure 的企业客户。OSPA 协议需要由世纪互联和企业客户共同签署。OSPA 支持两种业务模式：Direct OSPA（直接 OSPA）和 Indirect OSPA（间接 OSPA）。
-
-- Direct OSPA 由世纪互联与客户直接签约，客户直接向世纪互联付款。
-
-- Indirect OSPA 是指企业通过能满足自己需求的合作伙伴购买 Azure 在线服务高级协议这种协议需要由世纪互联、微软 Indirect 合作伙伴，以及中国的企业客户三方共同签署。Indirect OSPA 的条款与 OSPA 一致，通常是一种三年期承诺，费用按年支付。Indirect OSPA 合作伙伴可为客户的购买提供多种帮助，如售前咨询、根据采购方案提供报价，并可能将合作伙伴的解决方案与 Microsoft Azure 集成，计费和发票等支持。
-
-OSPA则对应于Azure EA账号。
-
-#### 1.1.2. Azure Global购买账号及对应的账号体系
-
-目前 Azure 全球服务的购买渠道有以下三种（本指南将详细介绍线上购买和企业合同两种购买渠道）：
-
-- 线上购买：通过 Azure 官网在线购买 Azure 服务
-- 企业合同：与微软代表签订企业合同购买 Azure 服务
-- 通过合作伙伴购买：通过微软云解决方案合作伙伴购买 Azure 服务与购买渠道相对应的 Azure 
-
-全球服务付费方式目前有以下三种：
-1. 即用即付（Pay-As-You-Go, PAYG）:客户按照实际使用量付款。没有最低使用数量限制或预付款。特点是客户在 Azure 网站上可以灵活地开始或终止服务。
-  - 此付费方式适用于线上购买 Azure 服务和 Azure 市场中的服务的客户
-  - 此付费方式适用于签订企业合同客户的超额使用部分
-2.	金额承诺（Monetary Commitment, MC）: 客户在签署企业协议后, 需要提前预付他们承诺的 Azure 服务购买金额，然后自行分配资金使用。此付费方式仅适用于签订企业合同和通过合作伙伴购买 Azure 服务的客户。
-
-3.	Azure 计划（Azure Plans: prepay for committed services）：在成为 Azure 服务的付费用户后，客户可以额外购买特定的服务或者服务组，称为 Azure 计划。 Azure 计划包括一些非消费性产品，比如 Azure 客户支持服务，以及一些提前预配置好的服务，比如 Azure Active Directory 服务。 此外还有 OMS，EMS，IoT 套件等服务都属于 Azure 计划之列。
-  - 线上购买 Azure 服务的用户可以额外购买 Azure 计划中的 Azure 客户支持服务
-  - 签订企业合同和通过合作伙伴购买 Azure 服务的客户可购买任意 Azure 计划
-
-#### 1.1.3. 平滑迁移资源
-如果已经测试或者部分使用了Azure资源后，需要进行资源迁移，那么怎么样进行平滑的迁移也是一个很重要的问题。通过使用 Azure 门户、Azure PowerShell、Azure CLI 或 REST API可以将 Azure 资源移动到另一 Azure 订阅，或移动到同一订阅下的另一资源组。
-
-在移动操作过程中，源组和目标组都会锁定。 在完成移动之前，将阻止对资源组执行写入和删除操作。此锁意味着无法添加、更新或删除资源组中的资源。 这并不意味着资源已冻结。例如，如果将 SQL Server 及其数据库移动到新的资源组中，则使用该数据库的应用程序将不会遇到停机的情况。 它仍可读取和写入到数据库。锁定时间最长可达四小时，但大多数移动完成的时间将少得多。移动资源仅能够将其移动到新的资源组或订阅中。但不会更改该资源的位置。
-
-对于跨订阅移动，资源及其从属资源必须位于同一资源组中，并且必须一起移动。 例如，具有托管磁盘的 VM 需要将 VM 和托管磁盘与其他依赖资源一起移动。
-
-将资源从一个订阅移到另一个订阅的过程分为下图三个步骤，出于说明目的，图中只有一个从属资源。
-
- - 步骤1：如果从属资源分布在不同的资源组中，请先将它们移到一个资源组中。
- - 步骤2：将资源和相关资源与源订阅一起移动到目标订阅。
- - 步骤3：（可选）将从属资源重新分发给目标订阅中的不同资源组。
- ![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/onboarding1.png?raw=true)
- 
-
-如果要将资源移到新订阅，请检查该资源是否有任何依赖资源，以及这些资源是否位于同一资源组中。 如果资源不在同一资源组中，请检查资源是否可以合并到同一个资源组中。如果是这样，请使用跨资源组的移动操作将所有这些资源置于同一资源组中。
-
-有关详细信息，请参阅[跨订阅移动方案](https://docs.microsoft.com/zh-cn/azure/azure-resource-manager/management/move-resource-group-and-subscription#scenario-for-move-across-subscriptions)。
-
-对于资源是否支持迁移，请参阅[支持移动的资源](https://docs.microsoft.com/zh-cn/azure/azure-resource-manager/management/move-support-resources)，里面列出了 Azure 资源类型是否支持移动操作。 它还提供有关移动资源时要考虑的特殊情况的信息。
-
-当订阅迁移发生问题时，请参阅[常见问题](https://docs.microsoft.com/zh-cn/azure/azure-resource-manager/management/move-resource-group-and-subscription)，对于资源迁移时间长、在资源移动过程中，源和目标资源组的锁定有哪些、错误代码 "MissingMoveDependentResources" 的含义是什么等，都进行了解答。
-
----
-
-### 1.2. 管理及使用Azure资源过程中涉及到的两个重要的访问地址
-#### 1.2.1. EA Portal 及其作用 
-- Azure Mooncake : https://ea.azure.cn
-- Global Azure : https://ea.azure.com
-
-Azure EA （Azure Enterprise Agreement）门户是一个在线管理门户，可帮助客户管理其 Azure EA 服务的结构和成本。 使用该门户可以创建 Azure EA 层次结构，包括部门、帐户和订阅。 使用它还可以核对所用服务的成本、下载使用情况报告，以及查看价目表。
-
-#### 1.2.2.	Azure Portal 及其作用
-- Azure Mooncake : https://portal.azure.cn
-- Global Azure : https://portal.azure.com
-
-Azure门户是基于Web的统一控制台，它提供了命令行工具的替代方法。借助Azure门户，用户可以使用图形用户界面管理Azure订阅。用户可以构建，管理和监视简单的从Web应用程序到复杂的云部署的所有内容。创建自定义仪表板，以获得组织化的资源视图。配置可访问性选项以获得最佳体验。
-
-Azure门户旨在实现弹性和持续可用性。它存在于每个Azure数据中心中。此配置使Azure门户能够抵御单个数据中心的故障，并通过靠近用户来避免网络运行缓慢。Azure门户不断更新，无需停机即可进行维护活动。
-
----
-
-### 1.3. Azure EA 管理 
-Azure EA 门户是一个在线管理门户，可帮助你管理 Azure EA 服务的成本。 使用该门户可以创建 Azure EA 层次结构，包括部门、帐户和订阅。
-
-使用它还可以核对所用服务的成本、下载使用情况报告，以及查看价目表。
-
-#### 1.3.1.	EA 层次结构及角色
-Azure EA 门户的层次结构包括：
-
-**部门** - 创建部门有助于将成本细分为逻辑分组，然后在部门级别设置预算或配额。
-
-**帐户** – 帐户是 Azure EA 门户中用于管理订阅的一个组织单位。 帐户也用于报告。
-
-**订阅** – 订阅是 Azure EA 门户中的最小单位。 它们是服务管理员管理的 Azure 服务的容器。
-
-下图演示了简单的 Azure EA 层次结构。
+EA 中涉及到的主要资源包括 Enrollment, Department, Account, Subscription, 具体结构如下：
 
 ![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/onboarding2.png?raw=true)
 
 由图片可以看到，根据职能、商业角度和地理位置等，可以针对一个企业结构进行不同的部门划分，不同的部门由不同的负责人进行管理，而针对更细化的项目或者应用需求，还可以划分出不同的订阅，进行更细化的管控。
 
-若要在注册中管理 Azure服务，EA账户体系提供五个不同的企业管理用户角色来帮助用户进行管理：
+**部门** - 创建部门有助于将成本细分为逻辑分组，然后在部门级别设置预算或配额.
+
+**帐户** – 帐户是 Azure EA 门户中用于管理订阅的一个组织单位。 帐户也用于报告.
+
+**订阅** – 订阅是 Azure EA 门户中的最小单位.
+
+EA账户体系提供五个不同的企业管理用户角色来帮助用户进行管理：
 
 **企业管理员**
 
@@ -155,44 +67,181 @@ Azure EA 门户的层次结构包括：
 
 服务管理员有权在 Azure 门户中管理服务，以及将用户分配到共同管理员角色。
 
-- 通知联系人
+**通知联系人**
 
 通知联系人接收与注册相关的使用通知。
 
-上述五个角色用于在两个不同的 Microsoft Azure 门户中完成任务。 Azure EA门户用于帮助管理计费和成本。 Azure 门户用于管理 Azure 服务。为了验证用户真实性，每个用户必须具有有效的工作、学校或 Microsoft 帐户。
+EA 门户概览及组件功能如下：
 
-怎样构建合理的EA体系结构，利用各种角色进行细化的资源管理，怎样激活EA账号并添加订阅等操作可以参见附件，或者参考[EA门户入门](https://docs.microsoft.com/zh-cn/azure/cost-management-billing/manage/ea-portal-get-started)。
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/x02.png?raw=true)
 
-#### 1.3.2.	EA账单解读
-企业管理员可以在 Azure EA 门户中查看其使用情况数据、货币承诺消耗量，以及与其他用途相关的费用的摘要。费用以摘要形式显示，适用于所有帐户和订阅。
+#### Azure Portal : https://portal.azure.com
 
-**查看使用情况摘要报表步骤和示图**
+Azure Portal 是创建, 管理 Azure 中资源的统一控制台；针对资源的创建, 管理, 更新, 删除以及工单提交等具体操作都是在 Azure Portal 中完成.
 
-1.	在 Azure EA 门户的左侧导航区域中，单击“报告”并查看“使用情况摘要”选项卡。
-2.	选择承诺条款。
-3.	在页面右上角的“M”（每月）和“C”（自定义）之间切换可以根据自定义的开始日期和结束日期查看“使用情况摘要”。
-4.	在图表上选择某个时段或月份可以查看更多详细信息。
-5.	图表显示了每月的使用情况，其中细分了使用量、服务额外费用、单独计收的费用和市场费用。
-6.	对于选定的月份，可在图表下方按部门、帐户和订阅进行筛选。
-7.	在“按服务列出的费用”与“按层次结构列出的费用”之间切换。
-8.	展开和折叠“Azure 服务”、“单独计收的费用”和“Azure 市场”可查看详细信息。
+Azure Portal 涉及的资源包括 Management Group, Subscription, Resource Group, Resource
 
-![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/onboarding3.png?raw=true)
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/x03.png?raw=true)
 
-**下载 CSV 报告**
+**用户帐户**
 
-企业管理员可以使用“月份报告下载”页将多份报告下载为 CSV 文件。 其中包括：
-- 余额和费用
-- 使用情况详细信息
-- 市场费用
-- 价目表
+所有 Microsoft 云服务的用户帐户均存储在 Active Directory (Azure AD) 租户中，其中包含用户帐户和组。 通过使用基于 Windows 服务器的服务 Azure AD Connect，Azure AD 租户可与你现有的 Active Directory 域服务 (AD DS) 帐户同步。 这叫做目录同步。
 
-若要下载报告：
-- 在 Azure EA 门户中单击“报告”。
-- 单击页面顶部的“下载使用情况”。
-- 选择月份报告旁边的“下载”。
+**Tenant**
 
-从使用日期开始算起，最长可能需要延迟五天，其费用才会显示在报告中。
+对于 SaaS 云服务，租户是承载提供云服务的服务器的区域位置。例如，Contoso 公司选择欧洲地区为其巴黎总部的 15,000 名工作人员托管其 Office 365、EMS 和 Dynamics 365 租户。
+
+Azure PaaS 服务和在 Azure IaaS 中托管的基于虚拟机的工作负荷可以在世界范围内的任何 Azure 数据中心拥有租户。在创建 Azure PaaS 应用或服务或 IaaS 工作负荷的元素时，应指定 Azure 数据中心（称为位置）。
+
+Azure AD 租户是包含帐户和组的 Azure AD 的特定实例。Office 365、Dynamics 365 或 Intune/EMS 的付费或试用版订阅包括免费的 Azure AD 租户。此 Azure AD 租户不包括其他 Azure 服务，且与 Azure 试用版或付费订阅不同。
+
+以下是快速回顾：
+- 组织可进行多个订阅
+- 订阅可具有多个许可证
+- 许可证可分配给各个用户帐户
+- 用户帐户存储在 Azure AD 租户中
+
+**Management Group**
+
+如果你的组织有多个订阅，则可能需要一种方法来高效地管理这些订阅的访问权限、策略和符合性。 Azure 管理组提供订阅上的作用域级别。 可将订阅组织到名为“管理组”的容器中，并将管理条件应用到管理组。 管理组中的所有订阅都将自动继承应用于管理组的条件。 不管使用什么类型的订阅，管理组都能提供大规模的企业级管理。 单个管理组中的所有订阅都必须信任同一个 Azure Active Directory 租户。
+
+例如，可将策略应用到限制创建虚拟机 (VM) 的区域的管理组。 此策略将应用到该管理组下面的所有管理组、订阅和资源，只允许在该区域中创建 VM。
+
+**订阅**
+
+订阅是与 Microsoft 就使用一个或多个 Microsoft 云平台或服务签订的协议，其费用基于每个用户许可证费用或云资源使用累计。
+
+- Microsoft 基于软件即服务 (SaaS) 的云服务（Office 365、Intune/EMS 和 Dynamics 365）按用户收取许可证费用。
+- Microsoft 的平台即服务 (PaaS) 和基础设施即服务 (IaaS) 云服务 (Azure) 根据云资源使用量收取费用。
+
+**Resource Group**
+
+资源组是用于保存 Azure 解决方案相关资源的容器。 资源组可以包含解决方案的所有资源，也可以只包含想要作为组来管理的资源。 根据对组织有利的原则，决定如何将资源分配到资源组。 通常可将共享相同生命周期的资源添加到同一资源组，以便将其作为一个组轻松部署、更新和删除。
+
+Azure Portal 各部分功能介绍可参照 :
+
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/onboarding10.png?raw=true)
+
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/onboarding11.png?raw=true)
+
+下表是各个组件及其说明：
+
+组件 |	说明
+:---|:---
+1	|页眉。 显示在每个门户页面的顶部并保存全局元素。
+2	|全局搜索。 使用搜索栏快速查找特定的资源、服务或文档。
+3	|全局控件。 与所有全局元素一样，这些功能在门户中保持不变，包括： Cloud Shell、订阅筛选器、通知、门户设置、帮助和支持，并向我们发送反馈。
+4	|你的帐户。 查看有关你的帐户、切换目录、注销或使用其他帐户登录的信息。
+5	|门户菜单。 门户菜单是一个全局元素，可帮助您在服务之间导航。 有时也称为边栏，门户菜单模式可以在门户设置中进行更改。
+6	|资源菜单。 许多服务都包含一个资源菜单，可帮助您管理该服务。 你可能会看到此元素称为左窗格。
+7	|命令栏。 命令栏上的控件与当前焦点相关。
+8	|工作窗格。 显示有关当前处于焦点的资源的详细信息。
+9	|导航. 您可以使用痕迹链接在工作流中上移。
+10	|用于在当前订阅中创建新资源的主控件。 展开或打开门户菜单，查找 " + 创建资源"。 搜索或浏览 Azure Marketplace，了解要创建的资源类型。
+11	|收藏夹列表。 若要了解如何自定义列表，请参阅添加、删除和排序收藏夹。
+
+### 1.2 Azure 云端费用管理
+
+**Azure计费**
+
+使用 Azure 云中的服务, 费用是如何计算的, 是经常被提起的话题.
+
+Azure 云中资源的计费相对透明, 针对 Azure 云中的计费, 可以在 [Azure 定价](https://azure.microsoft.com/en-us/pricing/) 中, 查看需要服务的定价模式. 以 Azure Blob 为例, 在定价页中, 我们可以看到 Blob 存储的计费模式, 以及常见的问题列表：
+
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/blob1.png)
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/blob2.png)
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/blob3.png)
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/blob4.png)
+
+**价格计算器**
+
+Azure价格计算器可以配置 Azure 产品并估算成本，选择想要评估的SKU，选择地区和付款方式，即可看到对应SKU的价格。还可以将价格计算器的结果导出成表格，进行进一步的测算和比较。
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/calculator1.png)
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/calculator2.png)
+
+**Azure资源优惠**
+
+企业客户可以通过购买 RI （保留实例），获得资源更为优惠的价格，实现更高的性价比。Azure 预留承诺预付适用于`虚拟机`、`Azure Blob 存储`或 `Azure Data Lake Storage Gen2`、`SQL 数据库计算容量`、`Azure Cosmos DB 吞吐量`或其他 Azure 资源的一年或三年计划，为用户节省资金。 通过承诺预付，能够以折扣价购买所用资源。 预留可显著将资源的成本，最多减少至即用即付价格的 72%。 预订提供计费折扣，并且不会影响资源的运行时状态。
+
+如果使用大容量/高吞吐量或者长时间运行的虚拟机、Blob 存储数据、Azure Cosmos DB 或 SQL 数据库，那么购买预留项可以获得最实惠价格。 例如，如果持续运行四个服务实例，在不购买预留项的情况下，需按即用即付价格付费。 如果购买这些资源的预留项，则将立即获得预留折扣。 这些资源不再按即用即付费率收费。
+预留项涵盖的计划：
+
+- 虚拟机预留实例 - 预留项仅涵盖虚拟机计算成本。 而不涵盖软件、网络或存储等其他费用。
+- Azure 存储预留容量 - 该预留项涵盖用于 Blob 存储或 Azure Data Lake Gen2 存储的标准存储帐户的存储容量。 不涵盖带宽或事务费率。
+-	Azure Cosmos DB 预留容量 - 预留项涵盖为资源预配的吞吐量的费用。 但它不涵盖存储和网络费用。
+-	SQL 数据库预留 vCore - 预留项仅包含计算成本。 许可证单独计费。
+-	SQL 数据仓库 - 预留项涵盖 cDWU 用量。 它不涵盖与 SQL 数据仓库用量相关的存储或网络费用。
+-	应用服务印花费 - 预留项涵盖印花使用费。 它不适用于辅助角色，因此与印花相关的任何其他资源将单独收费。
+-	Azure Database for MySQL
+-	Azure Database for PostgreSQL
+-	Azure Database for MariaDB
+-	Azure 数据资源管理器
+-	高级 SSD 托管磁盘
+
+以存储为例，下面看一下预留折扣应用于存储的收费以及如何申请预留实例：
+
+**折扣示例**：
+假设在美国西部 2 区域购买了一年期 100 TB 的预留容量。 预留适用于热访问层中的本地冗余存储 (LRS)。
+按照100TB存储来计算，如预留一年的预留的成本为 18,540 美元，$1,545/月。 如预留三年，则预留成本为14,928美元，$1,244/月。而如果按照即用即付计算的话，那么将花费 0.0184*50*1024 + 0.0177*50*1024 = 1,848.32‬美元/月，一年成本将高达22,179.84‬美元，如果按照预留3年的价格来算，将节省32.7%的成本。
+
+**购买 Azure 存储预留容量**：
+可以通过[Azure 门户](https://portal.azure.com/)购买 Azure 存储预留容量。 提前支付预订费用，按月支付。 若要详细了解每月支付的费用，请参阅提前或按月支付购买[Azure 预订](https://docs.microsoft.com/zh-cn/azure/billing/billing-monthly-payments-reservations)。
+
+以Blob为例，可以按照以下步骤购买预留容量：
+
+1. 导航到 Azure 门户中的 "购买预订" 窗格。
+2. 选择 " Azure Blob 存储" 以购买新的保留。
+3. 填写必填字段。
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/blobRI1.png)
+4. 选择预订参数后，Azure 门户会显示成本。 该门户还显示 "即用即付" 计费的折扣百分比。
+5. 在 "购买预订" 窗格中，查看预订的总成本。 还可以提供预订的名称。
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/blobRI2.png)
+
+购买保留后，它将自动应用于任何现有的 Azure 存储块 blob 或与保留条款匹配的 Azure Data Lake Storage Gen2 资源。 如果尚未创建任何 Azure 存储资源，则每次创建与预订条款相匹配的资源时，将应用保留。在这两种情况下，预订期限会在成功购买后立即开始。
+
+**查看预留**：
+
+1. 登录 Azure 门户
+
+2. 在 "All Services 中搜索 Reservations", 点击 "Reservations" 进入
+
+![image](./files/images/y01.png)
+
+3. 可以在这里查看已经购买的预留资源的信息
+
+![image](./files/images/y02.png)
+
+**Azure Cost Management**
+
+Cost Management可以有效规划和控制企业成本。成本管理任务通常由财务、管理和应用程序团队共同执行。Azure Cost Management + Billing可以帮助组织在计划时考虑到成本。它还有助于有效地分析成本，并采取行动优化云支出。要了解更多关于如何将成本管理作为一个组织来处理的信息，请阅读[Azure成本管理最佳实践文章](https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/cost-mgt-best-practices)。
+
+若要通过Cost Management查看成本，请在 Azure 门户打开范围并在菜单中选择“成本分析” 。 例如，转到“订阅”，从列表中选择订阅，然后在菜单中选择“成本分析” 。 使用“范围” 框可在成本分析中切换到不同的范围。 有关范围的详细信息，请参阅[了解并使用范围](https://docs.microsoft.com/zh-cn/azure/cost-management-billing/costs/understand-work-scopes)。
+
+所选的范围将用于整个成本管理，以提供数据整合和控制对成本信息的访问。 使用范围时，不要多选它们。 而应先选择一个汇总了其他范围的较大范围，然后筛选出所需的嵌套范围。 了解此方法很重要，因为某些用户可能无法访问单个涵盖多个嵌套范围的父范围。
+
+初始成本分析视图包括以下方面。
+
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/cost-analysis.png)
+
+**累计成本视图**：表示预定义的成本分析视图配置。 每个视图包含日期范围、粒度、分组依据和筛选器设置。 默认视图显示当前计费周期的聚合成本，但可以更改为其他内置视图。 有关详细信息，请参阅[自定义成本视图](https://docs.microsoft.com/zh-cn/azure/cost-management-billing/costs/quick-acm-cost-analysis#customize-cost-views)。
+
+**实际成本**：显示当前月份的总使用量和购买成本。这些购买成本是应记成本，会显示在账单上。
+
+**预测**：显示所选时间段的预测成本总计。
+
+**预算**：显示所选范围的计划支出限额（如可用）。
+
+**累计粒度**：显示从计费周期开始算起的累计每日成本总额。 为计费帐户或订阅创建预算后，可快速查看对预算而言的支出趋势。 将鼠标悬停某个日期上以查看该天的累计成本。
+
+**透视图（圆环图）** ：提供动态透视，按一组常见标准属性分解总成本。 它们显示当前月成本（从最大到最小排列）。 通过选择不同的透视，可以随时更改透视图。 成本按服务（计量类别）、位置（区域）和子范围（默认）分类。 例如，注册帐户在计费帐户之下，资源组在订阅之下，资源在资源组之下。
+
+
+
+**资源消耗情况查看**
+
+在使用过程中, 用户可以通过 EA Portal 查看资源的消耗情况, 以及详细的费用清单.
+
+企业管理员可以在 Azure EA 门户中查看其使用情况数据、货币承诺消耗量，以及与其他用途相关的费用的摘要。费用以摘要形式显示，适用于所有帐户和订阅。还可以使用“月份报告下载”页将多份报告下载为 CSV 文件。 
 
 CSV报告中包含有大量的字段信息，下面是每个字段代表的含义：
 
@@ -230,213 +279,152 @@ Cost Center	 ||	资源所属的Cost Center成本中心 ，成本中心只在EA P
 Unit of Measure	 ||	列：已消耗的资源数量的单位，比如虚拟机计算资源，是按照小时来收费的，则该列显示为Hour。对于存储来说，是按照GB来收费的。则该列会显示GB|	是
 资源组|Resource Group|	资源所属的资源组名称|	是
 
-下面以Azure Mooncake出发，实际看一下EA CSV报告解读。
+### 1.3 Azure 云端资源使用准备
 
-Azure可以通过下载Excel表格，将一段时间内Azure的详细账单，通过CSV文件格式进行下载，然后用户可以通过透视表的方式进行自定义查询。
+云端资源会有 Quota 的概念, 比如: 针对虚拟机, 账户下默认的Core数Quota是350个, 当环境中超过了这个值, 会导致资源创建失败. 但这个Quota是可以通过提交工单进行调整的, 所以, 部署资源之前, 检查环境中资源的Quota Limitation, 确保不会因为Quota不足导致资源创建不出来.
 
-1.	点击报表，下载使用量。
-![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/onboarding4.png?raw=true)
-2.	点击上图的按钮，就可以下载使用量的详细数据。如果未显示下载按钮，则点击下图的“刷新”按钮
-![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/onboarding5.png?raw=true)
-3.	下载完毕后，打开下载的CSV文件。
+通过 Azure Portal, 我们可以查看正在使用的订阅下 Quota 情况, 例如：
 
-如果想查看每个订阅每个月产生的费用情况，用户需要关心的列有：
-- 订阅名称
-- 年
-- 月
-- 扩展的成本 
-    
-如果想查看每个资源组每天产生的费用情况，需要关心的列有：
-+ 年
-+ 月
-+ 日
-+ 扩展的成本
-+ Resource Group
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/x08.png)
 
-用户还可以通过编辑数据透视表，来对CSV文件进行统计。打开CSV文件，全选第3行的列明，然后按CTRL + SHIFT + END，选中所有的表格内容。然后点击，插入，数据透视表。如下图：
+针对系统默认的 Quota Limitation, 请参照 [Azure 订阅和服务限制、配额和约束](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits)
 
-![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/onboarding6.png?raw=true)
+如果遇到 Quota Limitation 问题, 请及时开Case, 后台相关团队会协助调整
 
-在透视表中，拖动资源。
-![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/onboarding7.png?raw=true)
-即可以得到分析示图：
-![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/onboarding8.png?raw=true)
+![image](./files/images/y03.png)
 
----
+### 1.4 Azure 云端 Ticket & SLA & RCA
 
-### 1.4. Azure资源的订阅限制及配额、价格查询
-#### 1.4.1.	订阅限制及配额
-针对每个订阅，Azure中所提供的资源默认是有Quota限制的，此限制可根据实际需要，通过提交工单的方式调整，请根据实际需要，提前预估并做好相应的准备。
+当我们在 Azure 云端遇到问题, 包括 产品咨询, 配置问题, 服务不可用, 平台Bug 等等, 请第一时间开Ticket, 联系后台工程师协助解决.
 
-- Azure Mooncake 订阅限制及配额：https://docs.azure.cn/zh-cn/azure-subscription-service-limits
-  >如：在Azure Mooncake，每个订阅的 vCPU 数量的默认限制是20个，经过调整后，最大可以提升到10,000个。
-- Global Azure 订阅限制及配额：https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits
- > 如：每个订阅在每个区域中的存储帐户数，默认和最大都是250个。
+登陆到 Azure Portal, 选择 `Help + Support`,或者点击右上角的问号，根据实际严重程度选择 A/B/C 严重等级, 提供相应问题描述
 
-#### 1.4.2.	Azure 资源价格
-Azure 资源的价格相对透明，查询Azure资源的价格及其计费方式，可参见如下，可以查询到资源的价格，与本地服务的价格对比，或者是Support计划的价格等等。
-- Azure Mooncake ：https://www.azure.cn/pricing/
-- Global Azure ：https://azure.microsoft.com/en-us/pricing/
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/new-case.png)
 
----
+具体Support Plan的支持请参照 [Azure支持计划](https://azure.microsoft.com/en-us/support/plans/)
 
-### 1.5.	Azure资源优惠信息 
-#### 1.5.1.	Azure Mooncake
-企业客户可以通过购买包年虚机（CPP），获得优惠的价格，实现更高的性价比，具体CPP的介绍请参见：https://docs.azure.cn/zh-cn/enterprise-agreement-billing/enterprise-agreement-billing-check-cpp，关于CPP的购买及价格，请咨询销售。
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/supportplan.png)
 
-#### 1.5.2.	Global Azure
-企业客户可以通过购买 RI （保留实例），获得资源更为优惠的价格，实现更高的性价比。Azure 预留承诺预付适用于虚拟机、Azure Blob 存储或 Azure Data Lake Storage Gen2、SQL 数据库计算容量、Azure Cosmos DB 吞吐量或其他 Azure 资源的一年或三年计划，为用户节省资金。 通过承诺预付，能够以折扣价购买所用资源。 预留可显著将资源的成本，最多减少至即用即付价格的 72%。 预订提供计费折扣，并且不会影响资源的运行时状态。
+在Azure中，可以针对下面四类大的问题开case：
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/cases.png)
 
-如果使用大容量/高吞吐量或者长时间运行的虚拟机、Blob 存储数据、Azure Cosmos DB 或 SQL 数据库，那么购买预留项可以获得最实惠价格。 例如，如果持续运行四个服务实例，在不购买预留项的情况下，需按即用即付价格付费。 如果购买这些资源的预留项，则将立即获得预留折扣。 这些资源不再按即用即付费率收费。
-
-预留项涵盖的计划：
-- 虚拟机预留实例 - 预留项仅涵盖虚拟机计算成本。 而不涵盖软件、网络或存储等其他费用。
-- Azure 存储预留容量 - 该预留项涵盖用于 Blob 存储或 Azure Data Lake Gen2 存储的标准存储帐户的存储容量。 不涵盖带宽或事务费率。
-- Azure Cosmos DB 预留容量 - 预留项涵盖为资源预配的吞吐量的费用。 但它不涵盖存储和网络费用。
-- SQL 数据库预留 vCore - 预留项仅包含计算成本。 许可证单独计费。
-- SQL 数据仓库 - 预留项涵盖 cDWU 用量。 它不涵盖与 SQL 数据仓库用量相关的存储或网络费用。
-- 应用服务印花费 - 预留项涵盖印花使用费。 它不适用于辅助角色，因此与印花相关的任何其他资源将单独收费。
-- Azure Database for MySQL
-- Azure Database for PostgreSQL
-- Azure Database for MariaDB
-- Azure 数据资源管理器
-- 高级 SSD 托管磁盘
-
-具体支持保留实例购买的资源请参见[Azure预留实例](https://docs.microsoft.com/zh-cn/azure/cost-management-billing/reservations/save-compute-costs-reservations#charges-covered-by-reservation) 。
-
-保留实例的购买，退改等操作均通过Azure Portal自助完成，具体信息可参见：https://docs.microsoft.com/zh-cn/azure/cost-management-billing/reservations/manage-reserved-vm-instance
-
-关于保留实例的匹配策略，请参见各资源对应说明文档，如下为虚拟机部分的说明：https://docs.microsoft.com/zh-cn/azure/cost-management-billing/manage/understand-vm-reservation-charges
-
----
-
-### 1.6. Azure资源可用性确认 
-在部署前，检查资源的可用性是至关重要的，它关系着项目的顺利进行。比如：检查sku 是否支持某个region或者az区域，可以通过一下几种方式进行查询：
-- 产品对地区的支持性: https://azure.microsoft.com/en-us/global-infrastructure/services/?products=virtual-machines&regions=europe-west
-- 利用az命令查询某个sku支持的az，例如，查询虚机在西欧az的支持性：
-  > az vm list-skus -l westeurope --all --zone -o table
-- 利用powershell命令查询某个sku支持的az ，同样查询虚机在西欧az的支持性：
-  > Get-AzComputeResourceSku | where {$_.Locations.Contains("westeurope")}
-
-在迁移开始之前，需要为为后续迁移做好准备。 这个阶段主要在以下两个方面完成：组织就绪情况和环境（技术）就绪情况。 每个方面都可能需要技术参与者和非技术参与者掌握新技能。 这个阶段，可以参考[技能就绪](https://docs.microsoft.com/zh-cn/azure/cloud-adoption-framework/ready/suggested-skills)，包括技术学习路径和资源管理相应知识。
-
----
-
-### 1.7.	Azure Support Plan & Support 模式 
-#### 1.7.1.	Azure Mooncake Support 模式
-![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/onboarding9.png?raw=true) 
-技术case：
-1.	客户通过在线网站或者支持热线提交问题，case 随即生成并会被自动分派到对应 的技术支持 POD。 
-2.	由微软 CSS （微软全球技术支持中心）和 21V 的工程师共同组成 POD 支持团队，其中，21V 工程师将作为客 户联系的唯一接口；CSS 的 Technical Advisor (TA) 和 Support Escalation Engineer (SEE) 负责后端技术升级支持。 
-3.	经由客户的许可，21V 可以引入微软 CSS 与客户进行三方沟通，形式可以是邮件、 电话或者远程协助。 
-4.	如确定为产品导致的影响客户生产环境的紧急问题，21V 工程师或者微软 CSS 将给 21V WASU 提交紧急程度为 2 的内部工单，使其安排微软后端产品开发团队进行平 台排查。 
-5.	如问题需要产品团队协助排查，但问题本身并不紧急或者已有 workaround，微软 CSS 将向后端产品开发团队提交紧急程度为 3 的内部工单。
-6.	微软 CSS 将提供原厂技术支持服务，包括问题排查和咨询，TAM 也将全程参与。
-商务case：
-支持全过程适用于所有类别客户，如上面图中下方流程所示。
-
-#### 1.7.2.	Global Azure Support Plan标准及定价
+提出一个case时，需要填以下三类信息，以方便后台收集问题信息并及时处理：
 
 
-基本 | 开发人员 | 标准 |专业直接支持|	顶级支持
----|---|---|---|---
-技术支持|	|	在营业时间1通过电子邮件联系支持工程师	|全天候通过电子邮件和电话访问支持工程师	|全天候通过电子邮件和电话访问支持工程师	|全天候通过电子邮件和电话访问支持工程师
-谁能解决案例|	|	无限制的沟通次数/无限制的案例|	无限制的沟通次数/无限制的案例|	无限制的沟通次数/无限制的案例	|无限制的沟通次数/无限制的案例
-案例严重性/响应时间| |	最低业务影响 (Sev C)：<8 营业时间	最低业务影响 (Sev C):<8 营业时间<br>中等业务影响 (Sev B):<4 小时<br>关键业务影响 (Sev A):<1 小时|	最低业务影响 (Sev C):<4 营业时间<br>中等业务影响 (Sev B):<2 小时<br>关键业务影响 (Sev A):<1 小时|最低业务影响 (Sev C):<4 营业时间<br>中等业务影响 (Sev B):<2 小时<br>关键业务影响 (Sev A)：<1 小时<15 分钟（借助 Azure Rapid Response 或 Azure 事件管理）
-定价|	$29/月|	$100/月|	$1,000/月|	联系销售
+1. 开case时，第一步需要收集case的基本问题，如出现问题的订阅以及 SKU。
+![image](https://github.com/Helen1momo/OCPChinaPTSALLDOCS/blob/patch-3/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/case1.png)
 
-如遇到问题，请第一时间开Case，让后台帮助解决。根据实际业务影响程度，选择适合的case等级开出，后台人员会在响应时间与用户取得联系。
+2. 平台会根据填写的基本内容，推荐可以尝试的解决方法。
+![image](https://github.com/Helen1momo/OCPChinaPTSALLDOCS/blob/patch-3/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/case2.png)
 
----
+3. 填写case的严重等级（A/B/C），并填写更加详细的细节，比如问题出现的时间等等。
+![image](https://github.com/Helen1momo/OCPChinaPTSALLDOCS/blob/patch-3/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/case3.png)
 
-### 1.8. Azure 资源的组织形式 
-Azure中的资源众多，怎样进行有效的管理也是一个重要的问题，Azure提供了多个模块，可以很好的对于资源进行分级管理。
+4. 最后一步确认用户的联系人选项和联系信息，以方便进行及时沟通。根据问题的严重程度，用户可能会被要求表明，是希望在办公时间与用户联系，还是希望提供24小时7小时的答复，这意味着平台可能随时与用户联系。如果选择中文服务，则case将会是台湾或者上海的工程师接收，但提供支持的时间是北京时区的工作时间。如果是选择英文服务，则case会是英语语种工程师进行跟踪，可以达到7×24小时的支持服务。
 
-**订阅**
 
-订阅是与 Microsoft 就使用一个或多个 Microsoft 云平台或服务签订的协议，其费用基于每个用户许可证费用或云资源使用累计。
+针对平台级出现的问题, 包括平台故障, 计划升级等, 用户均可通过 `Azure Service Health`, 第一时间查看相关信息及更新, 并下载相应的RCA报告；同时也可以设置相应的告警, 出现问题第一时间通知负责的同事查看环境, 采取相应的措施.
 
-- Microsoft 基于软件即服务 (SaaS) 的云服务（Office 365、Intune/EMS 和 Dynamics 365）按用户收取许可证费用。
-- Microsoft 的平台即服务 (PaaS) 和基础设施即服务 (IaaS) 云服务 (Azure) 根据云资源使用量收取费用。
 
-**许可证**
+当然, 每个服务的SLA也是用户所关心的一个问题. 目前, 大部分Azure中的服务都具有SLA保障, 关于各服务SLA的详细描述及赔偿方案, 请参照 [服务级别协议](https://azure.microsoft.com/en-us/support/legal/sla/)。
 
-对于 Microsoft 的 SaaS 云服务，许可证允许特定用户帐户使用云产品的服务。 作为订阅的一部分，你可以每月支付固定的费用。 管理员将许可证分配给订阅中的各个用户帐户。 对于图 2 中的示例，Contoso 公司订阅了具有 100 个许可证的 Office 365 企业版 E5，允许最多 100 个单个用户帐户使用 Office 365 企业版 E5 的功能和服务。
+例如, 通过虚拟机SLA的页面, 我们可以找到虚拟机支持的SLA描述, 故障时间计算, 以及事故后赔偿方案
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/SLA-VM.png)
 
-对于基于 Azure PaaS 的云服务，软件许可证是服务定价的一部分。
+### 1.5 Azure 云端的安全&合规
 
-对于基于 Azure IaaS 的虚拟机，使用在虚拟机映像上安装的软件或应用程序可能需要其他许可证。某些虚拟机映像安装了授权版软件，并且成本包括在服务器的每分钟费率中。例如，SQL Server 2014 和 SQL Server 2016 的虚拟机映像。
+上云的安全与合规是每个企业都十分关注的问题，怎么构建更加安全可信赖的云上环境十分重要。
 
-**用户帐户**
+Azure提供了几个工具，帮助客户更好地查询云端安全合规方面的信息，这些信息，在用户上云，尤其是将`Mission Critical`应用迁移上云时，往往是需要了解的。
 
-所有 Microsoft 云服务的用户帐户均存储在 Active Directory (Azure AD) 租户中，其中包含用户帐户和组。 通过使用基于 Windows 服务器的服务 Azure AD Connect，Azure AD 租户可与你现有的 Active Directory 域服务 (AD DS) 帐户同步。 这叫做目录同步。
+__**通过 Microsoft Trust Center, 了解 Azure 云服务在 安全/合规/隐私/透明方面是如何做的**__
 
-**Tenant**
+![image](./files/images/y04.png)
 
-对于 SaaS 云服务，租户是承载提供云服务的服务器的区域位置。例如，Contoso 公司选择欧洲地区为其巴黎总部的 15,000 名工作人员托管其 Office 365、EMS 和 Dynamics 365 租户。
+具体可登陆 [Microsoft Trust Center](https://www.microsoft.com/zh-cn/trust-center)
 
-Azure PaaS 服务和在 Azure IaaS 中托管的基于虚拟机的工作负荷可以在世界范围内的任何 Azure 数据中心拥有租户。在创建 Azure PaaS 应用或服务或 IaaS 工作负荷的元素时，应指定 Azure 数据中心（称为位置）。
+__**通过 Service Trust Portal , 可以找到所有Azure相关的合规Report以及合规相关的信息，比如，SOC1，SOC2的报告**__
 
-Azure AD 租户是包含帐户和组的 Azure AD 的特定实例。Office 365、Dynamics 365 或 Intune/EMS 的付费或试用版订阅包括免费的 Azure AD 租户。此 Azure AD 租户不包括其他 Azure 服务，且与 Azure 试用版或付费订阅不同。
+![image](./files/images/y05.png)
 
-以下是快速回顾：
-- 组织可进行多个订阅
-- 订阅可具有多个许可证
-- 许可证可分配给各个用户帐户
-- 用户帐户存储在 Azure AD 租户中
+具体可登陆 [Service Trust Portal](https://servicetrust.microsoft.com/)
 
-**Management Group**
+__**通过 Compliance Manager, 可以对目前使用的Azure资源进行自检，看目前的环境与一些期望的证数，如 SOC1，SOC2等, 在哪些方面需要提高**__
 
-如果你的组织有多个订阅，则可能需要一种方法来高效地管理这些订阅的访问权限、策略和符合性。 Azure 管理组提供订阅上的作用域级别。 可将订阅组织到名为“管理组”的容器中，并将管理条件应用到管理组。 管理组中的所有订阅都将自动继承应用于管理组的条件。 不管使用什么类型的订阅，管理组都能提供大规模的企业级管理。 单个管理组中的所有订阅都必须信任同一个 Azure Active Directory 租户。
+![image](./files/images/y06.png)
 
-例如，可将策略应用到限制创建虚拟机 (VM) 的区域的管理组。 此策略将应用到该管理组下面的所有管理组、订阅和资源，只允许在该区域中创建 VM。
+具体可登陆 [Compliance Manager](https://servicetrust.microsoft.com/ComplianceManager/V3)
 
-**Resource Group**
+__**通过 Microsoft Privacy Statement, 可以了解微软对隐私保护相关的信息**__
 
-资源组是用于保存 Azure 解决方案相关资源的容器。 资源组可以包含解决方案的所有资源，也可以只包含想要作为组来管理的资源。 根据对组织有利的原则，决定如何将资源分配到资源组。 通常可将共享相同生命周期的资源添加到同一资源组，以便将其作为一个组轻松部署、更新和删除。
+![image](./files/images/y07.png)
 
----
+具体可登陆 [Microsoft Privacy Statement](https://privacy.microsoft.com/zh-cn/privacystatement)
 
-### 1.9. Azure资源命名的最佳实践 
-在大型云采用工作中，以有助于运营管理和支持会计要求的方式来组织基于云的资产是一项常见挑战。通过将明确定义的命名和元数据标记约定应用于云托管资源，IT 人员可以快速查找和管理资源。通过使用退款和报销计帐机制，明确定义的名称和标记还有助于与业务团队协调云使用成本。
+下图是列出了云端安全保护方面涉及到的一些服务，供大家参考：
 
-资源名称可能很难更改。 在开始进行任何大型云部署之前，应参考最佳实践，结合实际情况确定建立综合命名约定的优先级。
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/security.png)
+
+**身份**:通过Azure Active Directory提供的行业领先的身份和访问管理解决方案，可以更好地控制身份威胁。基于角色的访问控制、MFA或身份保护等功能将确保正确的用户获得适当级别的访问权限，并将帮助用户最小化与身份盗窃或滥用管理特权相关的风险。
+
+**数据保护**:利用虚拟机、数据库和存储中静态数据的多种加密选项，确保数据的机密性和完整性。从虚拟机到存储、SQL、CosmosDB和Azure Data Lake，数据加密控制都内置在服务中。Azure密钥库使您能够保护和控制云应用程序和服务使用的密钥和其他机密。
+
+**网络安全**:您可以使用虚拟网络、网络安全组、VPN和ExpressRoute来建立到Azure及其内部的安全连接。保护并确保您的应用程序的可用性，通过Web应用程序防火墙、Azure防火墙和Azure DDoS保护等服务来抵御网络层的威胁
+
+**威胁保护和安全管理**:最后，持续评估安全状态也同样重要，特别是在云工作负载动态变化的情况下。Azure Security Center将帮助您监视Azure资源和混合工作负载的安全状态。它将提供一个动态安全记分卡和建议，以在一个集中的控制台中改进安全性，使跨不同资源的安全性管理更容易。你可以在许多服务中得到高级的威胁保护，比如虚拟机、服务器、应用程序、Azure SQL、存储、VMs上的容器——在微软智能Graph的支持下，你可以在这些服务中快速检测和响应威胁。Azure还提供了一个健壮的日志管理系统，您可以从日志分析中获得更多的见解。
+
+最后，您可以使用专门为Azure平台构建的丰富的产品阵列来扩展Azure的安全功能。Azure市场包括用于防病毒、网络安全、加密、监视和警报、应用程序安全、身份验证等的合作伙伴解决方案。您可以使用您信任的安全合作伙伴来跨混合环境保护资源。
+
+### 1.6 Azure 服务可用性及Roadmap了解
+
+Azure在全球有57个地区，共计140个国家都具有可用性。能够给用户提供低延迟的网络，更方便的服务。
+
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/region.png)
+
+了解产品的地区可用性, 对于项目规划阶段非常有用, 能够帮助用户更好的计划项目周期. 请参照 [Products available by region](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=all)查看各区域的服务落地情况
+
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/x16.png?raw=true)
+
+对于服务的发布落地, Azure 严格遵循着相应的流程, 确保平台及用户不受影响. 用户在使用 Azure 服务时, 经常能够听到 `Private Preview` & `Public Preview` & `GA` 三个阶段, 这三个阶段分别对应着 `邀请客户试用` & `公共预览` & `正式商用` 三个阶段, 如下是服务上线所遵循的流程：
+
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/x17.png?raw=true)
 
 ---
 
 ## 2.	动手实践
-### 2.1.	Azure Portal页面及组件
-![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/onboarding10.png?raw=true)
 
-![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/onboarding11.png?raw=true)
-下表是各个组件及其说明：
+### 2.1 熟悉云上资源的创建
 
-组件 |	说明
-:---|:---
-1	|页眉。 显示在每个门户页面的顶部并保存全局元素。
-2	|全局搜索。 使用搜索栏快速查找特定的资源、服务或文档。
-3	|全局控件。 与所有全局元素一样，这些功能在门户中保持不变，包括： Cloud Shell、订阅筛选器、通知、门户设置、帮助和支持，并向我们发送反馈。
-4	|你的帐户。 查看有关你的帐户、切换目录、注销或使用其他帐户登录的信息。
-5	|门户菜单。 门户菜单是一个全局元素，可帮助您在服务之间导航。 有时也称为边栏，门户菜单模式可以在门户设置中进行更改。
-6	|资源菜单。 许多服务都包含一个资源菜单，可帮助您管理该服务。 你可能会看到此元素称为左窗格。
-7	|命令栏。 命令栏上的控件与当前焦点相关。
-8	|工作窗格。 显示有关当前处于焦点的资源的详细信息。
-9	|导航. 您可以使用痕迹链接在工作流中上移。
-10	|用于在当前订阅中创建新资源的主控件。 展开或打开门户菜单，查找 " + 创建资源"。 搜索或浏览 Azure Marketplace，了解要创建的资源类型。
-11	|收藏夹列表。 若要了解如何自定义列表，请参阅添加、删除和排序收藏夹。
+如下三个实验, 是一个进阶的过程, 从易到难帮助大家熟悉Azure资源的操作管理
 
-### 2.2. 动手练习
-- 练习如何通过 Azure Portal 及 CLI，创建并管理虚拟机：https://docs.microsoft.com/zh-cn/learn/paths/administer-infrastructure-resources-in-azure/
-- 练习创建各种Azure资源 ：https://github.com/MicrosoftLearning/AZ-103-MicrosoftAzureAdministrator/tree/master/Instructions/Labs
-- Workshop 如何在云端构建 Enterprise Ready 的系统 ：https://github.com/Microsoft/MCW-Enterprise-Ready-Cloud
+- 第一个实验, 带我们熟悉, 通过 Azure Portal 及命令行工具, 创建并管理最基本的IaaS层资源（虚机/磁盘/网络等）- [管理 Azure 中的基础设施资源](https://docs.microsoft.com/zh-cn/learn/paths/administer-infrastructure-resources-in-azure/)
 
----
+- 第二个实验, 更为全面的带大家熟悉常用的Azure资源的操作方法 - [AZ-103-MicrosoftAzureAdministrator](https://github.com/MicrosoftLearning/AZ-103-MicrosoftAzureAdministrator/tree/master/Instructions/Labs)
 
-## 3.	参考资料及Tips
+- 第三个实验, 结合 Whiteboard Design + Handson Lab, 帮助我们了解, 企业级应用搭建在云端所需要考虑的方面 - [Enterprise-ready-cloud](https://github.com/Microsoft/MCW-Enterprise-Ready-Cloud)
+
+### 2.2 开启云端之旅
+
+针对用户上云的方方面面, 微软总结了一套可以落地的方法论实践, Cloud Adoption Framework, 希望大家不止用云, 更能够用好云, 详细文档请参照 [适用于 Azure 的 Microsoft 云采用框架](https://docs.microsoft.com/zh-cn/azure/cloud-adoption-framework/)
+
+![image](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/files/images/x20.png)
+
+跟大家密切相关的两个部分 
+
+- Cloud Adoption Framework Ready [为云采用计划准备好环境](https://docs.microsoft.com/zh-cn/azure/cloud-adoption-framework/ready/) : 计划一个标准化的 Landing Zone, 对于后续系统上云的构建有指导意义
+
+- Cloud Adoption Framework Governance [适用于 Azure 的 Microsoft 云采用框架中的治理](https://docs.microsoft.com/zh-cn/azure/cloud-adoption-framework/govern/) : 从上云的第一天开始，就做好云端的管理工作, 相比于后期改造, 能够节省成本, 同时以最佳实践的方式结合用户的实际情况, 管理好云, 能够更大限度的促进云使用的成功
+
+### 2.3 更为丰富的 Azure 资料
+
+另外, 以下一些相关的资料, 对于大家熟悉Azure具有参考价值
+
+- [Azure 文档](https://docs.microsoft.com/zh-cn/azure/) : 相关服务的快速入门, 详细配置描述, 均可通过文档链接查看
+
+- [Microsoft Learn](https://docs.microsoft.com/zh-cn/learn/) : 包含系统化的Learning Path, 帮助用户学习微软的服务, 包括Azure/M365/Dynamics365/Power Platform
+
+- [Azure 解决方案](https://azure.microsoft.com/zh-cn/solutions/) : 找到可满足应用程序或业务需求的解决方案
+
+- [Microsoft Cloud Workshop](https://microsoftcloudworkshop.com/) : 针对不同的workload, 模拟业务场景, 帮助大家了解基于不同业务场景下的架构设计, 以及动手实践
+
 - [Azure 概览](https://microsoftapc.sharepoint.com/:b:/t/OCPPRCPTSTeam/EbM6PUPPSgtIhHsjD7dSBpABq8BKHnd7KVHfb_YKu4SWnQ?e=M5l9S7) 
-- Azure 基础知识 ：https://docs.microsoft.com/zh-cn/learn/paths/azure-fundamentals/
-- Azure 技术文档：
-Azure Mooncake ：https://docs.azure.cn/zh-cn/ 
-Global Azure ：https://docs.microsoft.com/zh-cn/azure/
-- 微软学习网站 （涵盖了包括Azure / O365 / D365在内多个产品内容）：https://docs.microsoft.com/zh-cn/learn/
-- 针对典型的Workload相关的Workshop ：https://microsoftcloudworkshop.com/
