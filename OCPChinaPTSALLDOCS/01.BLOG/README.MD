@@ -1,7 +1,19 @@
 # OCP PTS Team Blog汇总
 
+> 2020/4/1 updated
+
 | 序号 | 博客 | 创建者 | 所属月份 | 创建时间 | 项目类型 | 路径 |
 | ---- | ---- | ---- | ---- |  ---- | ---- | ---- |
+| 295 | [租户不统一也能快速部署使用Windows虚拟桌面](https://mp.weixin.qq.com/s/f5miqcWu7hKr_we_HKSHcA) | Jiayu Zhu | 2020年3月份 | 2020/03 | 
+| 294 | [New Customer Onboarding - 中国区Azure](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/New%20Customer%20Onboarding%20-%20%E4%B8%AD%E5%9B%BD%E5%8C%BAAzure.md) |Simeng Zhang| 2020年3月份 | 2020/03 | 
+| 293 | [New Customer Onboarding - 国际版Azure](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/New%20Customer%20Onboarding%20-%20%E5%9B%BD%E9%99%85%E7%89%88Azure.md) |Simeng Zhang| 2020年3月份 | 2020/03 | 
+| 292 | [Azure Cosmos DB的成本分析和优化（一）正确评估成本和匹配资源](https://mp.weixin.qq.com/s/drwEV2eIJvC1FUJiwEtx8A) |Teo Ma| 2020年3月份 | 2020/03 | 
+| 291 | [Azure Database for MySQL 多云容灾](https://www.cnblogs.com/wekang/p/12566749.html) |Wei Kang| 2020年3月份 | 2020/03 | 
+| 290 | [云迁移项目实施经验分享-风险分析](https://mp.weixin.qq.com/s/xPvYcE50kZGYrjYh0Zi8bw) |Teo Ma| 2020年3月份 | 2020/03 | 
+| 289 | [我有一百种方法让你的Excel连上数据库](https://blog.csdn.net/blogdevteam/article/details/105203745) |Jalen Hu| 2020年3月份 | 2020/03 | 
+| 288 | [利用 Log Analytics，查询&分析 Azure 账单](https://mp.weixin.qq.com/s?__biz=MzU0OTY0NDE1NA==&mid=2247484387&idx=1&sn=e20dc5e4bd787c129dc06be66a0971d4&chksm=fbadf1f6ccda78e04a8f7ceea5a6c96ba4f6f9434019e1f7f2cdaca213d111646bd7f9e2a472&token=327813426&lang=en_US#rd) |Jian Zhao| 2020年3月份 | 2020/03 | 
+| 287 | [鼠标轻点击，数据大挪移——Azure存储账户主动故障转移](https://aubreyhan.net/undefined/9864/) |Yuan Han| 2020年3月份 | 2020/03 | 
+| 286 | [备份数据何处放？云为衣兮霓为裳——浅谈备份介质云化](https://aubreyhan.net/undefined/35636/) |Yuan Han| 2020年3月份 | 2020/03 | 
 | 285 | [如何推送Azure Monitor报警到Teams](https://www.jianshu.com/p/1742452540ef) |Kele Wang| 2020年1&2月份 | 2020/03/02  00:00:00 | 项 |  |
 | 284 | [Azure 运维篇 - 通过 Ansible 批量更改 Azure 资源](https://mp.weixin.qq.com/s?__biz=MzU0OTY0NDE1NA==&mid=2247484310&idx=1&sn=e8f23712562680647f2f566d28ff20ff&chksm=fbadf183ccda78954edea01fb3c510d275c1e090463f27dc53fb18949f3cf21b423612dffb05&token=1138576309&lang=en_US#rd) |Jian Zhao| 2020年1&2月份 | 2020/03/02  00:00:00 | 项 |  |
 | 283 | [利用Microsoft Forms轻松创建员工返工情况调查表](https://mp.weixin.qq.com/s/x_awPeKLkSud6Pbv_zgVww) | Minsheng Wang | 2020年1&2月份 | 2020/03/02  00:00:00 | 项 |  |
@@ -287,8 +299,3 @@
 | 03 | [SQL数据库性能抓取和分析神器](https://mp.weixin.qq.com/s?__biz=MzU2MDE2MTg3MA==&mid=2247483689&idx=1&sn=2828d22ac620d36fdc6f30867ef60435&chksm=fc0d7408cb7afd1e887cd40c3e5bc9146b274b1dec7133ea962e224b9754956304f148f3bc76&mpshare=1&scene=1&srcid=09012yqcL4F4GfMrGxs5MPnj#rd) | Max Shen | 7-8月份 | 2017/7-8 |
 | 02 | [SQL2017 &Azure SQL新功能：图形数据库](https://mp.weixin.qq.com/s?__biz=MzU2MDE2MTg3MA==&mid=2247483701&idx=1&sn=d33df564eeb6802bd957dbe0e03a940d&chksm=fc0d7414cb7afd0205c05a21efa9a1909cc6ec1d11d2095eb66fd7854efdb59638264d685bc7&mpshare=1&scene=1&srcid=090170lV76bHtQVPtLoSezHD#rd) | Max Shen | 7-8月份 | 2017/7-8 |
 | 01 | [Global Azure 与 China Azure 互联](http://www.cnblogs.com/wekang/p/8746028.html) | Wei Kang | 7-8月份 | 2017/7-8 |
-
-
-Mason Wang
-
-2020-03-28
