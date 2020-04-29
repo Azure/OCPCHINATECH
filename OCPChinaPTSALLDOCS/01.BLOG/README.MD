@@ -1,9 +1,23 @@
 # OCP PTS Team Blog汇总
 
-> 2020/4/1 updated
+> 2020/4/29 updated
 
 | 序号 | 博客 | 创建者 | 所属月份 | 创建时间 | 项目类型 | 路径 |
 | ---- | ---- | ---- | ---- |  ---- | ---- | ---- |
+| 309 | [用Visual Studio Code写azure template](https://www.cnblogs.com/acui2010/p/12650706.html) | Alex Cui | 2020年4月份 | 2020/04 | 
+| 308 | [Azure上使用Jmespath快速查找VM镜像](https://www.cnblogs.com/acui2010/p/12641066.html) | Alex Cui | 2020年4月份 | 2020/04 | 
+| 307 | [来认识下云搜索利器-Azure Cognitive Search](https://mp.weixin.qq.com/s/TfwOMcR5WzQBcW2vdKzwBg) | Minsheng Wang | 2020年4月份 | 2020/04 | 
+| 306 | [从头开始做一个自己的小娜（第二步 机器人虚拟助手）](http://8nn.co/abM5) | Yanqiang Lu | 2020年4月份 | 2020/04 | 
+| 305 | [从头开始做一个自己的小娜（第一步: 自定义关键词唤醒）](http://8nn.co/abM3) | Yanqiang Lu | 2020年4月份 | 2020/04 | 
+| 304 | [Azure自定义视觉服务实现图像分类和预测](https://mp.weixin.qq.com/s/w20mPzlSeblfdzt2HSh4xw) | Minsheng Wang | 2020年4月份 | 2020/04 | 
+| 303 | [Windows Virtual Desktop之使用NetApp和FSLogix装载用户配置文件](http://dwz.date/asb7) | Jiayu Zhu | 2020年4月份 | 2020/04 | 
+| 302 | [探索微软数据中台构建之用户画像](https://mp.weixin.qq.com/s/2mKdLvC150lhE04pT7Fvzw) | Renjie Zhu | 2020年4月份 | 2020/04 | 
+| 301 | [探索微软数据中台构建之实践篇](https://mp.weixin.qq.com/s/ylvyrh-7sHYULkdcovYjxg) | Renjie Zhu | 2020年4月份 | 2020/04 | 
+| 300 | [探索微软数据中台构建之理论篇](https://mp.weixin.qq.com/s/WQOWMNoEH0jNbsWzQkjSBw) | Renjie Zhu | 2020年4月份 | 2020/04 | 
+| 299 | [数据平台系统升级（一）：本地SQL Server上云](https://mp.weixin.qq.com/s/upuzKGjOmEOsg8O_jhUbNQ) | Yi Liang | 2020年4月份 | 2020/04 | 
+| 298 | [并发批量创建Azure虚机](https://www.cnblogs.com/radez/p/12674398.html) | Rade Zheng | 2020年4月份 | 2020/04 | 
+| 297 | [事了抚身去，不留数据在——Azure Ephemeral OS Disk](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Faubreyhan.net%2Fundefined%2F23597%2F&data=02%7C01%7CJalen.Hu%40microsoft.com%7C0418d3007f234fe7486108d7ea4d3c91%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637235489755575469&sdata=RZVTocw9cM4FwiRVMovQYmcqv6pAWas0P%2B02pcmiteU%3D&reserved=0) | Yuan Han | 2020年4月份 | 2020/04 | 
+| 296 | [你有我有全都有——Azure-Shared-Disk](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Faubreyhan.net%2Fundefined%2F26863%2F&data=02%7C01%7CJalen.Hu%40microsoft.com%7C0418d3007f234fe7486108d7ea4d3c91%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637235489755575469&sdata=FD3n2HirJWpJFT79wbCB3GaAKTRrIKC%2Bh3LeobFoscA%3D&reserved=0) | Yuan Han | 2020年4月份 | 2020/04 | 
 | 295 | [租户不统一也能快速部署使用Windows虚拟桌面](https://mp.weixin.qq.com/s/f5miqcWu7hKr_we_HKSHcA) | Jiayu Zhu | 2020年3月份 | 2020/03 | 
 | 294 | [New Customer Onboarding - 中国区Azure](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/New%20Customer%20Onboarding%20-%20%E4%B8%AD%E5%9B%BD%E5%8C%BAAzure.md) |Simeng Zhang| 2020年3月份 | 2020/03 | 
 | 293 | [New Customer Onboarding - 国际版Azure](https://github.com/ChinaOcpPTS/OCPChinaPTSALLDOCS/blob/master/03.Azure%E8%B5%84%E6%96%99%E5%90%88%E9%9B%86/New_Customer_Onboard/New%20Customer%20Onboarding%20-%20%E5%9B%BD%E9%99%85%E7%89%88Azure.md) |Simeng Zhang| 2020年3月份 | 2020/03 | 
