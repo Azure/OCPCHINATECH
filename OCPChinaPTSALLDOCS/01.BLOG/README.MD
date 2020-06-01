@@ -4,6 +4,13 @@
 
 | 序号 | 博客 | 创建者 | 所属月份 | 创建时间 | 项目类型 | 路径 |
 | ---- | ---- | ---- | ---- |  ---- | ---- | ---- |
+| 316 | [Windows Virtual Desktop之配置使用Teams](http://6tt.co/ng6H) | Jiayu Zhu | 2020年5月份 | 2020/05 |
+| 315 | [Azure Sentinel -- deep dive系列一之连接方案](http://6tt.co/ng6M) | Jiayu Zhu | 2020年5月份 | 2020/05 |
+| 314 | [Power Apps 中加入 AI 的能力 - 实现一个简单的英汉词典](https://mp.weixin.qq.com/s?__biz=MzU0OTY0NDE1NA==&mid=2247484412&idx=1&sn=03e4659f7c5454dd297de6012327c748&chksm=fbadf1e9ccda78ff86fc9c2ef0634b9a2f0774d8d2d72138f78aa25077d63457b6502262022a&token=1826914741&lang=en_US#rd) | Jian Zhao | 2020年5月份 | 2020/05 | 
+| 313 | [Kubernetes(3)——逐个解析kubernetes基础操作代码](https://blog.csdn.net/i_beidou/article/details/106097987) | Jalen Hu | 2020年5月份 | 2020/05 | 
+| 312 | [Kubernetes(2)——如何在Windows10当中安装minikube](https://blog.csdn.net/i_beidou/article/details/105977147) | Jalen Hu | 2020年5月份 | 2020/05 | 
+| 311 | [Kubernetes(1)——什么是虚拟化技术，什么是容器，什么是Docker，什么是K8S](https://blog.csdn.net/i_beidou/article/details/105947986) | Jalen Hu | 2020年5月份 | 2020/05 | 
+| 310 | [我有一百种方法帮你保护企业数据（持续更新中）](https://blog.csdn.net/i_beidou/article/details/106257933) | Jalen Hu | 2020年5月份 | 2020/05 | 
 | 309 | [用Visual Studio Code写azure template](https://www.cnblogs.com/acui2010/p/12650706.html) | Alex Cui | 2020年4月份 | 2020/04 | 
 | 308 | [Azure上使用Jmespath快速查找VM镜像](https://www.cnblogs.com/acui2010/p/12641066.html) | Alex Cui | 2020年4月份 | 2020/04 | 
 | 307 | [来认识下云搜索利器-Azure Cognitive Search](https://mp.weixin.qq.com/s/TfwOMcR5WzQBcW2vdKzwBg) | Minsheng Wang | 2020年4月份 | 2020/04 | 
