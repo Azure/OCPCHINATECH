@@ -4,6 +4,9 @@
 
 | 序号 | 博客 | 创建者 | 所属月份 | 创建时间 | 项目类型 | 路径 |
 | ---- | ---- | ---- | ---- |  ---- | ---- | ---- |
+| 319 | [工具巧上手，运维自动化](https://aubreyhan.net/undefined/2867/) | Yuan Han | 2020年6月份 | 2020/06 |
+| 318 | [尔来四万八千岁，不与秦塞通人烟————Azure专用主机](https://aubreyhan.net/undefined/2420/) | Yuan Han | 2020年6月份 | 2020/06 |
+| 317 | [数据上云何所依？月光宝盒来助力。—————— 使用DataBox Edge数据传输](https://aubreyhan.net/undefined/15904/) | Yuan Han | 2020年6月份 | 2020/06 |
 | 316 | [Windows Virtual Desktop之配置使用Teams](http://6tt.co/ng6H) | Jiayu Zhu | 2020年5月份 | 2020/05 |
 | 315 | [Azure Sentinel -- deep dive系列一之连接方案](http://6tt.co/ng6M) | Jiayu Zhu | 2020年5月份 | 2020/05 |
 | 314 | [Power Apps 中加入 AI 的能力 - 实现一个简单的英汉词典](https://mp.weixin.qq.com/s?__biz=MzU0OTY0NDE1NA==&mid=2247484412&idx=1&sn=03e4659f7c5454dd297de6012327c748&chksm=fbadf1e9ccda78ff86fc9c2ef0634b9a2f0774d8d2d72138f78aa25077d63457b6502262022a&token=1826914741&lang=en_US#rd) | Jian Zhao | 2020年5月份 | 2020/05 | 
