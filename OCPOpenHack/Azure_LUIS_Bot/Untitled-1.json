@@ -1,0 +1,125 @@
+{
+    "query": "预订一张4月10号从北京去巴黎的机票",
+    "prediction": {
+        "topIntent": "BookFlight",
+        "intents": {
+            "BookFlight": {
+                "score": 0.9184409
+            },
+            "GetWeather": {
+                "score": 0.0452690646
+            },
+            "None": {
+                "score": 0.0143802371
+            },
+            "Cencle": {
+                "score": 0.00308279833
+            }
+        },
+        "entities": {
+            "Airport": [
+                {
+                    "From": [
+                        "北京"
+                    ],
+                    "$instance": {
+                        "From": [
+                            {
+                                "type": "From",
+                                "text": "北京",
+                                "startIndex": 10,
+                                "length": 2,
+                                "score": 0.7795254,
+                                "modelTypeId": 1,
+                                "modelType": "Entity Extractor",
+                                "recognitionSources": [
+                                    "model"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "To": [
+                        "巴黎"
+                    ],
+                    "$instance": {
+                        "To": [
+                            {
+                                "type": "To",
+                                "text": "巴黎",
+                                "startIndex": 13,
+                                "length": 2,
+                                "score": 0.9942933,
+                                "modelTypeId": 1,
+                                "modelType": "Entity Extractor",
+                                "recognitionSources": [
+                                    "model"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
+            "datetimeV2": [
+                {
+                    "type": "date",
+                    "values": [
+                        {
+                            "timex": "XXXX-04-10",
+                            "resolution": [
+                                {
+                                    "value": "2020-04-10"
+                                },
+                                {
+                                    "value": "2021-04-10"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "$instance": {
+                "Airport": [
+                    {
+                        "type": "Airport",
+                        "text": "北京",
+                        "startIndex": 10,
+                        "length": 2,
+                        "score": 0.997155845,
+                        "modelTypeId": 1,
+                        "modelType": "Entity Extractor",
+                        "recognitionSources": [
+                            "model"
+                        ]
+                    },
+                    {
+                        "type": "Airport",
+                        "text": "巴黎",
+                        "startIndex": 13,
+                        "length": 2,
+                        "score": 0.999820948,
+                        "modelTypeId": 1,
+                        "modelType": "Entity Extractor",
+                        "recognitionSources": [
+                            "model"
+                        ]
+                    }
+                ],
+                "datetimeV2": [
+                    {
+                        "type": "builtin.datetimeV2.date",
+                        "text": "4月10号",
+                        "startIndex": 4,
+                        "length": 5,
+                        "modelTypeId": 2,
+                        "modelType": "Prebuilt Entity Extractor",
+                        "recognitionSources": [
+                            "model"
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

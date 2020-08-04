@@ -1,7 +1,7 @@
-# 基于LUIS的Voice Command创建
+# 创建预订机票LUIS应用
 Language Understanding Intelligent Services（简称LUIS），是Azure中用于会话AI的意图管理的服务。通过LUIS用户可以创建任务对话服务中的意图，意图中的参数，部署和管理意图信息，发布意图服务给对话机器人或者其他需要意图识别的应用。
 
-本实验通过一个零售商品查询的场景，演示和介绍如何使用[luis.ai](https://www.luis.ai)生成语义App，创建意图，训练意图并发布语义App REST API给其他应用服务调用。该实验将包括以下内容：
+本实验是带领开发者完成一个中文机票预订的LUIS应用，该应用发布后，可以集成到[机票预订机器人](./README-BOT.md)的开发中。该实验将包括以下内容：
 - 创建语义应用
 - 创建意图/语料
 - 创建实例
@@ -15,99 +15,204 @@ Language Understanding Intelligent Services（简称LUIS），是Azure中用于�
 1 . LUIS为开发者提供了定制化训练业务场景语义的工具，开发者可以自己独立完成语义应用的搭建和训练。访问[luis.ai](https://www.luis.ai)，使用已有的Azure订阅账号登陆。
 ![注册登陆luis.ai](./images/image01.JPG)
 
-2 . 登陆LUIS门户后，进入MyApp页面，点击New App，创建你的LUIS应用，输入应用名称，语种（目前支持13种语言），应用的描述等信息。输入完成后点击创建。
+2 . 登陆LUIS门户后，进入MyApp页面，点击New App，创建你的LUIS应用，输入应用名称如：FlightBookingCN，语种（目前支持18种语言），应用的描述等信息。输入完成后点击创建。
 ![创建新应用](./images/image02.JPG)
 
 ![创建新应用](./images/image03.JPG)
 
-3 . 应用创建成功后，进入意图应用开发界面，界面功能介绍如下：
-![应用开发界面](./images/image04.JPG)
 
 
 ## 创建意图/语料 ##
-4 . 应用创建完成后，就可以开始为系统创建意图，点击"Create new intent"，输入意图名称比如“查询商品价格”，点击确认。
+4 . 应用创建完成后，就可以开始为系统创建意图，点击"Create new intent"，输入意图名称“BookFlight” （因为意图和实例名称都会在LUIS应用调用时返回给Bot程序，建议使用英文），点击确认。
+
 5 . 意图创建后，需要输入意图相关的语料，可以输入多个语料，每个语料输入后回车即可，确认的语料会出现在Utterance列表中。 
 ![创建意图中的语料](./images/image05.JPG)
 
-这里创建的语料中的“可口可乐”， “三元牛奶”，“王老吉”这些商品名称会有很多，不需要为每个商品名称都创建语料，只需要创建“商品名称”的实体（entity），需要的该实体的语料只需要在语料中加入该实体即可。
+这里创建的语料中的有“北京，上海，巴黎，伦敦”这些城市，还有“3月8号”等这些日期，不需要为每个城市和日期都创建语料，只需要创建机场和日期实体（entity），需要的该实体的语料只需要在语料中加入该实体即可。
 
 接下来， 我们看看实体的创建
 
 ## 创建实例 ##
-6 . 点击左侧功能栏中的Entities，进入实体管理界面， 选择Create new entity， 输入实体名称，例如“商品名称”，点击“Done”
-![实体创建](./images/image06.JPG)
-7 . 如果我们的实体是从一组数据中选择，比如商品名称的实际参数有：可口可乐，王老吉，三元牛奶，娃哈哈， 德芙巧克力等等。这时候我们需要创建Phrase List导入商品名称列表。点击左侧功能栏中的Phrase Lists， 进入Phrase List的管理界面，点击Create new phrase list，输入Phrase List名称，**必须与之前的实体名称一致**，这里是“商品名称”， 在Value栏中输入商品列表的参数，**注意参数之间用英文逗号分隔**，输入完成回车。
-![创建PhraseList](./images/image07.JPG)
-8 . 回车后，参数列表信息就会进入左下方的Phrase list values框中， 同时右下方的Related Values里面会有其他相关的推荐，可以根据需要添加对应的value进入你的Phrase List Values中，完成后，点击Save。
-![推荐Phraselistvalues](./images/image08.JPG)
+6 . LUIS目前废弃了之前composite的实例类型，使用Machine Learned类型来完成带结构的实例定义。点击左侧功能栏中的Entities，进入实例管理界面， 选择Create +， 选择：Machine Learned类型，输入实例名称:Airport，选择：Add structure，点击“Next”
+<img width="450" height="300" src="./images/image06.JPG"/>
 
-9 . 实体和对应的Phrase List创建完成后， 可以为需要该实体的语料做实体关联，点击左侧功能栏的Intents，进入意图管理界面， 选择之前我们创建的“查询商品名称”的意图，可以调出之前的Utterance列表， 用鼠标在Utterance中连续点击需要作为实体的字符，比如这里“王老吉”，就会自动出现实体列表， 其中会显示我们之前创建的实体“商品名称”，选择“商品名称”。以此类推， 为下面的三元牛奶，和可口可乐都做商品名称的关联。
-![商品名称关联](./images/image09.JPG)
+然后，在Airport实例下添加子实例，点击右侧的+，输入：From，在重复一次输入：To，点击“Create”
+<img width="450" height="300" src="./images/image07.JPG"/>
 
-此外，LUIS模型中提供预定义的实体，如时间，数字，百分比，年龄等，当你需要的语料实体是预定义实体时，就不用创建这些实体类型，可以直接选择语料中的参数，关联预定义的实体就可以。
+7 . 创建成功后，可以为Airport实例创建phrase list，帮助自动学习城市名称。 点击Airport实例，选择右侧“+Add Feature”，然后选择Create new phrase list，输入Phrase List名称：“Airport”， 在Value栏中输入城市的名称，每输入一个回车，即可进入下一个。
+<img width="450" height="180" src="./images/image08.JPG"/>
+
+
+
+8 . 下方的Suggestions Values里面会有其他相关的推荐，可以根据需要添加对应的value进入你的Phrase List Values中，完成后，点击Create。
+<img width="400" height="300" src="./images/image09.JPG"/>
+
+9 . 在本实验中还需要一个日期实例，LUIS提供了日期，温度，数字等常用实例类型，作为prebuilt entity。我们这需要创建这个prebuilt entity，点击实例页面中Add prebuilt entity，选择datetimeV2这个实例，点击Done
+
+<img width="300" height="250" src="./images/image10.JPG"/>
+
+## 语料关联实例 ##
+
+10 . 实例创建完成后，就可以在意图的语料中关联对应的实例，以方便训练识别。点击左侧功能栏的Intents，进入意图管理界面， 选择之前我们创建的“BookFlight”的意图，可以调出之前的Utterance列表， 用鼠标在Utterance中连续点击需要作为实体的字符，比如这里“巴黎”，在下拉框中选择Airport实例，再继续再右箭头点卡的下拉框中选择From，因为巴黎是出发地。以此类推，为目的地“上海”也关联到Airport的To上，同理再把2月13号这个日期与DATeTimeV2这个实例关联起来。
+
+<img width="300" height="100" src="./images/image11.JPG"/>
+
+以此类推，以后添加的语料有可能回自动识别到对应的实例，如果识别准确你可以选择对应的语料，然后点击confirm all entities就可以自动关联了。
+
 
 ## 训练与测试意图 ##
-10 . 意图和实体管理完成后，就可对意图做训练了， 点击右上方的“Train”，进行训练，训练完成后，就可以进行测试， 点击右上方的“Test”，进入测试界面，输入你需要测试的语料，比如“请问德芙巧克力多少钱？”，然后回车。测试页面会出现测试语料对应的意图以及意图的置信度的打分，这里是0.955（满分是1）。
+11 . 按照上面的意图和实例操作，再创建一个Cancel的意图，和GetWeather的意图。完成后，就可对意图做训练了， 点击右上方的“Train”，进行训练，训练完成后，就可以进行测试， 点击右上方的“Test”，进入测试界面，输入你需要测试的语料，比如“预订一张4月5号从伦敦去巴黎的机票”，然后回车。测试页面会出现测试语料对应的意图以及意图的置信度的打分，这里是0.941（满分是1）。可以点击Inspect查看返回的结果，包括实例是否识别正确
 
-<img width="300" height="450" src="./images/image10.JPG"/>
+<img width="300" height="350" src="./images/image12.JPG"/>
 
-11 . 测试结果中如果需要查看详细的信息，可以点击测试结果中的Inspect，进入Inspect界面，可以看到最高分的意图，该测试语料中是否有实体参数，具体参数信息都可以从这里看到，方便确认测试结果是否正确。
-
-<img width="400" height="450" src="./images/image11.JPG"/>
-
-到这里，我们查询商品价格的意图就创建并测试完成，可以通过以上方法持续添加该应用需要的其他意图，比如“查询商品余量”。所有意图和实体创建测试完成后，就可以进入发布阶段。
+所有意图和实体创建测试完成后，就可以进入发布阶段。
 
 ## 发布语义应用 ##
 
-12 . 发布语义应用需要使用LUIS的访问密钥。接下来，我们来看如何在您的[Azure Portal](http://portal.azure.com)中创建LUIS服务，发布语义应用时需要使用该LUIS服务的密钥。
-13 . 登陆[Azure Portal](http://portal.azure.com)后， 点击创建，输入LUIS查询，结果中出现与LUIS相关的Azure服务，点击Language Understanding，然后点击Create。
-![创建LUIS服务](./images/image12.JPG)
-14 . 在服务创建页面输入名称，选择服务的Location，选择价格，测试使用可以选择F0，免费服务， 选择资源组或者创建一个新的资源组，完成后点击下方的Create。
+12 .点击功能界面右上方的Publish，选择production slot，点击Done，进行发布。发布完成后，点击右上方的Manage，进入管理界面，选择左侧菜单中Setting，进入设置页面，将**AppID**复制出来后面开发使用。
+<img width="300" height="300" src="./images/image13.JPG"/>
 
-<img width="500" height="450" src="./images/image13.JPG"/>
-15 . 创建完成后，回到[Luis.ai](http://luis.ai)，点击右上方的MANAGE菜单，进入应用设置管理界面，在左侧功能栏中，选择Keys and Endpoints， 进入密钥和Endpoint管理界面，缺省这里会提供一个Starter-Key，本教程为了给大家一个完整的正式发布流程，在这里增加我们刚刚创建的LUIS服务的密钥，选择Assign resource
+13 . 语义应用最终是部署到Azure LUIS服务上的，接下来，在您的[Azure Portal](http://portal.azure.com)中创建LUIS服务，并将我们的FightBookingCN应用发布该LUIS服务上。登陆[Azure Portal](http://portal.azure.com)后， 点击创建，输入LUIS查询，结果中出现与LUIS相关的Azure服务，点击Language Understanding，然后点击Create。按照下面示例输入参数，资源组根据你自己的环境确定，选择Authoring和Prediction两种选项，价格可以选择F0，Name和Location自己确定。完成后点击Review+Create
+<img width="300" height="350" src="./images/image14.JPG"/>
 
-![增加LUIS服务key](./images/image14.JPG)
-16 . 选择你的账户的租户名称，选择刚刚创建服务所在的订阅， 选择该订阅下面的需要增加的LUIS服务，点击Assign resource，系统会自动将LUIS的Key导入，并生成Endpoint。后面我们就可以发布应用了。**如果你刚刚创建的服务没有出现在下拉列表中，可以尝试重新登陆即可**
+14 . 创建完成后，回到[Luis.ai](http://luis.ai)，点击右上方的MANAGE菜单，进入应用设置管理界面，在左侧功能栏中，选择Azure Resources， 点击Add prediction resources，选择你的订阅，并点击你刚刚创建好的LUIS服务，点击Done
+<img width="300" height="280" src="./images/image15.JPG"/>
 
-<img width="600" height="500" src="./images/image15.JPG"/>
+16 . 完成后就可以看到之前发布的BookingFlightCN应用已经部署到LUIS服务上了，保存**Primary Key:**，**Endpoint URL**，后面开发机器人使用。这里同时还提供了一个Query的URL链接，可以复制下来，在浏览器中测试你应用是否成功。
 
-17 . 点击右上方的“Publish”， 系统会发布刚刚的应用， 完成会会提示进入endpoint列表，也就是就进入16步中的列表，点击你的luis resource后面Endpoint链接。
+<img width="300" height="200" src="./images/image16.JPG"/>
 
-![语义应用发布](./images/image16.JPG)
+17 . 点击Endpoint链接后，进入浏览器，可以直接在URL链接后面输入测试语料比如：预订一张4月10号从北京去巴黎的机票， 回车，就可以看到语义应用返回的Json结果
 
-18 . 点击Endpoint链接后，进入浏览器，可以直接在URL链接后面输入测试语料， 回车，就可以看到语义应用返回的Json结果
-
-![语音应用Endpoint测试](./images/image17.JPG)
+![应用Endpoint测试](./images/image17.JPG)
 ```json
 {
-  "query": "请问三元牛奶多少钱",
-  "topScoringIntent": {
-    "intent": "查询商品价格",
-    "score": 0.9740832
-  },
-  "intents": [
-    {
-      "intent": "查询商品价格",
-      "score": 0.9740832
-    },
-    {
-      "intent": "None",
-      "score": 0.0166688282
+    "query": "预订一张4月10号从北京去巴黎的机票",
+    "prediction": {
+        "topIntent": "BookFlight",
+        "intents": {
+            "BookFlight": {
+                "score": 0.9184409
+            },
+            "GetWeather": {
+                "score": 0.0452690646
+            },
+            "None": {
+                "score": 0.0143802371
+            },
+            "Cencle": {
+                "score": 0.00308279833
+            }
+        },
+        "entities": {
+            "Airport": [
+                {
+                    "From": [
+                        "北京"
+                    ],
+                    "$instance": {
+                        "From": [
+                            {
+                                "type": "From",
+                                "text": "北京",
+                                "startIndex": 10,
+                                "length": 2,
+                                "score": 0.7795254,
+                                "modelTypeId": 1,
+                                "modelType": "Entity Extractor",
+                                "recognitionSources": [
+                                    "model"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "To": [
+                        "巴黎"
+                    ],
+                    "$instance": {
+                        "To": [
+                            {
+                                "type": "To",
+                                "text": "巴黎",
+                                "startIndex": 13,
+                                "length": 2,
+                                "score": 0.9942933,
+                                "modelTypeId": 1,
+                                "modelType": "Entity Extractor",
+                                "recognitionSources": [
+                                    "model"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
+            "datetimeV2": [
+                {
+                    "type": "date",
+                    "values": [
+                        {
+                            "timex": "XXXX-04-10",
+                            "resolution": [
+                                {
+                                    "value": "2020-04-10"
+                                },
+                                {
+                                    "value": "2021-04-10"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "$instance": {
+                "Airport": [
+                    {
+                        "type": "Airport",
+                        "text": "北京",
+                        "startIndex": 10,
+                        "length": 2,
+                        "score": 0.997155845,
+                        "modelTypeId": 1,
+                        "modelType": "Entity Extractor",
+                        "recognitionSources": [
+                            "model"
+                        ]
+                    },
+                    {
+                        "type": "Airport",
+                        "text": "巴黎",
+                        "startIndex": 13,
+                        "length": 2,
+                        "score": 0.999820948,
+                        "modelTypeId": 1,
+                        "modelType": "Entity Extractor",
+                        "recognitionSources": [
+                            "model"
+                        ]
+                    }
+                ],
+                "datetimeV2": [
+                    {
+                        "type": "builtin.datetimeV2.date",
+                        "text": "4月10号",
+                        "startIndex": 4,
+                        "length": 5,
+                        "modelTypeId": 2,
+                        "modelType": "Prebuilt Entity Extractor",
+                        "recognitionSources": [
+                            "model"
+                        ]
+                    }
+                ]
+            }
+        }
     }
-  ],
-  "entities": [
-    {
-      "entity": "三元牛奶",
-      "type": "商品名称",
-      "startIndex": 2,
-      "endIndex": 5,
-      "score": 0.9849083
-    }
-  ]
 }
 ```
-接下来，就可以将这个URL提供给需要调用语义应用的用户使用了。
+这样就完成了BookingFlightCN应用的开发。
 
-## 总结 ##
-LUIS提供给开发者独立完成语义训练环境和服务，利用它可以作为Voice Command或者BOT的意图处理中心，实现自己的人工智能服务。 
+## 后续 ##
+该应用完成后，就可以开始实现[机票预订机器人](./README-BOT.md)的开发和部署了。 
