@@ -1,0 +1,24 @@
+az ad app create --display-name "LitLiDevHackBot" --password "Template123456-0" --available-to-other-tenants
+appid： c3905791-e70a-483a-8393-704c3addeb54
+az account set --subscription "Microsoft Azure Internal Consumption"
+
+az deployment sub create --template-file template-with-new-rg.json --location westus --parameters appId=c3905791-e70a-483a-8393-704c3addeb54 appSecret=Template123456-0 botId=EchoBot1litli botSku=F0 newAppServicePlanName=LitLiDevHack newWebAppName=LitLiDevHack groupName=DevHack groupLocation=westus newAppServicePlanLocation=westus --name EchoBot1litli
+
+az deployment group create --resource-group "<name-of-resource-group>" --template-file "<path-to-template-with-preexisting-rg.json>" --parameters appId="<app-id-from-previous-step>" appSecret="<password-from-previous-step>" botId="<id or bot-app-service-name>" newWebAppName="<bot-app-service-name>" existingAppServicePlan="<name-of-app-service-plan>" appServicePlanLocation="<region-location-name>" --name ""
+
+az deployment group create --resource-group "DevHackLL" --template-file "template-with-preexisting-rg.json" --parameters appId=c3905791-e70a-483a-8393-704c3addeb54 appSecret=Template123456-0 botId=EchoBot1litli newWebAppName=LitLiDevHack newAppServicePlanName=LitLiDevHack appServicePlanLocation=westus --name EchoBot1litli
+
+az bot prepare-deploy --lang Csharp --code-dir "." --proj-file-path "EchoBot1.csproj"
+
+az webapp deployment source config-zip --resource-group DevHackLL --name "LitLiDevHack" --src "EchoBot1.zip"
+
+Luis English：
+appid： e0ee0443-57ee-4246-ad9e-25fd9d5a6354
+location： westus
+Prim Key：ad3788f2cefb4c52aed3fab351925798
+endpoint URL： https://westus.api.cognitive.microsoft.com/
+
+Luis China: 
+appid: 3d06f6bc-0f3e-498b-9f05-844ab4a0a2ad
+Prim Key: ad3788f2cefb4c52aed3fab351925798
+endpoint URL： https://westus.api.cognitive.microsoft.com/
