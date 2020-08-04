@@ -13,20 +13,21 @@ Language Understanding Intelligent Services（简称LUIS），是Azure中用于�
 
 ## 创建语义应用 ##
 1 . LUIS为开发者提供了定制化训练业务场景语义的工具，开发者可以自己独立完成语义应用的搭建和训练。访问[luis.ai](https://www.luis.ai)，使用已有的Azure订阅账号登陆。
-![注册登陆luis.ai](./images/image01.JPG)
+<img width="700" height="180" src="./images/image01.JPG"/>
+2 . 登陆LUIS门户后，进入MyApp页面，点击New App，
 
-2 . 登陆LUIS门户后，进入MyApp页面，点击New App，创建你的LUIS应用，输入应用名称如：FlightBookingCN，语种（目前支持18种语言），应用的描述等信息。输入完成后点击创建。
-![创建新应用](./images/image02.JPG)
+<img width="350" height="100" src="./images/image02.JPG"/>
 
-![创建新应用](./images/image03.JPG)
-
+创建你的LUIS应用，输入应用名称如：FlightBookingCN，语种（目前支持18种语言），应用的描述等信息。输入完成后点击Done。
+<img width="350" height="300" src="./images/image03.JPG"/>
 
 
 ## 创建意图/语料 ##
 4 . 应用创建完成后，就可以开始为系统创建意图，点击"Create new intent"，输入意图名称“BookFlight” （因为意图和实例名称都会在LUIS应用调用时返回给Bot程序，建议使用英文），点击确认。
 
 5 . 意图创建后，需要输入意图相关的语料，可以输入多个语料，每个语料输入后回车即可，确认的语料会出现在Utterance列表中。 
-![创建意图中的语料](./images/image05.JPG)
+
+<img width="450" height="200" src="./images/image05.JPG"/>
 
 这里创建的语料中的有“北京，上海，巴黎，伦敦”这些城市，还有“3月8号”等这些日期，不需要为每个城市和日期都创建语料，只需要创建机场和日期实体（entity），需要的该实体的语料只需要在语料中加入该实体即可。
 
@@ -34,17 +35,21 @@ Language Understanding Intelligent Services（简称LUIS），是Azure中用于�
 
 ## 创建实例 ##
 6 . LUIS目前废弃了之前composite的实例类型，使用Machine Learned类型来完成带结构的实例定义。点击左侧功能栏中的Entities，进入实例管理界面， 选择Create +， 选择：Machine Learned类型，输入实例名称:Airport，选择：Add structure，点击“Next”
+
 <img width="450" height="300" src="./images/image06.JPG"/>
 
 然后，在Airport实例下添加子实例，点击右侧的+，输入：From，在重复一次输入：To，点击“Create”
+
 <img width="450" height="300" src="./images/image07.JPG"/>
 
 7 . 创建成功后，可以为Airport实例创建phrase list，帮助自动学习城市名称。 点击Airport实例，选择右侧“+Add Feature”，然后选择Create new phrase list，输入Phrase List名称：“Airport”， 在Value栏中输入城市的名称，每输入一个回车，即可进入下一个。
+
 <img width="450" height="180" src="./images/image08.JPG"/>
 
 
 
 8 . 下方的Suggestions Values里面会有其他相关的推荐，可以根据需要添加对应的value进入你的Phrase List Values中，完成后，点击Create。
+
 <img width="400" height="300" src="./images/image09.JPG"/>
 
 9 . 在本实验中还需要一个日期实例，LUIS提供了日期，温度，数字等常用实例类型，作为prebuilt entity。我们这需要创建这个prebuilt entity，点击实例页面中Add prebuilt entity，选择datetimeV2这个实例，点击Done
@@ -70,12 +75,15 @@ Language Understanding Intelligent Services（简称LUIS），是Azure中用于�
 ## 发布语义应用 ##
 
 12 .点击功能界面右上方的Publish，选择production slot，点击Done，进行发布。发布完成后，点击右上方的Manage，进入管理界面，选择左侧菜单中Setting，进入设置页面，将**AppID**复制出来后面开发使用。
+
 <img width="300" height="300" src="./images/image13.JPG"/>
 
 13 . 语义应用最终是部署到Azure LUIS服务上的，接下来，在您的[Azure Portal](http://portal.azure.com)中创建LUIS服务，并将我们的FightBookingCN应用发布该LUIS服务上。登陆[Azure Portal](http://portal.azure.com)后， 点击创建，输入LUIS查询，结果中出现与LUIS相关的Azure服务，点击Language Understanding，然后点击Create。按照下面示例输入参数，资源组根据你自己的环境确定，选择Authoring和Prediction两种选项，价格可以选择F0，Name和Location自己确定。完成后点击Review+Create
+
 <img width="300" height="350" src="./images/image14.JPG"/>
 
 14 . 创建完成后，回到[Luis.ai](http://luis.ai)，点击右上方的MANAGE菜单，进入应用设置管理界面，在左侧功能栏中，选择Azure Resources， 点击Add prediction resources，选择你的订阅，并点击你刚刚创建好的LUIS服务，点击Done
+
 <img width="300" height="280" src="./images/image15.JPG"/>
 
 16 . 完成后就可以看到之前发布的BookingFlightCN应用已经部署到LUIS服务上了，保存**Primary Key:**，**Endpoint URL**，后面开发机器人使用。这里同时还提供了一个Query的URL链接，可以复制下来，在浏览器中测试你应用是否成功。
