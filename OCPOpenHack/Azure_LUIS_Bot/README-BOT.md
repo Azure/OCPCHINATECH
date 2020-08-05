@@ -146,9 +146,11 @@
 完成之后，点击生成解决方案并运行。
 ## 测试机器人应用 ##
 4 . 启动Bot Framework Emulator，输入调试的本地Bot URL，点击connect
+
 <img width="200" height="180" src="./images/image19.JPG"/>
 
 5 . Bot连接成功后，输入需要预订机票的语料如：“预订一张2020年3月23日从伦敦去北京的机票”，然后发送，就可以返回预订信息如下
+
 <img width="300" height="280" src="./images/image20.JPG"/>
 
 说明LUIS已经集成到Bot应用中。
