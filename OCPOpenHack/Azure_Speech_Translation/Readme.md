@@ -34,7 +34,7 @@ speech_key, service_region = "YourSubscriptionKey", "YourServiceRegion"
 
 请先找到[先决条件](#先决条件)中已经创建好的语音服务资源。部署完成后，选择“转到资源”，然后在左侧导航窗格中选择“密钥和终结点”以显示语音服务订阅密钥和区域。
 
-<img width="500" height="220" src="./images/image01.PNG"/>
+<img width="500" height="220" src="./images/image01.png"/>
 
 
 ## 创建语音翻译配置
