@@ -21,7 +21,7 @@ OCP-Hack项目是为参加OCP HackFest的伙伴准备的动手实验指导，主
 - [语义理解LUIS服务在容器中实现](./Cognitive_Service_Luis_on_Container/README.md)
 - [自定义视觉创建图像分类器](./Cognitive_Custom_Vision/README.md)
 - [ 创建基于LUIS的机票预订机器人](./Azure_LUIS_Bot/README.md)
-- [语音翻译服务实验](./Azure_Speech_Translation/README.md)
+- [语音翻译服务实验](./Azure_Speech_Translation/Readme.md)
 - [文本翻译服务实验](./Azure_Text_Translator/README.md)
 
 ## 机器学习&深度学习动手实验
