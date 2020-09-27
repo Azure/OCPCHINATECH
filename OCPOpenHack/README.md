@@ -12,6 +12,7 @@ OCP-Hack项目是为参加OCP HackFest的伙伴准备的动手实验指导，主
 ## 物联网动手实验
 - [基于Azure IoT Hub的远程监控](./Azure_IoT_Hub/README.md)
 - [利用Azure IoT Central快速搭建远程监控平台](./Azure_IoT_Central/README.md)
+- [基于Azure IoT Hub和Cosmos DB构建的远程监控](./Azure_IoT_CosmosDB/README.md)
 
 ## 认知服务动手实验
 - [基于LUIS的Voice Command创建](./Azure_LUIS/README.md)
@@ -20,12 +21,16 @@ OCP-Hack项目是为参加OCP HackFest的伙伴准备的动手实验指导，主
 - [语义理解LUIS服务在容器中实现](./Cognitive_Service_Luis_on_Container/README.md)
 - [自定义视觉创建图像分类器](./Cognitive_Custom_Vision/README.md)
 - [ 创建基于LUIS的机票预订机器人](./Azure_LUIS_Bot/README.md)
+- [语音翻译服务实验](./Azure_Speech_Translation/README.md)
+- [文本翻译服务实验](./Azure_Text_Translator/README.md)
+
 ## 机器学习&深度学习动手实验
 - [基于Azure Machine Learning Studio的机器学习](./Azure_Machine_Learning_Studio/README.md)
 - [基于Azure Machine Learning Service的机器学习](./Azure_Machine_Learning_Service/README.md)
 - [基于Azure的深度学习挑战](./Azure_Deep_Learning/README.md)
   
 ## 大数据与数据可视化动手实验
+- [基于Azure Synapse构建大数据服务](./Azure_Synapse/README.md)
 - [PowerBI入门到精通](./Power_BI/README.md)
 
 ## 区块链动手实验
