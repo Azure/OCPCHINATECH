@@ -4,6 +4,17 @@
 
 | 序号 | 博客 | 创建者 | 所属月份 | 创建时间 | 项目类型 | 路径 |
 | ---- | ---- | ---- | ---- |  ---- | ---- | ---- |
+| 341 | [以己之盾，御彼之矛——你需要知道的安全总览浅析](https://mp.weixin.qq.com/s/Zx9zTx-5qF8sXS23Y4-euw) | Renjie Zhu | 2020年10月份 | 2020/10 |
+| 340 | [Power Apps 与 Azure 服务的对接 (一) - 对接 AI 服务](https://mp.weixin.qq.com/s?__biz=MzU0OTY0NDE1NA==&mid=2247484446&idx=1&sn=edd2336edcfccbaef233cb59d8f54a96&chksm=fbadf60bccda7f1df54163637a5b94385091b47c81eb5070ee1c3d3ac0f27f6517bb7c304cd1&token=1811640643&lang=en_US#rd) | Jian Zhao | 2020年10月份 | 2020/10 |
+| 339 | [使用 jsDelivr CDN 加速 Github Pages](https://theodorew.github.io/wxsblog.github.io/2020/09/03/2020-09-03-GithubCDN/) | Xinsheng Wang | 2020年9月份 | 2020/9 |
+| 338 | [通过Azure AD 搭建企业安全身份标识系统](https://mp.weixin.qq.com/s/q0K78DdsyNrdjW3XwRaSDg) | Jiayu Zhu | 2020年9月份 | 2020/9 |
+| 337 | [Azure 日志管理(Log Analytics)(1)-LA 简介](https://zhuanlan.zhihu.com/p/249149303) | Alex Cui | 2020年9月份 | 2020/9 |
+| 336 | [Azure 日志管理(Log Analytics)(2)-连接Agent和LA Workspace](https://zhuanlan.zhihu.com/p/249385352) | Alex Cui | 2020年9月份 | 2020/9 |
+| 335 | [Azure 日志管理(Log Analytics)(4)-获取Windows 系统日志](https://zhuanlan.zhihu.com/p/253423710) | Alex Cui | 2020年9月份 | 2020/9 |
+| 334 | [Azure 日志管理(Log Analytics)(4)-获取Windows 系统日志](https://zhuanlan.zhihu.com/p/254920359) | Alex Cui | 2020年9月份 | 2020/9 |
+| 333 | [Azure 日志管理(Log Analytics)(5)-Kusto处理系统日志](https://zhuanlan.zhihu.com/p/254943601) | Alex Cui | 2020年9月份 | 2020/9 |
+| 332 | [Azure 日志管理(Log Analytics)(6)-测试一下日志索引时延](https://zhuanlan.zhihu.com/p/255089910) | Alex Cui | 2020年9月份 | 2020/9 |
+| 331 | [Azure 日志管理(Log Analytics)(7)-获取Linux Syslog](https://zhuanlan.zhihu.com/p/255273366) | Alex Cui | 2020年9月份 | 2020/9 |
 | 330 | [22条军规之Azure Policy](https://aubreyhan.net/undefined/52096/#more) | Yuan Han | 2020年7-8月份 | 2020/07-08 |
 | 329 | [云基础架构采用者避坑指南：拥抱“云”，更懂“云”](https://mp.weixin.qq.com/s/b4XStG9urcUEjEfa4fd71w) | Teo Ma | 2020年7-8月份 | 2020/07-08 |
 | 328 | [微软零信任框架建设最佳实践](https://mp.weixin.qq.com/s/5iiV4YA1zE2UFp-ZtOXbpg) | Jiayu Zhu | 2020年7-8月份 | 2020/07-08 |
