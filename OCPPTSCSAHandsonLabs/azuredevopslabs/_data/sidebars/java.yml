@@ -1,0 +1,71 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: Extend and Integrate
+  version: 2017
+  url: /labs/vstsextend
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage
+      output: pdf
+      type: frontmatter
+
+  - title: Hands-on-Labs
+    output: web, pdf
+    folderitems:
+
+    - title: Overview and Accessing the VM
+      url: labs/java/
+      output: web, pdf
+
+    - title: Setting up a new project on VSTS
+      url: labs/java/settingvstsproject/
+      output: web, pdf
+
+    - title: Setting up a Docker build agent
+      url: labs/java/dockerbuildagent/
+      output: web, pdf
+
+    - title: Cloning a VSTS Repo - IntelliJ
+      url: labs/java/intellijgit/
+      output: web, pdf
+
+    - title: Cloning a VSTS Repo - Eclipse
+      url: labs/java/eclipsegit/
+      output: web, pdf
+
+    - title: Maven Package Management with VSTS and Jenkins
+      url: labs/java/mavenpmjenkins/
+      output: web, pdf
+
+    - title: Maven Package Management with VSTS Team Build
+      url: labs/java/mavenpmvsts/
+      output: web, pdf
+
+    - title: Build Docker containers with VSTS
+      url: labs/java/builddocker/
+      output: web, pdf
+
+    - title: Release Management with VSTS
+      url: labs/java/releasemanagement/
+      output: web, pdf 
+
+    - title: End to End Workflow - IntelliJ
+      url: labs/java/e2eintellij/
+      output: web, pdf
+
+    - title: End to End Workflow - Eclipse
+      url: labs/java/e2eeclipse/
+      output: web, pdf
+
+
