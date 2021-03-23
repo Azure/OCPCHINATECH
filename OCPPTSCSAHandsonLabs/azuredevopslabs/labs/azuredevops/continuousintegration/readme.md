@@ -2,8 +2,8 @@
 title: 使用Azure Pipelines实现持续集成
 layout: page
 sidebar: vsts
-permalink: /labs/azuredevops/continuousintegration/
-folder: /labs/azuredevops/continuousintegration/
+permalink: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/continuousintegration/
+folder: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/continuousintegration/
 version: Lab version -1. 37.1
 updated: Last updated - 03/21/2021
 redirect_from: "/labs/vsts/continuousintegration/index.htm"

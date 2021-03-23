@@ -2,8 +2,8 @@
 title: Web Application Load and Performance Testing
 layout: page
 sidebar: vsts
-permalink: /labs/azuredevops/load/
-folder: /labs/azuredevops/load/
+permalink: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/load/
+folder: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/load/
 version: Lab version - 1.38.0
 updated: Last updated - 9/12/2019
 redirect_from: "/labs/vsts/load/index.htm"

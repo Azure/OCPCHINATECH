@@ -2,8 +2,8 @@
 title: Azure DevOps实验
 layout: homepage
 sidebar: vsts
-permalink: /labs/azuredevops/
-folder: /labs/azuredevops/
+permalink: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/
+folder: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/
 description: 提供Level 200-300的动手实验，赋能技术人员及客户使用Azure DevOps更好的实现敏捷业务
 ---
 <div class="vstsMain">
@@ -51,19 +51,19 @@ description: 提供Level 200-300的动手实验，赋能技术人员及客户使
       <div class="col-sm-4 col-xs-12">
          <div class="bg-color-grey equal-height-column mar-left-40">
             <ul>
-               <li><a href="/labs/azuredevops/agile/" class="barleft">使用Azure Boards进行敏捷规划和项目组合管理 </a></li>
-               <li><a href="/labs/azuredevops/git/" class="barleft">在Visual Studio Code和Azure DevOps中使用Git进行版本控制  </a></li>
-               <li><a href="/labs/azuredevops/packagemanagement/" class="barleft">使用Azure Artifacts进行程序包管理</a></li>
-               <li><a href="/labs/azuredevops/continuousintegration/" class="barleft">使用Azure Pipelines实现持续集成</a></li>
+               <li><a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/agile/" class="barleft">使用Azure Boards进行敏捷规划和项目组合管理 </a></li>
+               <li><a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/git/" class="barleft">在Visual Studio Code和Azure DevOps中使用Git进行版本控制  </a></li>
+               <li><a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/packagemanagement/" class="barleft">使用Azure Artifacts进行程序包管理</a></li>
+               <li><a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/continuousintegration/" class="barleft">使用Azure Pipelines实现持续集成</a></li>
             </ul>
          </div>
       </div>
       <div class="col-sm-4 col-xs-12">
          <div class="bg-color-grey equal-height-column mar-left-40">
             <ul>
-               <li><a href="/labs/azuredevops/continuousdeployment/" class="barleft">通过Azure Pipelines拥抱持续交付</a></li>
-               <li><a href="/labs/azuredevops/testmanagement/" class="barleft">使用Azure Test Plans进行测试计划和管理</a></li>
-               <li><a href="/labs/azuredevops/exploratorytesting/" class="barleft">使用Azure Test Plans测试计划进行探索性测试</a></li>
+               <li><a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/continuousdeployment/" class="barleft">通过Azure Pipelines拥抱持续交付</a></li>
+               <li><a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/testmanagement/" class="barleft">使用Azure Test Plans进行测试计划和管理</a></li>
+               <li><a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/exploratorytesting/" class="barleft">使用Azure Test Plans测试计划进行探索性测试</a></li>
             </ul>
          </div>
       </div>

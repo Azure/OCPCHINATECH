@@ -2,8 +2,8 @@
 title: Managing project schedules across teams with Delivery Plans 
 layout: page
 sidebar: vsts
-permalink: /labs/azuredevops/deliveryplans/
-folder: /labs/azuredevops/deliveryplans/
+permalink: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/deliveryplans/
+folder: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/deliveryplans/
 version: Lab version - 1.37.1
 updated: Last updated - 9/9/2019
 ---

@@ -2,8 +2,8 @@
 title: Version Controlling with Git in Visual Studio Code and Azure DevOps
 layout: page
 sidebar: vsts
-permalink: /labs/azuredevops/git/
-folder: /labs/azuredevops/git/
+permalink: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/git/
+folder: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/git/
 version: Lab version - 1.31.1
 updated: Last updated - 06/11/2020
 redirect_from: "/labs/vsts/git/index.htm"

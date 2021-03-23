@@ -2,8 +2,8 @@
 title: Managing Technical Debt with Azure DevOps and SonarCloud
 layout: page
 sidebar: vsts
-permalink: /labs/azuredevops/sonarcloud/
-folder: /labs/azuredevops/sonarcloud/
+permalink: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/sonarcloud/
+folder: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/sonarcloud/
 version: Lab version - 15.8.2
 updated: Last updated - 9/6/2018
 ---

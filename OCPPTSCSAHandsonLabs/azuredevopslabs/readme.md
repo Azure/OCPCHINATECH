@@ -102,7 +102,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 						</div>
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/azuredevops/agile/" class="text-col-gunpower">	
+							<a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/agile/" class="text-col-gunpower">	
 								<div class="bg-white text-font">Agile Planning and Portfolio Management with Azure Boards</div>
 							</a>
 					</div>					
@@ -118,7 +118,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 						</div>
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/azuredevops/deliveryplans/" class="text-col-gunpower">	
+							<a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/deliveryplans/" class="text-col-gunpower">	
 								<div class="bg-white text-font">Managing Project Schedules across Teams with Delivery Plans</div>
 							</a>
 					</div>					
@@ -134,7 +134,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 						</div>
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/azuredevops/git/" class="text-col-gunpower">	
+							<a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/git/" class="text-col-gunpower">	
 								<div class="bg-white text-font">Version Controlling with Azure Repos</div>
 							</a>
 					</div>					
@@ -150,7 +150,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 						</div>
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/azuredevops/pullrequests/" class="text-col-gunpower">	
+							<a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/pullrequests/" class="text-col-gunpower">	
 								<div class="bg-white text-font">Working with Pull Requests in VS Code and Azure DevOps</div>
 							</a>
 					</div>					
@@ -166,7 +166,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 						</div>
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/azuredevops/sonarcloud/" class="text-col-gunpower">	
+							<a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/sonarcloud/" class="text-col-gunpower">	
 								<div class="bg-white text-font">Managing Technical Debt with Azure DevOps and SonarCloud</div>
 							</a>
 					</div>					
@@ -184,7 +184,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 						</div>
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/azuredevops/yaml/" class="text-col-gunpower">	
+							<a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/yaml/" class="text-col-gunpower">	
 								<div class="bg-white text-font">Configuring pipelines as Code with YAML </div>
 							</a>
 					</div>					
@@ -200,7 +200,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 						</div>
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/azuredevops/continuousintegration/" class="text-col-gunpower">	
+							<a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/continuousintegration/" class="text-col-gunpower">	
 								<div class="bg-white text-font">Enabling Continuous Integration with Azure Pipelines</div>
 							</a>
 					</div>					
@@ -216,7 +216,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 						</div>
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/azuredevops/continuousdeployment/" class="text-col-gunpower">	
+							<a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/continuousdeployment/" class="text-col-gunpower">	
 								<div class="bg-white text-font">Embracing Continuous Delivery with Azure Pipelines</div>
 							</a>
 					</div>					
@@ -232,7 +232,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 						</div>
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/azuredevops/packagemanagement/" class="text-col-gunpower">	
+							<a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/packagemanagement/" class="text-col-gunpower">	
 								<div class="bg-white text-font">Package Management with Azure Artifacts</div>
 							</a>
 					</div>					
@@ -250,7 +250,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 						</div>
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/azuredevops/wiki/" class="text-col-gunpower">	
+							<a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/wiki/" class="text-col-gunpower">	
 								<div class="bg-white text-font">Collaborating with Azure DevOps Wiki</div>
 							</a>
 					</div>					
@@ -266,7 +266,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 						</div>
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/azuredevops/testmanagement/" class="text-col-gunpower">	
+							<a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/testmanagement/" class="text-col-gunpower">	
 								<div class="bg-white text-font">Test Planning and Management with Azure Test Plans</div>
 							</a>
 					</div>					
@@ -282,7 +282,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 						</div>
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/azuredevops/exploratorytesting/" class="text-col-gunpower">	
+							<a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/exploratorytesting/" class="text-col-gunpower">	
 								<div class="bg-white text-font">Exploratory Testing with Azure Test Plans</div>
 							</a>
 					</div>					
@@ -298,7 +298,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 						</div>
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/azuredevops/load/" class="text-col-gunpower">	
+							<a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/load/" class="text-col-gunpower">	
 								<div class="bg-white text-font">Web Application Load and Performance Testing</div>
 							</a>
 					</div>					
@@ -316,7 +316,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 						</div>
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/azuredevops/appinsights/" class="text-col-gunpower">	
+							<a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/appinsights/" class="text-col-gunpower">	
 								<div class="bg-white text-font">Monitoring App Performance with Application Insights</div>
 							</a>
 					</div>					
@@ -332,7 +332,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 						</div>
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-9 cont-mt cont-pl">					
-							<a href="/labs/azuredevops/githubpullrequests/" class="text-col-gunpower">	
+							<a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/githubpullrequests/" class="text-col-gunpower">	
 								<div class="bg-white text-font">Working with Pull Requests in VS Code and GitHub</div>
 							</a>
 					</div>					
@@ -392,7 +392,7 @@ description: Learn how you can implement modern DevOps practices with Azure, Azu
 			</div> 
 			<div class="col-sm-2 my-2">
 				<div class="shadow-sm hover-effect equal-height-column">
-					<a href="/labs/azuredevops/yaml/" class="text-col-gunpower">
+					<a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/yaml/" class="text-col-gunpower">
 						<div class="bg-azureblue1 p-2 text-center">
 							<div class="icon-cover1"><img src="/images/azurepipelines.png" alt="yaml" height="42"></div>
 						</div>

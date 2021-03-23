@@ -2,8 +2,8 @@
 title: 使用Azure Test Plans进行测试计划和管理
 layout: page
 sidebar: vsts
-permalink: /labs/azuredevops/testmanagement/
-folder: /labs/azuredevops/testmanagement/
+permalink: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/testmanagement/
+folder: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/testmanagement/
 version: Lab version - 15.8.2
 updated: Last updated - 9/6/2018
 redirect_from: "/labs/vsts/testmanagement/index.htm"

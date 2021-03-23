@@ -2,8 +2,8 @@
 title: Integrate Your GitHub Projects With Azure Pipelines
 layout: page
 sidebar: vsts2
-permalink: /labs/azuredevops/github-integration/
-folder: /labs/azuredevops/github-integration/
+permalink: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/github-integration/
+folder: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/github-integration/
 ---
 
 Last updated : {{ "now" | date: "%b %d,%Y" }}

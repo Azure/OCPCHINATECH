@@ -2,8 +2,8 @@
 title: Agile Planning and Portfolio Management with Azure Boards
 layout: page
 sidebar: vsts
-permalink: /labs/azuredevops/agile/
-folder: /labs/azuredevops/agile/
+permalink: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/agile/
+folder: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/agile/
 version: Lab version - 1.37.1
 updated: Last updated - 10/11/2020
 redirect_from: "/labs/vsts/agile/index.htm"

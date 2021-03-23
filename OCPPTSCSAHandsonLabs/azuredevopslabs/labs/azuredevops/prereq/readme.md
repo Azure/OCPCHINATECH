@@ -2,8 +2,8 @@
 title: Azure DevOps实验开始前的准备步骤
 layout: page
 sidebar: vsts
-permalink: /labs/azuredevops/prereq/
-folder: /labs/azuredevops/prereq/
+permalink: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/prereq/
+folder: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/prereq/
 version: Lab version - 1. 38.0
 updated: Last updated - 13/11/2020
 ---

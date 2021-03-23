@@ -2,8 +2,8 @@
 title: Collaborating using Azure DevOps Wiki
 layout: page
 sidebar: vsts
-permalink: /labs/azuredevops/wiki/
-folder: /labs/azuredevops/wiki/
+permalink: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/wiki/
+folder: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/wiki/
 version: Lab version - 1.37.1
 updated: Last updated - 9/9/2019
 ---

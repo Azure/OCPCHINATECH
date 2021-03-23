@@ -2,8 +2,8 @@
 title: 使用Azure Artifacts进行程序包管理
 layout: page
 sidebar: vsts
-permalink: /labs/azuredevops/packagemanagement/
-folder: /labs/azuredevops/packagemanagement/
+permalink: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/packagemanagement/
+folder: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/packagemanagement/
 version: Lab version - 1. 38.0
 updated: Last updated - 05/11/2020
 redirect_from: "/labs/vsts/packagemanagement/index.htm"

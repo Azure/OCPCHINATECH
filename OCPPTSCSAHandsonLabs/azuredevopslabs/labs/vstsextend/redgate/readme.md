@@ -38,7 +38,7 @@ In this lab, you will see
 
 ### Setting up the Environment
 
-1. This lab requires you to complete Task 1 & 2 from  the [prerequisite](https://azuredevopslabs.com/labs/azuredevops/prereq/) instructions.
+1. This lab requires you to complete Task 1 & 2 from  the [prerequisite](https://azuredevopslabs.com/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/prereq/) instructions.
 
 1. The following resources need to be configured for this lab:
   
@@ -107,7 +107,7 @@ In this lab, you will see
 
 Here, you will create a SQL Change Automation project in your existing PartsUnlimited application solution to manage database changes alongside the application. This SQL Change Automation project will contain a database's state and a set of scripts that describe how to get to that state.
 
-1. This exercise requires to to complete Task 1 & 2 from the [prerequisite](https://azuredevopslabs.com/labs/azuredevops/prereq/) section.
+1. This exercise requires to to complete Task 1 & 2 from the [prerequisite](https://azuredevopslabs.com/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/prereq/) section.
 
 1. Now, you will create a SQL Change Automation project. Right click on the solution and select **Add** **-->** **New Project**.
 

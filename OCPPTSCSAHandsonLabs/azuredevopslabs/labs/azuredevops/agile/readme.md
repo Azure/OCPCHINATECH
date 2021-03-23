@@ -2,8 +2,8 @@
 title: 使用Azure Boards进行敏捷规划和项目组合管理
 layout: page
 sidebar: vsts
-permalink: /labs/azuredevops/agile/
-folder: /labs/azuredevops/agile/
+permalink: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/agile/
+folder: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/agile/
 version: Lab version - 1.37.1
 updated: Last updated - 3/18/2021
 redirect_from: "/labs/vsts/agile/index.htm"

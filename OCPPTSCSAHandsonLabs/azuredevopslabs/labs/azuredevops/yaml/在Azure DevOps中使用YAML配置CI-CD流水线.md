@@ -2,8 +2,8 @@
 title: 在Azure DevOps中使用YAML配置CI/CD流水线
 layout: page
 sidebar: vsts
-permalink: /labs/azuredevops/yaml/
-folder: /labs/azuredevops/yaml/
+permalink: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/yaml/
+folder: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/yaml/
 version: Lab version - 1.37.1
 updated: Last updated - 21/03/2021
 ---
