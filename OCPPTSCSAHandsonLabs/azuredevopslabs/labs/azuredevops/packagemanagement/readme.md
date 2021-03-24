@@ -22,9 +22,9 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 <a name="Prerequisites"></a>
 ### 先决条件 ###
 
--Visual Studio 2017或更高版本
+- Visual Studio 2017或更高版本
 
--本实验要求您按照 <a href="../prereq/">先决条件</a>指令完成任务1和2。
+- 本实验要求您按照 <a href="../prereq/">先决条件</a>指令完成任务1和2。
 
 <a name="Exercise1"> </a>
 ## 练习1：使用Azure Artifacts ##
@@ -38,7 +38,7 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 
    ![](images/000.png)
    
-2. 点击 **Create feed**。该供稿将是可供组织内用户使用的NuGet软件包的集合，并且将与公共NuGet供稿一起作为对等源。本实验中的场景将重点放在使用Azure Artifacts的工作流上，因此实际的体系结构和开发决策仅是说明性的。
+2. 点击 **Create feed**。该Feed将是可供组织内用户使用的NuGet软件包的集合，并且将与公共NuGet Feed一起作为对等源。本实验中的场景将重点放在使用Azure Artifacts的工作流上，因此实际的体系结构和开发决策仅是演示性的。
 
    ![](images/createfeed.png)
 
@@ -65,7 +65,7 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 
    ![](images/005.png)
 
-9. 将e **Name** 设置为 **"PartsUnlimitedShared"** ，并粘贴先前复制的 **Source**  URL。单击 **Update** ，然后单击 **OK**。现在，Visual Studio已连接到新的提要。
+9. 将 **Name** 设置为 **"PartsUnlimitedShared"** ，并粘贴先前复制的 **Source**  URL。单击 **Update** ，然后单击 **OK**。现在，Visual Studio已连接到新的提要。
 
    ![](images/006.png)
 
@@ -130,9 +130,9 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 13. 执行以下行，从项目中创建一个 **.nupkg** 文件。请注意，这是将NuGet位打包在一起以进行部署的快捷方式。 NuGet是非常可定制的，并为为消费者提供详细信息提供了极大的灵活性。您可以在[NuGet程序包创建页面]上了解更多信息。 / nuget / create-packages / overview-and-workflow）。
 
     ```
-    ./nuget.exe包./PartsUnlimited.Shared.csproj
+    ./nuget.exe pack ./PartsUnlimited.Shared.csproj
     ```
-14.  NuGet根据能够从项目中提取的信息构建一个最小的程序包。例如，请注意名称为 **PartsUnlimited.Shared.1. 0.0.nupkg** 。该版本号是从程序集中提取的。
+14.  NuGet根据能够从项目中提取的信息构建一个最小的程序包。例如，请注意名称为 **PartsUnlimited.Shared.1.0.0.nupkg** 。该版本号是从程序集中提取的。
 
    ![](images/016.png)
 
@@ -147,7 +147,7 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 17. 返回 **PowerShell** 窗口并执行以下命令（它应该在一行上）。请注意，您需要提供一个“ API密钥”，该密钥可以是任何非空字符串。我们在这里使用 **"VSTS"** 。询问时使用您的Azure DevOps凭据登录。
 
     ```
-    ./nuget.exe push -source "PartsUnlimitedShared" -ApiKey VSTS PartsUnlimited.Shared.1. 0.0.nupkg
+    ./nuget.exe push -source "PartsUnlimitedShared" -ApiKey VSTS PartsUnlimited.Shared.1.0.0.nupkg
     ```
 18. 该命令应在几秒钟后成功执行。
 
@@ -216,14 +216,14 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 7. 返回 **PowerShell** 窗口并执行以下行以重新打包NuGet程序包。请注意，新软件包将具有更新的版本号。
 
     ```
-    ./nuget.exe包PartsUnlimited.Shared.csproj
+    ./nuget.exe pack PartsUnlimited.Shared.csproj
     ```
 8. 执行以下行以发布更新的软件包。请注意，版本号已更改以反映新的软件包。
 
     ```
-    ./nuget.exe推送-source“ PartsUnlimitedShared” -ApiKey VSTS PartsUnlimited.Shared.1. 1. 0.nupkg
+    ./nuget.exe push -source "PartsUnlimitedShared" -ApiKey VSTS PartsUnlimited.Shared.1.1.0.nupkg
     ```
-9. 返回浏览器窗口，打开对Azure DevOps的页面并刷新页面。您仍将查看该软件包的1. 0.0版本，但是可以通过选择**Versions** 标签并选择**1. 1. 0**来更改该版本。
+9. 返回浏览器窗口，打开对Azure DevOps的页面并刷新页面。您仍将查看该软件包的1.0.0版本，但是可以通过选择**Versions** 标签并选择**1.1.0**来更改该版本。
 
    ![](images/028.png)
 
