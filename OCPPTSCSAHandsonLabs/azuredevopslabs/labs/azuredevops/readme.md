@@ -66,9 +66,9 @@ CEO要求IT部门必须在90天内解决问题，否则整个部门将被...
 <a href="https://go.microsoft.com/fwlink/?LinkId=2014881" class="barleft">免费注册 </a>
 
  <ul class="tick">
-         <li>自动CI/CD流水线</li>
+         <li>可配置Kanban boards</li>
          <li>免费的无限私人Git存储库</li>
-         <li>可配置Kanban boards，和 </li>
+         <li>自动CI/CD流水线</li>
          <li>广泛的基于云的自动化负载测试工具。</li>
 </div>
 
