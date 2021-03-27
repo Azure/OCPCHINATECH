@@ -25,38 +25,22 @@ CEO要求IT部门必须在90天内解决问题，否则整个部门将被...
    ![](./images/PhoenixProject.png)  
    
 
-<div class="col-sm-10" style="padding-top:20px">
-   <h1>初次使用Azure DevOps?</h1>
-   <div style="margin-top:2px">
-     还没有帐号？不用担心！立即
-<a href="https://go.microsoft.com/fwlink/?LinkId=2014881" class="barleft">免费注册 </a>
 
- <ul class="tick">
-         <li>自动CI/CD流水线</li>
-         <li>免费的无限私人Git存储库</li>
-         <li>可配置Kanban boards，和 </li>
-         <li>广泛的基于云的自动化负载测试工具。</li>
-
-
-
-     
-   </div>
  
 </div>
 </div>
 </div>
 <div class="tab-content bg-color-wit-mlr">
 <div id="services-labs" class="container tab-pane active">
+
 <div class="col-sm-12">
-   <!--h2 class="pading-t-10">Azure DevOps Services</h2--> 
+   <h1>动手实验章节</h1>
+   <div class="row equal-height-columns">
+      <div class="col-sm-4 col-xs-12">
+
    <div>
       <p>使用Azure DevOps服务简化并加快DevOps流程。 以下实验将帮助您开始使用Azure DevOps服务，以自动执行软件交付并满足业务需求。</p>
    </div>
-</div>
-<div class="col-sm-12">
-   <h2>动手实验章节</h2>
-   <div class="row equal-height-columns">
-      <div class="col-sm-4 col-xs-12">
          <div class="bg-color-grey equal-height-column mar-left-40">
             <ul>
                <li><a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/agile/" class="barleft">使用Azure Boards进行敏捷规划和项目组合管理 </a></li>
@@ -74,8 +58,23 @@ CEO要求IT部门必须在90天内解决问题，否则整个部门将被...
 
    </div>
 </div>
+
+<div class="col-sm-10" style="padding-top:20px">
+   <h1>初次使用Azure DevOps?</h1>
+   <div style="margin-top:2px">
+     还没有帐号？不用担心！立即
+<a href="https://go.microsoft.com/fwlink/?LinkId=2014881" class="barleft">免费注册 </a>
+
+ <ul class="tick">
+         <li>自动CI/CD流水线</li>
+         <li>免费的无限私人Git存储库</li>
+         <li>可配置Kanban boards，和 </li>
+         <li>广泛的基于云的自动化负载测试工具。</li>
+</div>
+
+
 <div class="col-sm-12">
-   <h2>动手实验开始前的准备工作</h2>
+   <h1>动手实验开始前的准备工作</h1>
    为了完成这些实验，您需要：
    <ul>
       <li>
