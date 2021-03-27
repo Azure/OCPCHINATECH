@@ -14,15 +14,16 @@ description: 提供Level 200-300的动手实验，赋能技术人员及客户使
 
 项目在初始执行时面临如下挑战：
 
-**1.项目成本大大超出预算**
-**2.面临着大量积压的工作、未解决的问题和未实现的功能**
+**1.项目成本大大超出预算**  
+**2.面临着大量积压的工作、未解决的问题和未实现的功能**  
 **3.零售运营部不断提出新的想法和要求**
 
 CEO要求IT部门必须在90天内解决问题，否则整个部门将被...
 
 **您面临的挑战是使用DevOps原理及运用Azure DevOps 工具并将其应用到这一严肃的业务模拟中**
 
-   ![](images/PhoenixProject.png)
+   ![](./images/PhoenixProject.png)  
+   
 
 <div class="col-sm-10" style="padding-top:20px">
    <h1>初次使用Azure DevOps?</h1>
