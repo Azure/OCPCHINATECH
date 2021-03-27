@@ -39,7 +39,7 @@ CEO要求IT部门必须在90天内解决问题，否则整个部门将被...
       <div class="col-sm-4 col-xs-12">
 
    <div>
-      <p>使用Azure DevOps服务简化并加快DevOps流程。 以下实验将帮助您开始使用Azure DevOps服务，以自动执行软件交付并满足业务需求。</p>
+      <p>使用Azure DevOps服务简化并加快DevOps流程。 以下实验将帮助您使用Azure DevOps服务自动执行软件交付满足Parts Unlimited业务需求。</p>
    </div>
          <div class="bg-color-grey equal-height-column mar-left-40">
             <ul>
