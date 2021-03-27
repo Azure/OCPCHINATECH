@@ -28,7 +28,9 @@ CEO要求IT部门必须在90天内解决问题，否则整个部门将被...
 <div class="col-sm-10" style="padding-top:20px">
    <h1>初次使用Azure DevOps?</h1>
    <div style="margin-top:2px">
-     还没有帐号？ 不用担心！ 立即<b>免费</b>注册一个
+     还没有帐号？不用担心！立即
+<a href="https://go.microsoft.com/fwlink/?LinkId=2014881" class="barleft">免费注册 </a>
+
       <ul class="tick">
          <li>自动CI/CD流水线</li>
          <li>免费的无限私人Git存储库</li>
@@ -39,8 +41,7 @@ CEO要求IT部门必须在90天内解决问题，否则整个部门将被...
 
      
    </div>
-   <a href="https://go.microsoft.com/fwlink/?LinkId=2014881" class="launch-hol" role="button" target="_blank" onclick="pageTracker._trackEvent('SignUp', 'Click', 'New User SignUp');" style="
-      align-self:  right;"><span class="lab-details"现在免费注册</span></a>
+ 
 </div>
 </div>
 </div>
