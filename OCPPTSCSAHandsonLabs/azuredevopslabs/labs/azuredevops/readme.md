@@ -25,6 +25,8 @@ CEO要求IT部门必须在90天内解决问题，否则整个部门将被...
 
 
 
+ ![](/OCPPTSCSAHandsonLabs/azuredevopslabs/images/PhoenixProject.png)
+
 <div class="col-sm-10" style="padding-top:20px">
    <h1>初次使用Azure DevOps?</h1>
    <div style="margin-top:2px">
