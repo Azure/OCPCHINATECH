@@ -20,12 +20,9 @@ description: 提供Level 200-300的动手实验，赋能技术人员及客户使
 
 CEO要求IT部门必须在90天内解决问题，否则整个部门将被...
 
-**您面临的挑战是使用DevOps原理并将其应用到这一严肃的业务模拟中**
+**您面临的挑战是使用DevOps原理及运用Azure DevOps 工具并将其应用到这一严肃的业务模拟中**
 
-
-
-
- ![](/OCPPTSCSAHandsonLabs/azuredevopslabs/images/PhoenixProject.png)
+   ![](images/PhoenixProject.png)
 
 <div class="col-sm-10" style="padding-top:20px">
    <h1>初次使用Azure DevOps?</h1>
@@ -64,18 +61,14 @@ CEO要求IT部门必须在90天内解决问题，否则整个部门将被...
                <li><a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/git/" class="barleft">在Visual Studio Code和Azure DevOps中使用Git进行版本控制  </a></li>
                <li><a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/packagemanagement/" class="barleft">使用Azure Artifacts进行程序包管理</a></li>
                <li><a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/continuousintegration/" class="barleft">使用Azure Pipelines实现持续集成</a></li>
-            </ul>
-         </div>
-      </div>
-      <div class="col-sm-4 col-xs-12">
-         <div class="bg-color-grey equal-height-column mar-left-40">
-            <ul>
                <li><a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/continuousdeployment/" class="barleft">通过Azure Pipelines拥抱持续交付</a></li>
                <li><a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/testmanagement/" class="barleft">使用Azure Test Plans进行测试计划和管理</a></li>
                <li><a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/exploratorytesting/" class="barleft">使用Azure Test Plans测试计划进行探索性测试</a></li>
-            </ul>
-         </div>
-      </div>
+     
+
+
+
+
 
    </div>
 </div>
