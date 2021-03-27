@@ -34,7 +34,7 @@ CEO要求IT部门必须在90天内解决问题，否则整个部门将被...
 <div id="services-labs" class="container tab-pane active">
 
 <div class="col-sm-12">
-   <h1>动手实验章节</h1>
+   <h2>动手实验章节</h2>
    <div class="row equal-height-columns">
       <div class="col-sm-4 col-xs-12">
 
@@ -60,7 +60,7 @@ CEO要求IT部门必须在90天内解决问题，否则整个部门将被...
 </div>
 
 <div class="col-sm-10" style="padding-top:20px">
-   <h1>初次使用Azure DevOps?</h1>
+   <h2>初次使用Azure DevOps?</h2>
    <div style="margin-top:2px">
      还没有帐号？不用担心！立即
 <a href="https://go.microsoft.com/fwlink/?LinkId=2014881" class="barleft">免费注册 </a>
@@ -74,7 +74,7 @@ CEO要求IT部门必须在90天内解决问题，否则整个部门将被...
 
 
 <div class="col-sm-12">
-   <h1>动手实验开始前的准备工作</h1>
+   <h2>动手实验开始前的准备工作</h2>
    为了完成这些实验，您需要：
    <ul>
       <li>
