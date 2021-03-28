@@ -39,7 +39,7 @@ redirect_from: "/labs/vsts/agile/index.htm"
     
     ![](images/001.png)
     
-4.  使用 **“ PUL-Web”**作为 **Team name**，然后单击**Create team** （保留默认值）。
+4.  使用 **“ PUL-Web”**作为 **Team name**，其他保留默认值，然后单击**Create team** 。
     
     ![](images/002.png)
     
@@ -68,14 +68,14 @@ redirect_from: "/labs/vsts/agile/index.htm"
     
    ![](images/008.png)
     
-11.  从area下拉列表中，选择**Include sub areas**。所有team的默认设置是排除sub areas路径。我们将对其进行更改以包括sub areas，以便team可以看到所有team的所有work items。可选地，管理team还可以选择不包括子area，从而在将work items目分配给team之一后立即将其从其视图中删除。
+11.  从area下拉列表中，选择**Include sub areas**。所有team的默认设置是排除sub areas路径。我们将对其进行更改以包括sub areas，以便team可以看到所有team的所有work items。可选地，管理team还可以选择不包括子area，从而在将work items分配给team之后立即将其从其视图中删除。
     
    ![](images/009.png)
     
 <a name="Ex1Task2"></a>
 ### Task 2: 创建及使用work items-work items ###
 
-work items在Azure DevOps中扮演着重要角色。无论是描述要完成的工作，发布的障碍，测试定义还是其他关键项，work items都是现代项目的主力军。在此任务中，您将集中于使用各种work items来设置计划，以扩展带有产品培训部分的Parts Unlimited网站。虽然要扩大公司产品的如此重要的部分可能会令人生畏，但Azure DevOps和Scrum流程使其非常易于管理。
+work items在Azure DevOps中扮演着重要角色。无论是描述要完成的工作，版本发布，测试定义还是其他关键项，work items都是现代项目的主力军。在此任务中，您将集中于使用各种work items来设置计划，以扩展带有产品培训部分的Parts Unlimited网站。虽然要扩大公司产品，如此重要的部分可能会令人生畏，但Azure DevOps和Scrum流程使其非常易于管理。
 
 ![](images/010.png)
 
@@ -89,7 +89,7 @@ work items在Azure DevOps中扮演着重要角色。无论是描述要完成的�
     
     ![](images/012.png)
     
-3.  在Azure DevOps中创建work items的方法有很多，我们将探讨其中的一些方法，在Dashboards的右下角可以发现**New Work Item** 表单，键入**"Product training"**，**然后选择**Epic**类型。点击**Create**。
+3.  在Azure DevOps中创建work items的方法有很多，我们将探讨其中的一些方法，在Dashboards的右下角可以发现**New Work Item** 表单，键入** Product training **，然后选择**Epic**类型。点击**Create**。
     
     ![](images/new-wit.png) ![](images/013.png)
     
@@ -125,7 +125,7 @@ work items在Azure DevOps中扮演着重要角色。无论是描述要完成的�
     
    ![](images/021.png)
     
-12.  将板子从显示**Backlog**切换为显示**Features**。这将很容易的添加Task和其他work items到Features。
+12.  将Boards从显示**Backlog**切换为显示**Features**。这将很容易的添加Task和其他work items到Features。
     
    ![](images/022.png)
     
@@ -133,7 +133,7 @@ work items在Azure DevOps中扮演着重要角色。无论是描述要完成的�
     
    ![](images/023.png)
     
-14.  将第一个backlog项目命名为**As a customer, I want to view new tutorials**，然后按**Enter键**保存。这将创建一个新的**Product Backlog Item**（PBI）work items，该work items是功能的子项，并共享其area和Iterations。
+14.  将第一个backlog项目命名为**As a customer, I want to view new tutorials**，然后按**Enter键**保存。这将创建一个新的**Product Backlog Item**（PBI）work items，该work items是feature 的子项，并共享其area和Iterations。
     
    ![](images/024.png)
     
@@ -145,7 +145,7 @@ work items在Azure DevOps中扮演着重要角色。无论是描述要完成的�
     
    ![](images/026.png)
     
-17.  待办事项的状态定义了它们相对于完成的位置。尽管您可以使用该表单打开和编辑work items，但将卡拖到板上更容易。将第一个work items拖到**Approved**。
+17.  待办事项（Backlog items）的状态定义了相关事项完成情况的状态。尽管您可以使用该表单打开和编辑work items，但将卡拖到板上更容易。将第一个work items拖到**Approved**。
     
    ![](images/027.png)
     
@@ -161,7 +161,7 @@ work items在Azure DevOps中扮演着重要角色。无论是描述要完成的�
     
    ![](images/030.png)
     
-21.  将最终的PBI拖到**Done**阶段。
+21.  将最后一个PBI拖到**Done**阶段。
     
    ![](images/031.png)
     
@@ -177,18 +177,18 @@ work items在Azure DevOps中扮演着重要角色。无论是描述要完成的�
     
    ![](images/034.png)
     
-25.  向**Optimize data query for most recent tutorials**中添加另一个任务。将其**Remaining Work**设置为**3**，将其**Activity**为**Design**。点击**Save & Close**。
+25.  添加另一个任务：**Optimize data query for most recent tutorials**。将其**Remaining Work**设置为**3**，将其**Activity**为**Design**。点击**Save & Close**。
     
    ![](images/035.png)
     
 
 ### 任务3：管理sprint和容量
 
-您的team通常在sprint的第一天举行的sprint计划会议期间建立sprintbacklog。每个sprint对应一个有时间限制的间隔，该间隔支持您的team使用敏捷流程和工具进行工作的能力。在计划会议期间，您的产品负责人与您的team一起确定那些故事或待办事项以在sprint中完成。
+您的team通常在sprint的第一天举行的sprint计划会议期间建立sprint backlog。每个sprint对应一个有时间限制的间隔，该间隔支持您的team使用敏捷流程和工具进行工作的能力。在计划会议期间，您的产品负责人与您的team一起确定哪些故事或待办事项以在sprint中完成。
 
 计划会议通常包括两个部分。在第一部分中，team和产品所有者根据以前的sprint经验，确定team认为可以在sprint中完成的backlog项目。这些项目将添加到sprint待办事项列表中。在第二部分中，您的team确定如何开发和测试每个项目。然后，他们定义并估计完成每个项目所需的任务。最后，您的team承诺根据这些估计来实施部分或全部项目。
 
-1.  您的sprint待办事项应包含您的team在分配的时间内成功计划和完成工作所需的所有信息，而不必着急。在开始计划sprint之前，您将需要创建，确定优先级并估算backlog并定义sprint。使用导航导航到“ **Sprints”**视图。
+1.  您的sprint待办事项应包含您的team在分配的时间内成功计划和完成工作所需的所有信息，从而避免在该阶段最有一刻才尽力去做。在开始计划sprint之前，您将需要创建，确定优先级并估算backlog并定义sprint。使用导航栏导航到**Sprints**视图。
     
     ![](images/036.png)
     
@@ -212,7 +212,7 @@ work items在Azure DevOps中扮演着重要角色。无论是描述要完成的�
     
     ![](images/041.png)
     
-7.  将您的假期设置为在当前sprint期间（在接下来的几周内）跨越五个工作日。单击**OK**。
+7.  将您的假期设置为在当前sprint期间（不用按照以下截图的时间，请按照你做这个实验接下来的几周内）跨越五个工作日。单击**OK**。
     
     ![](images/042.png)
     
@@ -228,7 +228,7 @@ work items在Azure DevOps中扮演着重要角色。无论是描述要完成的�
     
    ![](images/045.png)
     
-11.  评估板的一项便利功能是您可以轻松地在线更新关键数据。定期更**Remaining Work**估算值是一个好习惯，以反映每个任务的预期时间。假设您已经查看了**Add page**任务的工作，发现实际上所需的时间比最初预期的要长。将其设置为该sprint的总容量。
+11.  看板（Boards）的一项便利功能是您可以轻松地在线更新关键数据。定期更新**Remaining Work**估算值是一个好习惯，以反映每个任务的预期时间。假设您已经查看了**Add page**任务的工作，发现实际上所需的时间比最初预期的要长。将其设置为该sprint的总容量。
     
    ![](images/046.png)
     
@@ -272,7 +272,7 @@ work items在Azure DevOps中扮演着重要角色。无论是描述要完成的�
     
    ![](images/056.png)
     
-22.  **Working with bugs**选项卡允许您指定错误在板上的呈现方式。
+22.  **Working with bugs**选项卡允许您指定bug在Boards看板上的呈现方式。
     
    ![](images/057.png)
     
@@ -285,7 +285,7 @@ work items在Azure DevOps中扮演着重要角色。无论是描述要完成的�
    ![](images/059.png)
 ### 任务4：客户化看板（Kanban boards）
 
-为了最大限度地提高团队持续交付高质量软件的能力，看板强调了两个主要实践。首先，可视化工作流程，要求您映射团队的工作流阶段，并配置看板以匹配。第二，约束在制品的数量，要求您设置在制品（WIP）限制。然后，您就可以在看板上跟踪进度，并监控关键指标，以减少提前期或周期时间。看板将您的backlog变成一个交互式的招牌，提供一个可视化的工作流程。随着工作从构思到完成的进行，你会更新黑板上的项目。每一列代表一个工作阶段，每一张卡片代表一个用户故事（蓝卡）或一个bug（红卡）。但是，每个团队都会随着时间的推移开发自己的流程，因此定制Kanban Board以匹配团队工作方式的能力至关重要。
+为了最大限度地提高团队持续交付高质量软件的能力，看板强调了两个主要实践。首先，可视化工作流程，要求您映射团队的工作流阶段，并配置看板以匹配。第二，约束正在进行工作的数量，要求您设置正在工作数量（work-in-progress简称WIP）限制。然后，您就可以在看板上跟踪进度，并监控关键指标，以减少提前期或周期时间。看板将您的backlog（待办事项）变成一个交互式的招牌板，提供一个可视化的工作流程。随着工作从构思到完成的进行，你会更新黑板上的项目。每一列代表一个工作阶段，每一张卡片代表一个用户故事（蓝牌）或一个bug（红牌）。但是，每个团队都会随着时间的推移开发自己的流程，因此定制Kanban Board以匹配团队工作方式的能力至关重要。
 1.  导航到**Boards**。
     
     ![](images/060.png)
@@ -374,11 +374,11 @@ work items在Azure DevOps中扮演着重要角色。无论是描述要完成的�
     
    ![](images/081.png)
     
-23.  您的看板板支持您可视化从新到完成的工作流程的能力。添加**swimlanes**，还可以可视化支持不同服务级别类的工作状态。您可以创建泳道来表示支持您的跟踪需求的任何其他维度。在“**泳道”**选项卡上，单击**添加Swimlane**然后**Name**设置为**Expedite**。单击**Save and close**。
+23.  您的看板支持您可视化从新到完成的工作流程的能力。添加**swimlanes**，还可以可视化支持不同服务级别类的工作状态。您可以创建swimlanes泳道来表示支持您的跟踪需求的任何其他维度。在**Swimlanes**选项卡上，单击**添加Swimlane**然后**Name**设置为**Expedite**。单击**Save and close**。
     
    ![](images/082.png)
     
-24.  将**Committed**work items拖放**QA Approved | Doing** , 这样做是为了在QA带宽(bandwidth)可用时将其识别为优先级。
+24.  将**Committed**work items拖放**QA Approved | Doing** , 这样做是为了在QA带宽(bandwidth)可用时将其识别为优先事项。
     
    ![](images/083.png)
     
@@ -397,7 +397,7 @@ work items在Azure DevOps中扮演着重要角色。无论是描述要完成的�
     
     ![](images/086.png)
     
-2.  从仪表板下拉菜单中，选择**Parts Unlimited Team Overview**。仪表板使team可以可视化状态并监视整个项目的进度。一目了然，您可以做出明智的决定，而不必深入到team项目站点的其他部分。“概述”页面提供对默认team仪表板的访问，您可以通过添加，删除或重新排列磁贴来对其进行自定义。每个图块都对应一个小部件，该小部件可提供对一个或多个特征或功能的访问。
+2.  从仪表板Dashboards下拉菜单中，选择**Parts Unlimited Team Overview**。仪表板使team可以可视化状态并监视整个项目的进度。看到的信息一目了然，您可以做出明智的决定，而不必深入到team项目站点的其他部分。“Overview”页面提供对默认team仪表板的访问，您可以通过添加，删除或重新排列widget磁贴来对其进行自定义。每个图块都对应一个小部件，该小部件可提供对一个或多个特征或功能的访问。
     
     ![](images/087.png)
     
@@ -405,7 +405,7 @@ work items在Azure DevOps中扮演着重要角色。无论是描述要完成的�
     
     ![](images/088.png)
     
-4.  将**Nmae**设置为**Product training**，然后选择**PUL-Web**team。点击**Create**。
+4.  将**Nmae**设置为**Product training**，然后team下拉菜单选择**PUL-Web**。点击**Create**。
     
     ![](images/089.png)
     
@@ -413,7 +413,7 @@ work items在Azure DevOps中扮演着重要角色。无论是描述要完成的�
     
     ![](images/090.png)
     
-6.  在**Add Widget**面板中，搜索**sprint**以查找专注于**sprint的**现有小部件。选择**Sprint Overview**，然后单击**Add**。
+6.  在**Add Widget**面板中，搜索**sprint**以查找专注于**sprint的**现有widget。选择**Sprint Overview**，然后单击**Add**。
     
     ![](images/091.png)
     
@@ -425,7 +425,7 @@ work items在Azure DevOps中扮演着重要角色。无论是描述要完成的�
     
     ![](images/093.png)
     
-9.  再次在小部件中搜索**sprint**然后添加** Sprint Capacity**小部件(widget)。
+9.  再次在小部件中搜索**sprint**然后添加**Sprint Capacity**小部件(widget)。
     
     ![](images/094.png)
     
@@ -445,7 +445,7 @@ work items在Azure DevOps中扮演着重要角色。无论是描述要完成的�
     
    ![](images/098.png)
     
-14.  将第一项设置为**Work Item Type = Task**，将第二项设置为** Area Path = Parts Unlimited\PUL-Web**。
+14.  将第一项设置为**Work Item Type = Task**，将第二项设置为**Area Path = Parts Unlimited\PUL-Web**。
     
    ![](images/099.png)
     
@@ -474,15 +474,15 @@ work items在Azure DevOps中扮演着重要角色。无论是描述要完成的�
    ![](images/105.png)
     
 ### 任务6: 客户化 team流程
-在Azure DevOps中，您可以通过过程自定义工作跟踪体验。流程定义了work items跟踪系统以及您通过Azure DevOps访问的其他子系统的构建块。每当您创建team项目时，都将选择包含项目所需构建基块的过程。
+在Azure DevOps中，您可以通过流程自定义工作跟踪体验。流程定义了work items跟踪系统以及您通过Azure DevOps访问的其他子系统的构建块。每当您创建team项目时，都将选择包含项目所需构建基块的过程。
 
-Azure DevOps支持两种流程类型。首先，核心系统进程（Scrum，Agile和CMMI系统进程）被锁定。您无法自定义这些过程。第二种类型，即继承的过程，是从核心系统过程创建的。您可以自定义这些过程。
+Azure DevOps支持两种流程类型。首先，核心系统流程（Scrum，Agile和CMMI系统进程）被锁定。您无法自定义这些过程。第二种类型，即继承的流程，是从核心系统流程创建的。您可以自定义这些流程。
 
 此外，所有进程都是共享的。也就是说，一个或多个team项目可以引用一个流程。您可以自定义流程，而不是自定义单个team项目。对流程所做的更改会自动更新所有引用该流程的team项目。
 
 创建继承的流程后，您可以对其进行自定义，基于该流程创建team项目，并迁移现有的team项目以对其进行引用。在将Gitteam项目迁移到继承的流程之前，无法对其进行自定义。
 
-在此任务中，我们将创建一个继承自Scrum的新流程。我们将要做的一项更改是添加一个backlog项目字段，该字段旨在跟踪专有的PartsUnlimited票证ID。
+在此任务中，我们将创建一个继承自Scrum的新流程。我们将要做的一项更改是添加一个backlog项目字段，该字段旨在跟踪专有的PartsUnlimited Ticket ID。
 
 1.  单击左上角的**Azure DevOps**徽标导航到帐户根目录。
     
@@ -524,7 +524,7 @@ Azure DevOps支持两种流程类型。首先，核心系统进程（Scrum，Agi
     
    ![](images/115.png)
     
-11.  现在已经配置了自定义过程，让我们切换Parts Unlimited项目以使用它。使用面包屑返回到**All processes**根目录。
+11.  现在已经配置了自定义流程，让我们切换Parts Unlimited项目以使用它。使用上部导航栏返回到**All processes**根目录。
     
    ![](images/116.png)
     
@@ -568,5 +568,5 @@ Azure DevOps支持两种流程类型。首先，核心系统进程（Scrum，Agi
     
 
 您可以观看以下视频，引导您完成本实验中介绍的所有步骤
-<iframe width="560" height="315" src="https://www.youtube.com/embed/WWUf5OWeBD0" frameborder="0" allowfullscreen="true"> </iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WWUf5OWeBD0" frameborder="0" allowfullscreen="true"></iframe>
 
