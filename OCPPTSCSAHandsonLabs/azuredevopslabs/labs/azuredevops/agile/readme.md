@@ -568,5 +568,8 @@ Azure DevOps支持两种流程类型。首先，核心系统流程（Scrum，Agi
     
 
 您可以观看以下视频，引导您完成本实验中介绍的所有步骤
-<iframe width="560" height="315" src="https://www.youtube.com/embed/WWUf5OWeBD0" frameborder="0" allowfullscreen="true"></iframe>
+
+<figure class="video_container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/WWUf5OWeBD0" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
 
