@@ -1,7 +1,7 @@
 
 
 
-# OCP PTS&CSA 动手实验
+# OCP PTS&CSAUnicorn 动手实验
 
 <img width="2000" height="200" src="./images/Microsoft-Hands-On-Labs.png"/>
 
@@ -13,6 +13,10 @@
 * 实验相关配置文件与源代码
 
 ## Azure DevOps
+
+<img width="2000" height="100" src="./images/AzureDevOps.png"/>
+
+
 - [使用Azure Boards进行敏捷规划和项目组合管理](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/agile/)
 - [在Visual Studio Code和Azure DevOps中使用Git进行版本控制](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/git/)
 - [使用Azure Artifacts进行程序包管理](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/packagemanagement/)
@@ -22,9 +26,15 @@
 - [使用Azure Test Plans测试计划进行探索性测试](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/exploratorytesting/)
 
 ## Azure Cloud Native
+
+<img width="2000" height="100" src="./images/AKS.png"/>
+
 -Coming soon
 
 ## Azure Spring Cloud
+
+<img width="2000" height="100" src="./images/AzureSpringCloud.png"/>
+
 -Coming soon
 
 ## Azure订阅获取
