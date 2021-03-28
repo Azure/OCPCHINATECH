@@ -217,7 +217,7 @@ Git对**Branches and Merges**功能的使用通过请求请求起作用，因此
    ![](images/033_new.png)
 
 <a name="Exercise5"> </a>
-## 练习5：使用分支机构branch ##
+## 练习5：使用分支branch ##
 
 您可以从Web上的“分支”视图在Azure DevOps Git存储库中管理工作。您还可以自定义视图以跟踪您最关心的**Branches**，以便您可以掌握团队所做的更改。
 
@@ -249,7 +249,7 @@ Git对**Branches and Merges**功能的使用通过请求请求起作用，因此
    ![](images/038.png)
 
 <a name="Ex5Task2"> </a>
-### 任务2：使用分支机构 ###
+### 任务2：使用分支 ###
 
 Git跟踪正在处理的分支，并确保在签出（checkout）分支时文件与该分支上的最新提交相匹配。分支使您可以同时使用同一本地Git存储库中的多个版本的源代码。您可以使用Visual Studio Code来发布，签出和删除分支。
 
@@ -316,7 +316,7 @@ Git跟踪正在处理的分支，并确保在签出（checkout）分支时文件
    ![](images/052.png)
 
 <a name="Exercise6"> </a>
-##练习6：从Azure DevOps管理分支##
+## 练习6：从Azure DevOps管理分支 ##
 
 除了Visual Studio Code中可用的所有功能之外，您还可以从Azure DevOps门户管理回购分支。
 

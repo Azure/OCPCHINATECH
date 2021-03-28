@@ -12,7 +12,7 @@ updated: Last updated - 13/11/2020
 某些Azure DevOps实验需要预先配置的 **Parts Unlimited** 团队项目。本文档概述了设置所需数据的必需步骤。
 
 <a name="Ex0Task1"> </a>
-### 任务1：配置零件无限团队项目 ###
+### 任务1：配置Parts Unlimited团队项目 ###
 
 1. 导航到[https://azuredevopsdemogenerator.azurewebsites.net](https://azuredevopsdemogenerator.azurewebsites.net/).。该实用工具网站将自动在您的帐户中创建一个新Azure Azure DevOps项目的过程，该项目中已预先填充了实验所需的内容（work items, repos,等）。有关该网站的更多信息，请参见[https://docs.microsoft.com/en-us/azure/devops/demo-gen](https://docs.microsoft.com/en-us/azure/devops/demo-gen).
 
@@ -35,9 +35,9 @@ updated: Last updated - 13/11/2020
    ![](images/003.png)
 
 <a name="Ex0Task2"> </a>
-### 任务2：在Visual Studio中配置部件无限解决方案 ###
+### 任务2：在Visual Studio中配置Parts Unlimited解决方案 ###
 
-1. 有些实验室会要求您在 **Visual Studio** 中打开 **Parts Unlimited** 解决方案。如果您的实验室不需要这样做，则可以跳过此任务。
+1. 有些实验会要求您在 **Visual Studio** 中打开 **Parts Unlimited** 解决方案。如果您的实验不需要这样做，则可以跳过此任务。
 
 1. 导航到您的Azure DevOps team project以获取“ Parts Unlimited”。类似于[https://dev.azure.com/YOURACCOUNT/Parts%20Unlimited](https://dev.azure.com/YOURACCOUNT/Parts Unlimited).
 
@@ -59,4 +59,4 @@ updated: Last updated - 13/11/2020
 
    ![](images/unsupported.png)
 
-1. 将Visual Studio保持打开状态以供您在实验室中使用。
+1. 将Visual Studio保持打开状态以供您在实验中使用。

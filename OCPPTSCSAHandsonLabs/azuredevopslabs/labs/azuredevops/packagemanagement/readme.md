@@ -42,7 +42,7 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 
    ![](images/createfeed.png)
 
-3. 此提要将包含可以在该组织中的各个项目之间共享的通用功能。选择此实验室的范围作为 **Organization** 。将名称设置为 **"PartsUnlimitedShared"** ，然后单击 **Create**。保留默认选项。
+3. 此提要（Feed）将包含可以在该组织中的各个项目之间共享的通用功能。选择此实验的范围作为 **Organization** 。将名称设置为 **"PartsUnlimitedShared"** ，然后单击 **Create**。保留默认选项。
 
    ![](images/create-feed-window2.png)
 
@@ -52,11 +52,11 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 
     
 
-5. 在 **Connect to feed** 窗口中，选择 **Visual Studio** 并复制 **Source** URL。这是Visual Studio和NuGet唯一需要开始利用新的提要的东西。在浏览器中将对话框保持打开状态。
+5. 在 **Connect to feed** 窗口中，选择 **Visual Studio** 并复制 **Source** URL。这是Visual Studio和NuGet唯一需要开始利用New Feed的优势。在浏览器中将对话框保持打开状态。
 
   ![](images/connect-feed.png)
 
-6. 启动 **Visual Studio**的 **new** 实例。请勿使用通过克隆主要的 **Parts Unlimited** 解决方案而打开的实例。
+6. 启动 **Visual Studio**的 **新** 实例。请勿使用通过克隆 **Parts Unlimited** 而打开的实例。
 
 7. 选择 **Tools \| NuGet Package Manager \| Package Manager Settings**。
      
@@ -189,7 +189,7 @@ redirect_from: "/labs/vsts/packagemanagement/index.htm"
 
    ![](images/025.png)
 
-3. 选择 **Class** 模板，然后输入 **Name "TaxService.cs"** 。点击 **Add** 以添加课程。我们可以假装将税收计算合并到此共享的类中并进行集中管理，以便其他团队可以简单地使用NuGet程序包。
+3. 选择 **Class** 模板，然后输入 **Name "TaxService.cs"** 。点击 **Add** 以添加课程。我们可以假装将tax calculation合并到此共享的类中并进行集中管理，以便其他团队可以简单地使用NuGet程序包。
 
    ![](images/026.png)
 
