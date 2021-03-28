@@ -536,7 +536,7 @@ Azure DevOps支持两种流程类型。首先，核心系统流程（Scrum，Agi
     
    ![](images/118.png)
     
-14.  从**Parts Unlimited**的上下文菜单中。选择**Change process**。
+14.  从**Parts Unlimited**的下拉菜单中。选择**Change process**。
     
    ![](images/119.png)
     
@@ -544,7 +544,7 @@ Azure DevOps支持两种流程类型。首先，核心系统流程（Scrum，Agi
     
    ![](images/120.png)
     
-16.  使用徽标链接返回到帐户信息中心。
+16.  使用徽标链接返回到帐户仪表板。
     
    ![](images/121.png)
     
