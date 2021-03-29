@@ -37,6 +37,7 @@
 <img width="2000" height="150" src="./images/AKS.png"/>
 
 - [云原生应用 -基础架构版本实验](https://github.com/Azure/OCPCHINATECH/blob/master/OCPPTSCSAHandsonLabs/MCW-Cloud-native-applications/Hands-on%20lab/HOL%20step-by-step%20-%20Cloud-native%20applications%20-%20Infrastructure%20edition.md)
+  
 - [云原生应用 -开发者版本实验](/OCPPTSCSAHandsonLabs/MCW-Cloud-native-applications/Hands-on%20lab/HOL%20step-by-step%20-%20Cloud-native%20applications%20-%20Developer%20edition.md)
 
 &emsp;
