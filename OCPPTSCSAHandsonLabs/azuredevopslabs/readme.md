@@ -47,7 +47,7 @@ CEO要求IT部门必须在90天内解决问题，否则整个部门将被...
                <li><a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/git/" class="barleft">在Visual Studio Code和Azure DevOps中使用Git进行版本控制  </a></li>
                <li><a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/packagemanagement/" class="barleft">使用Azure Artifacts进行程序包管理</a></li>
                <li><a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/continuousintegration/" class="barleft">使用Azure Pipelines实现持续集成</a></li>
-               <li><a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/continuousdeployment/" class="barleft">通过Azure Pipelines拥抱持续交付</a></li>
+               <li><a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/yaml/" class="barleft">通过Azure Pipelines拥抱持续交付</a></li>
                <li><a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/testmanagement/" class="barleft">使用Azure Test Plans进行测试计划和管理</a></li>
                <li><a href="/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/exploratorytesting/" class="barleft">使用Azure Test Plans测试计划进行探索性测试</a></li>
      
