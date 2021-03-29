@@ -2,12 +2,16 @@
 
 
 # OCP PTS&CSAUnicorn 动手实验
-
-<img width="2000" height="300" src="./images/Microsoft-Hands-On-Labs.png"/>
-
 本系列动手实验意在赋能技术人员掌握Level 200-300技能，每个实验主题提供1-3天的workshop
 
-  
+<img width="2000" height="300" src="./images/Microsoft-Hands-On-Labs.png"/>
+ 
+    
+      
+        
+          
+          
+   
 
 ## Azure DevOps
 通过一个虚拟客户场景，使用DevOps原理及运用Azure DevOps工具帮助客户实现敏捷开发和自动化交付
