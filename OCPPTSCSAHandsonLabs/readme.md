@@ -45,7 +45,7 @@
 &emsp;
 
 ## Azure Spring Cloud
-这是一个动手实践的培训，它将广泛使用命令行。 从一个简单的演示到更复杂的示例，非常快速地进行编码并在平台上运行。在完成所有指南之后，您应该对Azure Spring Cloud提供的所有内容都有比较深入的了解。
+本次动手实验广泛使用命令行。 从一个简单的演示到更复杂的示例，非常快速地进行编码并在平台上运行。在完成所有指南之后，您应该对Azure Spring Cloud提供的所有内容都有比较深入的了解。
 
 <img width="2000" height="150" src="./images/AzureSpringCloud.png"/>
 
