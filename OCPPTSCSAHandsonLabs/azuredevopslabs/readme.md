@@ -22,7 +22,7 @@ CEO要求IT部门必须在90天内解决问题，否则整个部门将被...
 
 **您面临的挑战是使用DevOps原理及运用Azure DevOps 工具并将其应用到这一严肃的业务模拟中**
 
-   ![](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/images/PhoenixProject.png)  
+   ![](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/images/PhoenixProject.PNG)  
    
 
 
