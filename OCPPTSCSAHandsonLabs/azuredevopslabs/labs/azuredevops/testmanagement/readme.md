@@ -268,7 +268,7 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 
 4. 将新套件命名为 **"End-to-end tests"** ，然后按 **Enter**。
 
- ![](images/051. png)
+ ![](images/051.png)
 
 5. 从 **Tests** 选项卡中，选择 **New \| New test case** ，以创建新的测试用例。
 
@@ -353,7 +353,7 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 
 6. 测试的第一步是打开项目站点。为此，请切换到已加载 **Parts Unlimited** solution的 **Visual Studio** 实例。从 **IIS Express** 目标下拉列表中，选择 **Browse With...**。
 
- ![](images/061. png)
+ ![](images/061.png)
 
 7. 选择 **Google Chrome** ，然后单击 **Browse**。
 
@@ -393,7 +393,7 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 
 16. **Test Runner** 提供了三种有价值的方式来记录测试运行中的媒体。第一种选择是截取屏幕截图。第二个是在图像操作日志中捕获每个用户操作。最后是将屏幕录制为视频。单击**Capture screenshot** 按钮以捕获屏幕快照。
 
- ![](images/071. png)
+ ![](images/071.png)
 
 17. 缩小屏幕以显示登录表单和错误消息。指定名称 **"No admin account"** ，然后单击“确认”按钮。
 
