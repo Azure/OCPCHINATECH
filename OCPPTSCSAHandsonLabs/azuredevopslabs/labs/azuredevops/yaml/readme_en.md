@@ -86,7 +86,7 @@ The following image will walk you through all the steps explained in this lab
     ![](images/010.png)
 
 <a name="Ex1Task3"></a>
-### Task 3: Adding a YAML build definition ###
+### Task 3: Adding a YAML build definition 
 
 1. Navigate to the **Pipelines** hub.
 
@@ -143,7 +143,7 @@ The following image will walk you through all the steps explained in this lab
     ![](images/023.png)
 
 <a name="Ex1Task4"></a>
-### Task 4: Adding continuous delivery to the YAML definition ###
+### Task 4: Adding continuous delivery to the YAML definition 
 
 1. Now that the build and test processes are successful, we can now add delivery to the YAML definition. From the options dropdown, select **Edit pipeline**.
 

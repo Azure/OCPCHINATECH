@@ -26,12 +26,12 @@ updated: Last updated - 21/03/2021
 ![](images/YAML-pipeline-workflow.gif)
  
 <a name="Exercise1"> </a>
-## 练习1：在Azure DevOps中使用YAML将CI / CD管道配置为代码 ##
+## 练习1：在Azure DevOps中使用YAML 代码配置CI/CD流水线
 
 <a name="Ex1Task1"> </a>
 ### 任务1：创建Azure资源 ###
 
-1. 此实验室需要将Parts Unlimited项目部署到Azure应用服务中。为此，您将需要旋转必要的基础结构。通过 [https://portal.azure.com](https://portal.azure.com/) 登录到您的Azure帐户。
+1. 此实验室需要将Parts Unlimited项目部署到Azure应用服务中。为此，您将需要通过 [https://portal.azure.com](https://portal.azure.com/) 登录到您的Azure帐户。
 
 2. 单击 **Create a resource**，然后搜索**Web App + SQL**。
 
@@ -71,7 +71,7 @@ updated: Last updated - 21/03/2021
 11. 资源配置将需要几分钟，因此您可以继续执行下一个任务。
 
 <a name="Ex1Task2"> </a>
-### 任务2：配置零件无限项目 ###
+### 任务2：配置Parts Unlimited项目 ###
 
 12. 在新的浏览器选项卡中导航到Azure DevOps上的团队项目。在深入研究YAML管道之前，您将需要禁用现有的构建管道。
 
@@ -110,7 +110,7 @@ updated: Last updated - 21/03/2021
 
  ![](images/015.png)
 
-6. 查看YAML定义的内容。它将作为一个名为 **azure-pipelines.yml**的新文件保存在资源库的根目录中，其中包含构建和测试典型ASP.NET解决方案所需的所有内容。您还可以根据需要自定义构建。在这种情况下，更新 **pool**以指定生成应使用Visual Studio 2017生成VM。
+6. 查看YAML定义的内容。它将作为一个名为 **azure-pipelines.yml**的新文件保存在资源库的根目录中，其中包含构建和测试典型ASP.NET解决方案所需的所有内容。您还可以根据需要自定义构建。在这种情况下，更新 **pool**的vmImage的值，指定使用**vs2017-win2016**的Biuld VM。
 
  ![](images/poolimage.png)
 
@@ -145,9 +145,9 @@ updated: Last updated - 21/03/2021
  ![](images/023.png)
 
 <a name="Ex1Task4"> </a>
-### 任务4：向YAML定义中添加连续交付 ###
+### 任务4：向YAML定义中添加连续交付
 
-1. 现在，构建和测试过程已成功完成，我们现在可以将交付内容添加到YAML定义中。从选项下拉列表中，选择**Edit pipeline**。
+1. 现在，构建（Biuld）和测试过程已成功完成，我们现在可以将交付内容添加到YAML定义中。从选项下拉列表中，选择**Edit pipeline**。
 
  ![](images/024.png)
 
@@ -161,11 +161,11 @@ updated: Last updated - 21/03/2021
     ```
  ![](images/addingbuildstage.png)
 
-3. 突出显示（选择）YAML文件的其余部分，并将其缩进四个空格（两个选项卡）。 “ pool”（包括在内）之后的所有内容都应属于“ job：Build”。这将简单地采用现有的构建定义并将其重新定位为**jobs** 节点的子代。
+3. 突出显示（选择）YAML文件的其余部分，并将其缩进四个空格（按两次Tab键）。 “ pool”（包括在内）之后的所有内容都应属于“ job：Build”。这将简单地采用现有的构建定义并将其重新定位为**jobs** 节点的子节点。
 
  ![](images/pipelineindent.png)
 
-4. 在文件底部，添加以下配置以定义第二阶段。
+4. 在文件底部，添加以下配置以定义第二阶段（stage）。
 
     ```
     - stage: Deploy
@@ -189,7 +189,7 @@ updated: Last updated - 21/03/2021
 
  ![](images/030.png)
 
-8. 输入您之前用于创建应用程序服务的 **App Service name** 。将     **Package or folder**更新为 **$(System.ArtifactsDirectory)/drop/*.zip**。不是 **$(System.DefaultWorkingDirectory)!**。点击**Add**。
+8. 输入您之前用于创建应用程序服务的 **App Service name** 。将 **Package or folder**更新为 **$(System.ArtifactsDirectory)/drop/*.zip**。不是 **$(System.DefaultWorkingDirectory)!**。点击**Add**。
 
  ![](images/031.png)
 
@@ -197,11 +197,11 @@ updated: Last updated - 21/03/2021
 
  ![](images/032.png)
 
-10. 在添加的任务仍在编辑器中选中的情况下，将其缩进四个空格（两个选项卡），以使其成为**steps** 任务的子级。
+10. 在添加的任务仍在编辑器中选中的情况下，将其缩进四个空格（按两次Tab键），以使其成为**steps** 任务的子级。
 
  ![](images/azureappservicetask.png)
 
-   >注意：**packageForLinux**参数在示例中有点误导，但对Windows或Linux有效。这是**Package**的别名，因此可以简化为
+   >注意：**packageForLinux**参数在示例中有点误导，但对Windows或Linux有效。这是**Package**的别名，因此可以简化。
 
 11. 重要的是要注意，这两个阶段将独立运行。因此，如果没有特殊考虑，第一阶段的构建输出将无法用于第二阶段。为此，我们将使用一个任务在构建阶段结束时发布构建输出，并使用另一个任务在部署阶段开始时将其下载。将光标放在构建阶段结束时的空白行上。
 
@@ -215,7 +215,7 @@ updated: Last updated - 21/03/2021
 
  ![](images/036.png)
 
-14. 将发布任务缩进四个空格（两个选项卡）。您可能还需要在前后添加一个空行，以使其更易于阅读。
+14. 将发布任务缩进四个空格（按两次Tab键）。您可能还需要在前后添加一个空行，以使其更易于阅读。
 
  ![](images/037.png)
 
@@ -274,7 +274,7 @@ updated: Last updated - 21/03/2021
  ![](images/050.png)
 
 <a name="Ex1Task5"> </a>
-### 任务5：查看已部署的站点###
+### 任务5：查看已部署的站点
 
 1. 返回到Azure门户浏览器选项卡。
 
