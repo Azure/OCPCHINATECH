@@ -4,14 +4,13 @@
 # OCP PTS&CSAUnicorn 动手实验
 本系列动手实验意在赋能技术人员掌握Level 200-300技能，每个实验主题提供1-3天的workshop
 
-<img width="2000" height="300" src="./images/Microsoft-Hands-On-Labs.png"/>
- 
-    
-      
-        
-          
-          
-   
+<img width="2000" height="300" src="./images/Microsoft-Hands-On-Labs.png"/>  
+
+&emsp;
+&emsp;
+&emsp;
+&emsp;
+&emsp;   
 
 ## Azure DevOps
 通过一个虚拟客户场景，使用DevOps原理及运用Azure DevOps工具帮助客户实现敏捷开发和自动化交付
@@ -28,7 +27,9 @@
 - [使用Azure Test Plans进行测试计划和管理](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/testmanagement/)
 - [使用Azure Test Plans测试计划进行探索性测试](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/exploratorytesting/)
 
-
+&emsp;
+&emsp;
+&emsp;
 
 
 ## Azure Cloud Native 
@@ -40,10 +41,10 @@
 
 - [Cloud-native applications - Developer edition](/OCPPTSCSAHandsonLabs/MCW-Cloud-native-applications/Hands-on%20lab/HOL%20step-by-step%20-%20Cloud-native%20applications%20-%20Developer%20edition.md)
 
+&emsp;
+&emsp;
+&emsp;
 
-
-    
- 
 ## Azure Spring Cloud
 这是一个动手实践的培训，它将广泛使用命令行。 从一个简单的演示到更复杂的示例，非常快速地进行编码并在平台上运行。在完成所有指南之后，您应该对Azure Spring Cloud提供的所有内容都有比较深入的了解。
 
