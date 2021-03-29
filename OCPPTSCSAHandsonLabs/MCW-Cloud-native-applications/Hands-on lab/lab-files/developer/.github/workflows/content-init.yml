@@ -1,0 +1,42 @@
+name: content-init
+
+# This workflow is triggered on push to the 'content-web' directory of the  master branch of the repository
+on:
+  push:
+    branches:
+    - master
+    paths:
+    - 'content-init/**'
+
+  # Configure workflow to also support triggering manually
+  workflow_dispatch:
+
+# Environment variables are defined so that they can be used throughout the job definitions.
+env:
+  imageRepository: 'content-init'
+  resourceGroupName: 'Fabmedical-[SHORT_SUFFIX]'
+  containerRegistryName: 'fabmedical[SHORT_SUFFIX]'
+  containerRegistry: 'fabmedical[SHORT_SUFFIX].azurecr.io'
+  dockerfilePath: './content-init'
+  tag: '${{ github.run_id  }}'
+
+# Jobs define the actions that take place when code is pushed to the master branch
+jobs:
+
+  build-and-publish-docker-image:
+    name: Build and Push Docker Image
+    runs-on: ubuntu-latest
+    steps:
+    # Checkout the repo
+    - uses: actions/checkout@master
+
+    - name: Build and push an image to container registry
+      uses: docker/build-push-action@v1
+      with:
+        username: ${{ secrets.ACR_USERNAME }}
+        password: ${{ secrets.ACR_PASSWORD }}
+        path: ${{ env.dockerfilePath  }}
+        dockerfile: '${{ env.dockerfilePath }}/Dockerfile'
+        registry: ${{ env.containerRegistry }}
+        repository: ${{ env.imageRepository }}
+        tags: ${{ env.tag }},latest

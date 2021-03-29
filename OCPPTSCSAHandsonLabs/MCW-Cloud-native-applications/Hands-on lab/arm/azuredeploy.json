@@ -1,0 +1,451 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "Suffix": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 3
+        },
+        "Location": {
+            "type": "string",
+            "defaultValue": "[resourceGroup().location]"
+        },
+        "VirtualMachineAdminUsernameLinux": {
+            "type": "string"
+        },
+        "VirtualMachineAdminPublicKeyLinux": {
+            "type": "securestring"
+        },
+        "CosmosLocation": {
+            "type": "string",
+            "defaultValue": "eastus"
+        },
+        "CosmosLocationName": {
+            "type": "string",
+            "defaultValue": "East US"
+        },
+        "CosmosPairedLocation": {
+            "type": "string",
+            "defaultValue": "westus"
+        },
+        "CosmosPairedLocationName": {
+            "type": "string",
+            "defaultValue": "West US"
+        },
+        "guid": {
+            "type": "string",
+            "defaultValue": "[newGuid()]"
+        },
+        "guid2": {
+            "type": "string",
+            "defaultValue": "[newGuid()]"
+        }
+    },
+    "variables": {
+        "virtualNetworkName": "[concat('fabmedical-', parameters('Suffix'), '-vnet')]",
+        "virtualNetworAddressPrefixes": [
+            "172.16.0.0/24"
+        ],
+        "virtualNetworkSubnets": [
+            {
+                "name": "default",
+                "properties": {
+                    "addressPrefix": "172.16.0.0/24"
+                }
+            }
+        ],
+        "vnetId": "[resourceId(resourceGroup().name, 'Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]",
+        "subnetName": "default",
+        "subnetRef": "[concat(variables('vnetId'), '/subnets/', variables('subnetName'))]",
+        "networkSecurityGroupNameLinux": "[concat('fabmedical-', parameters('Suffix'), '-nsg')]",
+        "networkSecurityGroupRulesLinux": [
+            {
+                "name": "SSH",
+                "properties": {
+                    "priority": 300,
+                    "protocol": "TCP",
+                    "access": "Allow",
+                    "direction": "Inbound",
+                    "sourceAddressPrefix": "*",
+                    "sourcePortRange": "*",
+                    "destinationAddressPrefix": "*",
+                    "destinationPortRange": "22"
+                }
+            },
+            {
+                "name": "allow-app-endpoints",
+                "properties": {
+                    "priority": 301,
+                    "protocol": "*",
+                    "access": "Allow",
+                    "direction": "Inbound",
+                    "sourceAddressPrefix": "*",
+                    "sourcePortRange": "*",
+                    "destinationAddressPrefix": "*",
+                    "destinationPortRange": "3000-3010"
+                }
+            }
+        ],
+        "publicIpAddressNameLinux": "[concat('fabmedical-', parameters('Suffix'), '-ip')]",
+        "publicIpAddressTypeLinux": "Dynamic",
+        "publicIpAddressSkuLinux": "Basic",
+        "networkInterfaceNameLinux": "[concat('fabmedical-', parameters('Suffix'))]",
+        "nsgIdLinux": "[resourceId(resourceGroup().name, 'Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupNameLinux'))]",
+        "diagnosticsStorageAccountNameLinux": "[tolower(concat('fab', toLower(parameters('Suffix')), 'diag',uniqueString(resourceGroup().id)))]",
+        "diagnosticsStorageAccountTypeLinux": "Standard_LRS",
+        "diagnosticsStorageAccountKindLinux": "Storage",
+        "virtualMachineNameLinux": "[concat('fabmedical-', parameters('Suffix'))]",
+        "virtualMachineSizeLinux": "Standard_D2s_v3",
+        "virtualMachineOsDiskTypeLinux": "StandardSSD_LRS",
+        "registryName": "[concat('fabmedical', parameters('Suffix'))]",
+        "registrySku": "Standard",
+        "registryAdminUserEnabled": true,
+        "kubernetesClusterName": "[concat('fabmedical-', parameters('Suffix'))]",
+        "kubernetesVersion": "1.17.16",
+        "kubernetesDnsPrefix": "[concat('fabmedical-', parameters('Suffix'), '-dns')]",
+        "kubernetesAgentOsType": "Linux",
+        "kubernetesAgentOsDiskSizeGB": 0,
+        "kubernetesAgentCount": 2,
+        "kubernetesAgentVmSize": "Standard_D2_v2",
+        "kubernetesNetworkProfilePlugin": "kubenet",
+        "kubernetesRBACEnabled": true,
+        "logAnalyticsName": "[concat('fabmed-', parameters('Suffix'),uniqueString(resourceGroup().id))]",
+        "logAnalyticsSku": "standalone",
+        "logAnalyticsId": "[resourceId(resourceGroup().name, 'Microsoft.OperationalInsights/workspaces', variables('logAnalyticsName'))]",
+        "cosmosName": "[concat('fabmedical-', toLower(parameters('Suffix')))]",
+        "cosmosSku": "Standard",
+        "cosmosApi": "MongoDB",
+        "cosmosApiExperience": "Azure Cosmos DB for MongoDB API",
+        "appInsightsNames": [
+            "content-web",
+            "content-api"
+        ]
+    },
+    "resources": [
+        {
+            "name": "[variables('virtualNetworkName')]",
+            "type": "Microsoft.Network/virtualNetworks",
+            "apiVersion": "2019-02-01",
+            "location": "[parameters('Location')]",
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": "[variables('virtualNetworAddressPrefixes')]"
+                },
+                "subnets": "[variables('virtualNetworkSubnets')]"
+            }
+        },
+        {
+            "name": "[variables('networkSecurityGroupNameLinux')]",
+            "type": "Microsoft.Network/networkSecurityGroups",
+            "apiVersion": "2019-02-01",
+            "location": "[parameters('Location')]",
+            "properties": {
+                "securityRules": "[variables('networkSecurityGroupRulesLinux')]"
+            }
+        },
+        {
+            "name": "[variables('publicIpAddressNameLinux')]",
+            "type": "Microsoft.Network/publicIpAddresses",
+            "apiVersion": "2019-02-01",
+            "location": "[parameters('Location')]",
+            "properties": {
+                "publicIpAllocationMethod": "[variables('publicIpAddressTypeLinux')]"
+            },
+            "sku": {
+                "name": "[variables('publicIpAddressSkuLinux')]"
+            }
+        },
+        {
+            "type": "Microsoft.Network/networkInterfaces",
+            "apiVersion": "2018-10-01",
+            "name": "[variables('networkInterfaceNameLinux')]",
+            "location": "[parameters('Location')]",
+            "dependsOn": [
+                "[concat('Microsoft.Network/networkSecurityGroups/', variables('networkSecurityGroupNameLinux'))]",
+                "[concat('Microsoft.Network/virtualNetworks/', variables('virtualNetworkName'))]",
+                "[concat('Microsoft.Network/publicIpAddresses/', variables('publicIpAddressNameLinux'))]"
+            ],
+            "properties": {
+                "ipConfigurations": [
+                    {
+                        "name": "ipconfig1",
+                        "properties": {
+                            "subnet": {
+                                "id": "[variables('subnetRef')]"
+                            },
+                            "privateIPAllocationMethod": "Dynamic",
+                            "publicIpAddress": {
+                                "id": "[resourceId(resourceGroup().name, 'Microsoft.Network/publicIpAddresses', variables('publicIpAddressNameLinux'))]"
+                            }
+                        }
+                    }
+                ],
+                "networkSecurityGroup": {
+                    "id": "[variables('nsgIdLinux')]"
+                }
+            }
+        },
+        {
+            "name": "[variables('diagnosticsStorageAccountNameLinux')]",
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2018-07-01",
+            "location": "[parameters('Location')]",
+            "properties": {},
+            "kind": "[variables('diagnosticsStorageAccountKindLinux')]",
+            "sku": {
+                "name": "[variables('diagnosticsStorageAccountTypeLinux')]"
+            }
+        },
+        {
+            "name": "[variables('virtualMachineNameLinux')]",
+            "type": "Microsoft.Compute/virtualMachines",
+            "apiVersion": "2018-10-01",
+            "location": "[parameters('Location')]",
+            "dependsOn": [
+                "[concat('Microsoft.Network/networkInterfaces/', variables('networkInterfaceNameLinux'))]",
+                "[concat('Microsoft.Storage/storageAccounts/', variables('diagnosticsStorageAccountNameLinux'))]"
+            ],
+            "properties": {
+                "hardwareProfile": {
+                    "vmSize": "[variables('virtualMachineSizeLinux')]"
+                },
+                "storageProfile": {
+                    "osDisk": {
+                        "createOption": "FromImage",
+                        "managedDisk": {
+                            "storageAccountType": "[variables('virtualMachineOsDiskTypeLinux')]"
+                        }
+                    },
+                    "imageReference": {
+                        "publisher": "Canonical",
+                        "offer": "UbuntuServer",
+                        "sku": "16.04-LTS",
+                        "version": "latest"
+                    }
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('networkInterfaceNameLinux'))]"
+                        }
+                    ]
+                },
+                "osProfile": {
+                    "computerName": "[variables('virtualMachineNameLinux')]",
+                    "adminUsername": "[parameters('VirtualMachineAdminUsernameLinux')]",
+                    "linuxConfiguration": {
+                        "disablePasswordAuthentication": true,
+                        "ssh": {
+                            "publicKeys": [
+                                {
+                                    "path": "[concat('/home/', parameters('VirtualMachineAdminUsernameLinux'), '/.ssh/authorized_keys')]",
+                                    "keyData": "[parameters('VirtualMachineAdminPublicKeyLinux')]"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "diagnosticsProfile": {
+                    "bootDiagnostics": {
+                        "enabled": true,
+                        "storageUri": "[concat('https://', variables('diagnosticsStorageAccountNameLinux'), '.blob.core.windows.net/')]"
+                    }
+                }
+            }
+        },
+        {
+            "type": "Microsoft.ContainerRegistry/registries",
+            "apiVersion": "2017-10-01",
+            "name": "[variables('registryName')]",
+            "location": "[parameters('Location')]",
+            "sku": {
+                "name": "[variables('registrySku')]"
+            },
+            "properties": {
+                "adminUserEnabled": "[variables('registryAdminUserEnabled')]"
+            }
+        },
+        {
+            "type": "Microsoft.ContainerService/managedClusters",
+            "apiVersion": "2020-03-01",
+            "name": "[variables('kubernetesClusterName')]",
+            "location": "[parameters('Location')]",
+            "dependsOn": [
+                "[concat('Microsoft.Resources/deployments/', 'WorkspaceDeployment-fabmedical-', parameters('Suffix'))]"
+            ],
+            "properties": {
+                "kubernetesVersion": "[variables('kubernetesVersion')]",
+                "enableRBAC": "[variables('kubernetesRBACEnabled')]",
+                "dnsPrefix": "[variables('kubernetesDnsPrefix')]",
+                "agentPoolProfiles": [
+                    {
+                        "name": "agentpool",
+                        "count": "[variables('kubernetesAgentCount')]",
+                        "osDiskSizeGB": "[variables('kubernetesAgentOsDiskSizeGB')]",
+                        "osType": "[variables('kubernetesAgentOsType')]",
+                        "vmSize": "[variables('kubernetesAgentVmSize')]",
+                        "storageProfile": "ManagedDisks",
+                        "type": "VirtualMachineScaleSets",
+                        "mode": "System"
+                    }
+                ],
+                "networkProfile": {
+                    "networkPlugin": "[variables('kubernetesNetworkProfilePlugin')]"
+                },
+                "addonProfiles": {
+                    "httpApplicationRouting": {
+                        "enabled": false
+                    },
+                    "omsagent": {
+                        "enabled": true,
+                        "config": {
+                            "logAnalyticsWorkspaceResourceID": "[variables('logAnalyticsId')]"
+                        }
+                    }
+                }
+            },
+            "identity": {
+                "type": "SystemAssigned"
+            }            
+        },
+        {
+            "name": "[parameters('guid')]",
+            "type": "Microsoft.Authorization/roleAssignments",
+            "dependsOn": [
+                "[concat('Microsoft.ContainerService/managedClusters/', variables('kubernetesClusterName'))]"
+            ],
+            "apiVersion": "2018-09-01-preview",
+            "properties": {
+                "roleDefinitionId": "[resourceId('Microsoft.Authorization/roleDefinitions', 'b24988ac-6180-42a0-ab88-20f7382dd24c')]",
+                "principalId": "[reference(resourceId('Microsoft.ContainerService/managedClusters', variables('kubernetesClusterName')), '2020-06-01', 'full').identity.principalId]",
+                "scope": "[resourceGroup().id]"
+            }
+        },
+        {
+            "name": "[parameters('guid2')]",
+            "type": "Microsoft.Authorization/roleAssignments",
+            "dependsOn": [
+                "[concat('Microsoft.ContainerService/managedClusters/', variables('kubernetesClusterName'))]"
+            ],
+            "apiVersion": "2018-09-01-preview",
+            "properties": {
+                "roleDefinitionId": "[resourceId('Microsoft.Authorization/roleDefinitions', '7f951dda-4ed3-4680-a7ca-43fe172d538d')]",
+                "principalId": "[reference(resourceId('Microsoft.ContainerService/managedClusters', variables('kubernetesClusterName'))).identityProfile.kubeletidentity.objectId]",
+                "scope": "[resourceGroup().id]"
+            }
+        },
+        {
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2017-05-10",
+            "name": "[concat('WorkspaceDeployment-fabmedical-', parameters('Suffix'))]",
+            "properties": {
+                "mode": "Incremental",
+                "template": {
+                    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+                    "contentVersion": "1.0.0.0",
+                    "parameters": {},
+                    "variables": {},
+                    "resources": [
+                        {
+                            "type": "Microsoft.OperationalInsights/workspaces",
+                            "apiVersion": "2015-11-01-preview",
+                            "name": "[variables('logAnalyticsName')]",
+                            "location": "[parameters('Location')]",
+                            "properties": {
+                                "sku": {
+                                    "name": "[variables('logAnalyticsSku')]"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2017-05-10",
+            "name": "[concat('SolutionDeployment-fabmedical-', parameters('Suffix'))]",
+            "dependsOn": [
+                "[concat('Microsoft.Resources/deployments/', 'WorkspaceDeployment-fabmedical-', parameters('Suffix'))]"
+            ],
+            "properties": {
+                "mode": "Incremental",
+                "template": {
+                    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+                    "contentVersion": "1.0.0.0",
+                    "parameters": {},
+                    "variables": {},
+                    "resources": [
+                        {
+                            "type": "Microsoft.OperationsManagement/solutions",
+                            "apiVersion": "2015-11-01-preview",
+                            "name": "[concat('ContainerInsights', '(', variables('logAnalyticsName'), ')')]",
+                            "location": "[parameters('Location')]",
+                            "properties": {
+                                "workspaceResourceId": "[variables('logAnalyticsId')]"
+                            },
+                            "plan": {
+                                "name": "[concat('ContainerInsights', '(', variables('logAnalyticsName'), ')')]",
+                                "product": "OMSGallery/ContainerInsights",
+                                "promotionCode": "",
+                                "publisher": "Microsoft"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "Microsoft.DocumentDb/databaseAccounts",
+            "apiVersion": "2020-04-01",
+            "name": "[variables('cosmosName')]",
+            "location": "[parameters('CosmosLocation')]",
+            "kind": "[variables('cosmosApi')]",
+            "properties": {
+                "databaseAccountOfferType": "[variables('cosmosSku')]",
+                "locations": [
+                    {
+                        "id": "[concat(variables('cosmosName'), '-', parameters('CosmosLocation'))]",
+                        "failoverPriority": 0,
+                        "locationName": "[parameters('CosmosLocationName')]"
+                    },
+                    {
+                        "id": "[concat(variables('cosmosName'), '-', parameters('CosmosPairedLocation'))]",
+                        "failoverPriority": 1,
+                        "locationName": "[parameters('CosmosPairedLocationName')]"
+                    }
+                ],
+                "enableMultipleWriteLocations": false,
+                "isVirtualNetworkFilterEnabled": false
+            },
+            "tags": {
+                "defaultExperience": "[variables('cosmosApiExperience')]"
+            }
+        },
+        {
+            "type": "Microsoft.Insights/components",
+            "apiVersion": "2015-05-01",
+            "name": "[variables('appInsightsNames')[copyIndex()]]",
+            "location": "[parameters('Location')]",
+            "kind": "web",
+            "properties": {
+                "ApplicationId": "[variables('appInsightsNames')[copyIndex()]]",
+                "Application_Type": "web",
+                "Flow_Type": "Bluefield",
+                "Request_Source": "rest"
+            },
+            "copy": {
+                "name": "appinsightscopy",
+                "count": "[length(variables('appInsightsNames'))]",
+                "mode": "Parallel"
+            }
+        }
+    ],
+    "outputs": {
+        "VirtualMachineAdminUsernameLinux": {
+            "type": "string",
+            "value": "[parameters('VirtualMachineAdminUsernameLinux')]"
+        }
+    }
+}
