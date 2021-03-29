@@ -24,12 +24,11 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 
 
 <a name="Exercise1"> </a>
- ## 练习1：管理测试计划，套件和案例 ##
-
-在本练习中，您将学习如何创建和管理测试计划，测试套件和测试用例。
+ ## 练习1：管理测试计划，套件和案例
+在本练习中，您将学习如何创建和管理测试计划，测试套件(Test Suite)和测试用例。
 
 <a name="Ex1Task1"> </a>
-  ###  任务1：了解测试计划，套件和案例  ###  
+  ###  任务1：了解测试计划，套件和案例 
 
 1. 导航到Azure DevOps上的团队项目。
 
@@ -38,23 +37,23 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
  ![](images/000.png)
 
 
-3. 一般来说，项目中的每个主要里程碑都应有自己的 **test plan**。每个测试计划中都有 **test suites**，它们是旨在验证工作项（例如功能实现或错误修复）的 **test cases** （以及可选的其他测试套件）的集合。每个测试用例都旨在确认一种特定的行为，并且可能属于一个或多个测试套件。零件无限制项目有一个测试计划，该计划位于 **Parts Unlimited Team** 下，称为**Parts Unlimited_TestPlan1** 。选择 **Parts Unlimited_TestPlan1** 。
+3. 一般来说，项目中的每个主要里程碑都应有自己的 **test plan**。每个测试计划中都有 **test suites**，它们是旨在验证工作项(Work Item)（例如功能实现或错误修复）的 **test cases** （以及可选的其他test suites）的集合。每个测试用例(Test Case)都旨在确认一种特定的行为，并且可能属于一个或多个测试套件(Test Suite)(Test Suites)。 Parts Unlimited项目有一个测试计划，该计划位于 **Parts Unlimited Team** 下，称为**Parts Unlimited_TestPlan1** 。选择 **Parts Unlimited_TestPlan1** 。
 
- ![](images/001. png)
+ ![](images/001.png)
 
-4. 为该故事选择测试套件 **As a customer, I would like to store my credit card details securely** 。这组测试重点在于该工作项，而该工作项恰好是一项功能。请注意，每次您为实验室生成演示数据时，工作项编号都会有所不同。
+4. 为该故事选择测试套件(Test Suite) **As a customer, I would like to store my credit card details securely** 。这组测试重点在于该工作项(Work Item)，而该工作项(Work Item)恰好是一项功能。请注意，每次您为实验室生成演示数据时，工作项(Work Item)编号都会有所不同。
 
  ![](images/002.png)
 
-5. 在右侧，您可以看到该测试套件具有三个测试用例，旨在确认功能实现的预期行为。双击 **Verify that user is allowed to save his credit card detail** 测试用例。
+5. 在右侧，您可以看到该测试套件(Test Suite)具有三个测试用例，旨在确认功能实现的预期行为。双击 **Verify that user is allowed to save his credit card detail** 测试用例。
 
  ![](images/003.png)
 
-6. 此对话框提供了有关此测试用例所需的所有信息。找到 **Related Work** 面板，并注意此测试用例已链接到它所属的套件。单击工作项以导航到它。
+6. 此对话框提供了有关此测试用例所需的所有信息。找到 **Related Work** 面板，并注意此测试用例已链接到它所属的套件。单击工作项(Work Item)以导航到它。
 
  ![](images/004.png)
 
-7. 在测试套件中，我们可以看到所有链接的工作项，它们恰好是测试用例。
+7. 在测试套件(Test Suite)中，我们可以看到所有链接的工作项(Work Item)，它们恰好是测试用例。
 
  ![](images/005.png)
 
@@ -74,18 +73,18 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 
  ![](images/009.png)
 
-12. 父功能现在与对其进行测试的套件相关联，并且任何人都可以在它们之间导航以查看其与所涉及的其他工作项的关系。
+12. 父功能现在与对其进行测试的套件相关联，并且任何人都可以在它们之间导航以查看其与所涉及的其他工作项(Work Item)的关系。
 
  ![](images/010.png)
 
 13. 单击 **Save & Close**。
 
- ![](images/011. png)
+ ![](images/011.png)
 
 14. 关闭原始的测试用例对话框。
 
 <a name="Ex1Task2"> </a>
-  ###  任务2：管理测试  ###  
+  ###  任务2：管理测试 
 
 1. 有时应按特定的顺序运行一组测试用例，以使效率最大化。单击 **Order tests** 以指定应运行这些测试用例的顺序。
 
@@ -125,7 +124,7 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 
 10. 单击 **Add new value** 并为 **iOS 12** 添加一个条目。
 
- ![](images/021. png)
+ ![](images/021.png)
 
 11. 单击 **Save**。
 
@@ -151,7 +150,7 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 
  ![](images/027.png)
 
-17. 单击到目前为止我们一直在使用的测试套件旁边的下拉列表，然后选择 **Assign configurations to test suite**。
+17. 单击到目前为止我们一直在使用的测试套件(Test Suite)旁边的下拉列表，然后选择 **Assign configurations to test suite**。
 
  ![](images/028.png)
 
@@ -166,9 +165,9 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 <a name="Ex1Task3"> </a>
   ###  任务3：编写测试  ###  
 
-1. 展开测试计划旁边的下拉菜单，然后选择 **New static suite.** 测试用例的 **static suite** 是已手动分配用例的套件。您还可以基于通用需求 ( **requirement-based suite** ) 或测试用例和/或工作项的查询( **query-based suite** )来创建套件。
+1. 展开测试计划旁边的下拉菜单，然后选择 **New static suite.** 测试用例的 **static suite** 是已手动分配用例的套件。您还可以基于通用需求 ( **requirement-based suite** ) 或测试用例和/或工作项(Work Item)的查询( **query-based suite** )来创建套件。
 
- ![](images/031. png)
+ ![](images/031.png)
 
 2. 将新套件的名称设置为 **Shipping tests**。这些测试将全部集中在与运输相关的功能上。请记住，您可以轻松地在套件之间共享测试用例，因此，在有许多重叠套件时，冗余度很小。
 
@@ -178,7 +177,7 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 
  ![](images/033.png)
 
-4. 您可以自定义用于指定要检索哪些需求的查询，但只需保留默认值，然后单击 **Run query**即可。找到并选择与运输相关的三个产品待办事项。单击 **Create suites** 以为每个套件创建一个测试套件。
+4. 您可以自定义用于指定要检索哪些需求的查询，但只需保留默认值，然后单击 **Run query**即可。找到并选择与运输相关的三个产品待办事项。单击 **Create suites** 以为每个套件创建一个测试套件(Test Suite)。
 
  ![](images/034.png)
 
@@ -194,7 +193,7 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 
  ![](images/037.png)
 
-8. 您可以选择继续在网格视图中添加和编辑工作项。如果满意，请单击 **View: Grid** 切换返回列表视图。
+8. 您可以选择继续在网格视图中添加和编辑工作项(Work Item)。如果满意，请单击 **View: Grid** 切换返回列表视图。
 
  ![](images/038.png)
 
@@ -202,11 +201,11 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 
  ![](images/039.png)
 
-10. 创建套件的另一种方法是通过工作项查询。展开 **Shipping tests** 套件旁边的下拉菜单，然后选择 **new query-based suite**。
+10. 创建套件的另一种方法是通过工作项(Work Item)查询。展开 **Shipping tests** 套件旁边的下拉菜单，然后选择 **new query-based suite**。
 
  ![](images/040.png)
 
-11. 假设您想从与项目中交付相关的测试用例中创建一个测试套件。将 **Work Item Type** 更改为 **Microsoft.TestCaseCategory** 以搜索测试用例，然后单击 **Run query**。现在，您将获得一个测试用例列表，可以选择从中创建套件。
+11. 假设您想从与项目中交付相关的测试用例中创建一个测试套件(Test Suite)。将 **Work Item Type** 更改为 **Microsoft.TestCaseCategory** 以搜索测试用例，然后单击 **Run query**。现在，您将获得一个测试用例列表，可以选择从中创建套件。
 
  ![](images/041-2.png)
 
