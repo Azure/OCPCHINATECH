@@ -2,7 +2,7 @@
 
 
 # OCP PTS&CSAUnicorn 动手实验
-本系列动手实验意在赋能技术人员掌握Level 200-300技能，每个实验主题提供1-3天的workshop
+本系列动手实验意在赋能技术人员掌握Level 200-300技能，每个实验主题提供1-3天的培训（Workshop或Bootcamp）
 
 <img width="2000" height="300" src="./images/Microsoft-Hands-On-Labs.png"/>  
 
