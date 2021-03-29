@@ -1,16 +1,16 @@
 
 
 
-# OCP PTS&CSAUnicorn ¶¯ÊÖÊµÑé
+# OCP PTS&CSAUnicorn åŠ¨æ‰‹å®éªŒ
 
 <img width="2000" height="300" src="./images/Microsoft-Hands-On-Labs.png"/>
 
-±¾ÏµÁĞ¶¯ÊÖÊµÑéÒâÔÚ¸³ÄÜ¼¼ÊõÈËÔ±ÕÆÎÕLevel 200-300¼¼ÄÜ£¬Ã¿¸öÊµÑéÖ÷ÌâÌá¹©1-3ÌìµÄworkshop
+æœ¬ç³»åˆ—åŠ¨æ‰‹å®éªŒæ„åœ¨èµ‹èƒ½æŠ€æœ¯äººå‘˜æŒæ¡Level 200-300æŠ€èƒ½ï¼Œæ¯ä¸ªå®éªŒä¸»é¢˜æä¾›1-3å¤©çš„workshop
 
-## ¶¯ÊÖÊµÑéÖ¸µ¼°üÀ¨£º
-* ÊµÑé»·¾³ÒªÇóºÍ´î½¨
-* ÊµÑé²½Öè
-* ÊµÑéÏà¹ØÅäÖÃÎÄ¼şÓëÔ´´úÂë
+## åŠ¨æ‰‹å®éªŒæŒ‡å¯¼åŒ…æ‹¬ï¼š
+* å®éªŒç¯å¢ƒè¦æ±‚å’Œæ­å»º
+* å®éªŒæ­¥éª¤
+* å®éªŒç›¸å…³é…ç½®æ–‡ä»¶ä¸æºä»£ç 
 
 
   
@@ -19,13 +19,13 @@
 <img width="2000" height="150" src="./images/AzureDevOps.png"/>
 
 
-- [Ê¹ÓÃAzure Boards½øĞĞÃô½İ¹æ»®ºÍÏîÄ¿×éºÏ¹ÜÀí](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/agile/)
-- [ÔÚVisual Studio CodeºÍAzure DevOpsÖĞÊ¹ÓÃGit½øĞĞ°æ±¾¿ØÖÆ](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/git/)
-- [Ê¹ÓÃAzure Artifacts½øĞĞ³ÌĞò°ü¹ÜÀí](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/packagemanagement/)
-- [Ê¹ÓÃAzure PipelinesÊµÏÖ³ÖĞø¼¯³É](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/continuousintegration/)
-- [Í¨¹ıAzure PipelinesÓµ±§³ÖĞø½»¸¶](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/git/)
-- [Ê¹ÓÃAzure Test Plans½øĞĞ²âÊÔ¼Æ»®ºÍ¹ÜÀí](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/testmanagement/)
-- [Ê¹ÓÃAzure Test Plans²âÊÔ¼Æ»®½øĞĞÌ½Ë÷ĞÔ²âÊÔ](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/exploratorytesting/)
+- [ä½¿ç”¨Azure Boardsè¿›è¡Œæ•æ·è§„åˆ’å’Œé¡¹ç›®ç»„åˆç®¡ç†](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/agile/)
+- [åœ¨Visual Studio Codeå’ŒAzure DevOpsä¸­ä½¿ç”¨Gitè¿›è¡Œç‰ˆæœ¬æ§åˆ¶](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/git/)
+- [ä½¿ç”¨Azure Artifactsè¿›è¡Œç¨‹åºåŒ…ç®¡ç†](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/packagemanagement/)
+- [ä½¿ç”¨Azure Pipelineså®ç°æŒç»­é›†æˆ](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/continuousintegration/)
+- [é€šè¿‡Azure Pipelinesæ‹¥æŠ±æŒç»­äº¤ä»˜](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/yaml/)
+- [ä½¿ç”¨Azure Test Plansè¿›è¡Œæµ‹è¯•è®¡åˆ’å’Œç®¡ç†](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/testmanagement/)
+- [ä½¿ç”¨Azure Test Plansæµ‹è¯•è®¡åˆ’è¿›è¡Œæ¢ç´¢æ€§æµ‹è¯•](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/exploratorytesting/)
 
 
 
@@ -54,6 +54,6 @@
 
 
    
-## Azure¶©ÔÄ»ñÈ¡
+## Azureè®¢é˜…è·å–
 
-Azureº£ÍâÊ¹ÓÃÕËºÅÉêÇë¿ÉÒÔ²Î¿¼[Á´½Ó](http://www.cnblogs.com/meowmeow/p/7773226.html?from=groupmessage&isappinstalled=0)
+Azureæµ·å¤–ä½¿ç”¨è´¦å·ç”³è¯·å¯ä»¥å‚è€ƒ[é“¾æ¥](http://www.cnblogs.com/meowmeow/p/7773226.html?from=groupmessage&isappinstalled=0)
