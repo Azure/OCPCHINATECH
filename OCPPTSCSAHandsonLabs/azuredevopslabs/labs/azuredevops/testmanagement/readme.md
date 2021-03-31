@@ -18,17 +18,18 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 在本实验中，您将学习如何使用Azure DevOps管理项目的测试生命周期。该项目将指导您创建旨在有效验证软件里程碑的测试计划。您还将创建并执行手动测试，这些手动测试可以在每个发行版的过程中一致地进行复制。
 
 <a name="先决条件"></a>
-  ###  先决条件  ###  
+### 先决条件 ###  
 
 -本实验要求您按照<a href="../prereq/">先决条件</a>指令完成任务1和2。
 
 
 <a name="Exercise1"> </a>
- ## 练习1：管理测试计划，套件和案例
-在本练习中，您将学习如何创建和管理测试计划，测试套件(Test Suite)和测试用例。
+## 练习1：管理测试计划，套件和案例 ##
+
+在本练习中，您将学习如何创建和管理测试计划，测试套件和测试用例。
 
 <a name="Ex1Task1"> </a>
-  ###  任务1：了解测试计划，套件和案例 
+### 任务1：了解测试计划，套件和案例 ###  
 
 1. 导航到Azure DevOps上的团队项目。
 
@@ -37,23 +38,23 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
  ![](images/000.png)
 
 
-3. 一般来说，项目中的每个主要里程碑都应有自己的 **test plan**。每个测试计划中都有 **test suites**，它们是旨在验证工作项(Work Item)（例如功能实现或错误修复）的 **test cases** （以及可选的其他test suites）的集合。每个测试用例(Test Case)都旨在确认一种特定的行为，并且可能属于一个或多个测试套件(Test Suite)(Test Suites)。 Parts Unlimited项目有一个测试计划，该计划位于 **Parts Unlimited Team** 下，称为**Parts Unlimited_TestPlan1** 。选择 **Parts Unlimited_TestPlan1** 。
+3. 一般来说，项目中的每个主要里程碑都应有自己的 **test plan**。每个测试计划中都有 **test suites**，它们是旨在验证工作项（例如功能实现或错误修复）的 **test cases** （以及可选的其他测试套件）的集合。每个测试用例都旨在确认一种特定的行为，并且可能属于一个或多个测试套件。零件无限制项目有一个测试计划，该计划位于 **Parts Unlimited Team** 下，称为**Parts Unlimited_TestPlan1** 。选择 **Parts Unlimited_TestPlan1** 。
 
  ![](images/001.png)
 
-4. 为该故事选择测试套件(Test Suite) **As a customer, I would like to store my credit card details securely** 。这组测试重点在于该工作项(Work Item)，而该工作项(Work Item)恰好是一项功能。请注意，每次您为实验室生成演示数据时，工作项(Work Item)编号都会有所不同。
+4. 为该故事选择测试套件 **As a customer, I would like to store my credit card details securely** 。这组测试重点在于该工作项，而该工作项恰好是一项功能。请注意，每次您为实验室生成演示数据时，工作项编号都会有所不同。
 
  ![](images/002.png)
 
-5. 在右侧，您可以看到该测试套件(Test Suite)具有三个测试用例，旨在确认功能实现的预期行为。双击 **Verify that user is allowed to save his credit card detail** 测试用例。
+5. 在右侧，您可以看到该测试套件具有三个测试用例，旨在确认功能实现的预期行为。双击 **Verify that user is allowed to save his credit card detail** 测试用例。
 
  ![](images/003.png)
 
-6. 此对话框提供了有关此测试用例所需的所有信息。找到 **Related Work** 面板，并注意此测试用例已链接到它所属的套件。单击工作项(Work Item)以导航到它。
+6. 此对话框提供了有关此测试用例所需的所有信息。找到 **Related Work** 面板，并注意此测试用例已链接到它所属的套件。单击工作项以导航到它。
 
  ![](images/004.png)
 
-7. 在测试套件(Test Suite)中，我们可以看到所有链接的工作项(Work Item)，它们恰好是测试用例。
+7. 在测试套件中，我们可以看到所有链接的工作项，它们恰好是测试用例。
 
  ![](images/005.png)
 
@@ -73,7 +74,7 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 
  ![](images/009.png)
 
-12. 父功能现在与对其进行测试的套件相关联，并且任何人都可以在它们之间导航以查看其与所涉及的其他工作项(Work Item)的关系。
+12. 父功能现在与对其进行测试的套件相关联，并且任何人都可以在它们之间导航以查看其与所涉及的其他工作项的关系。
 
  ![](images/010.png)
 
@@ -84,19 +85,18 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 14. 关闭原始的测试用例对话框。
 
 <a name="Ex1Task2"> </a>
-  ###  任务2：管理测试 
+ ### 任务2：管理测试 ###  
 
-1. 有时应按特定的顺序运行一组测试用例，以使效率最大化。单击 **Order tests** 以指定应运行这些测试用例的顺序。
+1. 有时应按特定的顺序运行一组测试用例，以使效率最大化。可以直接长按并拖动测试用例来改变顺序。
 
- ![](images/012.png)
+ ![](images/012new.png)
 
-2. 虽然可以单独运行这些测试用例以确认行为，但最好先运行拒绝无效卡的测试用例。然后，测试人员可以确认可以保存有效卡，然后是测试用例以编辑已保存的卡。将第二个测试用例拖放到第一个测试用例上方，然后单击 **Done**。
+2. 虽然可以单独运行这些测试用例以确认行为，但最好先运行拒绝无效卡的测试用例。然后，测试人员可以确认可以保存有效卡，然后是测试用例以编辑已保存的卡。将第二个测试用例拖放到第一个测试用例上方，然后单击列头 **Order** 进行重新排序。
 
- ![](images/013.png)
+ ![](images/013new.png)
 
 3. 现在，您可以看到 **Order** 已更新，并且列表已按其排序。
 
- ![](images/014.png)
 
 4. 测试的另一个重要方面与运行每个测试的环境有关。对于此Web应用程序，浏览器和操作系统是关键考虑因素。目前，所有测试仅使用一种配置：Windows 10。
 
@@ -150,9 +150,9 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 
  ![](images/027.png)
 
-17. 单击到目前为止我们一直在使用的测试套件(Test Suite)旁边的下拉列表，然后选择 **Assign configurations to test suite**。
+17. 单击到目前为止我们一直在使用的测试套件旁边的下拉列表，然后选择 **Assign configurations to test suite**。
 
- ![](images/028.png)
+ ![](images/028new.png)
 
 18. 选中 **iPhone X** 选项，然后单击 **Save**。
 
@@ -160,14 +160,14 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 
 19. 请注意，每个测试用例均已使用 **iPhone X** 的附加配置进行了复制。现在可以分别测试和跟踪每个环境。
 
- ![](images/030.png)
+ ![](images/030new.png)
 
 <a name="Ex1Task3"> </a>
   ###  任务3：编写测试  ###  
 
-1. 展开测试计划旁边的下拉菜单，然后选择 **New static suite.** 测试用例的 **static suite** 是已手动分配用例的套件。您还可以基于通用需求 ( **requirement-based suite** ) 或测试用例和/或工作项(Work Item)的查询( **query-based suite** )来创建套件。
+1. 展开测试计划旁边的下拉菜单，然后选择 **New static suite.** 测试用例的 **static suite** 是已手动分配用例的套件。您还可以基于通用需求 ( **requirement-based suite** ) 或测试用例和/或工作项的查询( **query-based suite** )来创建套件。
 
- ![](images/031.png)
+ ![](images/031new.png)
 
 2. 将新套件的名称设置为 **Shipping tests**。这些测试将全部集中在与运输相关的功能上。请记住，您可以轻松地在套件之间共享测试用例，因此，在有许多重叠套件时，冗余度很小。
 
@@ -175,9 +175,9 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 
 3. 展开新创建的套件旁边的下拉菜单，然后选择 **New requirement-based suite**。
 
- ![](images/033.png)
+ ![](images/033new.png)
 
-4. 您可以自定义用于指定要检索哪些需求的查询，但只需保留默认值，然后单击 **Run query**即可。找到并选择与运输相关的三个产品待办事项。单击 **Create suites** 以为每个套件创建一个测试套件(Test Suite)。
+4. 您可以自定义用于指定要检索哪些需求的查询，但只需保留默认值，然后单击 **Run query**即可。找到并选择与运输相关的三个产品待办事项, 按住Ctrl来进行多选。单击 **Create suites** 以为每个套件创建一个测试套件。
 
  ![](images/034.png)
 
@@ -185,15 +185,15 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 
  ![](images/035.png)
 
-6. 虽然可以一次创建一个测试用例，但有时使用网格布局来快速添加许多测试用例会更容易。在测试用例面板中，选择 **New \| New test case using grid**。
+6. 虽然可以一次创建一个测试用例，但有时使用网格布局来快速添加许多测试用例会更容易。在测试用例面板中，选择 **New Test Case \| Add test case using grid**。
 
- ![](images/036.png)
+ ![](images/036new.png)
 
 7. 输入一些测试用例，然后单击 **Save All** 按钮。 **Title** 将是测试用例的最终标题。 **Step Action** 将是测试的第一步（可能也是唯一一步）。如果该步骤具有预期结果，则可以将其指定为 **Step Expected Result**。
 
  ![](images/037.png)
 
-8. 您可以选择继续在网格视图中添加和编辑工作项(Work Item)。如果满意，请单击 **View: Grid** 切换返回列表视图。
+8. 您可以选择继续在网格视图中添加和编辑工作项。如果满意，请单击 **Close Grid** 切换返回列表视图。
 
  ![](images/038.png)
 
@@ -201,11 +201,11 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 
  ![](images/039.png)
 
-10. 创建套件的另一种方法是通过工作项(Work Item)查询。展开 **Shipping tests** 套件旁边的下拉菜单，然后选择 **new query-based suite**。
+10. 创建套件的另一种方法是通过工作项查询。展开 **Shipping tests** 套件旁边的下拉菜单，然后选择 **new query-based suite**。
 
- ![](images/040.png)
+ ![](images/040new.png)
 
-11. 假设您想从与项目中交付相关的测试用例中创建一个测试套件(Test Suite)。将 **Work Item Type** 更改为 **Microsoft.TestCaseCategory** 以搜索测试用例，然后单击 **Run query**。现在，您将获得一个测试用例列表，可以选择从中创建套件。
+11. 假设您想从与项目中交付相关的测试用例中创建一个测试套件。将 **Work Item Type** 更改为 **Microsoft.TestCaseCategory** 以搜索测试用例，然后单击 **Run query**。现在，您将获得一个测试用例列表，可以选择从中创建套件。
 
  ![](images/041-2.png)
 
@@ -233,7 +233,7 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 
 5. 点击 **Install** 以安装Chrome扩展程序。
 
- ![](images/044.png)
+ ![](images/044new.png)
 
 6. 在 **Chrome Web Store**中，单击**Add to Chrome**。
 
@@ -243,9 +243,9 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 
  ![](images/046.png)
 
-8. 要打开扩展名，请单击出现在地址栏右侧的扩展名图标。选择 **Connection Settings** 选项卡。输入Azure DevOps实例的URL，例如 **https://MYTEAM.visualstudio.com** 作为 **Server URL** ，然后单击 **Next**。
+8. 要打开扩展名，请单击出现在地址栏右侧的扩展名图标。选择 **Connection Settings** 选项卡。输入Azure DevOps实例的URL，例如 **https://dev.azure.com/[YOURTEAM]** 作为 **Server URL** ，然后单击 **Next**。
 
- ![](images/047.png)
+ ![](images/047new.png)
 
 9. 该扩展名可以在两种模式下使用： **Connected** 和 **Standalone** 模式。如果您有Azure DevOps或Team Foundation Server（TFS），请选择“连接模式”。独立模式适用于没有Azure DevOps或TFS并希望使用扩展程序来提交错误并与团队共享报告的用户。
 
@@ -254,7 +254,7 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
  ![](images/048.png)
 
 <a name="Ex2Task2"> </a>
-  ###  任务2：编写手动测试计划  ###  
+ ### 任务2：编写手动测试计划 ###  
 
 1. 在Chrome浏览器中，导航到 **Parts Unlimited** 项目。
 
@@ -264,15 +264,15 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 
 3. 展开测试计划旁边的下拉列表，然后选择 **New static suite** 。
 
- ![](images/050.png)
+ ![](images/050new.png)
 
 4. 将新套件命名为 **"End-to-end tests"** ，然后按 **Enter**。
 
  ![](images/051.png)
 
-5. 从 **Tests** 选项卡中，选择 **New \| New test case** ，以创建新的测试用例。
+5. 从右边栏，点击 **New Test Case** ，以创建新的测试用例。
 
- ![](images/052.png)
+ ![](images/052new.png)
 
 6. 在 **Title** 框中，键入 **Confirm that order number appears after successful order** 作为新测试用例的名称。
 
@@ -339,7 +339,7 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 
 2. 右键单击先前创建的测试用例，然后选择 **Run with options** 以开始手动测试运行。
 
- ![](images/058.png)
+ ![](images/058new.png)
 
 3. 您可以使用一些选项来自定义每个测试运行。第一个选项是选择 **Runner**，它将是这种情况下的浏览器。接下来，您可以选择指定要收集哪种 **类型数据** 。最后，您可以选择指定要测试的构建，以便更轻松地将结果与它们来自的构建相关联。单击 **OK** 继续。
 
@@ -440,7 +440,7 @@ redirect_from: "/labs/vsts/testmanagement/index.htm"
 
 5. 选择 **Test results** 选项卡。此选项卡列出了运行中包含的每个测试案例的结果及其结果。由于此处仅包含一个测试用例，因此双击它以将其打开。
 
- ![](images/081. png)
+ ![](images/081.png)
 
 6. 您可以从此处查看此特定测试用例的所有详细信息。
 
