@@ -10,8 +10,9 @@ redirect_from: "/labs/vsts/exploratorytesting/index.htm"
 ---
 <div class="rw-ui-container"></div>
 <a name="概述"></a>
-## 概述 ##
 
+
+## 概述 ##
 在本实验中，您将了解“测试与反馈”扩展中提供的探索性测试和反馈管理功能。您将了解探索性测试（也称为XT或敏捷测试）如何成为工具集中的一流体验。这使测试人员可以更灵活地测试基础软件，而不必完全依赖正式的测试用例。您还将了解如何管理引发和管理客户反馈生命周期的过程。
 
 
@@ -37,7 +38,7 @@ redirect_from: "/labs/vsts/exploratorytesting/index.htm"
 
 4. 在详细信息页面上单击 **Install** 按钮。
 
- ![](images/001. png)
+ ![](images/001.png)
 
 5. 点击 **Install** 以安装Chrome扩展程序。
 
@@ -51,7 +52,7 @@ redirect_from: "/labs/vsts/exploratorytesting/index.htm"
 
  ![](images/004.png)
 
-8. 要打开扩展程序，请单击出现在地址栏右侧的扩展名图标。选择 **Connection Settings** 选项卡。输入您的Azure DevOps实例的URL，例如 **https://dev.azure.com/MYTEAM**作为 **Server URL** ，然后单击**Next**。
+8. 要打开扩展程序，请单击出现在地址栏右侧的扩展名图标。选择 **Connection Settings** 选项卡。输入您的Azure DevOps实例的URL，例如 **https://dev.azure.com/MYTEAM** 作为 **Server URL** ，然后单击 **Next**。
 
  ![](images/005.png)
 
@@ -86,7 +87,7 @@ redirect_from: "/labs/vsts/exploratorytesting/index.htm"
 
 7. 您可以看到没有搜索结果。当您搜索 **jumper lead** 时，它会显示结果。但是，当您搜索 **jumper leads** 时，它没有显示任何结果。这似乎是一个错误。
 
- ![](images/011. png)
+ ![](images/011.png)
 
 8. 单击 **Exploratory Testing** 图标按钮，然后选择 **Capture screenshot | Browser** 。
 
@@ -125,7 +126,7 @@ redirect_from: "/labs/vsts/exploratorytesting/index.htm"
  ![](images/020.png)
 
 <a name="Ex1Task3"> </a>
-### 任务3：使用Chrome扩展程序创建错误###
+### 任务3：使用Chrome扩展程序创建错误 ###
 
 1. 单击 **Create bug** 图标按钮，然后单击展开的 **Create bug** 文本按钮。
 
@@ -135,7 +136,7 @@ redirect_from: "/labs/vsts/exploratorytesting/index.htm"
 
  ![](images/022.png)
 
-3. 此扩展的另一个重要功能是它能够查看类似的错误，从而减少冗余问题。假设您是另一位测试人员，恰巧发现了这个错误，却不知道它已被记录。再次单击 **Create bug** 图标按钮，然后再单击扩展的“创建错误”文本按钮，以启动新的错误表单。
+3. 此扩展的另一个重要功能是它能够查看类似的错误，从而减少冗余问题。假设您是另一位测试人员，恰巧发现了这个错误，却不知道它已被记录。再次单击 **Create bug** 图标按钮，然后再单击扩展的“Create bug”文本按钮，以启动新的错误表单。
 
  ![](images/023.png)
 
@@ -147,7 +148,7 @@ redirect_from: "/labs/vsts/exploratorytesting/index.htm"
 
  ![](images/025.png)
 
-6. 此时，当前的复制步骤已添加到图像操作日志中。实际上，您现在将查看现有的repro步骤，以确定是否使用其他方法找到了此错误，在这种情况下，您将更新内容以指示您的方法是替代的repro。单击 **Save** 以保存错误。
+6. 此时，新的再现步骤已添加到图像操作日志中。实际上，您现在将查看之前已经存在的相似步骤，以确定你找到的那个已存在的Bug是否使用其他方法，在这种情况下，您将更新内容以指示您的方法是另外的重现。单击 **Save** 以保存错误。
 
  ![](images/026.png)
 
