@@ -44,7 +44,7 @@ redirect_from: "/labs/vsts/continuousintegration/index.htm"
 
  ![](images/edit-pipeline.png)
 
-4. 为了不在稍后实验室中触发两个流水线，请为模板创建的流水线禁用CI触发器（取消选中），然后 **Save**。
+4. 为了不在稍后实验中触发两个流水线，请为模板创建的流水线禁用CI触发器（取消选中），然后 **Save**。
 
  ![](images/disable-ci.png)
 
@@ -64,11 +64,11 @@ redirect_from: "/labs/vsts/continuousintegration/index.htm"
 
  ![](images/template.png)
 
-9. 此构建流水线的过程很容易遵循。获取源代码后，Azure DevOps将使用NuGet还原任何依赖程序包。然后，将构建并测试该项目。然后将结果发布到已配置的目标。
+9. 此构建(Biuld)流水线的过程很容易遵循。获取源代码后，Azure DevOps将使用NuGet还原任何依赖程序包。然后，将构建并测试该项目。然后将结果发布到已配置的目标。
 
  ![](images/005.png)
 
-10. 选择**Variables** 选项卡。在这里，您可以配置在构建期间要使用的特殊参数，例如配置或平台。
+10. 选择**Variables** 选项卡。在这里，您可以配置在构建(Biuld)期间要使用的特殊参数，例如配置或平台。
 
  ![](images/006.png)
 
@@ -119,18 +119,18 @@ redirect_from: "/labs/vsts/continuousintegration/index.htm"
 
  ![](images/017.png)
 
-5. 摘要视图提供有关构建的概述详细信息，包括有关提交，测试和工件的详细信息。
+5. 摘要视图提供有关构建的概述详细信息，包括有关提交（commit），测试和Artifacts的详细信息。
 
  ![](images/018.png)
 
-6. 选择 **Tests**选项卡以查看此版本的测试性能。注意，您还可以轻松访问流水线编辑器，可以将新的构建排队，也可以下载该构建的工件。
+6. 选择 **Tests**选项卡以查看此版本的测试性能。注意，您还可以轻松访问流水线编辑器，可以将新的构建排队，也可以下载该构建的Artifacts。
 
  ![](images/019.png)
 
 <a name="Ex1Task3"> </a>
 ### 任务3：调用持续集成版本 ###
 
-1. 较早地配置了该版本以支持持续集成。使用**Repos \| Files**浏览该项目的Code。
+1. 较早已经配置了这个构建（Biuld）以支持持续集成。使用**Repos \| Files**浏览该项目的Code。
 
  ![](images/020.png)
 

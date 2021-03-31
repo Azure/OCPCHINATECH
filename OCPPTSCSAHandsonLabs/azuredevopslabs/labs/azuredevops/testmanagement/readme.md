@@ -1,5 +1,5 @@
 ---
-title: Test Planning and Management with Azure Test Plans
+title: 使用Azure Test Plans进行测试计划和管理
 layout: page
 sidebar: vsts
 permalink: /OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/testmanagement/
@@ -9,274 +9,276 @@ updated: Last updated - 9/6/2018
 redirect_from: "/labs/vsts/testmanagement/index.htm"
 ---
 <div class="rw-ui-container"></div>
-<a name="Overview"></a>
+<a name="概述"></a>
 
-## Overview ##
 
-In this lab, you will learn how to use Azure DevOps to manage your project's testing lifecycle. This project will guide you through creating test plans designed to efficiently validate your software milestones. You will also create and execute manual tests that can be consistently reproduced over the course of each release.
 
-<a name="Prerequisites"></a>
-### Prerequisites ###
+ ## 概述  ##
 
-- This lab requires you to complete tasks 1 and 2 from the <a href="../prereq/">prerequisite</a>  instructions.
+在本实验中，您将学习如何使用Azure DevOps管理项目的测试生命周期。该项目将指导您创建旨在有效验证软件里程碑的测试计划。您还将创建并执行手动测试，这些手动测试可以在每个发行版的过程中一致地进行复制。
 
-<a name="Exercise1"></a>
-## Exercise 1: Managing Test Plans, Suites and Cases ##
+<a name="先决条件"></a>
+  ###  先决条件  ###  
 
-In this exercise, you will learn how to create and manage test plans, test suites and test cases.
+-本实验要求您按照<a href="../prereq/">先决条件</a>指令完成任务1和2。
 
-<a name="Ex1Task1"></a>
-### Task 1: Understanding Test Plans, Suites and Cases ###
 
-1. Navigate to your team project on Azure DevOps.
+<a name="Exercise1"> </a>
+ ## 练习1：管理测试计划，套件和案例
+在本练习中，您将学习如何创建和管理测试计划，测试套件(Test Suite)和测试用例。
 
-1. Select **Test Plans** to navigate to the **Test Hub**. The test hub provides a central place for all test planning, execution, and analysis.
+<a name="Ex1Task1"> </a>
+  ###  任务1：了解测试计划，套件和案例 
 
-    ![](images/000.png)
+1. 导航到Azure DevOps上的团队项目。
 
-1. In general, every major milestone in a project should have its own **test plan**. Within each test plan are **test suites**, which are collections of **test cases** (and optionally other test suites) designed to validate a work item, such as a feature implementation or bug fix. Each test case is designed to confirm a specific behavior and may belong to one or more test suites. The Parts Unlimited project has one test plan, which is under the **Parts Unlimited Team** and called **Parts Unlimited_TestPlan1**. Select the **Parts Unlimited_TestPlan1** test plan.
+2. 选择 **Test Plans** 以导航到 **Test Hub**。测试中心为所有测试计划，执行和分析提供了一个中心位置。
 
-    ![](images/001.png)
+ ![](images/000.png)
 
-1. Select the suite of tests for the story **As a customer, I would like to store my credit card details securely**. This suite of tests focuses on that work item, which happens to be a feature. Note that the work item numbers will vary every time you generate demo data for a lab.
 
-    ![](images/002.png)
+3. 一般来说，项目中的每个主要里程碑都应有自己的 **test plan**。每个测试计划中都有 **test suites**，它们是旨在验证工作项(Work Item)（例如功能实现或错误修复）的 **test cases** （以及可选的其他test suites）的集合。每个测试用例(Test Case)都旨在确认一种特定的行为，并且可能属于一个或多个测试套件(Test Suite)(Test Suites)。 Parts Unlimited项目有一个测试计划，该计划位于 **Parts Unlimited Team** 下，称为**Parts Unlimited_TestPlan1** 。选择 **Parts Unlimited_TestPlan1** 。
 
-1. On the right side you can see that this test suite has three test cases designed to confirm expected behavior of the feature implementation. Double-click the **Verify that user is allowed to save his credit card detail** test case.
+ ![](images/001.png)
 
-    ![](images/003.png)
+4. 为该故事选择测试套件(Test Suite) **As a customer, I would like to store my credit card details securely** 。这组测试重点在于该工作项(Work Item)，而该工作项(Work Item)恰好是一项功能。请注意，每次您为实验室生成演示数据时，工作项(Work Item)编号都会有所不同。
 
-1. This dialog provides all the info you need on this test case. Locate the **Related Work** panel and note that this test case is linked to the suite it belongs to. Click the work item to navigate to it.
+ ![](images/002.png)
 
-    ![](images/004.png)
+5. 在右侧，您可以看到该测试套件(Test Suite)具有三个测试用例，旨在确认功能实现的预期行为。双击 **Verify that user is allowed to save his credit card detail** 测试用例。
 
-1. In the test suite, we can see all of the linked work items, which happen to be the test cases.
+ ![](images/003.png)
 
-    ![](images/005.png)
+6. 此对话框提供了有关此测试用例所需的所有信息。找到 **Related Work** 面板，并注意此测试用例已链接到它所属的套件。单击工作项(Work Item)以导航到它。
 
-1. However, it's not yet associated with the feature it's designed to test, which we can link now. Click **Add link \| Existing item**.
+ ![](images/004.png)
 
-    ![](images/006.png)
+7. 在测试套件(Test Suite)中，我们可以看到所有链接的工作项(Work Item)，它们恰好是测试用例。
 
-1. Set the **Link type** to **Parent** and search for **"credit card"**.
+ ![](images/005.png)
 
-    ![](images/007.png)
+8. 但是，它尚未与旨在测试的功能相关联，我们现在可以将其链接。点击**Add link \| Existing item**。
 
-1. Select the **Feature** for **Credit Card Purchase**.
+ ![](images/006.png)
 
-    ![](images/008.png)
+9. 将 **Link type** 设置为 **Parent** ，然后搜索 **"credit card"** 。
 
-1. Click **OK**.
+ ![](images/007.png)
 
-    ![](images/009.png)
+10. 选择**Credit Card Purchase** 的 **Feature** 。
 
-1. The parent feature is now associated with the suite that tests it and anyone can navigate between them to view their relationship relative to the other work items involved.
+ ![](images/008.png)
 
-    ![](images/010.png)
+11. 单击 **OK** 。
 
-1. Click **Save & Close**.
+ ![](images/009.png)
 
-    ![](images/011.png)
+12. 父功能现在与对其进行测试的套件相关联，并且任何人都可以在它们之间导航以查看其与所涉及的其他工作项(Work Item)的关系。
 
-1. Dismiss the original test case dialog.
+ ![](images/010.png)
 
-<a name="Ex1Task2"></a>
-### Task 2: Managing Tests ###
+13. 单击 **Save & Close**。
 
-1. Sometimes a set of test cases should be run in a specific order to maximize efficiency. Click **Order tests** to specify the order these test cases should be run.
+ ![](images/011.png)
 
-    ![](images/012.png)
+14. 关闭原始的测试用例对话框。
 
-1. While these test cases could be run separately to confirm the behavior, it probably makes more sense to run the test case that rejects invalid cards first. Then, the tester can confirm that a valid card can be saved, followed by the test case for editing a saved card. Drag and drop the second test case above the first and click **Done**.
+<a name="Ex1Task2"> </a>
+  ###  任务2：管理测试 
 
-    ![](images/013.png)
+1. 有时应按特定的顺序运行一组测试用例，以使效率最大化。单击 **Order tests** 以指定应运行这些测试用例的顺序。
 
-1. You can now see that the **Order** has been updated and that the list is now sorted by it.
+ ![](images/012.png)
 
-    ![](images/014.png)
+2. 虽然可以单独运行这些测试用例以确认行为，但最好先运行拒绝无效卡的测试用例。然后，测试人员可以确认可以保存有效卡，然后是测试用例以编辑已保存的卡。将第二个测试用例拖放到第一个测试用例上方，然后单击 **Done**。
 
-1. Another significant aspect of testing has to do with the environment each test is run in. For this web app, the browser and operating system are key considerations. Right now all the tests only use one configuration: Windows 10.
+ ![](images/013.png)
 
-    ![](images/015.png)
+3. 现在，您可以看到 **Order** 已更新，并且列表已按其排序。
 
-1. Select the **Configurations** tab.
+ ![](images/014.png)
 
-    ![](images/016.png)
+4. 测试的另一个重要方面与运行每个测试的环境有关。对于此Web应用程序，浏览器和操作系统是关键考虑因素。目前，所有测试仅使用一种配置：Windows 10。
 
-1. Note that there is one existing configuration for **Windows 10**. Each test configuration includes a name and a description, as well as a set of customizable **Configuration variables**. This project has one configuration variable set for **Operating System**. You can easily add more and/or edit the available entries for each. Click **Add configuration variable**.
+ ![](images/015.png)
 
-    ![](images/017.png)
+5. 选择 **Configurations** 选项卡。
 
-1. Select the **Browser** variable and set it to **Microsoft Edge**.
+ ![](images/016.png)
 
-    ![](images/018.png)
+6. 请注意，有一个 **Windows 10** 现有的配置。每个测试配置都包括名称和描述，以及一组可自定义的**Configuration variables**。该项目为 **Operating System** 设置了一个配置变量。您可以轻松添加更多和/或编辑每个条目的可用条目。点 **Add configuration variable** 。
 
-1. Click **Save** to save the configuration.
+ ![](images/017.png)
 
-    ![](images/019.png)
+7. 选择 **Browser** 变量并将其设置为 **Microsoft Edge** 。
 
-1. Now let's suppose the test team has acquired an iPhone X and wants to add it into the test matrix. It's really easy to register this environment as a new configuration so that test cases can specify it. However, before adding it, we'll need an **Operating System** option for **iOS 10**. Click the **Operating System** configuration variable.
+ ![](images/018.png)
 
-    ![](images/020.png)
+8. 单击 **Save** 以保存配置。
 
-1. Click **Add new value** and add an entry for **iOS 12**.
+ ![](images/019.png)
 
-    ![](images/021.png)
+9. 现在，假设测试团队已经购买了iPhone X，并希望将其添加到测试矩阵中。将环境注册为新配置非常容易，以便测试用例可以指定它。不过，在添加之前，我们需要针对 **iOS 10** 的 **Operating System** （操作系统）选项。单击 **Operating System** 配置变量。
 
-1. Click **Save**.
+ ![](images/020.png)
 
-    ![](images/022.png)
+10. 单击 **Add new value** 并为 **iOS 12** 添加一个条目。
 
-1. Now we have everything we need to add the iPhone X. Click the **Add** dropdown and select **New test configuration**.
+ ![](images/021.png)
 
-    ![](images/023.png)
+11. 单击 **Save**。
 
-1. Set the **Name** to **"iPhone X"**.
+ ![](images/022.png)
 
-    ![](images/024.png)
+12. 现在，我们拥有添加iPhone X所需的一切。单击 **Add** 下拉列表，然后选择 **New test configuration** 。
 
-1. Click **Add configuration variable** twice and set the **Browser** to **Safari** and **Operating System** to **iOS 12**.
+ ![](images/023.png)
 
-    ![](images/025.png)
+13. 将 **Name** 设置为 **"iPhone X"**。
 
-1. Click **Save** to save the new configuration.
+ ![](images/024.png)
 
-    ![](images/026.png)
+14. 双击 **Add configuration variable** ，然后将**Browser** 设置为 **Safari** ，将 **Operating System** 设置为 **iOS 12** 。
 
-1. Return to the **Test Plans** tab.
+ ![](images/025.png)
 
-    ![](images/027.png)
+15. 单击 **Save** 以保存新配置。
 
-1. Click the dropdown next to the test suite we've been working with so far and select **Assign configurations to test suite**.
+ ![](images/026.png)
 
-    ![](images/028.png)
+16. 返回 **Test Plans** 选项卡。
 
-1. Check the **iPhone X** option and click **Save**.
+ ![](images/027.png)
 
-    ![](images/029.png)
+17. 单击到目前为止我们一直在使用的测试套件(Test Suite)旁边的下拉列表，然后选择 **Assign configurations to test suite**。
 
-1. Notice that each test case has been duplicated with an additional configuration for **iPhone X**. Now each environment can be tested and tracked separately.
+ ![](images/028.png)
 
-    ![](images/030.png)
+18. 选中 **iPhone X** 选项，然后单击 **Save**。
 
-<a name="Ex1Task3"></a>
-### Task 3: Authoring Tests ###
+ ![](images/029.png)
 
-1. Expand the dropdown next to the test plan and select **New static suite.** A **static suite** of test cases is a suite where the cases have been manually assigned. You can also create suites based on common requirements (**requirement-based suite**) or a query of test cases and/or work items (**query-based suite**).
+19. 请注意，每个测试用例均已使用 **iPhone X** 的附加配置进行了复制。现在可以分别测试和跟踪每个环境。
 
-    ![](images/031.png)
+ ![](images/030.png)
 
-1. Set the name of the new suite to **"Shipping tests"**. These tests will all focus on functionality related to shipping. Remember that you can easily share test cases across suites, so there's minimal redundancy when having a lot of overlapping suites.
+<a name="Ex1Task3"> </a>
+  ###  任务3：编写测试  ###  
 
-    ![](images/032.png)
+1. 展开测试计划旁边的下拉菜单，然后选择 **New static suite.** 测试用例的 **static suite** 是已手动分配用例的套件。您还可以基于通用需求 ( **requirement-based suite** ) 或测试用例和/或工作项(Work Item)的查询( **query-based suite** )来创建套件。
 
-1. Expand the dropdown next to the newly created suite and select **New requirement-based suite**.
+ ![](images/031.png)
 
-    ![](images/033.png)
+2. 将新套件的名称设置为 **Shipping tests**。这些测试将全部集中在与运输相关的功能上。请记住，您可以轻松地在套件之间共享测试用例，因此，在有许多重叠套件时，冗余度很小。
 
-1. You could customize the query used to specify which requirements are retrieved, but just leave the defaults and click **Run query**. Locate and select the three product backlog items related to shipping. Click **Create suites** to create a test suite for each.
+ ![](images/032.png)
 
-    ![](images/034.png)
+3. 展开新创建的套件旁边的下拉菜单，然后选择 **New requirement-based suite**。
 
-1. Select one of the newly created suites, such as the one associated with tracking package status.
+ ![](images/033.png)
 
-    ![](images/035.png)
+4. 您可以自定义用于指定要检索哪些需求的查询，但只需保留默认值，然后单击 **Run query**即可。找到并选择与运输相关的三个产品待办事项。单击 **Create suites** 以为每个套件创建一个测试套件(Test Suite)。
 
-1. While you can create test cases one at a time, it's sometimes easier to use a grid layout to quickly add many test cases. In the test cases panel, select **New \| New test case using grid**.
+ ![](images/034.png)
 
-    ![](images/036.png)
+5. 选择一个新创建的套件，例如与跟踪程序包状态关联的套件。
 
-1. Enter a few test cases and click the **Save All** button. The **Title** will be the eventual title of the test case. **Step Action** will be the first (and possibly only) step of the test. If that step has an expected result, you can specify it as **Step Expected Result**.
+ ![](images/035.png)
 
-    ![](images/037.png)
+6. 虽然可以一次创建一个测试用例，但有时使用网格布局来快速添加许多测试用例会更容易。在测试用例面板中，选择 **New \| New test case using grid**。
 
-1. You can optionally continue to add and edit work items in the grid view. When satisfied, return back to the list view by clicking the **View: Grid** toggle.
+ ![](images/036.png)
 
-    ![](images/038.png)
+7. 输入一些测试用例，然后单击 **Save All** 按钮。 **Title** 将是测试用例的最终标题。 **Step Action** 将是测试的第一步（可能也是唯一一步）。如果该步骤具有预期结果，则可以将其指定为 **Step Expected Result**。
 
-1. The list view shows the same data, but in a different view.
+ ![](images/037.png)
 
-    ![](images/039.png)
+8. 您可以选择继续在网格视图中添加和编辑工作项(Work Item)。如果满意，请单击 **View: Grid** 切换返回列表视图。
 
-1. Another option to create suites is via work item query. Expand the dropdown next to the **Shipping tests** suite and select **new query-based suite**.
+ ![](images/038.png)
 
-    ![](images/040.png)
+9. 列表视图显示相同的数据，但视图不同。
 
-1. Let's say you wanted to create a test suite out of test cases related to shipping in the project. Change the **Work Item Type** to **Microsoft.TestCaseCategory** to search for test cases and click **Run query**. You now have a list of test cases that you can select to create suites from, if you choose.
+ ![](images/039.png)
 
-    ![](images/041-2.png)
+10. 创建套件的另一种方法是通过工作项(Work Item)查询。展开 **Shipping tests** 套件旁边的下拉菜单，然后选择 **new query-based suite**。
 
-1. Press **Esc** to close the dialog.
+ ![](images/040.png)
 
-<a name="Exercise2"></a>
-## Exercise 2: Authoring, Running and Analyzing Manual Tests ##
+11. 假设您想从与项目中交付相关的测试用例中创建一个测试套件(Test Suite)。将 **Work Item Type** 更改为 **Microsoft.TestCaseCategory** 以搜索测试用例，然后单击 **Run query**。现在，您将获得一个测试用例列表，可以选择从中创建套件。
 
-In this exercise, you will learn how to create a manual test plan and populate it with steps. The plan can later be run to confirm the expected behavior of your software. In this lab, we're going to focus on creating a new manual test case and running it.
+ ![](images/041-2.png)
 
-<a name="Ex2Task1"></a>
-### Task 1: Installing the Test & Feedback Extension ###
+12. 按 **Esc** 关闭对话框。
 
-1. Install **Google Chrome** from [http://google.com/chrome](http://google.com/chrome). The rest of this exercise will use Chrome as its browser. If you're already using Chrome, just open a new instance for the next set of steps.
+<a name="Exercise2"> </a>
+ ## 练习2：创作，运行和分析手动测试 ##
 
-1. Navigate to the **Azure DevOps Marketplace** at [http://marketplace.visualstudio.com](http://marketplace.visualstudio.com/).
+在本练习中，您将学习如何创建手动测试计划并按步骤进行填充。以后可以运行该计划，以确认软件的预期行为。在本实验中，我们将专注于创建新的手动测试用例并运行它。
 
-1. Select the **Azure DevOps** tab. Search for "**feedback**" and click the **Test & Feedback** extension.
+<a name="Ex2Task1"> </a>
+  ###  任务1：安装测试和反馈扩展  ###  
 
-    ![](images/042.png)
+1. 从[http://google.com/chrome](http://google.com/chrome)安装 **Google Chrome** 。本练习的其余部分将使用Chrome作为其浏览器。如果您已经在使用Chrome，则只需为下一组步骤打开一个新实例即可。
 
-1. Click on **Install** button on the details page.
+2. 导航至[http://marketplace.visualstudio.com](http://marketplace.visualstudio.com/)上的 **Azure DevOps Marketplace** 。
 
-    ![](images/043.png)
+3. 选择 **Azure DevOps** 选项卡。搜索 **feedback**  ，然后单击 **Test & Feedback** 扩展插件。
 
-1. Click **Install** for the Chrome extension.
+ ![](images/042.png)
 
-    ![](images/044.png)
+4. 在详细信息页面上单击 **Install** 按钮。
 
-1. In the **Chrome Web Store**, click **Add to Chrome**.
+ ![](images/043.png)
 
-    ![](images/045.png)
+5. 点击 **Install** 以安装Chrome扩展程序。
 
-1. Confirm the installation when asked.
+ ![](images/044.png)
 
-    ![](images/046.png)
+6. 在 **Chrome Web Store**中，单击**Add to Chrome**。
 
-1. To open the extension, click the extension icon that will appear on the right of the address bar. Select the **Connection Settings** tab. Enter the URL of your Azure DevOps instance, such as "**https://MYTEAM.visualstudio.com**", as the **Server URL** and click **Next**.
+ ![](images/045.png)
 
-    ![](images/047.png)
+7. 询问时确认安装。
 
-1. The extension can be used in two modes: **Connected** and **Standalone** mode. If you have Azure DevOps or Team Foundation Server (TFS), select Connected mode. Standalone mode is for users who don't have Azure DevOps or TFS and want to use the extension to file bugs and share the report with their team.
+ ![](images/046.png)
 
-1. After connecting to Azure DevOps, you will need to select the team you want these efforts associated with. Select the **Parts Unlimited Team** under the **Parts Unlimited** project and click **Save** to continue.
+8. 要打开扩展名，请单击出现在地址栏右侧的扩展名图标。选择 **Connection Settings** 选项卡。输入Azure DevOps实例的URL，例如 **https://MYTEAM.visualstudio.com** 作为 **Server URL** ，然后单击 **Next**。
 
-    ![](images/048.png)
+ ![](images/047.png)
 
-<a name="Ex2Task2"></a>
-### Task 2: Authoring a Manual Test Plan ###
+9. 该扩展名可以在两种模式下使用： **Connected** 和 **Standalone** 模式。如果您有Azure DevOps或Team Foundation Server（TFS），请选择“连接模式”。独立模式适用于没有Azure DevOps或TFS并希望使用扩展程序来提交错误并与团队共享报告的用户。
 
-1. In Chrome, navigate to your **Parts Unlimited** project.
+10. 连接到Azure DevOps之后，您将需要选择与这些工作相关联的团队。在 **Parts Unlimited** 项目下选择**Parts Unlimited Team** ，然后单击 **Save** 以继续。
 
-1. As before, navigate to the **Test Plans** hub.
+ ![](images/048.png)
 
-    ![](images/049.png)
+<a name="Ex2Task2"> </a>
+  ###  任务2：编写手动测试计划  ###  
 
-1. Expand the dropdown next to the test plan and select **New static suite**.
+1. 在Chrome浏览器中，导航到 **Parts Unlimited** 项目。
 
-    ![](images/050.png)
+2. 和以前一样，导航至 **Test Plans** 中枢Hub。
 
-1. Name the new suite **"End-to-end tests"** and press **Enter**.
+ ![](images/049.png)
 
-    ![](images/051.png)
+3. 展开测试计划旁边的下拉列表，然后选择 **New static suite** 。
 
-1. From the **Tests** tab, select **New \| New test case** to create a new test case.
+ ![](images/050.png)
 
-    ![](images/052.png)
+4. 将新套件命名为 **"End-to-end tests"** ，然后按 **Enter**。
 
-1. In the **Title** box, type "**Confirm that order number appears after successful order**" as the name of the new test case.
+ ![](images/051.png)
 
-    ![](images/053.png)
+5. 从 **Tests** 选项卡中，选择 **New \| New test case** ，以创建新的测试用例。
 
-1. At this point, we're ready to add steps to this manual test. Each step includes an **Action**, which describes the action the tester needs to perform. Optionally, a step can include an **Expected Result**, which describes the expected result of the given action. In the **Steps** panel, create a step for each of the following **Actions**, only one of which has an **Expected Result**.
+ ![](images/052.png)
 
+6. 在 **Title** 框中，键入 **Confirm that order number appears after successful order** 作为新测试用例的名称。
+
+ ![](images/053.png)
+
+7. 至此，我们准备为该手动测试添加步骤。每个步骤都包含一 **Action**，它描述了测试人员需要执行的操作。可选地，一个步骤可以包括 **Expected Result**，它描述了给定操作的预期结果。在 **Steps** 面板中，为以下每个 **Actions** 创建一个步骤，其中只有一个具有 **Expected Result** 。
 
     |Action|Expected Result|
     --- | ---
@@ -292,18 +294,19 @@ In this exercise, you will learn how to create a manual test plan and populate i
     |Log out||
     |Close browser||
 
-   **Note:** If you end up with an extra empty step, delete it.
+   **注意：** 如果最后空了一步，请将其删除。
 
 
-1. At this point, the **Steps** panel should look similar to the following:
+8. 此时， **Steps** 面板应类似于以下内容：
 
-    ![](images/054.png)
+ ![](images/054.png)
 
-1. Note the "Enter @Email, @Password" and "Enter @Name, @Phone, @Email, @Address, @City, @State, @PostalCode, @Country, @Promo" steps. In these steps, we used the **@** sign to indicate that there were iteration-specific variables to be used during the manual test pass. We can define which variables to use by scrolling down to the **Parameter Values** section of this form and entering them for each iteration. Note that you may need to use the scroll bar on the far right side of the test case dialog to view this section.
+9. 注意 "Enter @Email, @Password" and "Enter @Name, @Phone, @Email, @Address, @City, @State, @PostalCode, @Country, @Promo"  步骤。在这些步骤中，我们使用 **@** 符号表示在手动测试过程中将使用特定于迭代的变量。我们可以通过向下滚动到此表单的 **Parameter Values** 部分并为每次迭代输入它们来定义要使用的变量。请注意，您可能需要使用测试用例对话框最右侧的滚动条来查看此部分。
 
-    ![](images/055.png)
+ ![](images/055.png)
 
-1. Use the following table to set up values for two iterations.
+10. 使用下表设置两次迭代的值。
+
 
 
    |Fields|Iteration 1|Iteration 2|
@@ -320,168 +323,168 @@ In this exercise, you will learn how to create a manual test plan and populate i
    |Promo|FREE|FREE|
 
 
-1. The **Parameter Values** section should now look like this. Note that you can enter as many iterations as you need to fully test the breadth of the scenario.
 
-    ![](images/056.png)
+11. 现在， **Parameter Values**  部分应如下所示。请注意，您可以根据需要输入尽可能多的迭代来完全测试场景的广度。
 
-1. Click **Save & Close** to save the test case.
+ ![](images/056.png)
 
-    ![](images/057.png)
+12. 单击 **Save & Close** 以保存测试用例。
 
-<a name="Ex2Task3"></a>
-### Task 3: Running a Manual Test Plan ###
+ ![](images/057.png)
 
-1. In this task, you will learn how to run the manual test plan that we created earlier. Note that the process for triggering an automated test run follows a similar workflow. You can learn more about that in the [documentation](https://docs.microsoft.com/en-us/vsts/build-release/test/run-automated-tests-from-test-hub).
+<a name="Ex2Task3"> </a>
+  ###  任务3：运行手动测试计划  ###  
 
-1. Right-click the test case created earlier and select **Run with options** to begin a manual test run.
+1. 在此任务中，您将学习如何运行我们之前创建的手动测试计划。请注意，触发自动测试运行的过程遵循类似的工作流程。 [文档](https://docs.microsoft.com/en-us/vsts/build-release/test/run-automated-tests-from-test-hub)中了解有关此内容的更多信息。
 
-    ![](images/058.png)
+2. 右键单击先前创建的测试用例，然后选择 **Run with options** 以开始手动测试运行。
 
-1. There are a few options that you can use to customize each test run. The first option is to select a **Runner**, which will be the browser in this scenario. Next, you may have the option to specify which kinds of **data to collect**. Finally, you may optionally specify which build is being tested to make it easier to associate the results with the build they were from. Click **OK** to continue.
+ ![](images/058.png)
 
-    ![](images/059.png)
+3. 您可以使用一些选项来自定义每个测试运行。第一个选项是选择 **Runner**，它将是这种情况下的浏览器。接下来，您可以选择指定要收集哪种 **类型数据** 。最后，您可以选择指定要测试的构建，以便更轻松地将结果与它们来自的构建相关联。单击 **OK** 继续。
 
-1. If the **Test Runner** window does not appear, check to see if it was blocked by the pop-up blocker. If so, click the **Pop-up blocker** button, select **Always allow pop-ups...**, and then click **Done**. You can then launch the test run again with success.
+ ![](images/059.png)
 
-1. In the **Test Runner** window, expand the **Test 1 of 1: Iteration 1** dropdown. Note that there are two iterations: one for each set of parameters specified in the test case. In the first iteration, the [admin@test.com](mailto:admin@test.com) account is used. In the second, [sachin@test.com](mailto:sachin@test.com) will be used.
+4. 如果没有出现 **Test Runner** 窗口，请检查它是否被弹出窗口阻止程序阻止。如果是这样，请单击**Pop-up blocker** 按钮，选择 **Always allow pop-ups...**，然后单击 **Done**。然后，您可以成功再次启动测试运行。
 
-    ![](images/060.png)
+5. 在 **Test Runner** 窗口中，展开 **Test 1 of 1: Iteration 1** 下拉菜单。请注意，这里有两次迭代：对于测试用例中指定的每组参数，一次迭代。在第一次迭代中，使用 [admin@test.com](mailto:admin@test.com) 帐户。在第二个中，将使用 [sachin@test.com](mailto:sachin@test.com) 。
 
-1. The first step in the test is to open the project site. To do this, switch to the **Visual Studio** instance that has the **Parts Unlimited** solution loaded. From the **IIS Express** target dropdown, select **Browse With...**.
+ ![](images/060.png)
 
-    ![](images/061.png)
+6. 测试的第一步是打开项目站点。为此，请切换到已加载 **Parts Unlimited** solution的 **Visual Studio** 实例。从 **IIS Express** 目标下拉列表中，选择 **Browse With...**。
 
-1. Select **Google Chrome** and click **Browse**.
+ ![](images/061.png)
 
-    ![](images/062.png)
+7. 选择 **Google Chrome** ，然后单击 **Browse**。
 
-1. If you're working on a large screen, it may be easier to resize the new window to fit next to the **Test Runner** window. Otherwise you can just switch back and forth.
+ ![](images/062.png)
 
-    ![](images/063.png)
+8. 如果您在大屏幕上工作，则调整新窗口的大小以适合 **Test Runner** 窗口旁边可能会更容易。否则，您可以来回切换。
 
-1. Once the site loads, return to the **Test Runner** and click the **Pass test step** button. As you complete the next steps of this test, be sure to check the **Pass test step** buttons for them as well.
+ ![](images/063.png)
 
-    ![](images/064.png)
+9. 网站载入后，返回 **Test Runner** 并单击 **Pass test step** 按钮。完成此测试的后续步骤时，请确保也检查它们的 **Pass test step** 按钮。
 
-1. The next step is to click the **Brakes** menu item.
+ ![](images/064.png)
 
-    ![](images/065.png)
+10. 下一步是单击 **Brakes** 菜单。
 
-1. Then click the **Disk and Pad Combo** product.
+ ![](images/065.png)
 
-    ![](images/066.png)
+11. 然后单击 **Disk and Pad Combo** 产品。
 
-1. The next step is to click **Add to cart**.
+ ![](images/066.png)
 
-    ![](images/067.png)
+12. 下一步是单击 **Add to cart**。
 
-1. On the next page, click **Checkout**.
+ ![](images/067.png)
 
-    ![](images/068.png)
+13. 在下一页上，单击 **Checkout**。
 
-1. Log in using the credentials specified in the next step.
+ ![](images/068.png)
 
-    ![](images/069.png)
+14. 使用下一步中指定的凭据登录。
 
-1. Unfortunately, this will fail because there isn't an [admin@test.com](mailto:admin@test.com) account.
+ ![](images/069.png)
 
-    ![](images/070.png)
+15. 不幸的是，这将失败，因为没有[admin@test.com](mailto:admin@test.com)帐户。
 
-1. The **Test Runner** provides three valuable ways to record media from a test run. The first option is to take screenshots. The second is to capture each user action in an image action log. The final is to record the screen as a video. Click the **Capture screenshot** button to take a screenshot.
+ ![](images/070.png)
 
-    ![](images/071.png)
+16. **Test Runner** 提供了三种有价值的方式来记录测试运行中的媒体。第一种选择是截取屏幕截图。第二个是在图像操作日志中捕获每个用户操作。最后是将屏幕录制为视频。单击**Capture screenshot** 按钮以捕获屏幕快照。
 
-1. Crop the screen down to show the login form and error message. Specify the name **"No admin account"** and click the **Confirm** button.
+ ![](images/071.png)
 
-    ![](images/072.png)
+17. 缩小屏幕以显示登录表单和错误消息。指定名称 **"No admin account"** ，然后单击“确认”按钮。
 
-1. Right-click the failed step and select **Add comment**.
+ ![](images/072.png)
 
-    ![](images/073.png)
+18. 右键单击失败的步骤，然后选择 **Add comment**。
 
-1. Enter a comment of **"Admin account does not exist by default"** and fail the test using the **Fail test step** button.
+ ![](images/073.png)
 
-    ![](images/074.png)
+19. 输入注释 **"Admin account does not exist by default"** ，然后使用 **Fail test step** 按钮使测试失败。
 
-1. Click **Create bug** to log a new bug.
+ ![](images/074.png)
 
-    ![](images/075.png)
+20. 单击 **Create bug** 以记录新的错误。
 
-1. Enter the bug title of **"Admin account does not exist by default"** and click **Save & Close** to log the bug.
+ ![](images/075.png)
 
-    ![](images/076.png)
+21. 输入错误标题 **"Admin account does not exist by default"** ，然后单击 **Save & Close** 以记录该错误。
 
-1. Since the test cannot be completed due to a bug not directly related to the functionality being tested, expand the **Mark test case result** dropdown and select **Block test**. Click **Save and close** to save the test run.
+ ![](images/076.png)
 
-    ![](images/077.png)
+22. 由于由于与测试功能不直接相关的错误而无法完成测试，因此请展开 **Mark test case result** 下拉菜单并选择 **Block test** 。单击**Save and close** 以保存测试运行。
 
-1. Close the test browser windows.
+ ![](images/077.png)
 
-<a name="Ex2Task4"></a>
-### Task 4: Analyzing Manual Test Results ###
+23. 关闭测试浏览器窗口。
 
-1. In this task, you will learn how to review the results of a manual test run.
+<a name="Ex2Task4"> </a>
+  ###  任务4：分析手动测试结果  ###  
 
-1. Return to the browser window hosting the **Test Hub**. Select the **Runs** tab.
+1. 在此任务中，您将学习如何查看手动测试运行的结果。
 
-    ![](images/078.png)
+2. 返回托管 **Test Hub**的浏览器窗口。选择 **Runs** 标签。
 
-1. Double-click the most recent test run to open it. You may need to refresh the data to see it.
+ ![](images/078.png)
 
-    ![](images/079.png)
+3. 双击最新的测试运行以将其打开。您可能需要刷新数据才能看到它。
 
-1. The **Run summary** tab provides an overview of the test run, as well as high-level details on the results of all tests included as part of the run.
+ ![](images/079.png)
 
-    ![](images/080.png)
+4.  **Run summary** 选项卡提供测试运行的概述，以及运行中包含的所有测试结果的高级详细信息。
 
-1. Select the **Test results** tab. This tab lists the results of each individual test case included in the run along with their results. Since there was only one test case included here, double-click it to open.
+ ![](images/080.png)
 
-    ![](images/081.png)
+5. 选择 **Test results** 选项卡。此选项卡列出了运行中包含的每个测试案例的结果及其结果。由于此处仅包含一个测试用例，因此双击它以将其打开。
 
-1. You can review all details for this particular test case run from here.
+ ![](images/081. png)
 
-    ![](images/082.png)
+6. 您可以从此处查看此特定测试用例的所有详细信息。
 
-1. Scroll to the bottom to locate the iterations. Expand the first iteration.
+ ![](images/082.png)
 
-    ![](images/083.png)
+7. 滚动到底部以找到迭代。展开第一次迭代。
 
-1. Review the results of each step in this iteration, as well as the failed login step, which shows the screenshot attached during the test run.
+ ![](images/083.png)
 
-    ![](images/084.png)
+8. 查看此迭代中每个步骤的结果以及失败的登录步骤，该步骤显示了测试运行过程中随附的屏幕截图。
 
-<a name="Ex2Task5"></a>
-### Task 5: Creating Shared Steps ###
+ ![](images/084.png)
 
-1. In this task, you will learn how to create shared steps. A shared step combines multiple steps that are commonly performed in sequence into a single logical step, which can be shared across tests. If the process defined by the shared steps ever changes in the future, you can update the shared step in one place and it will be reflected in all tests that reference it.
+<a name="Ex2Task5"> </a>
+  ###  任务5：创建共享步骤  ###  
 
-1. Click the test case link in the **Summary** section.
+1. 在此任务中，您将学习如何创建共享步骤。共享步骤将通常按顺序执行的多个步骤组合为一个逻辑步骤，可以在测试之间共享。如果将来由共享步骤定义的过程发生变化，则可以在一处更新共享步骤，它将在引用该共享步骤的所有测试中得到反映。
 
-    ![](images/085.png)
+2. 单击 **Summary** 部分中的测试用例链接。
 
-1. Double-click the case to open it in the test case editor.
+ ![](images/085.png)
 
-    ![](images/086.png)
+3. 双击案例以在测试案例编辑器中将其打开。
 
-1. Select steps 2-4 (use **Shift+Click**) and click the **Create shared steps** button.
+ ![](images/086.png)
 
-    ![](images/087.png)
+4. 选择步骤2-4（使用 **Shift+Click**），然后单击 **Create shared steps** 按钮。
 
-1. Set the name of these shared steps to **"Add Disk and Pad Combo to cart"** and click **Create**.
+ ![](images/087.png)
 
-    ![](images/088.png)
+5. 将这些共享步骤的名称设置为 **"Add Disk and Pad Combo to cart"** ，然后单击 **Create** 。
 
-1. Now you can see the previous steps replaced with the shared steps. Double-click the shared steps to open.
+ ![](images/088.png)
 
-    ![](images/089.png)
+6. 现在，您可以看到以前的步骤已被共享步骤替换。双击共享步骤以打开。
 
-1. If necessary, you can revisit these steps later on to update them for new requirements.
+ ![](images/089.png)
 
-    ![](images/090.png)
+7. 如有必要，您可以稍后重新访问这些步骤，以针对新要求更新它们。
 
-1. Press **Esc** to close the **Shared Steps** dialog.
+ ![](images/090.png)
 
-1. Click **Save & Close** to save the test case.
+8. 按 **Esc** 关闭 **Shared Steps** 对话框。
 
-    ![](images/091.png)
+9. 单击 **Save & Close** 以保存测试用例。
 
+ ![](images/091.png)

@@ -1,2 +1,72 @@
 
-OCP PTS&CSA Handson Labs
+
+
+# OCP PTS&CSAUnicorn 动手实验
+
+  <img width="2000" height="300" src="./images/Microsoft-Hands-On-Labs.png"/>  
+&emsp;
+&emsp;
+&emsp;
+&emsp;
+&emsp;
+&emsp;   
+
+## Azure DevOps
+通过一个虚拟客户场景，使用DevOps原理及运用Azure DevOps工具帮助客户实现敏捷开发和自动化交付
+<img width="2000" height="150" src="./images/AzureDevOps.png"/>
+
+
+
+
+- [使用Azure Boards进行敏捷规划和项目组合管理](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/agile/)
+- [在Visual Studio Code和Azure DevOps中使用Git进行版本控制](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/git/)
+- [使用Azure Artifacts进行程序包管理](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/packagemanagement/)
+- [使用Azure Pipelines实现持续集成](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/continuousintegration/)
+- [通过Azure Pipelines拥抱持续交付](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/yaml/)
+- [使用Azure Test Plans进行测试计划和管理](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/testmanagement/)
+- [使用Azure Test Plans测试计划进行探索性测试](/OCPPTSCSAHandsonLabs/azuredevopslabs/labs/azuredevops/exploratorytesting/)
+
+&emsp;
+&emsp;
+&emsp;
+
+
+## 云原生-Azure Cloud Native 
+本次动手实验目的是帮助一个虚拟客户建立概念验证（POC），以将其代码迁移到更易于管理的流程，其中涉及对租户代码进行容器化，更好的DevOps工作流程以及为其提供的简单的后端数据库迁移。
+
+<img width="2000" height="150" src="./images/AKS.png"/>
+
+- [云原生应用 -基础架构版本实验](https://github.com/Azure/OCPCHINATECH/blob/master/OCPPTSCSAHandsonLabs/MCW-Cloud-native-applications/Hands-on%20lab/HOL%20step-by-step%20-%20Cloud-native%20applications%20-%20Infrastructure%20edition.md)
+  
+- [云原生应用 -开发者版本实验](/OCPPTSCSAHandsonLabs/MCW-Cloud-native-applications/Hands-on%20lab/HOL%20step-by-step%20-%20Cloud-native%20applications%20-%20Developer%20edition.md)
+
+&emsp;
+&emsp;
+&emsp;
+
+## Azure Spring Cloud
+本次动手实验广泛使用命令行。 从一个简单的演示到更复杂的示例，非常快速地进行编码并在平台上运行。在完成所有指南之后，您应该对Azure Spring Cloud提供的所有内容都有比较深入的了解。
+
+<img width="2000" height="150" src="./images/AzureSpringCloud.png"/>
+
+- [00 - 实验准备](azure-spring-cloud-training/00-setup-your-environment/README.md)
+- [01 - 创建Azure Spring Cloud集群](azure-spring-cloud-training/01-create-an-azure-spring-cloud-instance/README.md)
+- [02 - 构建一个简单的Spring Boot微服务](azure-spring-cloud-training/02-build-a-simple-spring-boot-microservice/README.md)
+- [03 - 配置应用日志](azure-spring-cloud-training/03-configure-monitoring/README.md)
+- [04 - 配置Spring Cloud Config server](azure-spring-cloud-training/04-configure-a-spring-cloud-config-server/README.md)
+- [05 - 使用Spring Cloud实现Spring Boot微服务](azure-spring-cloud-training/05-build-a-spring-boot-microservice-using-spring-cloud-features/README.md)
+- [06 - 集成Cosmos DB构建reactive Spring Boot微服务 ](azure-spring-cloud-training/06-build-a-reactive-spring-boot-microservice-using-cosmosdb/README.md)
+- [07 - 集成Mysql构建reactive Spring Boot微服务](azure-spring-cloud-training/07-build-a-spring-boot-microservice-using-mysql/README.md)
+- [08 - 构建Spring Cloud网关](azure-spring-cloud-training/08-build-a-spring-cloud-gateway/README.md)
+- [09 - 实现完整的微服务栈](azure-spring-cloud-training/09-putting-it-all-together-a-complete-microservice-stack/README.md)
+- [10 - 蓝绿部署](azure-spring-cloud-training/10-blue-green-deployment/README.md)
+- [11 - C配置CI/CD](azure-spring-cloud-training/11-configure-ci-cd/README.md)
+- [12 - 微服务交互](azure-spring-cloud-training/12-making-microservices-talk-to-each-other/README.md)
+- [总结思考](99-conclusion/README.md)
+
+
+
+   
+## Azure订阅获取
+
+Azure海外使用账号申请可以参考[链接](http://www.cnblogs.com/meowmeow/p/7773226.html?from=groupmessage&isappinstalled=0)
