@@ -37,8 +37,23 @@
 <img width="2000" height="150" src="./images/AKS.png"/>
 
 - [云原生应用 -动手实验前的准备](https://github.com/Azure/OCPCHINATECH/blob/master/OCPPTSCSAHandsonLabs/MCW-Cloud-native-applications/Hands-on%20lab/%E5%8A%A8%E6%89%8B%E5%AE%9E%E9%AA%8C%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87.md)
+&emsp;
+&emsp;
 - [云原生应用 -基础架构版本实验](https://github.com/Azure/OCPCHINATECH/blob/master/OCPPTSCSAHandsonLabs/MCW-Cloud-native-applications/Hands-on%20lab/%E5%8E%9F%E7%94%9F%E5%BA%94%E7%94%A8-%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84%E7%89%88.md)  
+  * 练习1：创建并运行Docker应用程序
+  * 练习2：使用Azure数据库迁移服务将MongoDB迁移到Cosmos DB
+  * 练习3：将解决方案部署到Azure Kubernetes服务
+  * 练习4：扩展应用程序并测试HA
+  * 练习5：使用服务和路由应用程序流量
+&emsp;
+&emsp;
+
 - [云原生应用 -开发者版本实验](https://github.com/Azure/OCPCHINATECH/blob/master/OCPPTSCSAHandsonLabs/MCW-Cloud-native-applications/Hands-on%20lab/%E4%BA%91%E5%8E%9F%E7%94%9F%E5%BA%94%E7%94%A8-%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98%E7%89%88.md)
+  * 练习1：创建并运行Docker应用程序
+  * 练习2：使用Azure数据库迁移服务将MongoDB迁移到Cosmos DB
+  * 练习3：将解决方案部署到Azure Kubernetes服务
+  * 练习4：扩展应用程序并测试HA
+  * 练习5：使用服务和路由应用程序流量
 
 &emsp;
 &emsp;
