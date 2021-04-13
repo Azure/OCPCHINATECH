@@ -1,100 +1,100 @@
 ---
-page_type: sample
-languages:
-- java
+page_type：sample
+Language：
+-   Java
 ---
 
-# Azure Spring Cloud training
+# Azure Spring Cloud培训
 
-You will find here a full workshop on Azure Spring Cloud, including guides and demos.
+> 您将在此处找到关于 Azure Spring Cloud的完整Workshop，包括教程和演示。
 
-This lab is based on a public workshop created by [Julien Dubois](https://twitter.com/juliendubois) and available for free to everyone, under the [MIT license](LICENSE.txt).
+> 这个实验是基于一个公共Workshop创建的[朱利安·杜布瓦](https://twitter.com/juliendubois)并免费提供给每个人，遵守[MIT License](LICENSE.txt).
 
-## What you should expect
+## 友情提示
 
-This is not the official documentation but an opinionated training.
+> 这不是官方文件，而是第三方提供的培训。
 
-It is a hands-on training, and it will use the command line extensively. The idea is to get coding very quickly and play with the platform, from a simple demo to far more complex examples.
+> 这是一次动手培训，它将大量使用命令行cli。这个想法为了是快速编码和熟悉平台，从一个简单的演示开始到更复杂的例子。
 
-After completing all the guides, you should have a fairly good understanding of everything that Azure Spring Cloud offers.
+> 完成所有教程后，您应该对 Azure  Spring Cloud提供的一切有相当好的了解。
 
-## Symbols
+## 符号说明
 
->🛑 -  __Manual Modification Required__. When this symbol appears in front of one or more commands, you will need to modify the commands as indicated prior to running them.
+> 🛑 -**需要手工修改**.当此符号出现在一个或多个命令前面时，您将需要在运行命令之前按照指示修改命令。
 
->🚧 - __Preview-specific__. This symbol indicates steps that are only necessary while Azure Spring Cloud is in preview.
+> 🚧 -**预览特定**.此符号表示仅在 Azure Spring Cloud 预览时需要的步骤。
 
->💡 - __Frustration Avoidance Tip__. These will help you avoid potential pitfalls.
+> 💡 -**坑避免提示**.这些将帮助您避免潜在的陷阱。
 
-## [00 - Prerequisites and Setup](00-setup-your-environment/README.md)
+## [00 - 先决条件和设置](00-setup-your-environment/README.md)
 
-Prerequisites and environment setup.
+先决条件和环境设置。
 
-## [01 - Create an Azure Spring Cloud cluster](01-create-an-azure-spring-cloud-instance/README.md)
+## [01 - 创建Azure Spring Cloud Cluster ](01-create-an-azure-spring-cloud-instance/README.md)
 
-Basics on creating a cluster and configuring the CLI to work efficiently.
+创建集群， 并配置 CLI 来提高工作效率。
 
-## [02 - Build a simple Spring Boot microservice](02-build-a-simple-spring-boot-microservice/README.md)
+## [02 - 构建一个简单的Spring Boot 微服务](02-build-a-simple-spring-boot-microservice/README.md)
 
-Build the simplest possible Spring Boot microservice using the Spring Initializer.
+使用Spring Initializer构建最简单的Spring Boot 微服务。
 
-## [03 - Configure application logs](03-configure-monitoring/README.md)
+## [03 - 配置应用程序日志](03-configure-monitoring/README.md)
 
-Access Spring Boot applications logs to understand common issues.
+访问Spring Boot 应用程序日志以了解常见问题。
 
-## [04 - Configure a Spring Cloud Config server](04-configure-a-spring-cloud-config-server/README.md)
+## [04 - 配置Spring Cloud Config Server](04-configure-a-spring-cloud-config-server/README.md)
 
-Configure a [Spring Cloud Config Server](https://cloud.spring.io/spring-cloud-config), that will be entirely managed and supported by Azure Spring Cloud, to be used by Spring Boot microservices.
+配置一个[Spring Cloud Config Server](https://cloud.spring.io/spring-cloud-config)，这将完全由 Azure Spring Cloud管理和支持，由Spring Boot微服务使用。
 
-## [05 - Build a Spring Boot microservice using Spring Cloud features](05-build-a-spring-boot-microservice-using-spring-cloud-features/README.md)
+## [05 - 使用Spring Cloud 特性来构建Spring Boot 微服务](05-build-a-spring-boot-microservice-using-spring-cloud-features/README.md)
 
-Build a Spring Boot microservice that is cloud-enabled: it uses a Spring Cloud Service Registry and a [Spring Cloud Config Server](https://cloud.spring.io/spring-cloud-config) which are both managed and supported by Azure Spring Cloud.
+构建云原生的Spring Boot微服务：结合使用Spring Cloud Service Registry和[Spring Cloud Config Server](https://cloud.spring.io/spring-cloud-config) 两个服务都由Azure Spring Cloud管理和支持。
 
-## [06 - Build a reactive Spring Boot microservice using Cosmos DB](06-build-a-reactive-spring-boot-microservice-using-cosmosdb/README.md)
+## [06 - 构建一个使用Cosmos DB 的响应式 Spring Boot 微服务](06-build-a-reactive-spring-boot-microservice-using-cosmosdb/README.md)
 
-Build a reactive Spring Boot microservice, that uses the [Spring reactive stack](https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html) and is bound to a [Cosmos DB database](https://docs.microsoft.com/en-us/azure/cosmos-db/?WT.mc_id=azurespringcloud-github-judubois) in order to access a globally-distributed database with optimum performance.
+构建一个响应式的Spring Boot 微服务，使用[Spring reactive stack ](https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html)并绑定一个[Cosmos DB 数据库](https://docs.microsoft.com/en-us/azure/cosmos-db/?WT.mc_id=azurespringcloud-github-judubois)以便访问性能最佳的全球分布式数据库。
 
-## [07 - Build a Spring Boot microservice using MySQL](07-build-a-spring-boot-microservice-using-mysql/README.md)
+## [07 - 构建一个使用 MySQL 的 Spring Boot 微服务](07-build-a-spring-boot-microservice-using-mysql/README.md)
 
-Build a classical Spring Boot application that uses JPA to access a [MySQL database managed by Azure](https://docs.microsoft.com/en-us/azure/mysql/?WT.mc_id=azurespringcloud-github-judubois).
+构建一个经典的Spring Boot 应用程序，使用 JPA 访问[由Azure管理的 MySQL 数据库](https://docs.microsoft.com/en-us/azure/mysql/?WT.mc_id=azurespringcloud-github-judubois).
 
-## [08 - Build a Spring Cloud Gateway](08-build-a-spring-cloud-gateway/README.md)
+## [08 - 构建Spring Cloud 网关](08-build-a-spring-cloud-gateway/README.md)
 
-Build a [Spring Cloud Gateway](https://spring.io/projects/spring-cloud-gateway) to route HTTP requests to the correct Spring Boot microservices.
+构建一个[ Spring Cloud网关](https://spring.io/projects/spring-cloud-gateway)将HTTP请求路由到指定的Spring Boot 微服务。
 
-## [09 - Putting it all together, a complete microservice stack](09-putting-it-all-together-a-complete-microservice-stack/README.md)
+## [09 - 综合一起，一个完整的微服务堆栈](09-putting-it-all-together-a-complete-microservice-stack/README.md)
 
-Use a front-end to access graphically our complete microservice stack. Monitor our services with Azure Spring Cloud's distributed tracing mechanism and scale our services depending on our needs.
+使用前端以图形方式访问我们完整的微服务堆栈。通过 Azure Spring Cloud的分布式跟踪机制监控我们的服务，并根据我们的需求扩展我们的服务。
 
-## [10 - Blue/Green deployment](10-blue-green-deployment/README.md)
+## [10 - 蓝/绿部署](10-blue-green-deployment/README.md)
 
-Deploy new versions of applications in a staging environment and switch between staging and production with Azure Spring Cloud.
+在Staging环境中部署新版本的应用程序，并与 Azure Spring Cloud在Staging和Production之间切换。
 
-## [11 - Configure CI/CD](11-configure-ci-cd/README.md)
+## [11 - 配置 CI/CD](11-configure-ci-cd/README.md)
 
-Configure a Continuous Integration / Continuous Deployment platform using GitHub Actions, so our Spring Boot microservices are automatically deployed.
+使用 GitHub Action配置连续集成/连续部署平台，因此我们的Spring Boot 微服务将实现自动部署。
 
-## [12 - Making Microservices Talk to Each Other](12-making-microservices-talk-to-each-other/README.md)
+## [12 - 微服务间的相互调用](12-making-microservices-talk-to-each-other/README.md)
 
-Creating a microservice that talks to other microservices.
+创建与其他微服务相互调用的微服务。
 
-## [Conclusion](99-conclusion/README.md)
+## [总结](99-conclusion/README.md)
 
 ---
 
 ## Legal Notices
 
-Microsoft and any contributors grant you a license to the Microsoft documentation and other content
-in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode),
-see the [LICENSE](LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the
-[LICENSE-CODE](LICENSE-CODE) file.
+微软和任何贡献者授予您微软文档和其他内容的许可证
+在此存储库下[创意共享归属 4.0 国际公共许可证](https://creativecommons.org/licenses/by/4.0/legalcode),
+看到[许可证](LICENSE)文件，并授予您许可证下存储库中的任何代码[MIT License](https://opensource.org/licenses/MIT)，请参阅
+[许可证代码](LICENSE-CODE)文件。
 
-Microsoft, Windows, Microsoft Azure and/or other Microsoft products and services referenced in the documentation
-may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries.
-The licenses for this project do not grant you rights to use any Microsoft names, logos, or trademarks.
-Microsoft's general trademark guidelines can be found at http://go.microsoft.com/fwlink/?LinkID=254653.
+文档中引用的微软、Windows、微软 Azure 和/或其他微软产品和服务
+可能是微软在美国和/或其他国家的商标或注册商标。
+此项目的许可证不授予您使用任何 Microsoft 名称、徽标或商标的权利。
+微软的一般商标教程可以在<http://go.microsoft.com/fwlink/?LinkID=254653>.
 
-Privacy information can be found at https://privacy.microsoft.com/en-us/
+隐私信息可在<https://privacy.microsoft.com/en-us/>
 
-Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents,
-or trademarks, whether by implication, estoppel or otherwise.
+微软和任何贡献者保留所有其他权利，无论是根据各自的版权，专利，
+或商标，无论是通过暗示，阻止或其他。
