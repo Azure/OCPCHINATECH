@@ -1,51 +1,53 @@
-# 06 - Build a reactive Spring Boot microservice using Cosmos DB
+# 06 - 使用Cosmos DB构建ReactiveSpring Boot微服务
 
-__This guide is part of the [Azure Spring Cloud training](../README.md)__
+**本教程是[Azure Spring Cloud 培训](../README.md)系列之一**
 
-In this section, we'll build an application that uses a [Cosmos DB database](https://docs.microsoft.com/en-us/azure/cosmos-db/?WT.mc_id=azurespringcloud-github-judubois) in order to access a globally-distributed database with optimum performance.
 
-We'll use the reactive programming paradigm to build our microservice in this section, leveraging the [Spring reactive stack](https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html). In contrast, we'll build a more traditional data-driven microservice in the next section.
+在本节中，我们将构建一个使用[Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/?WT.mc_id=azurespringcloud-github-judubois)的应用程序，以便访问性能最佳的全球分布式数据库。
+
+我们将使用Reactive编程范式来构建本节中的微服务，利用[Spring Reactive stack](https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html). 作为对比，我们将在下一节构建更传统的数据驱动微服务。
 
 ---
 
-## Prepare the Cosmos DB database
+## 准备Cosmos DB
 
-From Section 00, you should already have a CosmosDB account named `sclabc-<unique string>`.
+从第 00 节开始， 你应该已经有一个Cosmos DB帐户命名`sclabc-<unique string>`.
 
-- Click on the "Data Explorer" menu item
-  - Expand the container named `azure-spring-cloud-cosmosdb`.
-  - In that container, expand the container named `City`.
-  - Click on "Items" and use the "New Item" button to create some sample items:
+-   单击"数据资源管理器"菜单项
 
-    ```json
-    {
-        "name": "Paris, France"
-    }
-    ```
+    -   展开目录`azure-spring-cloud-cosmosdb`.
+    -   在该目录中，展开目录`City`.
+    -   单击"项目(Items)"并使用"新项目(New Item)"按钮创建一些示例项目：
 
-    ```json
-    {
-        "name": "London, UK"
-    }
-    ```
+        ```json
+        {
+            "name": "Paris, France"
+        }
+        ```
+
+        ```json
+        {
+            "name": "London, UK"
+        }
+        ```
 
 ![Data explorer](media/02-data-explorer.png)
 
-## Create a Spring Webflux microservice
+## 创建Spring Webflux微服务
 
-The microservice that we create in this guide is [available here](city-service/).
+我们在本教程中创建的微服务[可以参考在这里](city-service/).
 
-To create our microservice, we will invoke the Spring Initalizer service from the command line:
+为了创建我们的微服务，我们将从命令行调用Spring Initalizer服务：
 
 ```bash
 curl https://start.spring.io/starter.tgz -d dependencies=webflux,cloud-eureka,cloud-config-client -d baseDir=city-service -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
 ```
 
-> We use the `Spring Webflux`, `Eureka Discovery Client` and the `Config Client` Spring Boot starters.
+> 我们使用`Spring Webflux`,`Eureka Discovery Client`和`Config Client`Spring Boot starters。
 
-## Add the Cosmos DB API
+## 添加Cosmos DB API
 
-In the application's `pom.xml` file, add the Cosmos DB dependency just after the `spring-cloud-starter-netflix-eureka-client` dependency:
+在应用程序的`pom.xml`文件中，在`spring-cloud-starter-netflix-eureka-client`后添加Cosmos DB依赖：
 
 ```xml
         <dependency>
@@ -55,9 +57,9 @@ In the application's `pom.xml` file, add the Cosmos DB dependency just after the
         </dependency>
 ```
 
-## Add Spring reactive code to get the data from the database
+## 添加Spring Reactive代码从数据库获取数据
 
-Next to the `DemoApplication` class, create a `City` domain object:
+在的`DemoApplication`类目录下，创建一个`City` domain Object：
 
 ```java
 package com.example.demo;
@@ -76,10 +78,10 @@ class City {
 }
 ```
 
-Then, in the same location, create a new `CityController.java` file that
-contains the code that will be used to query the database.
+然后，在同一位置创建一个新的`CityController.java`文件，
+添加用于查询数据库的代码。
 
-> The CityController class will get its Cosmos DB configuration from the Azure Spring Cloud service binding that we will configure later.
+> City控制器类将从 Azure Spring Cloud服务绑定中获取其Cosmos DB 配置，我们将在稍后进行配置。
 
 ```java
 package com.example.demo;
@@ -131,32 +133,32 @@ public class CityController {
 }
 ```
 
-## Create the application on Azure Spring Cloud
+## 在Azure Spring Cloud上创建应用程序
 
-As in [02 - Build a simple Spring Boot microservice](../02-build-a-simple-spring-boot-microservice/README.md), create a specific `city-service` application in your Azure Spring Cloud instance:
+如在[02 - 构建一个简单的Spring Boot微服务](../02-build-a-simple-spring-boot-microservice/README.md)，创建一个特定的`city-service`应用在您的Azure Spring Cloud实例中：
 
 ```bash
 az spring-cloud app create -n city-service
 ```
 
-## Bind the Cosmos DB database to the application
+## 将Cosmos DB绑定到应用程序中
 
-Azure Spring Cloud can automatically bind the Cosmos DB database we created to our microservice.
+Azure Spring Cloud可以自动将我们创建的Cosmos DB绑定到我们的微服务中。
 
-- Go to "Apps" in your Azure Spring Cloud instance.
-- Select the `city-service` application
-- Go to `Service bindings`
-- Click on `Create service binding``
-  - Give your binding a name, for example `cosmosdb-city`
-  - Select the Cosmos DB account and database we created and keep the default `sql` API type
-  - In the drop-down list, select the primary master key
-  - Click on `Create` to create the database binding
+-   转到 Azure Spring Cloud实例中的"应用"。
+-   选择`city-service`应用
+-   转到(G)`Service bindings`
+-   单击"创建服务绑定"
+    -   例如，给绑定一个名称`cosmosdb-city`
+    -   选择我们创建的Cosmos DB帐户和数据库，并保留默认值`sql`API 类型
+    -   在下拉列表中，选择主键
+    -   单击`Create`创建数据库绑定
 
 ![Bind Cosmos DB database](media/03-bind-service-cosmosdb.png)
 
-## Deploy the application
+## 部署应用程序
 
-You can now build your "city-service" project and send it to Azure Spring Cloud:
+现在，您可以构建您的"city-service"项目，并将其部署到 Azure Spring Cloud：
 
 ```bash
 cd city-service
@@ -165,23 +167,23 @@ az spring-cloud app deploy -n city-service --jar-path target/demo-0.0.1-SNAPSHOT
 cd ..
 ```
 
-## Test the project in the cloud
+## 在云中测试项目
 
-- Go to "Apps" in your Azure Spring Cloud instance.
-  - Verify that `city-service` has a `Registration status` which says `1/1`. This shows that it is correctly registered in Spring Cloud Service Registry.
-  - Select `city-service` to have more information on the microservice.
-- Copy/paste the "Test Endpoint" that is provided.
+-   转到 Azure Spring Cloud实例中的"应用"。
+    -   验证`city-service`有一个`Registration status`其中说`1/1`.这表明它在Spring Cloud Service Registry注册成功。
+    -   选择`city-service`了解有关微服务的更多信息。
+-   复制/粘贴提供的"测试终点"。
 
-You can now use cURL to test the `/cities` endpoint, and it should give you the list of cities you created. For example, if you only created `Paris, France` and `London, UK` like it is shown in this guide, you should get:
+您现在可以使用cURL来测试`/cities`终点，它应该返回你创建的城市列表。例如，如果您只创建`Paris, France`和`London, UK`就像本教程中显示的那样，您应该获得：
 
 ```json
 [[{"name":"Paris, France"},{"name":"London, UK"}]]
 ```
 
-If you need to check your code, the final project is available in the ["city-service" folder](city-service/).
+如果您需要检查您的代码，最终项目可在["city-service"文件夹](city-service/).
 
 ---
 
-⬅️ Previous guide: [05 - Build a Spring Boot microservice using Spring Cloud features](../05-build-a-spring-boot-microservice-using-spring-cloud-features/README.md)
+⬅️上一个教程：[05 - 使用Spring Cloud功能构建Spring Boot微服务](../05-build-a-spring-boot-microservice-using-spring-cloud-features/README.md)
 
-➡️ Next guide: [07 - Build a Spring Boot microservice using MySQL](../07-build-a-spring-boot-microservice-using-mysql/README.md)
+➡️下一个教程：[07 - 使用 MySQL 构建Spring Boot微服务](../07-build-a-spring-boot-microservice-using-mysql/README.md)

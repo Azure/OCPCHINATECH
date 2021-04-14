@@ -1,26 +1,27 @@
-# 08 - Build a Spring Cloud Gateway
+# 08 - 构建Spring Cloud网关
 
-__This guide is part of the [Azure Spring Cloud training](../README.md)__
+**本教程是[Azure Spring Cloud 培训](../README.md)系列之一**
 
-A Spring Cloud gateway allows you to selectively expose your microservices and to route traffic to them and among them. In this section, we will create a Spring Cloud Gateway that will expose the microservices we created in the preceding two sections.
+
+Spring Cloud网关允许您有选择地暴露您的微服务，并将流量路由到它们之间。在此部分中，我们将创建一个"Spring Cloud Gateway"，该网关将使用我们在前两个部分创建的微服务。
 
 ---
 
-## Create a Spring Cloud Gateway
+## 创建Spring Cloud网关
 
-The application that we create in this guide is [available here](gateway/).
+我们在本教程中创建的应用程序[可参考这里](gateway/).
 
-To create our gateway, we will invoke the Spring Initalizer service from the command line:
+为了创建我们的网关，我们将从命令行调用Spring Initalizer服务：
 
 ```bash
 curl https://start.spring.io/starter.tgz -d dependencies=cloud-gateway,cloud-eureka,cloud-config-client -d baseDir=gateway -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
 ```
 
-> We use the `Cloud Gateway`, `Eureka Discovery Client` and the `Config Client` components.
+> 我们使用`Cloud Gateway`,`Eureka Discovery Client`和`Config Client`组件。
 
-## Configure the application
+## 配置应用程序
 
-Rename `src/main/resources/application.properties` to `src/main/resources/application.yml` and add the following configuration:
+重命名`src/main/resources/application.properties`自`src/main/resources/application.yml`并添加以下配置：
 
 ```yaml
 spring:
@@ -40,21 +41,21 @@ spring:
 
 ```
 
-- The `spring.main.allow-bean-definition-overriding=true` part is to configure Spring Cloud Gateway to use the Spring Cloud Discovery Server bean configured in the Azure Spring Cloud Client library.
-- The `spring.cloud.gateway.discovery.locator.enabled=true` part is to configure Spring Cloud Gateway to use the Spring Cloud Service Registry to discover the available microservices.
-- The `spring.cloud.gateway.globalcors.corsConfiguration` part is to allow CORS requests to our gateway. This will be helpful in the next guide, when we will add a front-end that is not hosted on Azure Spring Cloud.
+-   `spring.main.allow-bean-definition-overriding=true`这部分是配置Spring Cloud网关，以使用 Azure Spring Cloud Client Library中配置的Spring Cloud Discovery Server bean。
+-   `spring.cloud.gateway.discovery.locator.enabled=true`这部分是配置Spring Cloud网关，使用Spring Cloud Service Registry发现可用的微服务。
+-   `spring.cloud.gateway.globalcors.corsConfiguration`这部分是允许CORS请求到我们的网关。这将在下一个教程中使用到，届时我们将添加未在 Azure Spring 云上托管的前端应用。
 
-## Create the application on Azure Spring Cloud
+## 在Azure Spring Cloud上创建应用程序
 
-As in [02 - Build a simple Spring Boot microservice](../02-build-a-simple-spring-boot-microservice/README.md), create a specific `gateway` application in your Azure Spring Cloud instance. As this application is a gateway, we add the `--is-public true` flag so it is exposed publicly.
+如在[02 - 构建一个简单的Spring Boot微服务](../02-build-a-simple-spring-boot-microservice/README.md)，创建一个特定的`gateway`应用在您的Azure Spring Cloud实例中。由于此应用程序是网关，我们添加`--is-public true`标志，所以它是互联网可访问的。
 
 ```bash
 az spring-cloud app create -n gateway --is-public true
 ```
 
-## Deploy the application
+## 部署应用程序
 
-You can now build your "gateway" project and send it to Azure Spring Cloud:
+您现在可以构建您的"Gateway"项目并将其部署到 Azure Spring Cloud 中：
 
 ```bash
 cd gateway
@@ -64,23 +65,23 @@ cd ..
 
 ```
 
-## Test the project in the cloud
+## 在云中测试项目
 
-- Go to "Apps" in your Azure Spring Cloud instance.
-  - Verify that `gateway` has a `Registration status` which says `1/1`. This shows that it is correctly registered in the Spring Cloud Service Registry.
-  - Select `gateway` to have more information on the microservice.
-- Copy/paste the public URL that is provided (there is a "Test Endpoint" like for microservices, but the gateway is directly exposed on the Internet, so let's use the public URL). Keep this URL handy for subsequent sections.
+-   转到 Azure Spring Cloud实例中的"应用"。
+    -   验证`gateway`有一个`Registration status`其中说`1/1`.这表明它在Spring Cloud Service Registry注册成功。
+    -   选择`gateway`了解有关微服务的更多信息。
+-   复制/粘贴提供的公共网址（有一个"测试端点"，如微服务，但网关直接暴露在互联网上，所以我们可以使用公共网址）。为后续部分方便测试，记下这个URL。
 
-As the gateway is connected to the Spring Cloud Service Registry, it should have automatically opened routes to the available microservices, with URL paths in the form of `/MICROSERVICE-ID/**`:
-[The MICROSERVICE-ID must be in capital letters]
+由于网关连接到Spring Cloud Service Registry，因此它应该自动打开通往可用微服务的路由，URL 路径的格式如下`/MICROSERVICE-ID/**`:
+[MICROSERVICE-ID必须是大写字母]
 
-- Test the `city-service` microservice endpoint by doing: `curl https://XXXXXXXX-gateway.azuremicroservices.io/CITY-SERVICE/cities` (replacing XXXXXXXX with the name of your Azure Spring Cloud instance)
-- Test the `weather-service` microservice endpoint by doing: `curl 'https://XXXXXXXX-gateway.azuremicroservices.io/WEATHER-SERVICE/weather/city?name=Paris%2C%20France'` (replacing XXXXXXXX by the name of your gateway)
+-   测试`city-service`微服务终点通过做：`curl https://XXXXXXXX-gateway.azuremicroservices.io/CITY-SERVICE/cities`（用您的Azure Spring Cloud实例名称替换X）
+-   测试`weather-service`微服务终点通过做：`curl 'https://XXXXXXXX-gateway.azuremicroservices.io/WEATHER-SERVICE/weather/city?name=Paris%2C%20France'`（用网关名称替换X）
 
-If you need to check your code, the final project is available in the ["gateway" folder](gateway/).
+如果您需要参考您的代码，最终项目在["gateway"文件夹](gateway/).
 
 ---
 
-⬅️ Previous guide: [07 - Build a Spring Boot microservice using MySQL](../07-build-a-spring-boot-microservice-using-mysql/README.md)
+⬅️上一个教程：[07 - 使用 MySQL 构建Spring Boot微服务](../07-build-a-spring-boot-microservice-using-mysql/README.md)
 
-➡️ Next guide: [09 - Putting it all together, a complete microservice stack](../09-putting-it-all-together-a-complete-microservice-stack/README.md)
+➡️下一个教程：[09 - 综上所述，一个完整的微服务Stack](../09-putting-it-all-together-a-complete-microservice-stack/README.md)

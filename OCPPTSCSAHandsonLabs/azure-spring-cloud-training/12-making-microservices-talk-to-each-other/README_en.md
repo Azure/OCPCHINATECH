@@ -1,31 +1,30 @@
-# 12 - 微服务间的相互调用
+# 12 - Making Microservices Talk to Each Other
 
-**本教程是[Azure Spring Cloud 培训](../README.md)系列之一**
+__This guide is part of the [Azure Spring Cloud training](../README.md)__
 
-
-创建与其他微服务通讯的微服务。
+Creating a microservice that talks to other microservices.
 
 ---
 
-在[第6节](../06-build-a-reactive-spring-boot-microservice-using-cosmos/README.md)我们部署了一个微服务，返回一个城市列表。在[第7节](../07-build-a-spring-boot-microservice-using-mysql/README.md)，我们部署了一个微型服务，给一个城市，返回该城市的天气。并在[第9节](../09-putting-it-all-together-a-complete-microservice-stack/README.md)，我们创建了一个前端应用程序，来调用这两个微服务。
+In [Section 6](../06-build-a-reactive-spring-boot-microservice-using-cosmos/README.md) we deployed a microservice that returns a list of cities. In [Section 7](../07-build-a-spring-boot-microservice-using-mysql/README.md), we deployed a microservice that, given a city, returns the weather for that city. And in [Section 9](../09-putting-it-all-together-a-complete-microservice-stack/README.md), we created a front-end application that queries these two microservices.
 
-这种设计效率明显低下：浏览器首先调用`city-service`，等待它响应，并在得到该响应后，再基于每个城市调用`weather-service`获得返回。所有这些远程调用都是通过公共互联网进行的，其访问速度很难得到保证。
+There is a glaring inefficiency in this design: the browser first calls `city-service`, waits for it to respond, and upon getting that response, calls `weather-service` for each of the cities returned. All these remote calls are made over public internet, whose speed is never guaranteed.
 
-为了改进这种低效率，我们将创建一个入口的微服务，实现[交易脚本](https://www.martinfowler.com/eaaCatalog/transactionScript.html)模式：它将协调各个微服务的调用，并返回所有城市的天气。为此，我们将使用[Spring Cloud OpenFeign]. OpenFeign 将从Spring Cloud Registry自动获取调用的微服务的地址，从而方便我们构建微服务`all-cities-weather-services`，无需关心其他微服务的位置。
+To resolve this inefficiency, we will create a single microservice that implements the [Transaction Script](https://www.martinfowler.com/eaaCatalog/transactionScript.html) pattern: it will orchestrate the calls to individual microservices and return the weather for all cities. To do this, we will use [Spring Cloud OpenFeign]. OpenFeign will automatically obtain the URLs of invoked microservices from Spring Cloud Registry, allowing us to build our `all-cities-weather-services` microservice without needing to resolve the locations of the constituent microservices.
 
-请注意，我们在本节中创建的代码是适用于任意endpoint的。我们需要指定的就是在`@FeignClient`的注解。然后，OpenFeign 和Spring Cloud Registry 在幕后合作，将我们的新微服务连接到之前创建的服务。
+Note how the code we create in this section is endpoint-agnostic. All we specify is the name of the services we want to invoke in the `@FeignClient` annotation. OpenFeign and Spring Cloud Registry then work together behind the scenes to connect our new microservice to the services we've created previously.
 
-## 创建Spring Boot微服务
+## Create a Spring Boot Microservice
 
-我们从命令行调用Spring Initalizer服务为来创建新的微服务：
+To create our microservice, we will invoke the Spring Initalizer service from the command line:
 
 ```bash
 curl https://start.spring.io/starter.tgz -d dependencies=cloud-feign,web,cloud-eureka,cloud-config-client -d baseDir=all-cities-weather-service -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
 ```
 
-## 添加Spring代码调用其他微服务
+## Add Spring code to call other microservices
 
-在`DemoApplication`类同一目录下，创建一个`Weather`类：
+Next to the `DemoApplication` class, create a `Weather` class:
 
 ```java
 package com.example.demo;
@@ -64,9 +63,9 @@ public class Weather {
 }
 ```
 
-注意：这是跟我们在第7节创建的类`Weather`是基本一样的，与我们原来在`weather-service`定义的有一个唯一的区别是：我们不再将该类注释为用于数据检索的JPA实体。
+Note: this is the same `Weather` class that we created in Section 7 when we defined the original `weather-service` with one important difference: we no longer annotate the class as a JPA entity for data retrieval.
 
-接下来，在同一位置创建`City`类。这与我们在第6节创建的类`City`是基本一样的。
+Next, in the same location create the `City` class. This is the same `City` class that we created in Section 6.
 
 ```java
 package com.example.demo;
@@ -85,7 +84,7 @@ public class City {
 }
 ```
 
-然后，在同一位置创建一个名为`CityServiceClient`的接口类，内容如下。当我们运行新服务时，OpenFeign 将自动为此接口提供实现。
+Then, in the same location, create an interface called `CityServiceClient` with the following contents. When we run our new service, OpenFeign will automatically provide an implementation for this interface.
 
 ```java
 package com.example.demo;
@@ -104,7 +103,7 @@ public interface CityServiceClient{
 
 ```
 
-为weather-service创建一个类似的 OpenFeign 客户端接口，命名为`WeatherServiceClient`.
+Create a similar OpenFeign client interface for the weather service, named `WeatherServiceClient`.
 
 ```java
 package com.example.demo;
@@ -127,7 +126,7 @@ public interface WeatherServiceClient{
 
 ```
 
-要使 Spring Cloud 能够发现基础服务并自动生成 OpenFeign 客户端，需要在`DemoApplication`类添加注释 @EnableDiscoveryClient 和 @EnableFeignClients，（以及相应的`import`声明）：
+To enable Spring Cloud to discovery the underlying services and to automatically generate OpenFeign clients, add the annotations @EnableDiscoveryClient and @EnableFeignClients to the `DemoApplication` class (as well as the corresponding `import` statements):
 
 ```java
 package com.example.demo;
@@ -147,7 +146,7 @@ public class DemoApplication {
 }
 ```
 
-现在一切都就位了，可以开始实现`all-cities-weather-service`. 创建类`AllCitiesWeatherController`如下：
+Everything is now in place to implement the `all-cities-weather-service`. Create the class `AllCitiesWeatherController` as follows:
 
 ```java
 package com.example.demo;
@@ -187,27 +186,26 @@ public class AllCitiesWeatherController {
     }
 }
 ```
+## Add time-out settings
 
-## 添加超时设置
-
-为了阻止 Feign 服务自动超时，请打开`src/main/resources/application.properties`文件并添加：
+In order to stop the Feign services timing out automatically, open up the `src/main/resources/application.properties` file and add:
 
 ```properties
 feign.client.config.default.connectTimeout=160000000
 feign.client.config.default.readTimeout=160000000
 ```
 
-## 在Azure Spring Cloud上创建应用程序
+## Create the application on Azure Spring Cloud
 
-和以前一样，创建一个特定的`all-cities-weather-service`应用在您的Azure Spring Cloud实例中：
+As before, create a specific `all-cities-weather-service` application in your Azure Spring Cloud instance:
 
 ```bash
 az spring-cloud app create -n all-cities-weather-service
 ```
 
-## 部署应用程序
+## Deploy the application
 
-现在，您可以编译您的"all-cities-weather-service"项目，并将其发送到 Azure Spring Cloud中：
+You can now build your "all-cities-weather-service" project and send it to Azure Spring Cloud:
 
 ```bash
 cd all-cities-weather-service
@@ -216,17 +214,17 @@ az spring-cloud app deploy -n all-cities-weather-service --jar-path target/demo-
 cd ..
 ```
 
-## 在云中测试项目
+## Test the project in the cloud
 
-您可以使用第 8 节中创建的网关直接访问全城市天气服务。
+You can use the gateway created in Section 8 to access the all-cities-weather-service directly.
 
-> 💡**注意：**尾随斜线（`/`）是必须的。
+>💡__Note:__ the trailing slash (`/`) is not optional.
 
 ```bash
 https://<Your gateway URL>/ALL-CITIES-WEATHER-SERVICE/
 ```
 
-您应该获得 JSON 输出与所有城市的天气：
+You should get the JSON output with the weather for all the cities:
 
 ```json
 [{"city":"Paris, France","description":"It's always sunny on Azure Spring Cloud","icon":"weather-sunny"},
@@ -235,6 +233,6 @@ https://<Your gateway URL>/ALL-CITIES-WEATHER-SERVICE/
 
 ---
 
-⬅️上一个教程：[11 - 配置 CI/CD](../11-configure-ci-cd/README.md)
+⬅️ Previous guide: [11 - Configure CI/CD](../11-configure-ci-cd/README.md)
 
-➡️下一个教程：[总结](../99-conclusion/README.md)
+➡️ Next guide: [Conclusion](../99-conclusion/README.md)

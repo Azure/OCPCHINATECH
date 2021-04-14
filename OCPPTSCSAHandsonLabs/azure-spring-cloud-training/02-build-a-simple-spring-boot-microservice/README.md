@@ -1,32 +1,38 @@
-# 02 - Build a simple Spring Boot microservice
+# 02 - 构建一个简单的Spring Boot微服务
 
-__This guide is part of the [Azure Spring Cloud training](../README.md)__
+**本教程是[Azure Spring Cloud 培训](../README.md)系列之一**
 
-In this section, we'll build a simple Spring boot microservice and deploy it to Azure Spring Cloud. This will give us a starting point for adding Spring Cloud technologies in later sections.
+在此部分中，我们将构建一个简单的Spring Boot微服务，并将其部署到 Azure Spring Cloud。这是我们在以后的章节中学习Spring Cloud技术的一个基础前提。
 
 ---
 
-## Create a simple Spring Boot microservice
+## 创建简单的Spring Boot微服务
 
-The microservice that we create in this guide is [available here](simple-microservice/).
+我们在本教程中创建的微服务是[基于这个样例](simple-microservice/), 样例仅供参考，下面我们会一步步把它创建出来.
 
-A typical way to create Spring Boot applications is to use the Spring Initializer at  [https://start.spring.io/](https://start.spring.io/). Feel free to explore it outside this training. **For the purposes of this training, we will only invoke the Spring Initializer site via the `curl` command**.
+创建Spring Boot应用程序的典型方法是使用Spring Initializer：<https://start.spring.io/> . 如果想了解更多，可以看看官方文档或其他教程。**为了这次培训的目的，我们只会使用`curl`命令**.
 
->💡 __Note:__ All subsequent commands in this workshop should be run from the same directory, except where otherwise indicated via `cd` commands.
+> 💡**注意：**本Workshop的所有后续命令应从同一目录运行，除非另有指示`cd`命令。
 
-In an __empty__ directory execute the curl command line below:
+在一个**空**目录执行下面的 curl 命令行：
 
 ```bash
 curl https://start.spring.io/starter.tgz -d dependencies=web -d baseDir=simple-microservice -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
 ```
 
-> We force the Spring Boot version to be 2.3.8.
+> 我们强制Spring Boot版本为2.3.8。
 
-## Add a new Spring MVC Controller
+## 添加新的Spring MVC Controller
 
-In the `simple-microservice/src/main/java/com/example/demo` directory, create a
-new file  called `HelloController.java` next to `DemoApplication.java` file with
-the following content:
+可以在VS Code下操作
+```bash
+cd simple-microservice
+code .
+```
+
+在`simple-microservice/src/main/java/com/example/demo`目录，创建一个
+新文件`HelloController.java`, 与`DemoApplication.java`文件一起。输入
+以下内容：
 
 ```java
 package com.example.demo;
@@ -44,11 +50,11 @@ public class HelloController {
 }
 ```
 
-The final project is available in the ["simple-microservice" folder](simple-microservice/).
+最终项目可在["simple-microservice"文件夹](simple-microservice/).
 
-## Test the project locally
+## 在本地测试项目
 
-Run the project:
+运行项目：
 
 ```bash
 cd simple-microservice
@@ -56,40 +62,40 @@ cd simple-microservice
 cd ..
 ```
 
-Requesting the `/hello` endpoint should return the "Hello from Azure Spring Cloud" message.
+请求`/hello` 服务应返回"Hello from Azure Spring Cloud"的消息。
 
 ```bash
 curl http://127.0.0.1:8080/hello
 ```
 
-Finally, kill running app:
+最后，kill运行的应用程序：
 
 ```bash
 kill %1
 ```
 
-## Create and deploy the application on Azure Spring Cloud
+## 在Azure Spring Cloud上创建和部署应用程序
 
-This section shows how to create an app instance and then deploy your code to it.
+此部分显示如何创建应用实例，然后将代码部署到其中。
 
-In order to create the app instance graphically, you can use [the Azure portal](https://portal.azure.com/?WT.mc_id=azurespringcloud-github-judubois):
+为了以图形方式创建应用实例，您可以使用[Azure Portal](https://portal.azure.com/):
 
-- Look for your Azure Spring Cloud instance in your resource group
-- Click on the "Apps" link under "Settings" on the navigation sidebar.
-- Click on "Create App" link at the top of the Apps page.
-- Create a new application named "simple-microservice"
+-   在资源组中查找您的 Azure Spring Cloud实例
+-   单击导航侧边栏"设置"下的"应用"链接。
+-   单击应用页面顶部的"创建应用"链接。
+-   创建名为"simple-microservice"的新应用
 
 ![Create application](media/01-create-application.png)
 
-- Click on "Create".
+-   单击"创建"。
 
-Alternatively, you can use the command line to create the app instance, which is easier:
+或者，您可以使用命令行创建应用实例，这更容易：
 
 ```bash
 az spring-cloud app create -n simple-microservice
 ```
 
-You can now build your "simple-microservice" project and deploy it to Azure Spring Cloud:
+您现在可以构建您的"simple-microservice"项目，并将其部署到 Azure Spring Cloud：
 
 ```bash
 cd simple-microservice
@@ -98,64 +104,62 @@ az spring-cloud app deploy -n simple-microservice --jar-path target/demo-0.0.1-S
 cd ..
 ```
 
-This creates a jar file on your local disk and uploads it to the app instance you created in the preceding step.  The `az` command will output a result in JSON.  You don't need to pay attention to this output right now, but in the future, you will find it useful for diagnostic and testing purposes.
+这将在本地磁盘上创建一个jar文件，并将其上传到您在上一步中创建的应用实例。 这`az`命令将在JSON中输出结果。 您现在不需要注意此输出，但将来，您会发现它可用于诊断和测试的。
 
-## Test the project in the cloud
+## 在云中测试项目
 
-Go to [the Azure portal](https://portal.azure.com/?WT.mc_id=azurespringcloud-github-judubois):
+转到(G)[Azure Portal](https://portal.azure.com/):
 
-- Look for your Azure Spring Cloud instance in your resource group
-- Click "Apps" in the "Settings" section of the navigation pane and select "simple-microservice"
-- Click on 'See more' to see "Test Endpoint"
-![See More](media/02-seemore.png)
-- Mouse over the URL labeled as "Test Endpoint" and click the clipboard icon that appears.  
-    This will give you something like:
-   `https://primary:BBQM6nsYnmmdQREXQINityNx63kWUbjsP7SIvqKhOcWDfP6HJTqg27klMLaSfpTB@rwo1106f.test.azuremicroservices.io/simple-microservice/default/`
-   >💡 Note the text between `https://` and `@`.  These are the basic authentication credentials, without which you will not be authorized to access the service.
-- Append `hello/` to the URL.  Failure to do this will result in a "404 not found".
+-   在资源组中查找您的 Azure Spring Cloud实例
+-   单击导航窗格"设置"部分中的"应用"，然后选择"simple-microservice"
+-   单击"查看更多"以查看"测试终点"
+    ![See More](media/02-seemore.png)
+-   网址上的鼠标标记为"测试端点"，然后单击显示的剪贴板图标。  
+    这将显示类似的链接：
+     `https://primary:BBQM6nsYnmmdQREXQINityNx63kWUbjsP7SIvqKhOcWDfP6HJTqg27klMLaSfpTB@rwo1106f.test.azuremicroservices.io/simple-microservice/default/`
+    > 💡注意之间的文本`https://`和`@`. 这些是基本的身份验证凭据，没有凭据，您将无权访问该服务。
+-   点终结点右边的复制，并附加`hello/`到网址末尾。 否则，将导致"找不到404"。
 
-You can now use cURL again to test the `/hello` endpoint, this time served by Azure Spring Cloud.  For example.
+您现在可以再次使用cURL来测试`/hello`终点，这次由Azure Spring Cloud服务。 例如。
 
 ```bash
 curl https://primary:...simple-microservice/default/hello/
 ```
 
-If successful, you should see the message: `Hello from Azure Spring Cloud`.
+如果成功，您应该看到消息：`Hello from Azure Spring Cloud`.
 
-## Conclusion
+## 结论
 
-Congratulations, you have deployed your first Spring Boot microservice to Azure Spring Cloud!
+恭喜你，你已经部署了你的第一个Spring Boot微服务到Azure Spring Cloud！
 
-If you need to check your code, the final project is available in the ["simple-microservice" folder](simple-microservice/).
+如果您需要检查您的代码，最终项目可在["simple-microservice"文件夹](simple-microservice/).
 
-Here is the final script to build and deploy everything that was done in this guide:
+下面是构建和部署本教程中所做的一切的最终脚本：
+```bash
+    curl https://start.spring.io/starter.tgz -d dependencies=web -d baseDir=simple-microservice -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
+    cd simple-microservice
+    cat > HelloController.java << EOF
+    package com.example.demo;
 
-```
-curl https://start.spring.io/starter.tgz -d dependencies=web -d baseDir=simple-microservice -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
-cd simple-microservice
-cat > HelloController.java << EOF
-package com.example.demo;
+    import org.springframework.web.bind.annotation.GetMapping;
+    import org.springframework.web.bind.annotation.RestController;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+    @RestController
+    public class HelloController {
 
-@RestController
-public class HelloController {
-
-    @GetMapping("/hello")
-    public String hello() {
-        return "Hello from Azure Spring Cloud";
+        @GetMapping("/hello")
+        public String hello() {
+            return "Hello from Azure Spring Cloud";
+        }
     }
-}
-EOF
-mv HelloController.java src/main/java/com/example/demo/HelloController.java
-az spring-cloud app create -n simple-microservice
-./mvnw clean package
-az spring-cloud app deploy -n simple-microservice --jar-path target/demo-0.0.1-SNAPSHOT.jar
+    EOF
+    mv HelloController.java src/main/java/com/example/demo/HelloController.java
+    az spring-cloud app create -n simple-microservice
+    ./mvnw clean package
+    az spring-cloud app deploy -n simple-microservice --jar-path target/demo-0.0.1-SNAPSHOT.jar
 ```
-
 ---
 
-⬅️ Previous guide: [01 - Create an Azure Spring Cloud instance](../01-create-an-azure-spring-cloud-instance/README.md)
+⬅️上一个教程：[01 - 创建Azure Spring Cloud实例](../01-create-an-azure-spring-cloud-instance/README.md)
 
-➡️ Next guide: [03 - Configure monitoring](../03-configure-monitoring/README.md)
+➡️下一个教程：[03 - 配置监控](../03-configure-monitoring/README.md)

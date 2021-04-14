@@ -1,31 +1,31 @@
-# 07 - Build a Spring Boot microservice using MySQL
+# 07 - 使用 MySQL 构建Spring Boot微服务
 
-__This guide is part of the [Azure Spring Cloud training](../README.md)__
+**本教程是[Azure Spring Cloud 培训](../README.md)系列之一**
 
-In this section, we'll build another data-driven microservice. This time, we will use a relational database, a [MySQL database managed by Azure](https://docs.microsoft.com/en-us/azure/mysql/?WT.mc_id=azurespringcloud-github-judubois). And we'll use Java Persistence API (JPA) to access the data in a way that is more frequently used in the Java ecosystem.
+
+在此部分中，我们将构建另一个数据驱动的微服务。这一次，我们将使用一个关系数据库，一个[由Azure管理的 MySQL 数据库](https://docs.microsoft.com/en-us/azure/mysql/?WT.mc_id=azurespringcloud-github-judubois).我们将使用 Java 持久性 API （JPA） 来访问数据，这是也Java 生态里主流的方式。
 
 ---
 
-## Create the application on Azure Spring Cloud
+## 在Azure Spring Cloud上创建应用程序
 
-As in [02 - Build a simple Spring Boot microservice](../02-build-a-simple-spring-boot-microservice/README.md), create a specific `weather-service` application in your Azure Spring Cloud instance:
+如在[02 - 构建一个简单的Spring Boot微服务](../02-build-a-simple-spring-boot-microservice/README.md)，创建一个特定的`weather-service`应用在您的Azure Spring Cloud实例中：
 
 ```bash
 az spring-cloud app create -n weather-service
 ```
 
+## 配置 MySQL 服务器实例
 
-## Configure the MySQL Server instance
+在遵循第 00 节中的步骤后，您应该有一个名为 MySQL 实例的 Azure 数据库`sclabm-<unique string>`在您的资源组中。
 
-After following the steps in Section 00, you should have an Azure Database for MySQL instance named `sclabm-<unique string>` in your resource group.
+然而，在我们使用它之前，我们需要执行几个任务：
 
-Before we can use it however, we will need to perform several tasks:
+1.  创建 MySQL 防火墙规则，以便从我们的本地环境中进行连接。
+2.  创建 MySQL 防火墙规则，允许来自 Azure 服务的连接。这将启用来自Azure Spring Cloud的连接。
+3.  创建一个MySQL数据库。
 
-1. Create a MySQL firewall rule to allow connections from our local environment.
-1. Create a MySQL firewall rule to allow connections from Azure Services. This will enable connections from Azure Spring Cloud.
-1. Create a MySQL database.
-
-> 💡When prompted for a password, enter the MySQL password you specified when deploying the ARM template in [Section 00](../00-setup-your-environment/README.md).
+> 💡当提示密码时，输入您在部署 ARM 模板时指定的 MySQL 密码[第 00 节](../00-setup-your-environment/README.md).
 
 ```bash
 # Obtain the info on the MYSQL server in our resource group:
@@ -59,37 +59,37 @@ echo "Your MySQL username is: ${MYSQL_USERNAME}"
 
 ```
 
-## Bind the MySQL database to the application
+## 将 MySQL 数据库绑定到应用程序
 
-As we did for CosmosDB in the previous section, create a service binding for the MySQL database to make it available to Azure Spring Cloud microservices.
-In the [Azure Portal](https://portal.azure.com/?WT.mc_id=azurespringcloud-github-judubois):
+正如我们在上一节中为Cosmos DB所做的那样，为 MySQL 数据库创建一个绑定服务，使其可用于 Azure Spring Cloud微服务。
+在[Azure门户](https://portal.azure.com/?WT.mc_id=azurespringcloud-github-judubois):
 
-- Navigate to your Azure Spring Cloud instance
-- Click on Apps
-- Click on `weather-service`.
-- Click on "Service Bindings" and then on "Create Service Binding".
-- Populate the service binding fields as shown.
-  - The username will be displayed in last line of output from the section above.
-  - The password is the one you specified in section 0. The default value is `super$ecr3t`.
-- Click on `Create` to create the database binding
+-   导航到您的Azure Spring Cloud实例
+-   单击应用
+-   单击`weather-service`.
+-   单击"服务绑定"，然后点击"创建服务绑定"。
+-   如图所示填充服务绑定字段。
+    -   用户名将显示在上面部分的最后一行输出中。
+    -   密码是您在第 0 节中指定的密码。默认值为`super$ecr3t`.
+-   单击`Create`创建数据库绑定
 
 ![MySQL Service Binding](media/01-create-service-binding-mysql.png)
 
-## Create a Spring Boot microservice
+## 创建Spring Boot微服务
 
-Now that we've provisioned the Azure Spring Cloud instance and configured the service binding, let's get the code for `weather-service` ready. The microservice that we create in this guide is [available here](weather-service/).
+现在，我们已经准备了Azure Spring Cloud实例并配置了服务绑定，让我们获取代码`weather-service`准备。我们在本教程中创建的微服务[可参考这里](weather-service/).
 
-To create our microservice, we will invoke the Spring Initalizer service from the command line:
+为了创建我们的微服务，我们将从命令行调用Spring Initalizer服务：
 
 ```bash
 curl https://start.spring.io/starter.tgz -d dependencies=web,data-jpa,mysql,cloud-eureka,cloud-config-client -d baseDir=weather-service -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
 ```
 
-> We use the `Spring Web`, `Spring Data JPA`, `MySQL Driver`, `Eureka Discovery Client` and the `Config Client` components.
+> 我们使用`Spring Web`,`Spring Data JPA`,`MySQL Driver`,`Eureka Discovery Client`和`Config Client`组件。
 
-## Add Spring code to get the data from the database
+## 添加Spring代码从数据库获取数据
 
-Next to the `DemoApplication` class, create a `Weather` JPA entity:
+在`DemoApplication`类同一目录下，创建一个名为`Weather` 的JPA 实体：
 
 ```java
 package com.example.demo;
@@ -133,7 +133,7 @@ public class Weather {
 }
 ```
 
-Then, create a Spring Data repository to manage this entity, called `WeatherRepository`:
+然后，创建一个Spring Data Repository来管理此实体，称为`WeatherRepository`:
 
 ```java
 package com.example.demo;
@@ -144,7 +144,7 @@ public interface WeatherRepository extends CrudRepository<Weather, String> {
 }
 ```
 
-And finish coding this application by adding a Spring MVC controller called `WeatherController`:
+并完成编码此应用程序添加一个Spring MVC控制器为`WeatherController`:
 
 ```java
 package com.example.demo;
@@ -169,26 +169,26 @@ public class WeatherController {
 }
 ```
 
-## Add sample data in MySQL
+## 在 MySQL 中添加样本数据
 
-In order to have Hibernate automatically create your database, open up the `src/main/resources/application.properties` file and add:
+为了让Hibernate自动创建您的数据库，打开`src/main/resources/application.properties`文件并添加：
 
 ```properties
 spring.jpa.hibernate.ddl-auto=create
 ```
 
-Then, in order to have Spring Boot add sample data at startup, create a `src/main/resources/import.sql` file and add:
+然后，为了让Spring Boot在启动时添加示例数据，创建`src/main/resources/import.sql`文件并添加：
 
 ```sql
 INSERT INTO `azure-spring-cloud-training`.`weather` (`city`, `description`, `icon`) VALUES ('Paris, France', 'Very cloudy!', 'weather-fog');
 INSERT INTO `azure-spring-cloud-training`.`weather` (`city`, `description`, `icon`) VALUES ('London, UK', 'Quite cloudy', 'weather-pouring');
 ```
 
-> The icons we are using are the ones from [https://materialdesignicons.com/](https://materialdesignicons.com/) - you can pick their other weather icons if you wish.
+> 我们正在使用的图标是从<https://materialdesignicons.com/>获得-如果你愿意，你可以选择他们的其他天气图标。
 
-## Deploy the application
+## 部署应用程序
 
-You can now build your "weather-service" project and send it to Azure Spring Cloud:
+您现在可以构建您的"天气服务"项目，并将其发送到 Azure Spring Cloud：
 
 ```bash
 cd weather-service
@@ -197,23 +197,23 @@ az spring-cloud app deploy -n weather-service --jar-path target/demo-0.0.1-SNAPS
 cd ..
 ```
 
-## Test the project in the cloud
+## 在云中测试项目
 
-- Go to "Apps" in your Azure Spring Cloud instance.
-  - Verify that `weather-service` has a `Registration status` which says `1/1`. This shows that it is correctly registered in the Spring Cloud Service Registry.
-  - Select `weather-service` to have more information on the microservice.
-- Copy/paste the "Test Endpoint" that is provided. You might have to click on `See more` to find it.
+-   转到 Azure Spring Cloud实例中的"应用"。
+    -   验证`weather-service`有一个`Registration status`其中说`1/1`.这表明它在Spring Cloud Service Registry注册成功。
+    -   选择`weather-service` 查看有关微服务的更多信息。
+-   复制/粘贴提供的"测试终点"。您可能需要单击`See more`才能看到。
 
-You can now use cURL to test the `/weather/city` endpoint. For example, to test for `Paris, France` city, append to the end of the test endpoint: `/weather/city?name=Paris%2C%20France`.
+您现在可以使用cURL来测试`/weather/city`端点。例如，测试`Paris, France`城市，附加到测试终点的末尾：`/weather/city?name=Paris%2C%20France`.
 
 ```json
 {"city":"Paris, France","description":"Very cloudy!","icon":"weather-fog"}
 ```
 
-If you need to check your code, the final project is available in the ["weather-service" folder](weather-service/).
+如果您需要参考代码，最终完成的项目可在["weather-service"文件夹](weather-service/).
 
 ---
 
-⬅️ Previous guide: [06 - Build a reactive Spring Boot microservice using Cosmos DB](../06-build-a-reactive-spring-boot-microservice-using-cosmosdb/README.md)
+⬅️上一个教程：[06 - 使用Cosmos DB构建Reactive Spring Boot微服务](../06-build-a-reactive-spring-boot-microservice-using-cosmosdb/README.md)
 
-➡️ Next guide: [08 - Build a Spring Cloud Gateway](../08-build-a-spring-cloud-gateway/README.md)
+➡️下一个教程：[08 - 构建Spring Cloud网关](../08-build-a-spring-cloud-gateway/README.md)
