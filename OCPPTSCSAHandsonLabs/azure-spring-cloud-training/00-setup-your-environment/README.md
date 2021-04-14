@@ -2,7 +2,7 @@
 
 **本教程是[Azure Spring Cloud 培训](../README.md)系列之一**
 
-在本节中，我们将设置好您快速完成培训所需的一切。
+为了让您能快速顺利的完成培训，在本节中，我们将设置好所需的一切。
 
 ---
 
@@ -18,7 +18,7 @@
 
 [![部署到Azure](media/deploybutton.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2Fazure-spring-cloud-training%2Fmaster%2F00-setup-your-environment%2Fazuredeploy.json?WT.mc_id=azurespringcloud-github-judubois)
 
-> ⏱资源配置需要一些时间。**不用等待！**继续进行Workshop。
+> ⏱资源配置需要一些时间。**不用等待**继续进行Workshop。
 
 ## 先决条件
 
