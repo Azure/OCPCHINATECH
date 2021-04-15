@@ -3,7 +3,7 @@
 **本教程是[Azure Spring Cloud 培训](../README.md)系列之一**
 
 
-在此部分中，我们将构建另一个数据驱动的微服务。这一次，我们将使用一个关系数据库，一个[由Azure管理的 MySQL 数据库](https://docs.microsoft.com/en-us/azure/mysql/?WT.mc_id=azurespringcloud-github-judubois).我们将使用 Java 持久性 API （JPA） 来访问数据，这是也Java 生态里主流的方式。
+在此部分中，我们将构建另一个数据驱动的微服务。这一次，我们将使用一个关系数据库，一个[由Azure管理的 MySQL 数据库](https://docs.microsoft.com/en-us/azure/mysql/?WT.mc_id=azurespringcloud-github-judubois).我们将使用 Java 持久性 API （JPA） 来访问数据，这也是Java 生态里主流的方式。
 
 ---
 
@@ -77,9 +77,9 @@ echo "Your MySQL username is: ${MYSQL_USERNAME}"
 
 ## 创建Spring Boot微服务
 
-现在，我们已经准备了Azure Spring Cloud实例并配置了服务绑定，让我们获取代码`weather-service`准备。我们在本教程中创建的微服务[可参考这里](weather-service/).
+现在，我们已经准备了Azure Spring Cloud实例并配置了服务绑定，现在可以开始实现`weather-service`的代码。 完整的代码[可参考这里](weather-service/)，但建议按照下面步骤一步一步实现.
 
-为了创建我们的微服务，我们将从命令行调用Spring Initalizer服务：
+我们将从命令行调用Spring Initalizer服务来创建我们的微服务：
 
 ```bash
 curl https://start.spring.io/starter.tgz -d dependencies=web,data-jpa,mysql,cloud-eureka,cloud-config-client -d baseDir=weather-service -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
@@ -144,7 +144,7 @@ public interface WeatherRepository extends CrudRepository<Weather, String> {
 }
 ```
 
-并完成编码此应用程序添加一个Spring MVC控制器为`WeatherController`:
+再添加一个Spring MVC控制器为`WeatherController`:
 
 ```java
 package com.example.demo;

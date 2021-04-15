@@ -8,7 +8,7 @@
 
 > 💡 如果您的组织使用 Azure 存储库(Repos)作为源代码存储库，请参阅[使用Azure Repos进行Azure Spring Cloud配置](AzureReposForConfig.md)
 
-> ⏱如果您想跳过创建私有存储库的步骤，您可以改用此公共存储库：<https://github.com/Azure-Samples/spring-cloud-sample-public-config.git>.**在真实世界部署中不建议将配置存储在公共存储库中。**我们仅提供此公共存储库作为本次Workshop的实验便利，例如，如果您没有 GitHub 帐户。
+> ⏱如果您想跳过创建私有存储库的步骤，您可以改用此公共存储库：<https://github.com/Azure-Samples/spring-cloud-sample-public-config.git>. **在真实世界部署中不建议将配置存储在公共存储库中.** 我们仅提供此公共存储库作为本次Workshop的实验便利，例如，如果您没有 GitHub 帐户。
 >
 > 要使用此快捷方式：
 >

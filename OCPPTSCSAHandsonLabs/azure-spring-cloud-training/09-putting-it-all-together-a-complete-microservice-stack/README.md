@@ -30,6 +30,7 @@
 使用流览器转到(G)<https://spring-training.azureedge.net/>，在输入框中输入您的Spring Cloud网关的公共网址，然后单击"Go"。您应该看到以下屏幕：
 
 ![VueJS front-end](media/01-vuejs-frontend.png)
+注：Gateway URL最后不能带"/"
 
 ## 查看分布式跟踪以更好地了解架构
 
@@ -39,7 +40,7 @@
 
 > 💡跟踪数据可能需要几分钟才能被系统采集到，因此请利用这段时间生成一些负载。
 
-在 Azure Portal 中的"应用洞察"菜单中，您现在应该可以访问完整的应用程序地图以及一些性能指标，让您找到性能瓶颈在哪。
+在 Azure Portal 中的"应用洞察(Application Insights)"菜单中，您现在应该可以访问完整的应用程序地图以及一些性能指标，让您找到性能瓶颈在哪。
 
 ![Distributed tracing](media/02-distributed-tracing.png)
 

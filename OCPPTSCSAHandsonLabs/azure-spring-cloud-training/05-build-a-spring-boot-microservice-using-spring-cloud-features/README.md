@@ -8,7 +8,7 @@
 
 ## 我们要建立什么
 
-本教程建立在以前的教程：我们将再次建立一个简单的Sping Boot微服务，如在[02 - 构建一个简单的Spring Boot微服务](../02-build-a-simple-spring-boot-microservice/README.md)，但这次它将使用两个主要的Spring Cloud功能：
+本教程建立在以前的教程：我们将再次建立一个简单的Sping Boot微服务，就像 [02 - 构建一个简单的Spring Boot微服务](../02-build-a-simple-spring-boot-microservice/README.md)，但这次它将使用两个主要的Spring Cloud功能：
 
 -   它将连接到一个Sping Cloud Service Registry，以便它可以发现其他微服务，以及本身被发现！
 
@@ -26,11 +26,11 @@
 curl https://start.spring.io/starter.tgz -d dependencies=web,cloud-eureka,cloud-config-client -d baseDir=spring-cloud-microservice -d bootVersion=2.3.8 -d javaVersion=1.8 | tar -xzvf -
 ```
 
-> 这一次，我们添加`Eureka Discovery Client`和`Config Client`Spring Boot starters，将分别自动使用自带的Spring Cloud服务注册表和Spring Cloud配置服务器。
+> 这一次，我们添加`Eureka Discovery Client`和`Config Client` Spring Boot starters，将分别自动使用自带的Spring Cloud服务注册表和Spring Cloud配置服务器。
 
 ## 添加新的Sping  MVC 控制器
 
-可以使用VS Code打开，在DemoApplication类同一目录下，创建一个新类名为`HelloController`内容如下：
+可以使用VS Code打开创建的应用，在DemoApplication类同一目录下，创建一个新类名为`HelloController`内容如下：
 
 ```java
 package com.example.demo;
@@ -139,7 +139,7 @@ _请注意，日志可能需要几分钟才能显示出来。_
 
 此工作区允许您在聚合日志上运行查询。最常见的查询是从特定应用程序获取最新日志：
 
-**重要：**Spring Boot应用程序日志具有专用`AppPlatformLogsforSpring`类型。
+**重要：** Spring Boot应用程序日志具有专用`AppPlatformLogsforSpring`类型。
 
 下面是如何获得其50最新的日志`AppPlatformLogsforSpring`我们刚刚部署的微服务类型：
 

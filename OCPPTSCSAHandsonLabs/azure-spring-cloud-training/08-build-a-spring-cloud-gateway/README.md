@@ -3,13 +3,13 @@
 **本教程是[Azure Spring Cloud 培训](../README.md)系列之一**
 
 
-Spring Cloud网关允许您有选择地暴露您的微服务，并将流量路由到它们之间。在此部分中，我们将创建一个"Spring Cloud Gateway"，该网关将使用我们在前两个部分创建的微服务。
+Spring Cloud网关允许您有选择地通过统一的服务入口暴露您的微服务，并将流量路由到各服务。在此部分中，我们将创建一个"Spring Cloud Gateway"，该网关将使用我们在前两个部分创建的微服务。
 
 ---
 
 ## 创建Spring Cloud网关
 
-我们在本教程中创建的应用程序[可参考这里](gateway/).
+我们在本教程中创建的应用程序[可参考这里](gateway/). 建议按下面一步一步来创建。
 
 为了创建我们的网关，我们将从命令行调用Spring Initalizer服务：
 
@@ -43,11 +43,13 @@ spring:
 
 -   `spring.main.allow-bean-definition-overriding=true`这部分是配置Spring Cloud网关，以使用 Azure Spring Cloud Client Library中配置的Spring Cloud Discovery Server bean。
 -   `spring.cloud.gateway.discovery.locator.enabled=true`这部分是配置Spring Cloud网关，使用Spring Cloud Service Registry发现可用的微服务。
--   `spring.cloud.gateway.globalcors.corsConfiguration`这部分是允许CORS请求到我们的网关。这将在下一个教程中使用到，届时我们将添加未在 Azure Spring 云上托管的前端应用。
+-   `spring.cloud.gateway.globalcors.corsConfiguration`这部分是允许CORS(跨站)请求到我们的网关。这将在下一个教程中使用到，届时我们将添加未在 Azure Spring Cloud 上托管的前端应用。
 
 ## 在Azure Spring Cloud上创建应用程序
 
-如在[02 - 构建一个简单的Spring Boot微服务](../02-build-a-simple-spring-boot-microservice/README.md)，创建一个特定的`gateway`应用在您的Azure Spring Cloud实例中。由于此应用程序是网关，我们添加`--is-public true`标志，所以它是互联网可访问的。
+如在[02 - 构建一个简单的Spring Boot微服务](../02-build-a-simple-spring-boot-microservice/README.md)，创建一个特定的`gateway`应用在您的Azure Spring Cloud实例中。由于此应用程序是网关，我们需要添加`--is-public true`标志，以便互联网可以访问到。
+
+注：这个标志以后会改成 `--assign-endpoint`
 
 ```bash
 az spring-cloud app create -n gateway --is-public true

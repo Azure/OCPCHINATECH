@@ -1,4 +1,4 @@
-# 06 - 使用Cosmos DB构建ReactiveSpring Boot微服务
+# 06 - 使用Cosmos DB构建Reactive Spring Boot微服务
 
 **本教程是[Azure Spring Cloud 培训](../README.md)系列之一**
 
@@ -30,7 +30,7 @@
             "name": "London, UK"
         }
         ```
-
+    - 点击Save
 ![Data explorer](media/02-data-explorer.png)
 
 ## 创建Spring Webflux微服务
@@ -59,7 +59,7 @@ curl https://start.spring.io/starter.tgz -d dependencies=webflux,cloud-eureka,cl
 
 ## 添加Spring Reactive代码从数据库获取数据
 
-在的`DemoApplication`类目录下，创建一个`City` domain Object：
+在`DemoApplication`类的目录下，创建一个`City` domain Object：
 
 ```java
 package com.example.demo;
@@ -151,7 +151,7 @@ Azure Spring Cloud可以自动将我们创建的Cosmos DB绑定到我们的微�
 -   单击"创建服务绑定"
     -   例如，给绑定一个名称`cosmosdb-city`
     -   选择我们创建的Cosmos DB帐户和数据库，并保留默认值`sql`API 类型
-    -   在下拉列表中，选择主键
+    -   在下拉列表中，选择主要密钥
     -   单击`Create`创建数据库绑定
 
 ![Bind Cosmos DB database](media/03-bind-service-cosmosdb.png)
