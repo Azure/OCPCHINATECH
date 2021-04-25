@@ -2,7 +2,7 @@
 
 ## 安全
 
-Microsoft 认真对待我们软件产品和服务的安全性，其中包括通过我们的 GitHub 组织管理的所有源代码存储库，其中包括[微软](https://github.com/Microsoft),[天蓝色](https://github.com/Azure),[点网](https://github.com/dotnet),[阿斯普网](https://github.com/aspnet),[萨马林](https://github.com/xamarin)和[我们的吉特胡布组织](https://opensource.microsoft.com/).
+Microsoft 认真对待我们软件产品和服务的安全性，其中包括通过我们的 GitHub 组织管理的所有源代码存储库，其中包括[微软](https://github.com/Microsoft),[天蓝色](https://github.com/Azure),[点网](https://github.com/dotnet),[阿斯普网](https://github.com/aspnet),[萨马林](https://github.com/xamarin)和[我们的GitHub组织](https://opensource.microsoft.com/).
 
 如果您认为您在任何 Microsoft 拥有的存储库中都发现了安全漏洞[微软对安全漏洞的定义](https://docs.microsoft.com/en-us/previous-versions/tn-archive/cc751383(v=technet.10))，请向我们报告如下所述。
 

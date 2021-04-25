@@ -34,7 +34,7 @@ CLA 并适当地装饰 PR（例如，标签、评论）。只需按照说明操�
 
 ### 确定报告地点
 
-MSW 项目分布在多个存储库中。尝试将问题提交到正确的车间。检查列表[相关项目](https://github.com/Microsoft/MSW/wiki/Related-Projects)如果您不确定哪个回购是正确的。
+MSW 项目分布在多个存储库中。尝试将问题提交到正确的Workshop。检查列表[相关项目](https://github.com/Microsoft/MSW/wiki/Related-Projects)如果您不确定哪个回购是正确的。
 
 ### 查找现有问题
 
