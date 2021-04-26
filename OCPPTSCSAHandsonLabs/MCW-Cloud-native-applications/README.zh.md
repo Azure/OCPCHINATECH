@@ -19,7 +19,7 @@
 
 ### Workshop
 
-在这个研讨会上，您将构建一个概念证明 （POC），将现有的本地应用程序转变为基于容器的应用程序。此 POC 将提供利用 Azure Kubernetes 服务 （AKS）、Linux 节点上的 Docker 容器以及从蒙古开发银行迁移到 Cosmos 开发银行的多租户 Web 应用托管解决方案。
+在这个研讨会上，您将构建一个概念证明 （POC），将现有的本地应用程序转变为基于容器的应用程序。此 POC 将提供利用 Azure Kubernetes 服务 （AKS）、Linux 节点上的 Docker 容器以及从Mongo开发银行迁移到 Cosmos 开发银行的多租户 Web 应用托管解决方案。
 
 在这个研讨会结束时，您将能够通过经过时间测试的 DevOps 实践，更好地提高基于容器的应用程序的可靠性和增加释放节奏。
 
@@ -31,17 +31,17 @@
 
 ### 动手实验
 
-这个动手实验旨在引导您完成构建和部署 Docker 图像到 Azure Kubernetes 服务 （AKS） 托管的 Kubernetes 平台的过程，此外还学习如何处理动态服务发现、服务扩展和高可用性。
+这个动手实验旨在引导您完成构建和部署 Docker 镜像到 Azure Kubernetes 服务 （AKS） 托管的 Kubernetes 平台的过程，此外还学习如何处理动态服务发现、服务扩展和高可用性。
 
 在此实验结束时，您将能够更好地构建和部署容器化应用程序到 Azure Kubernetes 服务，并执行常见的 DevOps 程序。
 
 ## Azure服务及相关产品
 
--   阿祖尔·库伯内斯服务 （AKS）
+-   阿祖尔· Kubernetes 服务 （AKS）
 -   Azure集装箱注册处
 -   GitHub
--   码头工人
--    Cosmos 数据库（包括蒙哥德布API）
+-   Dockerfile
+-    Cosmos 数据库（包括MongoDBAPI）
 
 ## Azure解决方案
 

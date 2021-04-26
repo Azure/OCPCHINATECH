@@ -12,7 +12,7 @@ Before the hands-on lab setup guide
 November 2020
 </div>
 
-本文档中的信息（包括 URL 和其他互联网网站参考）可能会在未通知的情况下更改。除非另有说明，否则此处描述的示例公司、组织、产品、域名、电子邮件地址、徽标、人员、地点和事件均为虚构的，并且不与任何真实公司、组织、产品、域名、电子邮件地址、徽标、人、地点或事件关联，或应推断。遵守所有适用的版权法是用户的责任。在不限制版权保护的情况下，未经微软公司明确书面许可，不得复制、存储或引入检索系统，也不得以任何形式或以任何方式（电子、机械、影印、录音或其他方式）传输本文件的任何部分。
+本文档中的信息（包括 URL 和其他互联网网站参考）可能会在未通知的情况下更改。除非另有说明，否则此处描述的示例公司、组织、产品、域名、电子邮件 Address、徽标、人员、地点和事件均为虚构的，并且不与任何真实公司、组织、产品、域名、电子邮件 Address、徽标、人、地点或事件关联，或应推断。遵守所有适用的版权法是用户的责任。在不限制版权保护的情况下，未经微软公司明确书面许可，不得复制、存储或引入检索系统，也不得以任何形式或以任何方式（电子、机械、影印、录音或其他方式）传输本文件的任何部分。
 
 Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、商标、版权或其他知识产权。除非 Microsoft 的任何书面许可协议中明确规定，否则本文档的提供不会为您提供这些专利、商标、版权或其他知识产权的任何许可。
 
@@ -24,22 +24,22 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
 
 <!-- TOC -->
 
--   <a href="#cloud-native-applications-before-the-hands-on-lab-setup-guide">动手实验设置指南之前的云原生应用</a>
+-   <a href="#cloud-native-applications-before-the-hands-on-lab-setup-guide">动手实验Settings指南之前的云原生应用</a>
     -   <a href="#requirements">要求</a>
     -   <a href="#before-the-hands-on-lab">在动手实验之前</a>
-        -   <a href="#task1">任务1：设置AzureCloud Shell</a>
+        -   <a href="#task1">任务1：SettingsAzureCloud Shell</a>
         -   <a href="#task-2-download-starter-files">任务2：下载入门文件</a>
         -   <a href="#task-3-resource-group">任务3：资源组</a>
         -   <a href="#task-4-create-an-ssh-key">任务 4：创建 SSH 密钥</a>
         -   <a href="#task-5-deploy-arm-template">任务 5：部署 ARM 模板</a>
         -   <a href="#task-6-create-a-github-repository">任务 6： 创建 GitHub 存储库</a>
         -   <a href="#task-7-connect-securely-to-the-build-agent">任务 7：安全地连接到构建代理</a>
-        -   <a href="#task-8-complete-the-build-agent-setup">任务 8：完成构建代理设置</a>
+        -   <a href="#task-8-complete-the-build-agent-setup">任务 8：完成构建代理Settings</a>
         -   <a href="#task-9-clone-repositories-to-the-build-agent">任务 9：生成代理的克隆存储库</a>
 
 <!-- /TOC -->
 
-# <a id="cloud-native-applications-before-the-hands-on-lab-setup-guide">动手实验设置指南之前的云原生应用</a>
+# <a id="cloud-native-applications-before-the-hands-on-lab-setup-guide">动手实验Settings指南之前的云原生应用</a>
 
 ## <a id="requirements">要求</a>
 
@@ -47,7 +47,7 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
 
     -   试用订阅将不适用做本实验。
 
-    -   要完成此实验设置，请确保您的帐户包括以下内容：
+    -   要完成此实验Settings，请确保您的帐户包括以下内容：
 
         -   有[所有者](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)用于您使用的订阅的内置角色。
 
@@ -57,7 +57,7 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
 
 2.  微软的一个帐户[GitHub](https://github.com).
 
-3.  本地计算机或配置为以下配置的虚拟机器：
+3.  本地计算机或配置为以下配置的VM 器：
 
     -   浏览器，最好是Chrome浏览器，以实现与实验实施测试的一致性。
 
@@ -69,17 +69,17 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
 
 您应该遵循本节中提供的所有步骤_以前_提前参加动手实验，因为其中一些步骤需要时间。
 
-### <a id="task1">任务1：设置AzureCloud Shell</a>
+### <a id="task1">任务1：SettingsAzureCloud Shell</a>
 
 1.  通过选择菜单栏中的Cloud Shell图标打开Cloud Shell。
 
     ![The cloud shell icon is highlighted on the menu bar.](media/b4-image35.png "Cloud Shell")
 
-2.  Cloud Shell在浏览器窗口中打开。选择**巴什**如果提示或使用外壳菜单栏上的左侧下拉来选择**巴什**从下降（如图所示）。如果提示，请选择**确认**.
+2.  Cloud Shell在浏览器窗口中打开。选择**巴什**如果提示或使用外 shell菜单栏上的左侧下拉来选择**巴什**从下降（如图所示）。如果提示，请选择**确认**.
 
     ![This is a screenshot of the cloud shell opened in a browser window. Bash was selected.](media/b4-image36.png "Cloud Shell Bash Window")
 
-3.  您应该确保正确设置默认订阅。查看当前订阅类型：
+3.  您应该确保正确Settings默认订阅。查看当前订阅类型：
 
     ```bash
     az account show
@@ -87,7 +87,7 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
 
     ![In this screenshot of a Bash window, az account show has been typed and run at the command prompt. Some subscription information is visible in the window, and some information is obscured.](media/b4-image37.png "Bash Shell AZ Account Show")
 
-4.  要将默认订阅设置为当前选择以外的其他操作，请键入以下类型，用所需的订阅 ID 值替换 {id}：
+4.  要将默认订阅Settings为当前选择以外的其他操作，请键入以下类型，用所需的订阅 ID 值替换 {id}：
 
     ```bash
     az account set --subscription {id}
@@ -105,7 +105,7 @@ az account list
 
 在此任务中，您使用`git`将实验内容复制到Cloud Shell中，以便实验启动文件可用。
 
-> **注意**：如果您没有可用的Cloud Shell，请参阅<a href="#task1">任务1：设置AzureCloud Shell</a>.
+> **注意**：如果您没有可用的Cloud Shell，请参阅<a href="#task1">任务1：SettingsAzureCloud Shell</a>.
 
 1.  键入以下命令并按下`<ENTER>`:
 
@@ -131,7 +131,7 @@ az account list
 
 1.  在Cloud Shell窗口中，您键入类似于以下命令的命令，请务必更换令牌：
 
-    > **注意**：如果您没有可用的Cloud Shell，请参阅<a href="#task1">任务1：设置AzureCloud Shell</a>.
+    > **注意**：如果您没有可用的Cloud Shell，请参阅<a href="#task1">任务1：SettingsAzureCloud Shell</a>.
 
     ```bash
     az group create -l '[LOCATION]' -n 'fabmedical-[SUFFIX]'
@@ -153,11 +153,11 @@ az account list
 
 ### <a id="task-4-create-an-ssh-key">任务 4：创建 SSH 密钥</a>
 
-在即将到来的练习中，您创建虚拟机。在此部分中，您创建一个 SSH 密钥，以便安全地访问 VM。
+在即将到来的练习中，您创建VM 。在此部分中，您创建一个 SSH 密钥，以便安全地访问 VM。
 
 1.  从Cloud Shell命令行输入以下命令，以确保存在 SSH 密钥的目录。您可以忽略在输出中看到的任何错误。
 
-    > **注意**：如果您没有可用的Cloud Shell，请参阅<a href="#task1">任务1：设置AzureCloud Shell</a>.
+    > **注意**：如果您没有可用的Cloud Shell，请参阅<a href="#task1">任务1：SettingsAzureCloud Shell</a>.
 
     ```bash
     mkdir .ssh
@@ -173,7 +173,7 @@ az account list
 
 4.  提示时输入密码短语，以及**别忘了**!
 
-5.  因为你输入`.ssh/fabmedical`什基根生成的文件在`.ssh`用户文件夹中的文件夹，默认情况下云外壳打开的位置。
+5.  因为你输入`.ssh/fabmedical`什基根生成的文件在`.ssh`用户文件夹中的文件夹，默认情况下云外 shell打开的位置。
 
     ![In this screenshot of the cloud shell window, ssh-keygen -t RSA -b 2048 -C admin@fabmedical has been typed and run at the command prompt. Information about the generated key appears in the window.](media/b4-image57.png "SSH Keygen")
 
@@ -183,7 +183,7 @@ az account list
     cat .ssh/fabmedical.pub
     ```
 
-7.  保持此Cloud Shell打开并保留在默认目录中。您将在以后的任务中使用此外壳。
+7.  保持此Cloud Shell打开并保留在默认目录中。您将在以后的任务中使用此外 shell。
 
     ![In this screenshot of the cloud shell window, cat .ssh/fabmedical has been typed and run at the command prompt. Information about the public key content appears in the window.](media/b4-image571.png "Cloud Shell - cat .ssh")
 
@@ -193,7 +193,7 @@ az account list
 
 1.  在 Azure Cloud Shell中，切换到 ARM 模板目录：
 
-    > **注意**：如果您没有可用的Cloud Shell，请参阅<a href="#task1">任务1：设置AzureCloud Shell</a>.
+    > **注意**：如果您没有可用的Cloud Shell，请参阅<a href="#task1">任务1：SettingsAzureCloud Shell</a>.
 
     ```bash
     cd MCW-Cloud-native-applications/Hands-on\ lab/arm/
@@ -233,13 +233,13 @@ az account list
     az deployment group create --resource-group {resourceGroup} --template-file azuredeploy.json --parameters azuredeploy.parameters.json
     ```
 
-    此命令部署所有实验资源需要 30 到 60 分钟。您可以在部署运行时继续执行设置 GitHub 的下一个任务。
+    此命令部署所有实验资源需要 30 到 60 分钟。您可以在部署运行时继续执行Settings GitHub 的下一个任务。
 
     > **注意**如果你得到一个关于 Cosmos DB名称的错误，确保你键入`ComsosLocation`和`CosmosPairedLocation`没有任何空间。更正名称后重新运行上述命令。
 
 ### <a id="task-6-create-a-github-repository">任务 6： 创建 GitHub 存储库</a>
 
-FabMedical为您提供了入门文件。他们为客户 Contoso Neuro 获取了网站副本，并将其从单个节点.js网站重新构接到一个包含内容 API 的网站，该网站为扬声器和会话提供服务。此重构代码是验证其网站的容器化的起点。使用此功能帮助他们完成 POC，验证将网站和 API 作为 Docker 容器运行的开发工作流程，并在 Azure Kubernetes 服务环境中管理它们。
+FabMedical为您提供了入门文件。他们为客户 Contoso Neuro 获取了网站副本，并将其从单个节点.js网站重新构接到一个包含内容 API 的网站，该网站为 speakers和会话提供服务。此重构代码是验证其网站的容器化的起点。使用此功能帮助他们完成 POC，验证将网站和 API 作为 Docker 容器运行的开发工作流程，并在 Azure Kubernetes 服务环境中管理它们。
 
 1.  打开网络浏览器并导航到<https://www.github.com>.使用您的 GitHub 帐户凭据登录。
 
@@ -285,7 +285,7 @@ FabMedical为您提供了入门文件。他们为客户 Contoso Neuro 获取了�
     content-web/
     ```
 
-9.  设置您的用户名和电子邮件，git 用于提交。
+9.  Settings您的用户名和电子邮件，git 用于提交。
 
     ```bash
     git config --global user.email "you@example.com"
@@ -300,7 +300,7 @@ FabMedical为您提供了入门文件。他们为客户 Contoso Neuro 获取了�
     git commit -m "Initial Commit"
     ```
 
-11. 通过发布以下命令将远程源设置为 GitHub URL：
+11. 通过发布以下命令将远程源Settings为 GitHub URL：
 
     ```bash
     git remote add origin <your GitHub URL>
@@ -319,7 +319,7 @@ FabMedical为您提供了入门文件。他们为客户 Contoso Neuro 获取了�
     git push -u origin master
     ```
 
-    > **注意**：如果您具有多重身份验证，则在使用Cloud Shell时需要创建个人访问令牌。请参阅以下链接以获取有关设置 GitHub 个人访问令牌以进行身份验证的帮助`git`与您的GitHub帐户：<https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token>.
+    > **注意**：如果您具有多重身份验证，则在使用Cloud Shell时需要创建个人访问令牌。请参阅以下链接以获取有关Settings GitHub 个人访问令牌以进行身份验证的帮助`git`与您的GitHub帐户：<https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token>.
 
     > **注意**：一旦您获得个人访问令牌，请重试上述命令，使用令牌作为密码。
 
@@ -330,9 +330,9 @@ FabMedical为您提供了入门文件。他们为客户 Contoso Neuro 获取了�
 在本节中，您验证可以连接到新的生成代理
 虚拟市场。
 
-1.  打开一个**new**Azure Cloud Shell牌控制台并运行以下命令，以查找运行 ARM 部署时提供的构建代理 VM 的 IP 地址：
+1.  打开一个**new**Azure Cloud Shell牌控制台并运行以下命令，以查找运行 ARM 部署时提供的构建代理 VM 的 IP  Address：
 
-    > **注意**：如果您没有可用的Cloud Shell，请参阅<a href="#task1">任务1：设置AzureCloud Shell</a>.
+    > **注意**：如果您没有可用的Cloud Shell，请参阅<a href="#task1">任务1：SettingsAzureCloud Shell</a>.
 
     ```bash
     az vm show -d -g fabmedical-[SUFFIX] -n fabmedical-[SHORT_SUFFIX] --query publicIps -o tsv
@@ -344,7 +344,7 @@ FabMedical为您提供了入门文件。他们为客户 Contoso Neuro 获取了�
     az vm show -d -g fabmedical-sol -n fabmedical-SOL --query publicIps -o tsv
     ```
 
-2.  在Cloud Shell输出中，请注意 VM 的公共 IP 地址。
+2.  在Cloud Shell输出中，请注意 VM 的公共 IP  Address。
 
     ![The cloud shell window is displayed with the Public IP address shown.](media/b4-2019-10-01_11-58-05.png "Azure Cloud Shell Public IP")
 
@@ -358,9 +358,9 @@ FabMedical为您提供了入门文件。他们为客户 Contoso Neuro 获取了�
 
     -   `[PRIVATEKEYNAME]`：使用私钥名称`.ssh/fabmedical`，创建于上图。
 
-    -   `[BUILDAGENTUSERNAME]`：在默认设置中使用VM的用户名`adminfabmedical`.
+    -   `[BUILDAGENTUSERNAME]`：在默认Settings中使用VM的用户名`adminfabmedical`.
 
-    -   `[BUILDAGENTIP]`：上一步检索的生成代理VM的IP地址。
+    -   `[BUILDAGENTIP]`：上一步检索的生成代理VM的IP Address。
 
     ```bash
     ssh -i .ssh/fabmedical adminfabmedical@52.174.141.11
@@ -378,13 +378,13 @@ FabMedical为您提供了入门文件。他们为客户 Contoso Neuro 获取了�
 
 > **注意**：如果连接有问题，您可能在ARM模板中错误地粘贴了SSH公钥。不幸的是，如果是这样的话，你将不得不重新创建VM并重试。
 
-### <a id="task-8-complete-the-build-agent-setup">任务 8：完成构建代理设置</a>
+### <a id="task-8-complete-the-build-agent-setup">任务 8：完成构建代理Settings</a>
 
 在此任务中，您更新包并安装 Docker 引擎。
 
 1.  转到向构建代理VM打开SSH连接的Cloud Shell窗口。
 
-2.  更新 Ubuntu 封装，通过在单行命令中键入以下内容，在 HTTPS 上单步安装卷发和支持存储库。通过键入来响应`Y`并按下输入，如果问你是否愿意继续。
+2.  更新 Ubuntu 封装，通过在单行命令中键入以下内容，在 HTTPS 上单步安装curl和支持存储库。通过键入来响应`Y`并按下输入，如果问你是否愿意继续。
 
     ```bash
     sudo apt-get update && sudo apt install apt-transport-https ca-certificates curl software-properties-common
@@ -483,7 +483,7 @@ FabMedical为您提供了入门文件。他们为客户 Contoso Neuro 获取了�
 
 在此任务中，您从 GitHub 克隆存储库，以便您可以在构建代理上与他们合作。
 
-1.  正如您以前在Cloud Shell中所做的那样，设置用于 git 提交的用户名和电子邮件。
+1.  正如您以前在Cloud Shell中所做的那样，Settings用于 git 提交的用户名和电子邮件。
 
     ```bash
     git config --global user.email "you@example.com"

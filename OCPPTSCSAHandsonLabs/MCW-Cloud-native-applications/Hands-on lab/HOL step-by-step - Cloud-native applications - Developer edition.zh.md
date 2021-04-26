@@ -12,7 +12,7 @@ Hands-on lab step-by-step
 November 2020
 </div>
 
-本文档中的信息（包括 URL 和其他互联网网站参考）可能会在未通知的情况下更改。除非另有说明，否则此处描述的示例公司、组织、产品、域名、电子邮件地址、徽标、人员、地点和事件均为虚构的，并且不与任何真实公司、组织、产品、域名、电子邮件地址、徽标、人、地点或事件关联，或应推断。遵守所有适用的版权法是用户的责任。在不限制版权保护的情况下，未经微软公司明确书面许可，不得复制、存储或引入检索系统，也不得以任何形式或以任何方式（电子、机械、影印、录音或其他方式）传输本文件的任何部分。
+本文档中的信息（包括 URL 和其他互联网网站参考）可能会在未通知的情况下更改。除非另有说明，否则此处描述的示例公司、组织、产品、域名、电子邮件 Address、徽标、人员、地点和事件均为虚构的，并且不与任何真实公司、组织、产品、域名、电子邮件 Address、徽标、人、地点或事件关联，或应推断。遵守所有适用的版权法是用户的责任。在不限制版权保护的情况下，未经微软公司明确书面许可，不得复制、存储或引入检索系统，也不得以任何形式或以任何方式（电子、机械、影印、录音或其他方式）传输本文件的任何部分。
 
 Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、商标、版权或其他知识产权。除非 Microsoft 的任何书面许可协议中明确规定，否则本文档的提供不会为您提供这些专利、商标、版权或其他知识产权的任何许可。
 
@@ -34,26 +34,26 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
     -   [练习1：创建并运行Docker应用程序](#exercise-1-create-and-run-a-docker-application)
         -   [任务1：测试应用程序](#task-1-test-the-application)
         -   [任务2：浏览到 Web 应用程序](#task-2-browsing-to-the-web-application)
-        -   [任务3：创建一个码头工人](#task-3-create-a-dockerfile)
-        -   [任务4：创建码头工人图像](#task-4-create-docker-images)
+        -   [任务3：创建一个Dockerfile](#task-3-create-a-dockerfile)
+        -   [任务4：创建Dockerfile镜像](#task-4-create-docker-images)
         -   [任务 5：运行容器化应用程序](#task-5-run-a-containerized-application)
-        -   [任务6：设置环境变量](#task-6-setup-environment-variables)
-        -   [任务 7： 将图像推送至 Azure 容器注册处](#task-7-push-images-to-azure-container-registry)
-        -   [任务 8：设置 CI 管道以推送图像](#task-8-setup-ci-pipeline-to-push-images)
-    -   [练习 2： 使用 Azure 数据库迁移服务将蒙哥德布迁移到 Cosmos 数据库](#exercise-2-migrate-mongodb-to-cosmos-db-using-azure-database-migration-service)
-        -   [任务1：启用微软.数据移民资源提供商](#task-1-enable-microsoftdatamigration-resource-provider)
+        -   [任务6：Settings环境变量](#task-6-setup-environment-variables)
+        -   [任务 7： 将镜像推送至 Azure 容器注册处](#task-7-push-images-to-azure-container-registry)
+        -   [任务 8：Settings CI 管道以推送镜像](#task-8-setup-ci-pipeline-to-push-images)
+    -   [练习 2： 使用 Azure 数据库迁移服务将MongoDB迁移到 Cosmos 数据库](#exercise-2-migrate-mongodb-to-cosmos-db-using-azure-database-migration-service)
+        -   [任务1：启用Microsoft.DataMigration资源provider](#task-1-enable-microsoftdatamigration-resource-provider)
         -   [任务2：提供Azure数据库迁移服务](#task-2-provision-azure-database-migration-service)
         -   [任务3：将数据迁移到Azure Cosmos 数据库](#task-3-migrate-data-to-azure-cosmos-db)
-    -   [练习 3： 将解决方案部署到Azure库伯内斯服务](#exercise-3-deploy-the-solution-to-azure-kubernetes-service)
+    -   [练习 3： 将解决方案部署到Azure Kubernetes 服务](#exercise-3-deploy-the-solution-to-azure-kubernetes-service)
         -   [任务 1： 隧道进入AzureKubernetes服务集群](#task-1-tunnel-into-the-azure-kubernetes-service-cluster)
         -   [任务 2：使用 Azure 门户部署服务](#task-2-deploy-a-service-using-the-azure-portal)
-        -   [任务 3： 使用库布克特尔部署服务](#task-3-deploy-a-service-using-kubectl)
-        -   [任务 4： 使用头盔图表部署服务](#task-4-deploy-a-service-using-a-helm-chart)
-        -   [任务 5：配置连续交付到Kubernetes集群](#task-5-configure-continuous-delivery-to-the-kubernetes-cluster)
+        -   [任务 3： 使用kubectl部署服务](#task-3-deploy-a-service-using-kubectl)
+        -   [任务 4： 使用Helm Chart部署服务](#task-4-deploy-a-service-using-a-helm-chart)
+        -   [任务 5：配置持续交付到Kubernetes集群](#task-5-configure-continuous-delivery-to-the-kubernetes-cluster)
         -   [任务 6：审查集装箱的Azure监视器](#task-6-review-azure-monitor-for-containers)
     -   [练习4：扩展应用并测试HA](#exercise-4-scale-the-application-and-test-ha)
         -   [任务 1：从 Azure 门户增加服务实例](#task-1-increase-service-instances-from-the-azure-portal)
-        -   [任务 2： 解决复制品供应失败问题](#task-2-resolve-failed-provisioning-of-replicas)
+        -   [任务 2： 解决replicas配置失败问题](#task-2-resolve-failed-provisioning-of-replicas)
         -   [任务3：重新启动容器并测试HA](#task-3-restart-containers-and-test-ha)
         -   [任务4：配置 Cosmos DB自动规模](#task-4-configure-cosmos-db-autoscale)
         -   [任务5：测试 Cosmos DB自动规模](#task-5-test-cosmos-db-autoscale)
@@ -71,7 +71,7 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
 
 ## 抽象和学习目标
 
-这个动手实验旨在引导您完成构建和部署 Docker 图像到 Azure Kubernetes 服务 （AKS） 托管的 Kubernetes 平台的过程，此外还学习如何处理动态服务发现、服务扩展和高可用性。
+这个动手实验旨在引导您完成构建和部署 Docker 镜像到 Azure Kubernetes 服务 （AKS） 托管的 Kubernetes 平台的过程，此外还学习如何处理动态服务发现、服务扩展和高可用性。
 
 在此实验结束时，您将能够更好地构建和部署容器化应用程序到 Azure Kubernetes 服务，并执行常见的 DevOps 程序。
 
@@ -79,7 +79,7 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
 
 法布里卡姆医疗会议 （FabMedical） 提供专为医疗界量身定做的会议网站服务。他们正在根据节点.js重新构想其应用程序代码，以便它可以作为 Docker 应用程序运行，并希望实施 POC，帮助他们熟悉开发过程、部署的生命周期以及托管环境的关键方面。他们将部署他们的应用程序到Azure Kubernetes服务，并希望学习如何部署集装箱在动态负载平衡的方式，发现容器，并按需缩放它们。
 
-在这个动手实验中，您将协助完成此 POC 与应用程序代码库的子集。您将创建基于 Linux 的构建代理，以及用于运行已部署应用程序的 Azure Kubernetes 服务集群。您将帮助他们完成应用的 Docker 设置、本地测试、推入图像存储库、部署到集群以及测试负载平衡和缩放。
+在这个动手实验中，您将协助完成此 POC 与应用程序代码库的子集。您将创建基于 Linux 的构建代理，以及用于运行已部署应用程序的 Azure Kubernetes 服务集群。您将帮助他们完成应用的 Docker Settings、本地测试、推入镜像存储库、部署到集群以及测试负载平衡和缩放。
 
 > **重要**：大多数Azure资源都需要独特的名称。在整个步骤中，您将看到"SUFFIX"一词作为资源名称的一部分。您应该用唯一的句柄（如 Microsoft 帐户电子邮件前缀）替换此操作，以确保资源的独特名称。
 
@@ -93,17 +93,17 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
 
 每个租户将拥有以下容器：
 
--   **会议网站**：SPA应用程序，将使用配置设置来处理租户的自定义样式。
+-   **Conference Web site**：SPA应用程序，将使用配置Settings来处理租户的自定义样式。
 
--   **管理网站**： 会议所有者用来管理会议配置详细信息、管理与会者注册、管理活动并与与会者沟通的 SPA 应用程序。
+-   **Admin Web site**： 会议所有者用来管理会议配置详细信息、管理与会者注册、管理活动并与与会者沟通的 SPA 应用程序。
 
--   **注册服务**： 处理所有注册活动的 API，使用适当的套餐选择和相关成本创建新的会议注册。
+-   **Registration service**： 处理所有注册活动的 API，使用适当的套餐选择和相关成本创建新的会议注册。
 
--   **电子邮件服务**： 在注册期间或会议所有者选择通过其管理网站与与会者互动时，处理向与会者发送电子邮件通知的 API。
+-   **Email service**： 在注册期间或会议所有者选择通过其管理网站与与会者互动时，处理向与会者发送电子邮件通知的 API。
 
--   **配置服务**： 处理会议配置设置（如日期、地点、定价表、早起的特价、倒计时等）的 API。
+-   **Config service**： 处理会议配置Settings（如日期、地点、定价表、早起的特价、倒计时等）的 API。
 
--   **内容服务**： 处理会议内容（如演讲者、会议、研讨会和赞助商）的 API。
+-   **Content service**： 处理会议内容（如演讲者、会议、研讨会和赞助商）的 API。
 
 ## 要求
 
@@ -120,7 +120,7 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
 
     -   您的订阅中必须有足够的内核，才能在动手实验之前创建构建代理和 Azure Kubernetes 服务集群。如果按照实验中的确切说明操作，则需要八个内核;如果您选择额外的群集节点或更大的 VM 大小，则需要更多内核。如果您执行实验前所需的步骤，您将能够查看是否需要在子中请求更多内核。
 
-2.  本地计算机或配置为以下配置的虚拟机器：
+2.  本地计算机或配置为以下配置的VM 器：
 
     -   浏览器，最好是Chrome浏览器，以实现与实验实施测试的一致性。
 
@@ -132,7 +132,7 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
 
 **期间**：40分钟
 
-在此练习中，您将采用入门文件并运行节点.js应用程序作为Docker应用程序。您将创建一个Dockerfile，构建Docker图像，并运行容器来执行应用程序。
+在此练习中，您将采用入门文件并运行节点.js应用程序作为Docker应用程序。您将创建一个Dockerfile，构建Docker镜像，并运行容器来执行应用程序。
 
 ### 任务1：测试应用程序
 
@@ -146,15 +146,15 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
     docker network create fabmedical
     ```
 
-3.  运行用于本地测试的蒙古人实例。
+3.  运行一个mongodb用于本地测试。
 
     ```bash
     docker container run --name mongo --net fabmedical -p 27017:27017 -d mongo:4.0
     ```
 
-    > **注意**：通过为蒙古开发银行编写的现有源代码，可以指向Azure Cosmos DB蒙哥德布API终点。Azure Cosmos DB仿真器可用于Windows上的本地开发;然而， Cosmos DB仿真的器不支持Linux。因此，在利用Linux进行开发时，当地发展环境仍然需要蒙古开发银行：与Azure Cosmos DB用于在云中的数据存储。这使得为 MongoDB 存储编写的现有源代码可以轻松迁移到使用 Azure  Cosmos  DB 后端。
+    > **注意**：通过为Mongo编写的现有源代码，可以指向Azure Cosmos DB MongoDB API终点。Azure Cosmos DB仿真器可用于Windows上的本地开发;然而， Cosmos DB仿真的器不支持Linux。因此，在利用Linux进行开发时，当地发展环境仍然需要Mongo开发银行：与Azure Cosmos DB用于在云中的数据存储。这使得为 MongoDB 存储编写的现有源代码可以轻松迁移到使用 Azure  Cosmos  DB 后端。
 
-4.  确认蒙古容器已运行并准备就绪。
+4.  确认Mongo容器已运行并准备就绪。
 
     ```bash
     docker container list
@@ -163,7 +163,7 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
 
     ![In this screenshot of the console window, docker container list has been typed and run at the command prompt, and the “api” container is in the list. Below this the log output is shown.](media/Ex1-Task1.4.png "Docker container mongo logs")
 
-5.  使用蒙古壳连接到蒙古实例，并测试一些基本命令：
+5.  使用Mongo shell连接到Mongo实例，并测试一些基本命令：
 
     ```bash
     mongo
@@ -229,7 +229,7 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
     sudo chown -R $USER:$(id -gn $USER) /home/adminfabmedical/.config
     ```
 
-10. 启动 API 作为背景过程。
+10. 启动 API 作为后端进程。
 
     ```bash
     nodejs ./server.js &
@@ -237,9 +237,9 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
 
     ![In this screenshot, nodejs ./server.js & has been typed and run at the command prompt, which starts the API as a background process.](media/image47.png "Start the mongodb in background")
 
-11. 压`ENTER`再次获得下一步的命令提示。
+11. 按`ENTER`再次获得下一步的命令提示。
 
-12. 使用卷发测试API。您将请求演讲者的内容，这将返回 JSON 结果。
+12. 使用curl测试API。您将请求演讲者的内容，这将返回 JSON 结果。
 
     ```bash
     curl http://localhost:3001/speakers
@@ -263,7 +263,7 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
     sudo chown -R $USER:$(id -gn $USER) /home/adminfabmedical/.config
     ```
 
-14. 从 Azure Cloud Shell中，运行以下命令，查找运行 ARM 部署时提供的构建代理 VM 的 IP 地址。
+14. 从 Azure Cloud Shell中，运行以下命令，查找运行 ARM 部署时提供的构建代理 VM 的 IP  Address。
 
     ```bash
     az vm show -d -g fabmedical-[SUFFIX] -n fabmedical-[SHORT_SUFFIX] --query publicIps -o tsv
@@ -275,17 +275,17 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
     az vm show -d -g fabmedical-sol -n fabmedical-SOL --query publicIps -o tsv
     ```
 
-15. 从生成机器中的Cloud Shell编辑`app.js`文件使用维姆。
+15. 从build machine 中的Cloud Shell编辑`app.js`文件使用维姆。
 
     ```bash
     vim app.js
     ```
 
-    然后按下**_我_**进入编辑模式后，用生成机器IP地址替换本地机座。
+    然后按下**_i_**进入编辑模式后，用build machine IP Address替换localhost。
 
     ![Edit the app.js file in vim in the build machine to update the API URL.](media/image27.png "Edit the app.js")
 
-    然后按下**_西亚经委会_**写**_：wq_**以保存更改并关闭文件。
+    然后按下**_ESC_**写**_：wq_**以保存更改并关闭文件。
 
 16. 现在在后台运行内容网络应用程序。
 
@@ -293,9 +293,9 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
     node ./app.js &
     ```
 
-    压`ENTER`再次获得下一步的命令提示。
+    按`ENTER`再次获得下一步的命令提示。
 
-17. 使用卷发测试 Web 应用程序。您将看到 HTML 输出返回时没有出错。
+17. 使用curl测试 Web 应用程序。您将看到 HTML 输出返回时没有出错。
 
     ```bash
     curl http://localhost:3000
@@ -303,7 +303,7 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
 
 18. 让应用程序运行以执行下一个任务。
 
-19. 如果您收到 JSON 对 /扬声器内容请求的响应和来自 Web 应用程序的 HTML 响应，您的环境将按预期工作。
+19. 如果您收到 JSON 对 /speakers内容请求的响应和来自 Web 应用程序的 HTML 响应，您的环境将按预期工作。
 
 ### 任务2：浏览到 Web 应用程序
 
@@ -315,11 +315,11 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
 
     ![In this screenshot of your list of available resources, the first item is selected, which has the following values for Name, Type, and Location: fabmedical-soll (a red arrows points to this name), Virtual machine, and East US 2.](media/image54.png "List of resources")
 
-3.  从**虚拟机**刀片概述，找到**IP地址**的虚拟市场。
+3.  从**VM **概述面板，找到**IP Address**的虚拟市场。
 
     ![In the Virtual Machine blade, Overview is selected on the left and Public IP address 52.174.141.11 is highlighted on the right.](media/image26.png "VM Public IP Address")
 
-4.  从浏览器中测试 Web 应用程序。使用在端口的构建代理 IP 地址导航到 Web 应用程序`3000`.
+4.  从浏览器中测试 Web 应用程序。使用在端口的构建代理 IP  Address导航到 Web 应用程序`3000`.
 
     ```text
     http://[BUILDAGENTIP]:3000
@@ -327,7 +327,7 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
     EXAMPLE: http://13.68.113.176:3000
     ```
 
-5.  选择标题中的扬声器和会话链接。您将看到页面显示您以前卷曲的 JSON 内容的 HTML 版本。
+5.  选择标题中的 speakers和会话链接。您将看到页面显示您以前卷曲的 JSON 内容的 HTML 版本。
 
 6.  验证应用程序通过浏览器访问后，请转到Cloud Shell窗口并停止运行节点进程。
 
@@ -336,7 +336,7 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
     killall node
     ```
 
-### 任务3：创建一个码头工人
+### 任务3：创建一个Dockerfile
 
 在此任务中，您将创建一个新的 Dockerfile，用于将 API 应用程序作为容器化应用程序运行。
 
@@ -351,7 +351,7 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
 
     ![In this screenshot of the console window, ll has been typed and run at the command prompt. The files in the folder are listed in the window. At this time, we are unable to capture all of the information in the window. Future versions of this course should address this.](media/image55.png "List the files")
 
-2.  创建名为"新文件"的新文件`Dockerfile`并注意名称中的外壳。使用
+2.  创建名为"新文件"的新文件`Dockerfile`并注意名称中的外 shell。使用
     按照Vim命令创建新文件。Cloud Shell窗口应
     如下图所示。
 
@@ -367,31 +367,31 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
 
 4.  在文件中键入以下文件。这些陈述生成了一个多克档案，其中描述了以下情况：
 
-    -   基本阶段包括环境设置，我们期望很少改变，如果有的话。
+    -   基本阶段包括环境Settings，我们期望很少改变，如果有的话。
 
-        -   从基本图像节点创建新的 Docker 图像：阿尔卑斯。此基础图像具有节点.js，并针对小尺寸进行优化。
+        -   从基本镜像节点创建新的 Docker 镜像：阿尔卑斯。此基础镜像具有节点.js，并针对小尺寸进行优化。
 
-        -   加`curl`到基本图像来支持码头工人的健康检查。
+        -   加`curl`到基本镜像来支持Dockerfile的健康检查。
 
-        -   在可复制应用程序文件的图像上创建目录。
+        -   在可复制应用程序文件的镜像上创建目录。
 
         -   暴露应用端口`3001`到集装箱环境，以便可以在港口达到应用程序`3001`.
 
     -   构建阶段包含创建应用程序所需的所有工具和中间文件。
 
-        -   创建新的码头工人图像从`node:argon`.
+        -   创建新的Dockerfile镜像从`node:argon`.
 
-        -   在可复制应用程序文件的图像上创建目录。
+        -   在可复制应用程序文件的镜像上创建目录。
 
         -   副本`package.json`到工作目录。
 
         -   运行npm安装以初始化节点应用环境。
 
-        -   将应用程序的源文件复制到图像中。
+        -   将应用程序的源文件复制到镜像中。
 
-    -   最后阶段将基础图像与构建阶段的生成输出相结合。
+    -   最后阶段将基础镜像与构建阶段的生成输出相结合。
 
-        -   将工作目录设置为应用程序文件位置。
+        -   将工作目录Settings为应用程序文件位置。
 
         -   从构建阶段复制应用文件。
 
@@ -443,21 +443,21 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
     cat Dockerfile
     ```
 
-### 任务4：创建码头工人图像
+### 任务4：创建Dockerfile镜像
 
-在此任务中，您将为应用程序创建 Docker 图像，---一个用于 API 应用程序，另一个用于 Web 应用程序。每个图像都将通过依赖于多克档案的 Docker 命令创建。
+在此任务中，您将为应用程序创建 Docker 镜像，---一个用于 API 应用程序，另一个用于 Web 应用程序。每个镜像都将通过依赖于多克档案的 Docker 命令创建。
 
-1.  从连接到构建代理 VM 的Cloud Shell中，键入以下命令以查看 VM 上的任何 Docker 图像。该列表将仅包含之前下载的蒙哥德布图像。
+1.  从连接到构建代理 VM 的Cloud Shell中，键入以下命令以查看 VM 上的任何 Docker 镜像。该列表将仅包含之前下载的MongoDB镜像。
 
     ```bash
     docker image ls
     ```
 
-2.  从包含 API 应用程序文件的内容 api 文件夹和您创建的新 Dockerfile 中键入以下命令，为 API 应用程序创建 Docker 图像。此命令提供以下命令：
+2.  从包含 API 应用程序文件的内容 api 文件夹和您创建的新 Dockerfile 中键入以下命令，为 API 应用程序创建 Docker 镜像。此命令提供以下命令：
 
-    -   执行 Docker 生成命令以生成图像
+    -   执行 Docker 生成命令以生成镜像
 
-    -   用名称标记生成的图像`content-api`（-t）
+    -   用名称标记生成的镜像`content-api`（-t）
 
     -   最后一个点（`.`）表示在此当前目录上下文中使用Dockerfile。默认情况下，此文件预计将有名称`Dockerfile`（案件敏感）。
 
@@ -465,13 +465,13 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
     docker image build -t content-api .
     ```
 
-3.  图像成功构建后，再次运行 Docker 图像列表命令。您将看到几个新图像：节点图像和容器图像。
+3.  镜像成功构建后，再次运行 Docker 镜像列表命令。您将看到几个新镜像：节点镜像和容器镜像。
 
     ```bash
     docker image ls
     ```
 
-    请注意未标记的图像。这是包含最终图像中不需要的所有中间文件的构建阶段。
+    请注意未标记的镜像。这是包含最终镜像中不需要的所有中间文件的构建阶段。
 
     ![The node image (node) and your container image (content-api) are visible in this screenshot of the console window.](media/image59.png "List Docker images")
 
@@ -500,7 +500,7 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
 
     > 请注意，`content-web`Dockerfile 构建阶段除了安装 npm 封装外，还包括用于前端角应用的其他工具。
 
-7.  键入以下命令，为 Web 应用程序创建 Docker 图像。
+7.  键入以下命令，为 Web 应用程序创建 Docker 镜像。
 
     ```bash
     docker image build -t content-web .
@@ -519,13 +519,13 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
     cat Dockerfile
     ```
 
-10. 键入以下命令，为 init 应用程序创建 Docker 图像。
+10. 键入以下命令，为 init 应用程序创建 Docker 镜像。
 
     ```bash
     docker image build -t content-init .
     ```
 
-11. 完成后，当您运行 Docker 图像命令时，您将看到现在有八张图像存在。
+11. 完成后，当您运行 Docker 镜像命令时，您将看到现在有八张镜像存在。
 
     ```bash
     docker image ls
@@ -535,7 +535,7 @@ Microsoft 可能拥有本文件中涉及主题事项的专利、专利申请、�
 
 ### 任务 5：运行容器化应用程序
 
-Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应用程序容器将与 mongodb 进行通信。在本练习中，您将在启动 mongodb 时创建的同一桥网络上启动您创建的容器创建的图像。
+Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应用程序容器将与 mongodb 进行通信。在本练习中，您将在启动 mongodb 时创建的同一桥网络上启动您创建的容器创建的镜像。
 
 1.  使用以下命令创建并启动 API 应用程序容器。命令如下：
 
@@ -545,13 +545,13 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
     -   指示码头发动机使用端口`3001`并映射到内部集装箱端口`3001`.
 
-    -   通过指定的图像（如`content-api`.
+    -   通过指定的镜像（如`content-api`.
 
     ```bash
     docker container run --name api --net fabmedical -p 3001:3001 content-api
     ```
 
-2.  这`docker container run`命令已失败，因为它被配置为使用本地热URL连接到蒙哥德布。但是，现在内容 api 被隔离在单独的容器中，即使在同一个码头主机上运行，它也不能通过本地主机访问 mongodb。相反，API 必须使用桥网连接到蒙古。
+2.  这`docker container run`命令已失败，因为它被配置为使用本地热URL连接到MongoDB。但是，现在内容 api 被隔离在单独的容器中，即使在同一个码头主机上运行，它也不能通过本地主机访问 mongodb。相反，API 必须使用桥网连接到Mongo。
 
     ```text
     > content-api@0.0.0 start
@@ -574,14 +574,14 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
     npm ERR!     /root/.npm/_logs/2020-11-23T03_04_12_948Z-debug.log
     ```
 
-3.  内容 api 应用程序允许环境变量配置蒙哥德布连接字符串。删除现有容器，然后指示码头工人引擎通过添加`-e`切换到`docker container run`命令。此外，使用`-d`切换到运行api作为一个达蒙。
+3.  内容 api 应用程序允许环境变量配置MongoDB连接字符串。删除现有容器，然后指示Dockerfile引擎通过添加`-e`切换到`docker container run`命令。此外，使用`-d`切换到运行api作为一个达蒙。
 
     ```bash
     docker container rm api
     docker container run --name api --net fabmedical -p 3001:3001 -e MONGODB_CONNECTION=mongodb://mongo:27017/contentdb -d content-api
     ```
 
-4.  输入命令以显示正在运行的容器。你会发现`api`容器在列表中。使用码头工人日志命令查看API应用程序已连接到蒙哥德布。
+4.  输入命令以显示正在运行的容器。你会发现`api`容器在列表中。使用Dockerfile日志命令查看API应用程序已连接到MongoDB。
 
     ```bash
     docker container ls
@@ -596,7 +596,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
     curl http://localhost:3001/speakers
     ```
 
-6.  创建并启动具有类似内容的 Web 应用程序容器`docker container run`命令-指示码头工人引擎使用任何端口与`-P`命令。
+6.  创建并启动具有类似内容的 Web 应用程序容器`docker container run`命令-指示Dockerfile引擎使用任何端口与`-P`命令。
 
     ```bash
     docker container run --name web --net fabmedical -P -d content-web
@@ -610,13 +610,13 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
     ![In this screenshot of the console window, docker container ls has again been typed and run at the command prompt. 0.0.0.0:32768->3000/tcp is highlighted under Ports.](media/image62.png "List Docker containers")
 
-8.  通过用卷发获取网址来测试 Web 应用程序。对于端口，请使用动态分配的端口，您可以从上一个命令的输出中找到该端口。您将看到 HTML 输出，就像您之前测试时所做的那样。
+8.  通过用curl获取网址来测试 Web 应用程序。对于端口，请使用动态分配的端口，您可以从上一个命令的输出中找到该端口。您将看到 HTML 输出，就像您之前测试时所做的那样。
 
     ```bash
     curl http://localhost:[PORT]/speakers.html
     ```
 
-### 任务6：设置环境变量
+### 任务6：Settings环境变量
 
 在此任务中，您将配置`web`容器使用环境变量与 API 容器通信，类似于向 api 提供 mongodb 连接字符串的方式。
 
@@ -640,7 +640,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
     cat app.js
     ```
 
-4.  观察`contentApiUrl`变量可以设置为环境变量。
+4.  观察`contentApiUrl`变量可以Settings为环境变量。
 
     ```javascript
     const contentApiUrl = process.env.CONTENT_API_URL || "http://[VM IP]:3001";
@@ -653,7 +653,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
     <i>
     ```
 
-6.  定位`EXPOSE`如下图所示行，并在上面添加一行，用于设置环境变量的默认值，如屏幕截图所示。
+6.  定位`EXPOSE`如下图所示行，并在上面添加一行，用于Settings环境变量的默认值，如屏幕截图所示。
 
     ```Dockerfile
     ENV CONTENT_API_URL http://localhost:3001
@@ -669,26 +669,26 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
     <Enter>
     ```
 
-8.  使用与以前相同的命令重建 Web 应用程序 Docker 图像。
+8.  使用与以前相同的命令重建 Web 应用程序 Docker 镜像。
 
     ```bash
     docker image build -t content-web .
     ```
 
-9.  创建并启动将正确的 URI 传递给 API 容器作为环境变量的图像。此变量将通过您创建的 Docker 网络使用其容器名称解决 API 应用程序。运行容器后，检查容器是否运行，并记下下一步的动态端口分配。
+9.  创建并启动将正确的 URI 传递给 API 容器作为环境变量的镜像。此变量将通过您创建的 Docker 网络使用其容器名称解决 API 应用程序。运行容器后，检查容器是否运行，并记下下一步的动态端口分配。
 
     ```bash
     docker container run --name web --net fabmedical -P -d -e CONTENT_API_URL=http://api:3001 content-web
     docker container ls
     ```
 
-10. 使用分配给 Web 容器的端口再次卷曲扬声器路径。同样，您将看到 HTML 返回，但由于 Curl 不处理 javascript，您无法确定 Web 应用程序是否正在与 api 应用程序进行通信。您必须在浏览器中验证此连接。
+10. 使用分配给 Web 容器的端口再次卷曲 speakers路径。同样，您将看到 HTML 返回，但由于 Curl 不处理 javascript，您无法确定 Web 应用程序是否正在与 api 应用程序进行通信。您必须在浏览器中验证此连接。
 
     ```bash
     curl http://localhost:[PORT]/speakers.html
     ```
 
-11. 您将无法在临时端口上浏览 Web 应用程序，因为 VM 只暴露了有限的端口范围。现在，您将停止网络容器并使用端口重新启动它`3000`在浏览器中进行测试。键入以下命令以停止容器、取出容器，并使用端口的显式设置再次运行它。
+11. 您将无法在临时端口上浏览 Web 应用程序，因为 VM 只暴露了有限的端口范围。现在，您将停止网络容器并使用端口重新启动它`3000`在浏览器中进行测试。键入以下命令以停止容器、取出容器，并使用端口的显式Settings再次运行它。
 
     ```bash
     docker container stop web
@@ -698,13 +698,13 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
     > **警告：**如果您收到错误，如`Error starting userland proxy: listen tcp4 0.0.0.0:3000: bind: address already in use.`以前的节点实例可能持有端口 3000。跑`sudo pkill node`杀死本地节点实例。
 
-12. 使用端口再次卷曲扬声器路径`3000`.您将看到相同的HTML返回。
+12. 使用端口再次卷曲 speakers路径`3000`.您将看到相同的HTML返回。
 
     ```bash
     curl http://localhost:3000/speakers.html
     ```
 
-13. 现在，您可以使用 Web 浏览器导航到网站，并在端口成功查看应用程序`3000`.取代`[BUILDAGENTIP]`与**IP地址**你以前用过
+13. 现在，您可以使用 Web 浏览器导航到网站，并在端口成功查看应用程序`3000`.取代`[BUILDAGENTIP]`与**IP Address**你以前用过
 
     ```bash
     http://[BUILDAGENTIP]:3000
@@ -722,19 +722,19 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
     如果提示，请输入凭据。
 
-### 任务 7： 将图像推送至 Azure 容器注册处
+### 任务 7： 将镜像推送至 Azure 容器注册处
 
-要在远程环境中运行容器，您通常会将图像推送至 Docker 注册处，在那里您可以存储和分发图像。每个服务将有一个存储库，可以推至和拉从与Docker命令。Azure 集装箱注册处 （ACR） 是基于码头注册处 v2 的托管私人码头注册服务。
+要在远程环境中运行容器，您通常会将镜像推送至 Docker 注册处，在那里您可以存储和分发镜像。每个服务将有一个存储库，可以推至和拉从与Docker命令。Azure 集装箱注册处 （ACR） 是基于码头注册处 v2 的托管私人码头注册服务。
 
-在此任务中，您将把图像推送至您的 ACR 帐户、带有标记的版本图像，并设置连续集成 （CI），以构建容器的未来版本，并自动将其推送至 ACR。
+在此任务中，您将把镜像推送至您的 ACR 帐户、带有标记的版本镜像，并Settings持续集成 （CI），以构建容器的未来版本，并自动将其推送至 ACR。
 
 1.  在[Azure门户](https://portal.azure.com/)，导航到您在动手实验之前创建的ACR。
 
-2.  选择**访问密钥**下**设置**在左侧菜单上。
+2.  选择**访问密钥**下**Settings**在左侧菜单上。
 
     ![In this screenshot of the left-hand menu, Access keys is highlighted below Settings.](media/image64.png "Access keys")
 
-3.  访问密钥刀片显示下一步所需的登录服务器、用户名和密码。在构建 VM 上执行操作时，请保持此方便。
+3.  访问密钥面板显示下一步所需的登录服务器、用户名和密码。在构建 VM 上执行操作时，请保持此方便。
 
     > **注意**：如果用户名和密码未显示，请选择"在管理员用户选项上启用"。
 
@@ -754,7 +754,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
     > **提示**：请确保指定完全合格的注册表登录服务器（所有小写字母）。
 
-5.  运行以下命令以正确标记您的图像以匹配您的 ACR 帐户名。
+5.  运行以下命令以正确标记您的镜像以匹配您的 ACR 帐户名。
 
     ```bash
     docker image tag content-web [LOGINSERVER]/content-web
@@ -763,7 +763,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
     > **注意**：请务必更换`[LOGINSERVER]`您的ACR实例。
 
-6.  列出您的码头工人图像，并查看存储库和标签。请注意，存储库预缀了您的 ACR 登录服务器名称，例如下面的屏幕截图中显示的示例。
+6.  列出您的Dockerfile镜像，并查看存储库和标签。请注意，存储库预缀了您的 ACR 登录服务器名称，例如下面的屏幕截图中显示的示例。
 
     ```bash
     docker image ls
@@ -771,7 +771,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
     ![This is a screenshot of a docker images list example.](./media/tagged-images-for-acr.png "Docker image list")
 
-7.  通过以下命令将图像推送至您的 ACR 帐户：
+7.  通过以下命令将镜像推送至您的 ACR 帐户：
 
     ```bash
     docker image push [LOGINSERVER]/content-web
@@ -780,7 +780,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
     ![In this screenshot of the console window, an example of images being pushed to an ACR account results from typing and running the following at the command prompt: docker push \[LOGINSERVER\]/content-web.](media/image67.png "Push image to ACR")
 
-8.  在 Azure 门户中，导航到您的 ACR 帐户，然后选择**存储 库**下**服务业**在左侧菜单上。您现在将看到两个容器**(2)**，每个图像一个。
+8.  在 Azure 门户中，导航到您的 ACR 帐户，然后选择**存储 库**下**服务业**在左侧菜单上。您现在将看到两个容器**(2)**，每个镜像一个。
 
     ![In this screenshot, content-api and content-web each appear on their own lines below Repositories.](media/acr-two-containers.png "Search for repositories")
 
@@ -788,7 +788,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
     ![In this screenshot, content-api is selected under Repositories, and the Tags blade appears on the right.](media/acr-content-api-latest.png "View latest repo tags")
 
-10. 从连接到 VM 的Cloud Shell会话中分配`v1`标记到每个图像与以下命令。然后列出 Docker 图像，以注意每个图像现在有两个条目：显示`latest`标签和`v1`标记。另请注意，图像 ID 与两个条目相同，因为图像只有一个副本。
+10. 从连接到 VM 的Cloud Shell会话中分配`v1`标记到每个镜像与以下命令。然后列出 Docker 镜像，以注意每个镜像现在有两个条目：显示`latest`标签和`v1`标记。另请注意，镜像 ID 与两个条目相同，因为镜像只有一个副本。
 
     ```bash
     docker image tag [LOGINSERVER]/content-web:latest [LOGINSERVER]/content-web:v1
@@ -798,42 +798,42 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
     ![In this screenshot of the console window is an example of tags being added and displayed.](media/newly-tagged-images.png "View latest image by tag")
 
-11. 通过以下命令将图像推送至您的 ACR 帐户：
+11. 通过以下命令将镜像推送至您的 ACR 帐户：
 
     ```bash
     docker image push [LOGINSERVER]/content-web:v1
     docker image push [LOGINSERVER]/content-api:v1
     ```
 
-12. 刷新其中一个存储库，查看图像的两个版本现在出现。
+12. 刷新其中一个存储库，查看镜像的两个版本现在出现。
 
     ![In this screenshot, content-api is selected under Repositories, and the Tags blade appears on the right. In the Tags blade, latest and v1 appear under Tags.](media/image71.png "View two versions of image")
 
-13. 运行以下命令，从存储库中提取图像。请注意，默认行为是拉标签的图像`latest`.您可以使用版本标签拉取特定版本。此外，请注意，由于构建代理上的图像已经存在，没有下载任何内容。
+13. 运行以下命令，从存储库中提取镜像。请注意，默认行为是拉标签的镜像`latest`.您可以使用版本标签拉取特定版本。此外，请注意，由于构建代理上的镜像已经存在，没有下载任何内容。
 
     ```bash
     docker image pull [LOGINSERVER]/content-web
     docker image pull [LOGINSERVER]/content-web:v1
     ```
 
-### 任务 8：设置 CI 管道以推送图像
+### 任务 8：Settings CI 管道以推送镜像
 
 在此任务中，您将使用 YAML 来定义构建 Docker 的 GitHub 操作工作流
-图像并自动将其推送至您的ACR实例。
+镜像并自动将其推送至您的ACR实例。
 
-1.  在GitHub，返回到**Fabmedical**存储库屏幕，并选择**设置**标签。
+1.  在GitHub，返回到**Fabmedical**存储库屏幕，并选择**Settings**标签。
 
-2.  从左侧菜单中选择**秘密**.
+2.  从左侧菜单中选择**secret**.
 
-3.  选择**新存储库秘密**按钮。
+3.  选择**New repository secret**按钮。
 
     ![Settings link, Secrets link, and New secret button are highlighted.](media/2020-08-24-21-45-42.png "GitHub Repository secrets")
 
-4.  在**新秘密**形式，输入名称`ACR_USERNAME`和价值，粘贴在Azure容器注册处**用户名**这是以前复制的。选择**添加秘密**.
+4.  在**New secret**形式，输入名称`ACR_USERNAME`和价值，粘贴在Azure容器注册处**用户名**这是以前复制的。选择**添加secret**.
 
     ![New secret screen with values are entered.](media/2020-08-24-21-48-54.png "New secret screen")
 
-5.  通过输入名称添加另一个秘密`ACR_PASSWORD`和价值，粘贴在Azure容器注册处**密码**这是以前复制的。
+5.  通过输入名称添加另一个secret`ACR_PASSWORD`和价值，粘贴在Azure容器注册处**密码**这是以前复制的。
 
     ![Secrets screen with both the ACR_USERNAME and ACR_PASSWORD secrets created.](media/2020-08-24-21-51-24.png "Secrets screen")
 
@@ -843,7 +843,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
     cd ~/Fabmedical
     ```
 
-7.  在 GitHub 操作工作流可以设置之前，`.github/workflows`目录需要创建，如果它还不存在。通过运行以下命令来做到这一点：
+7.  在 GitHub 操作工作流可以Settings之前，`.github/workflows`目录需要创建，如果它还不存在。通过运行以下命令来做到这一点：
 
     ```bash
     mkdir ~/Fabmedical/.github
@@ -940,11 +940,11 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
 15. 一秒钟后，新触发的工作流执行将显示在列表中。选择新**内容网**执行查看其状态。
 
-16. 选择**构建和推送码头工人图像**工作流程的工作将显示其执行状态。
+16. 选择**构建和推送Dockerfile镜像**工作流程的工作将显示其执行状态。
 
     ![Build and Push Docker Image job.](media/2020-08-25-15-42-11.png "Build and Push Docker Image job")
 
-17. 接下来，设置`content-api`工作流。此存储库已包含`content-api.yml`位于`.github/workflows`目录。打开`.github/workflows/content-api.yml`文件编辑。
+17. 接下来，Settings`content-api`工作流。此存储库已包含`content-api.yml`位于`.github/workflows`目录。打开`.github/workflows/content-api.yml`文件编辑。
 
 18. 编辑`resourceGroupName`和`containerRegistry`环境值以取代`[SHORT_SUFFIX]`与您自己的三个字母后缀，以便它匹配您的容器注册表的名称和资源组。
 
@@ -960,19 +960,19 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
     git push
     ```
 
-## 练习 2： 使用 Azure 数据库迁移服务将蒙哥德布迁移到 Cosmos 数据库
+## 练习 2： 使用 Azure 数据库迁移服务将MongoDB迁移到 Cosmos 数据库
 
 **期间**：20分钟
 
-此时，您有在 Docker 实例（VM - 生成代理）中运行的 Web 和 API 应用程序。下一步是将蒙哥德布数据库数据迁移到Azure Cosmos 数据库。这项工作将利用Azure数据库迁移服务将蒙哥德布数据库的数据迁移到Azure Cosmos 数据库。
+此时，您有在 Docker 实例（VM - 生成代理）中运行的 Web 和 API 应用程序。下一步是将MongoDB数据库数据迁移到Azure Cosmos 数据库。这项工作将利用Azure数据库迁移服务将MongoDB数据库的数据迁移到Azure Cosmos 数据库。
 
-### 任务1：启用微软.数据移民资源提供商
+### 任务1：启用Microsoft.DataMigration资源provider
 
-在此任务中，您将通过注册 Azure 订阅，启用 Azure 数据库迁移服务`Microsoft.DataMigration`资源提供商。
+在此任务中，您将通过注册 Azure 订阅，启用 Azure 数据库迁移服务`Microsoft.DataMigration`资源provider。
 
 1.  打开AzureCloud Shell。
 
-2.  运行以下 Azure CLI 命令以注册`Microsoft.DataMigration`Azure 订阅中的资源提供商：
+2.  运行以下 Azure CLI 命令以注册`Microsoft.DataMigration`Azure 订阅中的资源provider：
 
     ```sh
     az provider register --namespace Microsoft.DataMigration
@@ -1012,15 +1012,15 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
 ### 任务3：将数据迁移到Azure Cosmos 数据库
 
-在此任务中，您将创建**迁移项目**在Azure数据库迁移服务中，然后将数据从蒙哥德布迁移到Azure Cosmos 数据库。
+在此任务中，您将创建**迁移项目**在Azure数据库迁移服务中，然后将数据从MongoDB迁移到Azure Cosmos 数据库。
 
-1.  在 Azure 门户中，导航到构建代理 VM，并复制私人 IP 地址**(2)**.将内容粘贴到您选择的文本编辑器中（如 Windows 上的记事本，macOS 用户可以使用 TextEdit）供将来使用。
+1.  在 Azure 门户中，导航到构建代理 VM，并复制私人 IP  Address**(2)**.将内容粘贴到您选择的文本编辑器中（如 Windows 上的记事本，macOS 用户可以使用 TextEdit）供将来使用。
 
     ![Built Agent VM is shown. Overview tab is open. Private IP address is highlighted.](media/agent-vm-private-ip-address.png "Private IP Address")
 
 2.  在 Azure 门户中，导航到**Azure数据库迁移服务**这是以前提供的。
 
-3.  在 Azure 数据库迁移服务刀片上，选择**+ 新迁移项目**在**概述**窗 格。
+3.  在 Azure 数据库迁移服务面板上，选择**+ 新迁移项目**在**概述**窗 格。
 
 4.  在**新的迁移项目**窗格，输入以下值，然后选择**创建和运行活动**:
 
@@ -1031,16 +1031,16 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
     ![The screenshot shows the New migration project pane with values entered.](media/dms-new-migration-project.png "New migration project pane")
 
-    > **注意：**这**离线数据迁移**活动类型被选中，因为您将执行从蒙哥德布到 Cosmos DB的一次性迁移。此外，数据库中的数据不会在迁移期间更新。在生产场景中，您将要选择最适合解决方案要求的迁移项目活动类型。
+    > **注意：**这**离线数据迁移**活动类型被选中，因为您将执行从MongoDB到 Cosmos DB的一次性迁移。此外，数据库中的数据不会在迁移期间更新。在生产场景中，您将要选择最适合解决方案要求的迁移项目活动类型。
 
-5.  在**蒙哥德布到 Cosmos 数据库离线迁移向导**窗格，输入以下值的**选择源**标签：
+5.  在**MongoDB到 Cosmos 数据库离线迁移向导**窗格，输入以下值的**选择源**标签：
 
     -   模式：**标准模式**
-    -   源服务器名称：输入本实验中使用的生成代理 VM 的私人 IP 地址。
+    -   源服务器名称：输入本实验中使用的生成代理 VM 的私人 IP  Address。
     -   服务器端口：`27017`
     -   要求 SSL：未选中
 
-    > **注意：**离开**用户名**和**密码**空白，因为此实验的生成代理VM上的蒙哥德布实例没有打开身份验证。Azure 数据库迁移服务与构建代理 VM 连接到同一 VNet，因此它能够在 VNet 内直接与 VM 通信，而不会将 MongoDB 服务暴露到 Internet 中。在生产场景中，您应该始终在 MongoDB 上启用身份验证。
+    > **注意：**离开**用户名**和**密码**空白，因为此实验的生成代理VM上的MongoDB实例没有打开身份验证。Azure 数据库迁移服务与构建代理 VM 连接到同一 VNet，因此它能够在 VNet 内直接与 VM 通信，而不会将 MongoDB 服务暴露到 Internet 中。在生产场景中，您应该始终在 MongoDB 上启用身份验证。
 
     ![Select source tab with values selected for the MongoDB server.](media/dms-select-source.png "MongoDB to Azure Database for CosmosDB - Select source")
 
@@ -1062,21 +1062,21 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
     ![The screenshot shows the Connection string with the @undefined: value replaced with the correct DNS name.](media/dms-select-target-connection-string.png "Setting the Connection string")
 
-9.  选择**下一篇：数据库设置>>**.
+9.  选择**下一篇：数据库Settings>>**.
 
-10. 在**数据库设置**选项卡，选择`contentdb` **源数据库**因此，这个数据库将从蒙哥德布迁移到Azure Cosmos 数据库。
+10. 在**数据库Settings**选项卡，选择`contentdb` **源数据库**因此，这个数据库将从MongoDB迁移到Azure Cosmos 数据库。
 
     ![The screenshot shows the Database setting tab with the contentdb source database selected.](media/dms-database-setting.png "Database setting tab")
 
-11. 选择**下一个：集合设置>>**.
+11. 选择**下一个：集合Settings>>**.
 
-12. 在**收集设置**选项卡，扩展**内容数据库**数据库，并确保这两个**会话**和**扬声器**集合被选中用于迁移。此外，更新**吞吐量**自`400`两个集合。
+12. 在**收集Settings**选项卡，扩展**内容数据库**数据库，并确保这两个**会话**和** speakers**集合被选中用于迁移。此外，更新**吞吐量**自`400`两个集合。
 
     ![The screenshot shows the Collection setting tab with both sessions and speakers collections selected with Throughput RU/s set to 400 for both collections.](media/dms-collection-setting.png "Throughput RU")
 
 13. 选择**下一篇：移民摘要>>**.
 
-14. 在**迁移摘要**选项卡，输入`MigrateData`在**活动名称**字段，然后选择**开始迁移**启动蒙哥德布数据迁移到Azure Cosmos 数据库。
+14. 在**迁移摘要**选项卡，输入`MigrateData`在**活动名称**字段，然后选择**开始迁移**启动MongoDB数据迁移到Azure Cosmos 数据库。
 
     ![The screenshot shows the Migration summary is shown with MigrateData entered in the Activity name field.](media/dms-migration-summary.png "Migration summary")
 
@@ -1088,7 +1088,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
     ![The screenshot shows the Cosmos DB is open in the Azure Portal with Data Explorer open showing the data has been migrated.](media/dms-confirm-data-in-cosmosdb.png "Cosmos DB is open")
 
-## 练习 3： 将解决方案部署到Azure库伯内斯服务
+## 练习 3： 将解决方案部署到Azure Kubernetes 服务
 
 **期间**：30分钟
 
@@ -1106,7 +1106,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
     az account show
     ```
 
-    -   如果您未连接到正确的订阅，请列出您的订阅，然后通过其 ID 设置订阅，并下列命令（类似于您在实验前的Cloud Shell中所做的）：
+    -   如果您未连接到正确的订阅，请列出您的订阅，然后通过其 ID Settings订阅，并下列命令（类似于您在实验前的Cloud Shell中所做的）：
 
     ```bash
     az account list
@@ -1131,7 +1131,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
 在此任务中，您将使用 Azure 门户将 API 应用程序部署到 Azure Kubernetes 服务集群。
 
-1.  我们首先需要为我们的 API 定义服务，以便在集群中访问应用程序。在 Azure 门户中的 AKS 刀片中选择**服务和入口**并在服务选项卡上选择**+ 添加**.
+1.  我们首先需要为我们的 API 定义服务，以便在集群中访问应用程序。在 Azure 门户中的 AKS 面板中选择**服务和入口**并在服务选项卡上选择**+ 添加**.
 
     ![This is a screenshot of the Azure Portal for AKS showing adding a Service.](media/2021-03-25-17-04-04.png "Add a Service")
 
@@ -1250,7 +1250,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
     mongodb://<USERNAME>:<PASSWORD>@fabmedical-<SUFFIX>.documents.azure.com:10255/contentdb?ssl=true&replicaSet=globaldb
     ```
 
-12. 您将设置一个库伯内特的秘密来存储连接字符串并配置`content-api`申请访问秘密。首先，您必须根据64编码秘密值。打开 Azure Cloud Shell窗口，使用以下命令编码连接字符串，然后复制输出。
+12. 您将Settings一个库伯内特的secret来存储连接字符串并配置`content-api`申请访问secret。首先，您必须根据64编码secret值。打开 Azure Cloud Shell窗口，使用以下命令编码连接字符串，然后复制输出。
 
     > **注意**：连接字符串周围的双引号需要成功生成所需的输出。
 
@@ -1260,7 +1260,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
     ![This is a screenshot of the Azure cloud shell window showing the command to create the base64 encoded secret.  The output to copy is highlighted.](media/hol-2019-10-18_07-12-13.png "Show encoded secret")
 
-13. 返回到 Azure 门户中的 AKS 刀片并进行选择**配置**下**库伯内特资源**部分。选择**秘密**并选择**+ 添加**.
+13. 返回到 Azure 门户中的 AKS 面板并进行选择**配置**下**库伯内特资源**部分。选择**secret**并选择**+ 添加**.
 
 14. 在**添加与雅姆勒**屏幕，粘贴以下YAML，并取代占位符从你的剪贴板编码连接字符串，并选择**加**.请注意，YAML 对位置敏感，因此您必须在键入或粘贴时确保凹痕正确。
 
@@ -1280,7 +1280,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
     ![This is a screenshot of the Azure Portal for AKS showing secrets.](media/find-cosmosdb-secret.png "Manage Kubernetes secrets")
 
-16. 查看详情** Cosmos 德布**秘密通过选择它在列表中。
+16. 查看详情** Cosmos 德布**secret通过选择它在列表中。
 
     ![This is a screenshot of the Azure Portal for AKS showing the value of a secret.](media/2021-03-25-17-08-54.png "View cosmosdb secret")
 
@@ -1320,11 +1320,11 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
     kubectl create -f api.deployment.yml
     ```
 
-21. 在 Azure 门户中返回实时日志（参见第 5 步）。最后一个日志应显示为连接到蒙哥德布。
+21. 在 Azure 门户中返回实时日志（参见第 5 步）。最后一个日志应显示为连接到MongoDB。
 
     ![This is a screenshot of the Kubernetes management dashboard showing logs output.](media/2021-03-25-17-09-24.png "API Logs")
 
-### 任务 3： 使用库布克特尔部署服务
+### 任务 3： 使用kubectl部署服务
 
 在此任务中，使用部署 Web 服务`kubectl`.
 
@@ -1448,7 +1448,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
     ![In this screenshot of the console, kubectl apply -f kubernetes-web.yaml has been typed and run at the command prompt. Messages about web deployment and web service creation appear below.](media/image93.png "kubectl create application")
 
-11. 返回到 Azure 门户中的 AKS 刀片。从导航菜单，下**库伯内特资源**，选择**服务和入口**视图。您应该能够通过外部端点访问网站。
+11. 返回到 Azure 门户中的 AKS 面板。从导航菜单，下**库伯内特资源**，选择**服务和入口**视图。您应该能够通过外部端点访问网站。
 
     ![AKS services and ingresses shown with External IP highlighted](media/aks-resources-services-ingresses-view.png "AKS services and ingresses shown with External IP highlighted")
 
@@ -1456,19 +1456,19 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
     ![A screenshot of the web site showing no data displayed.](media/Ex2-Task3.11.png "Web site home page")
 
-### 任务 4： 使用头盔图表部署服务
+### 任务 4： 使用Helm Chart部署服务
 
 在此任务中，您将使用[掌舵](https://helm.sh/)简化 Azure Kubernetes 集群上基于容器的应用程序的安装和管理的图表。
 
-您将配置一个头盔图表，用于部署和配置**内容网**容器图像到库伯内特。这是一种可用于更轻松地在 Azure Kubernetes 集群上部署和管理应用程序的技术。
+您将配置一个Helm Chart，用于部署和配置**内容网**容器镜像到库伯内特。这是一种可用于更轻松地在 Azure Kubernetes 集群上部署和管理应用程序的技术。
 
-1.  从 Azure 门户中的 AKS 刀片，下**库伯内特资源**选择**工作量**.
+1.  从 Azure 门户中的 AKS 面板，下**库伯内特资源**选择**工作量**.
 
 2.  选择`web`部署，然后选择**删除**.提示时，请检查**确认删除**并选择**删除**再。
 
     ![A screenshot of the Kubernetes management dashboard showing how to delete a deployment.](media/2021-03-26-16-42-03.png "Kubernetes dashboard web deployments")
 
-3.  从 Azure 门户中的 AKS 刀片，下**库伯内特资源**选择**服务和入口**.
+3.  从 Azure 门户中的 AKS 面板，下**库伯内特资源**选择**服务和入口**.
 
 4.  选择`web`服务，然后选择**删除**.提示时，请检查**确认删除**并选择**删除**再。
 
@@ -1617,7 +1617,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
 22. 保存更改并Close Editor。
 
-23. 该图表现在已设置为部署我们的 Web 容器。键入以下命令以部署头盔图表描述的应用程序。您将收到一条消息，表明掌舵人创建了 Web 部署和 Web 服务。
+23. 该图表现在已Settings为部署我们的 Web 容器。键入以下命令以部署Helm Chart描述的应用程序。您将收到一条消息，表明掌舵人创建了 Web 部署和 Web 服务。
 
     ```bash
     cd ../..
@@ -1630,11 +1630,11 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
     ![In the AKS Services and ingresses blade in the Azure Portal showing the web service selected.](media/2021-03-26-16-44-18.png "Web service endpoint")
 
-25. 选择扬声器和会话链接，并检查每个链接是否显示内容。
+25. 选择 speakers和会话链接，并检查每个链接是否显示内容。
 
     ![A screenshot of the web site showing no data displayed.](media/Ex2-Task3.11.png "Web site home page")
 
-26. 我们现在将我们的头盔图表提交到我们的 GitHub 存储库。在"FabMedical"克隆的根文件夹中执行以下命令：
+26. 我们现在将我们的Helm Chart提交到我们的 GitHub 存储库。在"FabMedical"克隆的根文件夹中执行以下命令：
 
     ```bash
     git add content-web/charts/
@@ -1642,9 +1642,9 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
     git push
     ```
 
-### 任务 5：配置连续交付到Kubernetes集群
+### 任务 5：配置持续交付到Kubernetes集群
 
-在此任务中，您将使用 GitHub 操作工作流自动将 Web 图像部署到 AKS 集群的过程。您将更新工作流程并配置作业，以便当新图像被推入 ACR 时，管道将图像部署到 AKS 集群。
+在此任务中，您将使用 GitHub 操作工作流自动将 Web 镜像部署到 AKS 集群的过程。您将更新工作流程并配置作业，以便当新镜像被推入 ACR 时，管道将镜像部署到 AKS 集群。
 
 1.  导航到`.github/workflows`git存储库的文件夹，并打开`content-web.yml`工作流使用`vi`:
 
@@ -1697,15 +1697,15 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
 3.  保存文件。
 
-4.  在 Azure Cloud Shell中，使用以下命令输出`/.kube/config`包含与Azure库伯内斯服务进行身份验证的凭据的文件。这些凭据以前已检索，GitHub 行动也需要这些凭据才能部署到 AKS。然后复制文件的内容。
+4.  在 Azure Cloud Shell中，使用以下命令输出`/.kube/config`包含与Azure Kubernetes 服务进行身份验证的凭据的文件。这些凭据以前已检索，GitHub 行动也需要这些凭据才能部署到 AKS。然后复制文件的内容。
 
     ```bash
     cat ~/.kube/config
     ```
 
-5.  在GitHub，返回到**Fabmedical**存储库屏幕，选择**设置**选项卡，选择**秘密**从左菜单，然后选择**新秘密**按钮。
+5.  在GitHub，返回到**Fabmedical**存储库屏幕，选择**Settings**选项卡，选择**secret**从左菜单，然后选择**New secret**按钮。
 
-6.  创建一个新的 GitHub 秘密与名称`KUBECONFIG`并粘贴在内容`~/.kube/config`以前复制的文件。
+6.  创建一个新的 GitHub secret与名称`KUBECONFIG`并粘贴在内容`~/.kube/config`以前复制的文件。
 
     ![The screenshot displays the KUBECONFIG secret](media/2020-08-25-22-34-04.png "Edit KUBECONFIG secret")
 
@@ -1776,7 +1776,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
     ![In this screenshot, the resource group was previously selected and the AKS cluster is selected.](media/Ex2-Task8.1.png "Select fabmedical resource group")
 
-2.  从监控刀片中选择**见解**.
+2.  从监控面板中选择**见解**.
 
     ![In the Monitoring blade, Insights is highlighted.](media/Ex2-Task8.2.png "Select Insights link")
 
@@ -1818,9 +1818,9 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
 ### 任务 1：从 Azure 门户增加服务实例
 
-在此任务中，您将增加 AKS Azure 门户刀片中 API 部署的实例数。在部署时，您将观察不断变化的状态。
+在此任务中，您将增加 AKS Azure 门户面板中 API 部署的实例数。在部署时，您将观察不断变化的状态。
 
-1.  在 Azure 门户中的 AKS 刀片中选择**工作量**然后选择**应用程序接口**部署。
+1.  在 Azure 门户中的 AKS 面板中选择**工作量**然后选择**应用程序接口**部署。
 
 2.  选择**亚米尔**在窗口中加载并向下滚动，直到您找到**副本**.将复制品数量更改为**2**，然后选择**评论 + 保存**.提示时，请检查**确认显性更改**并选择**Save**.
 
@@ -1846,7 +1846,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
     -   在"默认"名称空间中，两个吊舱是健康的。
 
-5.  打开康托索神经会议网络应用程序。当您导航到"扬声器"和"会话"页面时，应用程序仍应不出现任何错误。
+5.  打开康托索神经会议网络应用程序。当您导航到" speakers"和"会话"页面时，应用程序仍应不出现任何错误。
 
     -   导航到`/stats`页。您将看到有关托管环境的信息，包括：
 
@@ -1864,11 +1864,11 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
         -   **运行时间：**API服务的备份时间。
 
-### 任务 2： 解决复制品供应失败问题
+### 任务 2： 解决replicas配置失败问题
 
 在此任务中，您将解决失败的 API 副本。这些故障的发生是由于集群无法满足所要求的资源。
 
-1.  在 Azure 门户中的 AKS 刀片中选择**工作量**然后选择**应用程序接口**部署。选择**亚米尔**导航项目。
+1.  在 Azure 门户中的 AKS 面板中选择**工作量**然后选择**应用程序接口**部署。选择**亚米尔**导航项目。
 
 2.  在**亚米尔**屏幕向下滚动并更改以下项目：
 
@@ -1880,7 +1880,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
             protocol: TCP
         ```
 
-    -   修改**中央处理器**并将其设置为**100米**.CPU 在节点上的所有 Pods 之间分配。
+    -   修改**中央处理器**并将其Settings为**100米**.CPU 在节点上的所有 Pods 之间分配。
 
         ```yaml
         resources:
@@ -1905,7 +1905,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
     ![The Stats page is visible in this screenshot of the Contoso Neuro web application.](media/image123.png "Contoso web task details")
 
-2.  在 Azure 门户中的 AKS 刀片中打开 api 部署并增加所需的复制件计数`4`.使用与练习 4、任务 1 相同的过程。
+2.  在 Azure 门户中的 AKS 面板中打开 api 部署并增加所需的复制件计数`4`.使用与练习 4、任务 1 相同的过程。
 
     ![In the left menu the Deployments item is selected. The API deployment is highlighted in the Deployments list box.](media/2021-03-26-17-30-28.png "API pod deployments")
 
@@ -1931,13 +1931,13 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
 9.  返回到 API 部署并将其缩减到`1`复制品。有关如果您不确定，请参阅上面的步骤 2，了解如何做到这一点。
 
-10. 返回浏览器中的示例网站的统计页面并刷新，同时 Kubernetes 正在缩减 Pods 的数量。您会注意到仅显示一个 API 主机名称，即使您可能仍然会在 API 复制器设置视图中看到几个运行吊舱。即使有几个吊舱正在运行，Kubernetes 将不再将流量发送到它选择终止的吊舱。稍后，API 复制器设置视图中将只显示一个吊舱。
+10. 返回浏览器中的示例网站的统计页面并刷新，同时 Kubernetes 正在缩减 Pods 的数量。您会注意到仅显示一个 API 主机名称，即使您可能仍然会在 API 复制器Settings视图中看到几个运行吊舱。即使有几个吊舱正在运行，Kubernetes 将不再将流量发送到它选择终止的吊舱。稍后，API 复制器Settings视图中将只显示一个吊舱。
 
     ![Replica Sets is selected under Workloads in the navigation menu on the left. On the right are the Details and Pods boxes. Only one API host name, which has a green check mark and is listed as running, appears in the Pods box.](media/2021-03-26-17-32-24.png "View replica details")
 
 ### 任务4：配置 Cosmos DB自动规模
 
-在此任务中，您将在Azure Cosmos 数据库上设置自动缩放。
+在此任务中，您将在Azure Cosmos 数据库上Settings自动缩放。
 
 1.  在 Azure 门户中，导航到`fabmedical-[SUFFIX]` **Azure Cosmos 数据库帐户**.
 
@@ -1945,9 +1945,9 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
 3.  在**数据资源管理器**，扩大`contentdb`数据库，然后扩展`sessions`收集。
 
-4.  下`sessions`收集、选择**缩放和设置**.
+4.  下`sessions`收集、选择**缩放和Settings**.
 
-5.  在**缩放和设置**选择**自动缩放**对于**吞吐量**设置下**规模**.
+5.  在**缩放和Settings**选择**自动缩放**对于**吞吐量**Settings下**规模**.
 
     ![The screenshot displays Cosmos DB Scale and Settings tab with Autoscale selected](media/cosmosdb-autoscale.png "CosmosDB collection scale and settings")
 
@@ -1961,7 +1961,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
 1.  在 Azure 门户中，导航到`fabmedical-[SUFFIX]` ** Cosmos 数据库帐户**.
 
-2.  选择**连接字符串**下**设置**.
+2.  选择**连接字符串**下**Settings**.
 
 3.  在**连接字符串**窗格，复制**主机**,**用户名**和**主要密码**值。保存这些供以后使用。
 
@@ -1981,7 +1981,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
     vi perftest.sh
     ```
 
-7.  有几个变量在顶部宣布`perftest.sh`脚本。修改**主机**,**用户名**和**密码**变量通过将其值设置为以前复制的相应 Cosmos DB连接字符串值。
+7.  有几个变量在顶部宣布`perftest.sh`脚本。修改**主机**,**用户名**和**密码**变量通过将其值Settings为以前复制的相应 Cosmos DB连接字符串值。
 
     ![The screenshot shows Vim with perftest.sh file open and variables set to Cosmos DB Connection String values.](media/cosmos-perf-test-variables.png "Modify the connection information in Vim")
 
@@ -1997,7 +1997,7 @@ Web 应用程序容器将调用 API 应用程序容器暴露的端点，API 应�
 
 10. 脚本完成后，导航返回到** Cosmos 数据库帐户**在Azure门户。
 
-11. 向下滚动**概述**窗格的** Cosmos 数据库帐户**刀片，并找到**请求费用**图。
+11. 向下滚动**概述**窗格的** Cosmos 数据库帐户**面板，并找到**请求费用**图。
 
     > **注意：** Cosmos DB集合上的活动可能需要2-5分钟才能显示在活动日志中。等待几分钟，然后刷新窗格，如果最近的请求费用没有出现在现在。
 
@@ -2033,7 +2033,7 @@ Kubernetes 服务可以发现分配给每个吊舱的端口，允许您在同一
 
     ![Deployments is selected under Workloads in the navigation menu on the left. On the right are the Details and New Replica Set boxes. The web deployment is highlighted in the New Replica Set box, indicating an error.](media/2021-03-26-18-23-38.png "View Pod deployment events")
 
-与 API 部署一样，Web 部署使用固定部署_主机端口_，并且您的缩放能力受可用代理节点数量的限制。但是，在通过删除_主机端口_设置时，由于 CPU 限制，Web 部署仍无法缩放过去两个吊舱。部署请求的 CPU 比 Web 应用程序需要的要多，因此您将在下一个任务中修复此限制。
+与 API 部署一样，Web 部署使用固定部署_主机端口_，并且您的缩放能力受可用代理节点数量的限制。但是，在通过删除_主机端口_Settings时，由于 CPU 限制，Web 部署仍无法缩放过去两个吊舱。部署请求的 CPU 比 Web 应用程序需要的要多，因此您将在下一个任务中修复此限制。
 
 ### 任务2：调整CPU约束，提高规模
 
@@ -2053,7 +2053,7 @@ Kubernetes 服务可以发现分配给每个吊舱的端口，允许您在同一
 
 ### 任务 3：执行滚动更新
 
-在此任务中，您将编辑 Web 应用程序源代码以添加应用程序洞察并更新部署所使用的 Docker 图像。然后，您将执行滚动更新，以演示如何部署代码更改。
+在此任务中，您将编辑 Web 应用程序源代码以添加应用程序洞察并更新部署所使用的 Docker 镜像。然后，您将执行滚动更新，以演示如何部署代码更改。
 
 1.  在 Azure Cloud Shell中执行此命令，以检索用于`content-web`应用见解资源：
 
@@ -2090,7 +2090,7 @@ Kubernetes 服务可以发现分配给每个吊舱的端口，允许您在同一
 
 5.  保存更改并Close Editor。
 
-6.  将这些更改推送至存储库，以便 GitHub 操作 CI 将生成和部署新的容器图像。
+6.  将这些更改推送至存储库，以便 GitHub 操作 CI 将生成和部署新的容器镜像。
 
     ```bash
     git add .
@@ -2098,11 +2098,11 @@ Kubernetes 服务可以发现分配给每个吊舱的端口，允许您在同一
     git push
     ```
 
-7.  访问`content-web`为您的 GitHub FabMedical存储库执行操作，并查看新图像被部署到您的Kubernetes集群中。
+7.  访问`content-web`为您的 GitHub FabMedical存储库执行操作，并查看新镜像被部署到您的Kubernetes集群中。
 
 8.  当此更新运行时，返回浏览器中的 Azure 门户。
 
-9.  从导航菜单中选择**复制套装**下**工作量**.从此视图中，您将看到为 Web 设置的新副本，该副本可能仍在部署过程中（如下图所示）或已完全部署。
+9.  从导航菜单中选择**复制套装**下**工作量**.从此视图中，您将看到为 Web Settings的新副本，该副本可能仍在部署过程中（如下图所示）或已完全部署。
 
     ![At the top of the list, a new web replica set is listed as a pending deployment in the Replica Set box.](media/2021-03-26-18-25-30.png "Pod deployment is in progress")
 
@@ -2149,7 +2149,7 @@ Kubernetes 服务可以发现分配给每个吊舱的端口，允许您在同一
      --set controller.admissionWebhooks.patch.nodeSelector."beta\.kubernetes\.io/os"=linux
     ```
 
-5.  在Azure门户下**服务和入口**复制IP地址**外部 IP**对于`nginx-ingress-RANDOM-nginx-ingress`服务。
+5.  在Azure门户下**服务和入口**复制IP Address**外部 IP**对于`nginx-ingress-RANDOM-nginx-ingress`服务。
 
     ![A screenshot of the Kubernetes management dashboard showing the ingress controller settings.](media/2021-03-26-18-26-13.png "Copy ingress controller settings")
 
@@ -2161,7 +2161,7 @@ Kubernetes 服务可以发现分配给每个吊舱的端口，允许您在同一
     >
     > ![A screenshot of Azure Cloud Shell showing the command output.](media/Ex4-Task5.5a.png "View the ingress controller LoadBalancer")
 
-6.  打开[Azure门户资源组刀片](https://portal.azure.com/?feature.customPortal=false#blade/HubsExtension/BrowseResourceGroups)并定位自动创建以托管 AKS 节点池的资源组。它将具有命名格式`MC_fabmedical-[SUFFIX]_fabmedical-[SUFFIX]_[REGION]`.
+6.  打开[Azure门户资源组面板](https://portal.azure.com/?feature.customPortal=false#blade/HubsExtension/BrowseResourceGroups)并定位自动创建以托管 AKS 节点池的资源组。它将具有命名格式`MC_fabmedical-[SUFFIX]_fabmedical-[SUFFIX]_[REGION]`.
 
 7.  在 Azure Cloud Shell中，创建一个脚本来更新入口外部 IP 的公共 DNS 名称。
 
@@ -2171,7 +2171,7 @@ Kubernetes 服务可以发现分配给每个吊舱的端口，允许您在同一
 
     将以下内容粘贴。请务必替换脚本中的以下占位符：
 
-    -   `[INGRESS PUBLIC IP]`：用从第5步复制的IP地址替换此地址。
+    -   `[INGRESS PUBLIC IP]`：用从第5步复制的IP Address替换此 Address。
     -   `[AKS NODEPOOL RESOURCE GROUP]`： 替换为从第 6 步复制的资源组名称。
     -   `[SUFFIX]`：用以前用于此实验的相同 SUFFIX 值替换此值。
 
@@ -2311,7 +2311,7 @@ Kubernetes 服务可以发现分配给每个吊舱的端口，允许您在同一
     > Normal  CertIssued          12s   cert-manager  Certificate issued successfully
     > ```
 
-    可能需要 5 到 30 分钟才能获得 tls 秘密。这是由于延迟提供 Tls 证书从让敏感。
+    可能需要 5 到 30 分钟才能获得 tls secret。这是由于延迟提供 Tls 证书从让敏感。
 
 18. 现在，您可以为内容应用程序创建一个入口资源。
 
@@ -2359,7 +2359,7 @@ Kubernetes 服务可以发现分配给每个吊舱的端口，允许您在同一
     kubectl create --save-config=true -f content.ingress.yml
     ```
 
-21. 刷新浏览器中的入口端点。您应该能够访问扬声器和会话页面并查看所有内容。
+21. 刷新浏览器中的入口端点。您应该能够访问 speakers和会话页面并查看所有内容。
 
 22. 直接访问 API，通过导航到`/content-api/sessions`在入口终点。
 
@@ -2371,7 +2371,7 @@ Kubernetes 服务可以发现分配给每个吊舱的端口，允许您在同一
 
 ### 任务 5：与流量管理器进行多区域负载平衡
 
-在此任务中，您将设置 Azure 流量管理器作为多区域负载平衡器。这将使您能够在辅助 Azure 区域中提供应用的 AKS 实例，并在两个区域之间实现负载平衡。
+在此任务中，您将Settings Azure 流量管理器作为多区域负载平衡器。这将使您能够在辅助 Azure 区域中提供应用的 AKS 实例，并在两个区域之间实现负载平衡。
 
 1.  在 Azure 门户内，请选择**+ 创建资源**.
 
@@ -2379,7 +2379,7 @@ Kubernetes 服务可以发现分配给每个吊舱的端口，允许您在同一
 
     ![The screenshot shows Traffic Manager profile in the Azure marketplace.](media/tm-marketplace.png "Traffic Manager profile")
 
-3.  在**创建流量管理器配置文件**刀片，输入以下值，然后选择**创造**.
+3.  在**创建流量管理器配置文件**面板，输入以下值，然后选择**创造**.
 
     -   名称：'法布医疗-[后缀]'
     -   路由方法：**性能**
@@ -2389,7 +2389,7 @@ Kubernetes 服务可以发现分配给每个吊舱的端口，允许您在同一
 
 4.  导航到新创建的`fabmedical-[SUFFIX]` **流量管理器配置文件**.
 
-5.  在**流量管理器配置文件**刀片，选择**端点**下**设置**.
+5.  在**流量管理器配置文件**面板，选择**端点**下**Settings**.
 
 6.  在**端点**窗格，选择**+ 添加**添加一个新的端点进行负载平衡。
 
@@ -2406,7 +2406,7 @@ Kubernetes 服务可以发现分配给每个吊舱的端口，允许您在同一
 
 8.  请注意列表**端点**现在显示**主要**已添加的端点。
 
-9.  在**流量管理器配置文件**刀片，选择**概述**.
+9.  在**流量管理器配置文件**面板，选择**概述**.
 
 10. 在**概述**窗格，复制**DNS名称**用于流量管理器配置文件。
 
@@ -2432,9 +2432,9 @@ Kubernetes 服务可以发现分配给每个吊舱的端口，允许您在同一
 
     ![The screenshot shows the Contoso Neuro website using the Traffic Manager profile DNS name](media/tm-endpoint-website.png "Traffic Manager show Contoso home page")
 
-13. 在 AKS 中设置多区域托管应用程序时，您将在另一个 Azure 区域设置辅助 AKS，然后将其终点添加到其流量管理器配置文件中以实现负载平衡。
+13. 在 AKS 中Settings多区域托管应用程序时，您将在另一个 Azure 区域Settings辅助 AKS，然后将其终点添加到其流量管理器配置文件中以实现负载平衡。
 
-    > **注意：**如果您愿意，您可以自行设置辅助 AKS 和康托索神经网站实例。设置该步骤的步骤与您在此实验中为设置主 AKS 和应用实例而经历的大多数步骤相同。
+    > **注意：**如果您愿意，您可以自行Settings辅助 AKS 和康托索神经网站实例。Settings该步骤的步骤与您在此实验中为Settings主 AKS 和应用实例而经历的大多数步骤相同。
 
 ## 动手实验后
 
@@ -2444,7 +2444,7 @@ Kubernetes 服务可以发现分配给每个吊舱的端口，允许您在同一
 
 1.  删除您放置所有 Azure 资源的资源组。
 
-    -   从门户，导航到您的刀片**资源集团**然后选择**删除**在顶部的命令栏中。
+    -   从门户，导航到您的面板**资源集团**然后选择**删除**在顶部的命令栏中。
 
     -   通过重新键入资源组名称并选择"删除"来确认删除。
 
