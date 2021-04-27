@@ -23,7 +23,7 @@
 
 在这个研讨会结束时，您将能够通过经过时间测试的 DevOps 实践，更好地提高基于容器的应用程序的可靠性和增加释放节奏。
 
-### 白板设计会话
+### 白板设计章节
 
 在此白板设计会话中，您将了解与在 Azure 中构建和部署容器化应用程序相关的选择、围绕此做出的关键决策以及解决方案的其他方面，包括如何提升和转移应用程序的部件以减少应用程序更改。
 
@@ -38,7 +38,7 @@
 ## Azure服务及相关产品
 
 -   阿祖尔· Kubernetes 服务 （AKS）
--   Azure集装箱注册处
+-   Azure容器注册处
 -   GitHub
 -   Dockerfile
 -    Cosmos 数据库（包括MongoDBAPI）
@@ -49,7 +49,7 @@
 
 ## 相关参考文献
 
--   [麦克瓦](https://github.com/Microsoft/MCW)
+-   [MCW](https://github.com/Microsoft/MCW)
 
 ## 帮助和支持
 
