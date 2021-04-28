@@ -40,7 +40,7 @@
 &emsp;
 &emsp;
 - [云原生应用 -基础架构版本实验](https://github.com/Azure/OCPCHINATECH/blob/master/OCPPTSCSAHandsonLabs/MCW-Cloud-native-applications/Hands-on%20lab/%E4%BA%91%E5%8E%9F%E7%94%9F%E5%BA%94%E7%94%A8%20-%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84%E7%89%88%E6%9C%AC%E5%AE%9E%E9%AA%8C.md)  
-  * [练习1：创建并运行Docker应用程序](#exercise-1-create-and-run-a-docker-application)
+  * <a href="https://github.com/Azure/OCPCHINATECH/blob/master/OCPPTSCSAHandsonLabs/MCW-Cloud-native-applications/Hands-on%20lab/%E4%BA%91%E5%8E%9F%E7%94%9F%E5%BA%94%E7%94%A8%20-%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84%E7%89%88%E6%9C%AC%E5%AE%9E%E9%AA%8C.md#exercise-1-create-and-run-a-docker-application">练习1：创建并运行Docker应用程序</a>
   * 练习2：使用Azure数据库迁移服务将MongoDB迁移到Cosmos DB
   * 练习3：将解决方案部署到Azure Kubernetes服务
   * 练习4：扩展应用程序并测试HA
@@ -54,11 +54,10 @@
   * 练习3：将解决方案部署到Azure Kubernetes服务
   * 练习4：扩展应用程序并测试HA
   * 练习5：使用服务和路由应用程序流量
-- [白板设计](https://github.com/Azure/OCPCHINATECH/blob/master/OCPPTSCSAHandsonLabs/MCW-Cloud-native-applications/Hands-on%20lab/%E4%BA%91%E5%8E%9F%E7%94%9F%E5%BA%94%E7%94%A8%20-%E5%BC%80%E5%8F%91%E8%80%85%E7%89%88%E6%9C%AC%E5%AE%9E%E9%AA%8C.md)
+- [白板设计](https://github.com/Azure/OCPCHINATECH/tree/master/OCPPTSCSAHandsonLabs/MCW-Cloud-native-applications/Whiteboard%20design%20session)
   * [学生指南](https://github.com/Azure/OCPCHINATECH/blob/master/OCPPTSCSAHandsonLabs/MCW-Cloud-native-applications/Whiteboard%20design%20session/%E7%99%BD%E6%9D%BF%E8%AE%BE%E8%AE%A1%E5%AD%A6%E7%94%9F%E6%8C%87%E5%8D%97.md)
   * [讲师指南](https://github.com/Azure/OCPCHINATECH/blob/master/OCPPTSCSAHandsonLabs/MCW-Cloud-native-applications/Whiteboard%20design%20session/%E7%99%BD%E6%9D%BF%E8%AE%BE%E8%AE%A1%E8%AE%B2%E5%B8%88%E6%8C%87%E5%8D%97.md)
 		
-https://github.com/Azure/OCPCHINATECH/blob/master/OCPPTSCSAHandsonLabs/MCW-Cloud-native-applications/Whiteboard%20design%20session/%E7%99%BD%E6%9D%BF%E8%AE%BE%E8%AE%A1%E5%AD%A6%E7%94%9F%E6%8C%87%E5%8D%97.md
 &emsp;
 &emsp;
 &emsp;
