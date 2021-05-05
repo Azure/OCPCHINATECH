@@ -1,4 +1,4 @@
-### 让我们知道我们在做什么！
+### 让我们知道你的反馈！
 
 请花点时间填写[微软云研讨会调查](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRyEtIpX7sDdChuWsXhzKJXJUNjFBVkROWDhSSVdYT0dSRkY4UVFCVzZBVy4u)并帮助我们改进我们的产品。
 
@@ -37,11 +37,11 @@ Fabrikam医疗会议提供会议网站服务，专为医疗界量身定做。他
 
 ## Azure服务及相关产品
 
--   阿祖尔· Kubernetes 服务 （AKS）
+-   Azure Kubernetes 服务 （AKS）
 -   Azure容器注册处
 -   GitHub
 -   Dockerfile
--    Cosmos 数据库（包括MongoDBAPI）
+-    Cosmos DB数据库（包括MongoDB API）
 
 ## Azure解决方案
 
@@ -53,7 +53,7 @@ Fabrikam医疗会议提供会议网站服务，专为医疗界量身定做。他
 
 ## 帮助和支持
 
-我们欢迎微软中小企业和提供 MCWs 的学习合作伙伴的反馈和评论。
+我们欢迎微软合作伙伴反馈和评论。
 
 **_有麻烦吗？_**
 
