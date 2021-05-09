@@ -1,65 +1,66 @@
-### Let us know how we’re doing!  
-Please take a moment to fill out the [Microsoft Cloud Workshop Survey](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRyEtIpX7sDdChuWsXhzKJXJUNjFBVkROWDhSSVdYT0dSRkY4UVFCVzZBVy4u) and help us improve our offerings.
+### 让我们知道你的反馈！
 
-# Cloud-native applications
+请花点时间填写[微软云研讨会调查](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRyEtIpX7sDdChuWsXhzKJXJUNjFBVkROWDhSSVdYT0dSRkY4UVFCVzZBVy4u)并帮助我们改进我们的产品。
 
-Fabrikam Medical Conferences provides conference web site services, tailored to the medical community. Their business has grown and the management of many instances of the code base and change cycle per tenant has gotten out of control.
+# 云原生应用
 
-The goal of this workshop is to help them build a proof of concept (POC) that will migrate their code to a more manageable process that involves containerization of tenant code, a better DevOps workflow, and a simple lift-and-shift story for their database backend.
+Fabrikam医疗会议提供会议网站服务，专为医疗界量身定做。他们的业务已经增长，许多情况下的代码基础和每个租户的变化周期的管理已经失控。
 
-November 2020
+本研讨会的目标是帮助他们建立一个概念验证 （POC），将他们的代码迁移到一个更易于管理的过程，包括租户代码的容器化、更好的 DevOps 工作流程以及数据库后端的简单提升和移位故事。
 
-## Target Audience
+2020 年 11 月
 
-- Application developer
-- Infrastructure architect
+## 目标受众
 
-## Abstracts
+-   应用程序开发人员
+-   基础设施架构师
+
+## 文摘
 
 ### Workshop
 
-In this workshop, you will build a proof of concept (POC) that will transform an existing on-premises application to a container-based application. This POC will deliver a multi-tenant web app hosting solution leveraging Azure Kubernetes Service (AKS), Docker containers on Linux nodes, and a migration from MongoDB to CosmosDB.
+在这个研讨会上，您将构建一个概念证明 （POC），将现有的本地应用程序转变为基于容器的应用程序。此 POC 将提供利用 Azure Kubernetes 服务 （AKS）、Linux 节点上的 Docker 容器以及从Mongo开发银行迁移到 Cosmos 开发银行的多租户 Web 应用托管解决方案。
 
-At the end of this workshop, you will be better able to improve the reliability of and increase the release cadence of your container-based applications through time-tested DevOps practices.
+在这个研讨会结束时，您将能够通过经过时间测试的 DevOps 实践，更好地提高基于容器的应用程序的可靠性和增加释放节奏。
 
-### Whiteboard Design Session
+### 白板设计章节
 
-In this whiteboard design session, you will learn about the choices related to building and deploying containerized applications in Azure, critical decisions around this, and other aspects of the solution, including ways to lift-and-shift parts of the application to reduce applications changes.
+在此白板设计会话中，您将了解与在 Azure 中构建和部署容器化应用程序相关的选择、围绕此做出的关键决策以及解决方案的其他方面，包括如何提升和转移应用程序的部件以减少应用程序更改。
 
-By the end of this design session, you will be better able to design solutions that target Azure Kubernetes Service (AKS) and define a DevOps workflow for containerized applications.
+到本设计会议结束时，您将能够更好地设计针对 Azure Kubernetes 服务 （AKS） 的解决方案，并为容器化应用程序定义 DevOps 工作流程。
 
-### Hands-on Lab
+### 动手实验
 
-This hands-on lab is designed to guide you through the process of building and deploying Docker images to the Kubernetes platform hosted on Azure Kubernetes Services (AKS), in addition to learning how to work with dynamic service discovery, service scale-out, and high-availability.
+这个动手实验旨在引导您完成构建和部署 Docker 镜像到 Azure Kubernetes 服务 （AKS） 托管的 Kubernetes 平台的过程，此外还学习如何处理动态服务发现、服务扩展和高可用性。
 
-At the end of this lab, you will be better able to build and deploy containerized applications to Azure Kubernetes Service and perform common DevOps procedures.
+在此实验结束时，您将能够更好地构建和部署容器化应用程序到 Azure Kubernetes 服务，并执行常见的 DevOps 程序。
 
-## Azure services and related products
+## Azure服务及相关产品
 
-- Azure Kubernetes Service (AKS)
-- Azure Container Registry
-- GitHub
-- Docker
-- Cosmos DB (including MongoDB API)
+-   Azure Kubernetes 服务 （AKS）
+-   Azure容器注册处
+-   GitHub
+-   Dockerfile
+-    Cosmos DB数据库（包括MongoDB API）
 
-## Azure solutions
+## Azure解决方案
 
-App Modernization
+应用现代化
 
-## Related references
+## 相关参考文献
 
-- [MCW](https://github.com/Microsoft/MCW)
+-   [MCW](https://github.com/Microsoft/MCW)
 
-## Help & Support
+## 帮助和支持
 
-We welcome feedback and comments from Microsoft SMEs & learning partners who deliver MCWs.  
+我们欢迎微软合作伙伴反馈和评论。
 
-***Having trouble?***
+**_有麻烦吗？_**
 
-- First, verify you have followed all written lab instructions (including the Before the Hands-on lab document).
-- Next, submit an issue with a detailed description of the problem.
-- Do not submit pull requests. Our content authors will make all changes and submit pull requests for approval.
+-   首先，验证您是否遵循了所有书面的实验说明（包括实际操作前的实验文档）。
+-   接下来，提交问题并详细说明问题。
+-   不要提交拉取请求。我们的内容作者将进行所有更改并提交拉力请求以供批准。
 
-If you are planning to present a workshop, *review and test the materials early*! We recommend at least two weeks prior.
+如果您计划举办研讨会，_及早审查和测试材料_!我们建议至少提前两周。
 
-### Please allow 5 - 10 business days for review and resolution of issues.
+### 请允许5-10个工作日来审查和解决问题。
