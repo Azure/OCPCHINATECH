@@ -57,6 +57,7 @@
 - [白板设计](https://github.com/Azure/OCPCHINATECH/tree/master/OCPPTSCSAHandsonLabs/MCW-Cloud-native-applications/Whiteboard%20design%20session)
   * [学生指南](https://github.com/Azure/OCPCHINATECH/blob/master/OCPPTSCSAHandsonLabs/MCW-Cloud-native-applications/Whiteboard%20design%20session/%E7%99%BD%E6%9D%BF%E8%AE%BE%E8%AE%A1%E5%AD%A6%E7%94%9F%E6%8C%87%E5%8D%97.md)
   * [讲师指南](https://github.com/Azure/OCPCHINATECH/blob/master/OCPPTSCSAHandsonLabs/MCW-Cloud-native-applications/Whiteboard%20design%20session/%E7%99%BD%E6%9D%BF%E8%AE%BE%E8%AE%A1%E8%AE%B2%E5%B8%88%E6%8C%87%E5%8D%97.md)	
+  * [讲师胶片](https://github.com/Azure/OCPCHINATECH/blob/master/OCPPTSCSAHandsonLabs/MCW-Cloud-native-applications/Whiteboard%20design%20session/%E7%99%BD%E6%9D%BF%E8%AE%BE%E8%AE%A1%E8%AE%B2%E5%B8%88presentation.pptx)	
 &emsp;
 &emsp;
 &emsp;
@@ -77,7 +78,7 @@
 - [08 - 构建Spring Cloud网关](azure-spring-cloud-training/08-build-a-spring-cloud-gateway/README.md)
 - [09 - 实现完整的微服务栈](azure-spring-cloud-training/09-putting-it-all-together-a-complete-microservice-stack/README.md)
 - [10 - 蓝绿部署](azure-spring-cloud-training/10-blue-green-deployment/README.md)
-- [11 - C配置CI/CD](azure-spring-cloud-training/11-configure-ci-cd/README.md)
+- [11 - 配置CI/CD](azure-spring-cloud-training/11-configure-ci-cd/README.md)
 - [12 - 微服务交互](azure-spring-cloud-training/12-making-microservices-talk-to-each-other/README.md)
 - [总结思考](99-conclusion/README.md)
 
