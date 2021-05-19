@@ -1130,7 +1130,7 @@ In this task, you will gather the information you need about your Azure Kubernet
 
 In this task, you will deploy the API application to the Azure Kubernetes Service cluster using the Azure Portal.
 
-1. We first need to define a Service for our API so that the application is accessible within the cluster. In the AKS blade in the Azure Portal select **Services and ingresses** and on the Services tab select **+ Add**.
+1. We first need to define a Service for our API so that the application is accessible within the cluster. In the AKS blade in the Azure Portal select **Services and ingresses** and on the Services tab select **+Add**.
 
     ![This is a screenshot of the Azure Portal for AKS showing adding a Service.](media/2021-03-25-17-04-04.png "Add a Service")
 

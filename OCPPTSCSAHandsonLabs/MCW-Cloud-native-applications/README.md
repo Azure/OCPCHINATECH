@@ -38,7 +38,7 @@ Fabrikam医疗会议提供会议网站服务，专为医疗界量身定做。他
 ## Azure服务及相关产品
 
 -   Azure Kubernetes 服务 （AKS）
--   Azure容器注册处
+-   Azure容器注册表
 -   GitHub
 -   Dockerfile
 -    Cosmos DB数据库（包括MongoDB API）
