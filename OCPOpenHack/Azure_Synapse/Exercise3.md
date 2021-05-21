@@ -44,7 +44,7 @@ GO
 
 1. 在Synapse Studio左侧菜单中选择Data项
 
-2. 切换至**Linked**标签, 创建**Dataset**
+2. 切换至**Linked**标签, 创建**Integration dataset**
 
 ![Create DataSet](./media/create-dataset.png "Create DataSet")
 
@@ -61,7 +61,7 @@ GO
 
 1. 在Synapse Studio左侧菜单中选择Manage项, 并选择**Linked Service**
 
-2. 在搜索框中输入**synapse**, 并选择**Azure Synapse Analytics (formly SQL DW)**, 点击**Continue**
+2. 在搜索框中输入**synapse**, 并选择**Azure Synapse Analytics**, 点击**Continue**
 
 3. 在属性对话框中属性下列信息, 并点击**Create**
 
@@ -79,7 +79,7 @@ GO
 
 1. 继续点击创建**Dataset**
 
-2. 在搜索框中输入**synapse**, 并选择**Azure Synapse Analytics (formly SQL DW)**, 点击**Continue**
+2. 在搜索框中输入**synapse**, 并选择**Azure Synapse Analytics**, 点击**Continue**
 
 ![Dest DataSet](./media/sales-dest-synapse.png "Dest DataSet")
 
@@ -90,7 +90,7 @@ GO
 
 ## Task 5: 创建管道
 
-1. 在Synapse Studio左侧菜单中选择Orchestrate项, 新建**Pipeline**, 并取名为**Copy Sales**
+1. 在Synapse Studio左侧菜单中选择Integrate项, 新建**Pipeline**, 并取名为**Copy Sales**
 
 ![Create Pipeline](./media/create_pipeline.png "Create Pipeline")
 

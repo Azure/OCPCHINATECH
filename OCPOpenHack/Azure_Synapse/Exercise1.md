@@ -31,7 +31,7 @@
     staging | 用于Pipeline存储临时数据
     synapsews | 用于存储Azure Synapse工作数据
 
-在下面的步骤中，你将配置 Azure Synapse 工作区以使用此存储帐户作为“主要”存储帐户，并使用容器来存储工作区数据
+在下面的步骤中，你将配置 Azure Synapse 工作区以使用此存储帐户作为“主要”存储帐户，并使用容器来存储工作区数据。将Github中的[labdata](https://github.com/Azure/OCPCHINATECH/tree/master/OCPOpenHack/Azure_Synapse/labdata)文件夹下的文件都下载下来，然后上传到刚刚新建的labdata的容器中
 
 
 ## Task 2: 创建Synapse工作区
@@ -70,7 +70,7 @@
 
 
 ## Task 4: 创建SQL池
-1. 在Synapse Studio的左侧菜单中，选择"Synapse 资源" > "SQL池" 
+1. 在Synapse Portal的左侧菜单中(非先前打开的Synapse 工作区)，选择"分析池" > "SQL池" 
 
 2. 选择"新建"
     选项卡|设置|建议的值

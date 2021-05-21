@@ -272,11 +272,11 @@ select count(1) from [dbo].[sales]
 
 2. 切换至**Linked**标签, 并在**Storage accounts**下选择之前创建的存储账户**aiaddatalake**
 
-3. 选择 labdata -> sample1.csv, 右击sample1.csv文件并选择 **New Notebook**
+3. 选择 labdata -> sample1.csv, 右击sample1.csv文件并选择 **New Notebook** --> **Load to DataFrame**
 
 ![New Notebook](./media/new-notebook.png "new Notebook")
 
-系统会自动生成相应的Python语句, 确认数据库引擎连接至**sparkpool01**, 并取消**header=True**前面的注释, 点击 **Run All**
+系统会自动生成相应的Python语句, 确认数据库引擎连接至**sparkpool01**, 并取消**header=True**前面的注释, 添加一行 **,sep="|"** （注意，包含逗号），点击 **Run All**
 
 ![Spark Result](./media/spark-result.png "Spark Result")
 

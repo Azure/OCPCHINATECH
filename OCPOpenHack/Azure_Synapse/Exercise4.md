@@ -88,7 +88,7 @@ FROM [labexternal].[MLModelExt]
 DECLARE @model varbinary(max) = (SELECT Model FROM MLModel WHERE Id = (SELECT Top(1) max(ID) FROM MLModel));
 
 SELECT d.*, p.Variable1 as Prediction
-FROM PREDICT(model=@model, DATA=SampleData AS d) WITH (Variable1 real) AS p;
+FROM PREDICT(model=@model, DATA=SampleData AS d, RUNTIME=ONNX) WITH (Variable1 real) AS p;
 ```
 
 7. 运行结果如下
