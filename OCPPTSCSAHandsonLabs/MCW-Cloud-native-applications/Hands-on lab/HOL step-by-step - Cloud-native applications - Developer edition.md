@@ -1827,9 +1827,9 @@ In this task, you will increase the number of instances for the API deployment i
 
    > **Note**: If the deployment completes quickly, you may not see the deployment Waiting states in the portal, as described in the following steps.
 
-3. From the Replica Set view for the API, you will see it is now deploying and that there is one healthy instance and one pending instance.
+3. From the replica sets view for the API, you will see it is now deploying and that there is one healthy instance and one pending instance.
 
-   ![Replica Sets is selected under Workloads in the navigation menu on the left, and at right, Pods status: 1 pending, 1 running is highlighted. Below that, a red arrow points at the API deployment in the Pods box.](media/api-replica-set.png "View replica details")
+   ![replica setss is selected under Workloads in the navigation menu on the left, and at right, Pods status: 1 pending, 1 running is highlighted. Below that, a red arrow points at the API deployment in the Pods box.](media/api-replica-set.png "View replica details")
 
 4. From the navigation menu, select **Workloads**. Note that the api Deployment has an alert and shows a pod count 1 of 2 instances (shown as `1/2`).
 
@@ -1839,9 +1839,9 @@ In this task, you will increase the number of instances for the API deployment i
 
    At this point, here is a health overview of the environment:
 
-   - One Deployment and one Replica Set are each healthy for the web service.
+   - One Deployment and one replica sets are each healthy for the web service.
 
-   - The api Deployment and Replica Set are in a warning state.
+   - The api Deployment and replica sets are in a warning state.
 
    - Two pods are healthy in the 'default' namespace.
 
@@ -1914,11 +1914,11 @@ In this task, you will restart containers and validate that the restart does not
 
    ![On the Stats page in the Contoso Neuro web application, two different api host name values are highlighted.](media/image126.png "View web task hostname")
 
-5. After refreshing enough times to see that the `hostName` value is changing, and the service remains healthy, you can open the **Replica Sets** view for the API in the Azure Portal.
+5. After refreshing enough times to see that the `hostName` value is changing, and the service remains healthy, you can open the **** view for the API in the Azure Portal.
 
 6. On this view you can see the hostName value shown in the web application stats page matches the pod names for the pods that are running.
 
-   ![Viewing replica set in the Azure Portal.](media/2021-03-26-17-31-02.png "Viewing replica set in the Azure Portal")
+   ![Viewing replica sets in the Azure Portal.](media/2021-03-26-17-31-02.png "Viewing replica sets in the Azure Portal")
 
 7. Select two of the Pods at random and choose **Delete**.
 
@@ -1930,9 +1930,9 @@ In this task, you will restart containers and validate that the restart does not
 
 9. Return to the API Deployment and scale it back to `1` replica. See Step 2 above for how to do this if you are unsure.
 
-10. Return to the sample web site's stats page in the browser and refresh while Kubernetes is scaling down the number of Pods. You will notice that only one API host name shows up, even though you may still see several running pods in the API replica set view. Even though several pods are running, Kubernetes will no longer send traffic to the pods it has selected to terminate. In a few moments, only one pod will show in the API Replica Set view.
+10. Return to the sample web site's stats page in the browser and refresh while Kubernetes is scaling down the number of Pods. You will notice that only one API host name shows up, even though you may still see several running pods in the API replica sets view. Even though several pods are running, Kubernetes will no longer send traffic to the pods it has selected to terminate. In a few moments, only one pod will show in the API replica sets view.
 
-    ![Replica Sets is selected under Workloads in the navigation menu on the left. On the right are the Details and Pods boxes. Only one API host name, which has a green check mark and is listed as running, appears in the Pods box.](media/2021-03-26-17-32-24.png "View replica details")
+    ![replica setss is selected under Workloads in the navigation menu on the left. On the right are the Details and Pods boxes. Only one API host name, which has a green check mark and is listed as running, appears in the Pods box.](media/2021-03-26-17-32-24.png "View replica details")
 
 ### Task 4: Configure Cosmos DB Autoscale
 
@@ -2030,7 +2030,7 @@ In this task, you will update the web service so that it supports dynamic discov
 
 6. Check the status of the scale out by refreshing the web deployment's view. From the navigation menu, select **Pods** from under Workloads. Select the **web** pods. From this view, you should see an error like that shown in the following screenshot.
 
-   ![Deployments is selected under Workloads in the navigation menu on the left. On the right are the Details and New Replica Set boxes. The web deployment is highlighted in the New Replica Set box, indicating an error.](media/2021-03-26-18-23-38.png "View Pod deployment events")
+   ![Deployments is selected under Workloads in the navigation menu on the left. On the right are the Details and New replica sets boxes. The web deployment is highlighted in the New replica sets box, indicating an error.](media/2021-03-26-18-23-38.png "View Pod deployment events")
 
 Like the API deployment, the web deployment used a fixed _hostPort_, and your ability to scale was limited by the number of available agent nodes. However, after resolving this issue for the web service by removing the _hostPort_ setting, the web deployment is still unable to scale past two pods due to CPU constraints. The deployment is requesting more CPU than the web application needs, so you will fix this constraint in the next task.
 
@@ -2044,7 +2044,7 @@ In this task, you will modify the CPU requirements for the web service so that i
 
 2. Select **Review + save**, confirm the change and then select **Save** to update the deployment.
 
-3. From the navigation menu, select **Replica Sets** under **Workloads**. From the view's Replica Sets list select the web replica set.
+3. From the navigation menu, select **replica setss** under **Workloads**. From the view's replica setss list select the web replica sets.
 
 4. When the deployment update completes, four web pods should be shown in running state.
 
@@ -2101,9 +2101,9 @@ In this task, you will edit the web application source code to add Application I
 
 8. While this update runs, return the Azure Portal in the browser.
 
-9. From the navigation menu, select **Replica Sets** under **Workloads**. From this view, you will see a new replica set for the web, which may still be in the process of deploying (as shown below) or already fully deployed.
+9. From the navigation menu, select **replica setss** under **Workloads**. From this view, you will see a new replica sets for the web, which may still be in the process of deploying (as shown below) or already fully deployed.从导航菜单中，在**Workloads**下选择**replica setss**。 从此视图中，您将看到Web的新副本集，该副本集可能仍在部署过程中（如下所示）或已经完全部署。
 
-    ![At the top of the list, a new web replica set is listed as a pending deployment in the Replica Set box.](media/2021-03-26-18-25-30.png "Pod deployment is in progress")
+    ![At the top of the list, a new web replica sets is listed as a pending deployment in the replica sets box.](media/2021-03-26-18-25-30.png "Pod deployment is in progress")
 
 10. While the deployment is in progress, you can navigate to the web application and visit the stats page at `/stats`. Refresh the page as the rolling update executes. Observe that the service is running normally, and tasks continue to be load balanced.
 

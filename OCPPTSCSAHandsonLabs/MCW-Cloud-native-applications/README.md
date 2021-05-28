@@ -19,7 +19,7 @@ Fabrikam医疗会议提供会议网站服务，专为医疗界量身定做。他
 
 ### Workshop
 
-在这个研讨会上，您将构建一个概念证明 （POC），将现有的本地应用程序转变为基于容器的应用程序。此 POC 将提供利用 Azure Kubernetes 服务 （AKS）、Linux 节点上的 Docker 容器以及从Mongo开发银行迁移到 Cosmos 开发银行的多租户 Web 应用托管解决方案。
+在这个研讨会上，您将构建一个概念证明 （POC），将现有的本地应用程序转变为基于容器的应用程序。此 POC 将提供利用 Azure Kubernetes 服务 （AKS）、Linux Node上的 Docker 容器以及从Mongo开发银行迁移到 Cosmos 开发银行的多租户 Web 应用托管解决方案。
 
 在这个研讨会结束时，您将能够通过经过时间测试的 DevOps 实践，更好地提高基于容器的应用程序的可靠性和增加释放节奏。
 
