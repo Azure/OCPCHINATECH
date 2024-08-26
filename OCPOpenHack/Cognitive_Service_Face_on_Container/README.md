@@ -72,15 +72,11 @@ docker run --rm -it -p 5000:5000 --memory 6g --cpus 2 containerpreview.azurecr.i
 
 2 . 待存储账号创建好后，在Access keys页面获得连接字符串
 
-![存储账号连接串](./images/storageconnection.PNG)
-
 3 . 创建Cosmos DB服务，确保API类型选择的是Azure Cosmos DB for MongoDB API
 
 ![创建COSMOS](./images/createcosmos.PNG)
 
 4 . 待Cosmos账号创建好后，在Connection String页面获得连接字符串
-
-![COSMOS连接串](./images/cosmosconnection.PNG)
 
 5 . 关掉正在运行的人脸容器服务，执行以下命令重新启动人脸容器
 
